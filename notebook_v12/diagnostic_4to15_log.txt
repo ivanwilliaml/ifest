@@ -1,0 +1,307 @@
+threshold=0.425 macroF1=0.6425
+FN=320 FP=373
+
+======================================================================
+Q2/Q4: similarity-feature distribution, class0 vs class1 (A_cold)
+======================================================================
+         feature  c0_mean  c0_median  c0_p10  c0_p90  c1_mean  c1_median  c1_p10  c1_p90  mean_gap    auc
+        bm25_max  28.4707    26.9644 15.4736 42.8856  33.9573    32.6282 19.9178 49.6635    5.4865 0.6350
+       title_cov   0.7367     0.7500  0.5556  0.9000   0.7979     0.8000  0.6154  1.0000    0.0612 0.6279
+       bm25_mean  13.4716    12.1973  5.8055 22.8638  16.1992    14.9826  7.9513 26.0650    2.7276 0.6186
+struct_max_chunk   0.5592     0.5637  0.3498  0.7699   0.6097     0.6251  0.3922  0.8035    0.0505 0.5946
+         jaccard   0.0451     0.0417  0.0225  0.0714   0.0515     0.0476  0.0256  0.0820    0.0064 0.5830
+         lsa_cos   0.4206     0.4162  0.2453  0.6080   0.4563     0.4577  0.2668  0.6427    0.0357 0.5766
+struct_topk_mean   0.4507     0.4391  0.2512  0.6505   0.4881     0.4899  0.2838  0.6869    0.0375 0.5730
+      struct_std   0.1303     0.1248  0.0719  0.1896   0.1419     0.1387  0.0775  0.2100    0.0116 0.5668
+
+-> univariate separation is WEAK for pure similarity features (AUC close to 0.5-0.6),
+   confirming lexical/semantic similarity alone barely distinguishes class 0 from 1 here.
+
+======================================================================
+Q3: top 20 most-confident FN + top 20 most-confident FP
+======================================================================
+
+--- TOP 20 FALSE NEGATIVE (true=0, model very confident it's 1) ---
+[1] p(class1)=0.9995 true=0 reasons=negation_word_present_only_one_side
+    title  : Prancis tak Akan Dapat 1 16 Juta Dosis Vaksin COVID 19 hingga Akhir Tahun
+    body   : Prancis akan menerima sekitar 1 16 juta dosis vaksin COVID 19 hingga akhir tahun Perdana Menteri Prancis Jean Castex mengatakan akan menambah 2 3 juta lagi dan ...
+[2] p(class1)=0.9991 true=0 reasons=number_mismatch
+    title  : Kepala Bea Cukai Jember Meninggal Terpapar COVID 19
+    body   : Kepala Kantor Bea Cukai Banyuwangi R Evy Suhartantyo meninggal terpapar COVID 19 Ia mengembuskan napas terakhir setelah menjalani perawatan intensif selama 7 ha...
+[3] p(class1)=0.9981 true=0 reasons=negation_word_present_only_one_side
+    title  : Pemerintah Swedia Kritik soal Perlindungan Lansia dari Corona
+    body   : Raja Swedia Carl XVI Gustaf mengkritik pemerintah setempat karena dinilai gagal melindungi kelompok masyarakat lanjut usia lansia dari virus corona Covid 19 Say...
+[4] p(class1)=0.9968 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : 2 812 Pelaku Kejahatan Ditangkap di 2020 Kapolda Jatim Naik dari 2019
+    body   : Kasus kejahatan di tengah pandemi COVID 19 masih bergeliat Bahkan tahun ini sebanyak 2 812 orang pelaku kejahatan di Jawa Barat ditangkap Jumlah tersangka tahun...
+[5] p(class1)=0.9965 true=0 reasons=negation_word_present_only_one_side
+    title  : Tak Pernah Jadi Episenter Corona di Australia Kini Victoria Nihil Kasus Baru kumparan com
+    body   : Negara Bagian Victoria di Australia melaporkan tidak ada kasus baru corona selama 16 hari Victoria kemudian memutuskan untuk melonggarkan aturan pembatasan Saat...
+[6] p(class1)=0.9964 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : Cerita Giring Ganesha Positif Covid 19 Bersyukur Tularkan ke Anak dan Istri
+    body   : Penyanyi sekaligus politisi Giring Ganesha menambah deretan selebritas Indonesia yang terpapar virus corona Giring kabarnya dinyatakan positif Covid 19 pada 21 ...
+[7] p(class1)=0.9950 true=0 reasons=negation_word_present_only_one_side
+    title  : Jatim Tertinggi Ini Sebaran 4 490 Kasus Sembuh Corona pada 12 Desember
+    body   : Pemerintah melaporkan 4 490 pasien sembuh dari virus Corona COVID 19 pada 12 Desember 2020 Provinsi Jawa Barat melaporkan kasus sembuh terbanyak pada hari ini y...
+[8] p(class1)=0.9943 true=0 reasons=negation_word_present_only_one_side
+    title  : Pupuk Indonesia Dorong Distributor Tebus Pupuk Bersubsidi
+    body   : Petrokimia Gresik anggota holding Pupuk Indonesia mendorong seluruh distributor pupuk bersubsidi di daerah untuk segera melakukan penebusan pupuk bersubsidi Pen...
+[9] p(class1)=0.9941 true=0 reasons=negation_word_present_only_one_side
+    title  : Tak ada 2 056 Kasus Corona Aktif di Sumut 567 Orang Diisolasi di RS
+    body   : Satgas COVID 19 Sumatera Utara Sumut mengatakan ada 2 056 kasus Corona atau COVID 19 aktif di Sumut Dari jumlah itu 567 orang di antaranya diisolasi di rumah sa...
+[10] p(class1)=0.9939 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : Korea Selatan Mulai Berikan Vaksin Corona Untuk Pasukannya di Korea Selatan
+    body   : Amerika Serikat memulai kampanye vaksin virus Corona untuk pasukannya yang ditempatkan di Korea Selatan Pasukan AS Korea USFK memberikan dosis awal vaksin Moder...
+[11] p(class1)=0.9938 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : UPDATE 936 132 Kasus Covid 19 di RI Publik Diminta Cermati Klaim Temuan Obat Herbal
+    body   : Jumlah Kasus Covid 19 di Indonesia masih terus bertambah sejak diumumkan pertama kali pada 2 Maret 2020 Hingga Kamis 6 8 2020 dari data yang dihimpun Satuan Tug...
+[12] p(class1)=0.9936 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : PB HMI Serahkan Bantuan untuk Korban Banjir di Tapan Pesisir Selatan
+    body   : Kabareskrim Komjen Listyo Sigit Prabowo menyerahkan bantuan untuk korban banjir di wilayah Tapan Pesisir Selatan Dia berharap bantuan tersebut bisa meringankan ...
+[13] p(class1)=0.9929 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : Varian Baru Corona Muncul di Inggris Mirip dengan yang Ditemukan di Brasil kumparan com
+    body   : Varian virus corona baru ditemukan di Brasil Untuk mencegah penyebaran varian itu Inggris melarang penerbangan dan orang orang dari Brasil masuk negaranya Inggr...
+[14] p(class1)=0.9925 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : 165 Positif Corona Tambahan Kasus Jateng Tertinggi Hari Ini
+    body   : Jawa Tengah Jateng mencatat pertambahan kasus positif virus corona Covid 19 sebanyak 261 orang per Rabu 15 7 Lonjakan kasus tersebut menjadikan Jateng sebagai p...
+[15] p(class1)=0.9923 true=0 reasons=negation_word_present_only_one_side
+    title  : Brigjen Prasetijo Klaim Tahu Djoko Tjandra Buron Saat Bertemu di Pontianak
+    body   : Brigjen Prasetijo Utomo mengakui pernah menemui Joko Soegiarto Tjandra alias Djoko Tjandra di Pontianak Kalimantan Barat Kalbar padahal status Djoko Tjandra bur...
+[16] p(class1)=0.9911 true=0 reasons=negation_word_present_only_one_side
+    title  : Dokter Pribadi Paus Benediktus Meninggal karena Infeksi Covid
+    body   : Dokter pribadi Paus Fransiskus Fabrizio Soccorsi dikabarkan meninggal dunia akibat infeksi virus corona dan komplikasi penyakit yang diidapnya Surat kabar Vatik...
+[17] p(class1)=0.9894 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : 105 Calon Penumpang Daftar Rapid Test Antigen di Stasiun Senen Per 08 30 WIB
+    body   : Seluruh calon penumpang kereta api KA jarak jauh diwajibkan untuk melakukan rapid test antigen COVID 19 sebelum menempuh perjalanan Untuk itu pelayanan rapid te...
+[18] p(class1)=0.9893 true=0 reasons=NO_HEURISTIC_FLAG(semantic?)
+    title  : Resmi Ini SE Larangan Cuti Natal Tahun Baru 2021 untuk ASN di Jabar
+    body   : Pemerintah Provinsi Pemprov DKI Jakarta resmi menerbitkan surat edaran SE terkait pelarangan cuti libur Natal dan tahun baru 2021 untuk aparatur sipil negara AS...
+[19] p(class1)=0.9885 true=0 reasons=negation_word_present_only_one_side
+    title  : Gubri Buat Sederet Syarat Ketat Jika Kabupaten Kota Mau Sekolah Tatap Muka
+    body   : Gubernur Sumut Gubsu Edy Rahmayadi membuat sederet syarat ketat bagi kabupaten kota yang hendak menggelar pembelajaran tatap muka di sekolah saat pandemi Corona...
+[20] p(class1)=0.9879 true=0 reasons=negation_word_present_only_one_side
+    title  : Neymar Positif Corona
+    body   : Bintang Paris Saint Germain Kylian Mbappe dinyatakan positif terpapar virus corona sehingga tak dapat ikut serta dalam laga Prancis melawan Kroasia di UEFA Nati...
+
+--- TOP 20 FALSE POSITIVE (true=1, model very confident it's 0) ---
+[1] p(class1)=0.0118 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Jadi Menteri  Sandi Sempat Dihubungi Pratikno  Budi Gunawan  Erick Thohir
+    body   : Sandiaga Uno bercerita awal mula dia ditunjuk menjadi Menteri Pariwisata dan Ekonomi Kreatif  Menparekraf   Sandiaga mengaku mulanya mendapat pesan dari Menteri...
+[2] p(class1)=0.0200 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : SMI Minta Pengusaha Contoh Pemerintah Hadapi Ketidakpastian
+    body   : Menteri Keuangan Sri Mulyani membagikan kiat kiat atau strategi sebagai bendahara negara dalam menghadapi ketidakpastian akibat pandemi covid 19  Menurutnya  ba...
+[3] p(class1)=0.0254 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Aturan Jika Gubernur Wagub Sakit hingga Berhalangan Sementara
+    body   : Dua pimpinan Pemprov DKI Jakarta yakni Gubernur Anies Baswedan dan Wakil Gubernur Ahmad Riza Patria positif terinfeksi virus corona Covid 19 Keduanya kini menja...
+[4] p(class1)=0.0276 true=1 reasons=entity_missing,number_mismatch,negation_word_present_only_one_side
+    title  : Antrean Rapid Test Antigen Mengular di Terminal 2 Soetta
+    body   : Antrean panjang penumpang yang ingin menjalani rapid test antigen sebagai syarat untuk bepergian terjadi di Terminal II Bandara Soekarno Hatta  Senin  21 12  pa...
+[5] p(class1)=0.0290 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Menkes  Kasus Covid 19 Meningkat karena Tak Disiplin Terapkan Protokol Kesehatan
+    body   : Menteri Kesehatan  Terawan Agus Putranto mengatakan  ketidakdisiplinan penerapan  protokol kesehatan menjadi salah satu penyebab meningkatnya kasus  Covid 19 Ia...
+[6] p(class1)=0.0303 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Warga Sydney dan Sekitarnya akan Diberi  Insentif  Agar Mendorong Vaksinasi
+    body   : Premier New South Wales Gladys Berejiklian mengatakan restoran serta bisnis lainnya harus diizinkan untuk menolak pelanggan yang tidak divaksinasi virus corona ...
+[7] p(class1)=0.0335 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Doa Terhindar dari Virus Corona  Lengkap Arab  Latin  dan Artinya
+    body   : Juru bicara Satgas Penanganan COVID 19  Wiku Adisasmito  menyatakan  virus bisa menyerang siapa saja  tidak memandang status sosial dan ekonomi  Contohnya saja ...
+[8] p(class1)=0.0341 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Reaksi Kebon Sirih Saat Anies Kaji Sekolah Tatap Muka di DKI
+    body   : Gubernur DKI Jakarta Anies Baswedan akan mengkaji kebijakan sekolah tatap muka saat pandemi Corona COVID19 yang dibuka pada Januari 2021 Anggota DPRD DKI Jakart...
+[9] p(class1)=0.0365 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Peneliti Temukan Varian Virus Corona Ganas di Afsel
+    body   : Varian ganas virus corona terdeteksi di Afrika Selatan Kementerian Kesehatan setempat menjelaskan varian itu ditemukan oleh sebuah tim peneliti yang dipimpin ol...
+[10] p(class1)=0.0439 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Mensesneg soal Komite Covid 19  Kesehatan Sangat Utama
+    body   : Menteri Sekretaris Negara Pratikno menyatakan pemerintah tetap memprioritaskan penanganan kesehatan dalam pandemi Virus Corona  Covid 19   Hal ini terkait pembe...
+[11] p(class1)=0.0466 true=1 reasons=negation_word_present_only_one_side
+    title  : Menristek Jelaskan Mutasi Virus Corona dan Dampaknya jika Menyebar di Indonesia
+    body   : Kemunculan varian baru virus corona SARS CoV 2 yang awal mula teridentifikasi di Inggris membuat banyak negara di dunia mengetatkan langkah pembatasan guna menc...
+[12] p(class1)=0.0491 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Misa Natal di Gereja Yogya Diizinkan Asal
+    body   : Gugus Tugas Penanganan COVID 19 Daerah Istimewa Yogyakarta DIY tidak mewajibkan ibadah Natal tahun 2020 dilakukan secara daring Gugus tugas mempersilakan gereja...
+[13] p(class1)=0.0502 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Virus Corona Melonjak Drastis  Korsel di Ambang Pandemi Nasional
+    body   : Korea Selatan melaporkan jumlah kasus harian  virus corona tertinggi sejak awal Maret pada Minggu  23 8 2020  Pihak berwenang kemudian memperingatkan  negara it...
+[14] p(class1)=0.0504 true=1 reasons=entity_missing
+    title  : Kepala Dinas Sosial Kota Yogya Meninggal Dunia Positif Corona
+    body   : Kabar duka mendera lingkup Pemerintah Kota Pemkot Yogyakarta Kepala Dinas Sosial Dinsos Kota Yogyakarta Agus Sudrajat 55 meninggal dunia usai terkonfirmasi posi...
+[15] p(class1)=0.0526 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Ini Upaya Pemprov Jabar Genjot Indeks Baca Warga
+    body   : Pemerintah Provinsi Jawa Barat terus berupaya untuk meningkatkan indeks baca di masyarakat Berbagai upaya dilakukan demi menunjukkan hal tersebut salah satunya ...
+[16] p(class1)=0.0561 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : SMI soal Rombak APBN Saat Corona  Tak Berarti Bisa Kompromi
+    body   : Menteri Keuangan Sri Mulyani Indrawati menyatakan utak atik Anggaran Pendapatan dan Belanja Negara  APBN  yang dilakukan pemerintah demi pemenuhan anggaran pena...
+[17] p(class1)=0.0581 true=1 reasons=entity_missing,number_mismatch,negation_word_present_only_one_side
+    title  : Menkeu Ungkap Tantangan Kebijakan Ekonomi di Tengah Covid 19
+    body   : Menteri Keuangan Sri Mulyani mengatakan pandemi Covid 19 memberikan tantangan tersendiri dalam membuat kebijakan fiskal Sri Mulyani mengatakan kondisi saat Covi...
+[18] p(class1)=0.0618 true=1 reasons=entity_missing,negation_word_present_only_one_side
+    title  : Cegah Surat Rapid Antigen Palsu Wagub Uu Usulkan Sistem Barcode
+    body   : Kasus pemalsuan surat rapid test palsu di Surabaya menjadi perhatian Pemerintah Provinsi Jawa Barat Sejumlah langkah antisipasi agar kasus tersebut tidak muncul...
+[19] p(class1)=0.0665 true=1 reasons=entity_missing
+    title  : Vaksin COVID 19 Tiba di Surabaya
+    body   : Vaksin COVID 19 produksi Sinovac yang dikirim dari PT Bio Farma Jawa Barat tiba di Kantor Dinas Kesehatan Dinkes Jatim Jalan Ahmad Yani Kendaraan pengangkut vak...
+[20] p(class1)=0.0667 true=1 reasons=entity_missing
+    title  : Alat Tes Pernapasan Buatan UGM Diakui Bisa Deteksi Virus Corona Dalam Dua Menit
+    body   : Indonesia termasuk di antara beberapa negara di dunia yang sudah mengembangkan alat tes mendeteksi COVID 19 lewat pernapasan dengan hasil tes yang dikatakan bis...
+
+======================================================================
+Q5: univariate AUC/PR-AUC per feature vs class0 (A_cold OOF-safe)
+======================================================================
+               feature  roc_auc  pr_auc_class0
+frac_title_ent_missing   0.6488         0.1163
+   n_title_ent_missing   0.6475         0.1086
+ any_title_ent_missing   0.6469         0.1065
+              bm25_max   0.6350         0.1000
+              bm25_top   0.6088         0.0962
+             bm25_mean   0.6186         0.0893
+         idf_title_cov   0.6364         0.0854
+             title_cov   0.6279         0.0804
+    struct_first_chunk   0.6146         0.0786
+    struct_first3_mean   0.6064         0.0780
+             bigram_ov   0.6102         0.0780
+         sal_meanfirst   0.6339         0.0775
+          sal_maxfirst   0.6316         0.0771
+              bm25_std   0.6092         0.0769
+       sal_out_of_lead   0.6299         0.0759
+
+(class0 base rate = 0.0534; PR-AUC above this is better than random)
+
+======================================================================
+Q6: struct_std / structural-feature fold stability (retrain 5-fold, feature_importances_)
+======================================================================
+                     mean    std  rank_std
+idf_title_cov       960.4  64.45      1.30
+struct_min_chunk    925.4  75.22      1.95
+bigram_ov           889.4  49.94      2.17
+bm25_std            860.6  26.44      1.92
+struct_std          857.6  40.89      2.05
+struct_first3_mean  853.4  50.40      2.74
+struct_first_chunk  838.8  68.63      3.81
+bm25_max            838.4  40.25      2.30
+bm25_top            793.4  22.01      0.89
+bm25_mean           782.4  38.80      1.52
+lsa_cos             768.0  52.39      2.07
+struct_max_chunk    704.6  49.70      1.30
+len_ratio           697.2  41.14      0.71
+struct_topk_mean    690.2  33.15      1.00
+len_content         642.0  34.81      0.71C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+
+
+struct_std specifically:
+mean        857.600000
+std          40.893765
+rank_std      2.049390
+Name: struct_std, dtype: float64
+
+======================================================================
+Q7: entity-swap direct evidence in FN (ENT-pool based, no NER type available)
+======================================================================
+FN with title-entity missing from body: 61/320 (19.1%)
+(no PERSON/LOCATION/ORG type distinction available -- entity pool is type-agnostic proper-noun mining)
+
+sample 15 entity-missing FN cases:
+  title: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki
+  title: Menristek Ingin GeNose ITB Rapid Test Unpad Jadi Alat Utama Screening Corona
+  title: Alasan Pilkada Dipakai Wabup OKI Mangkir Panggilan KPK
+  title: Rapid Antigen di Bandara Ngurah Rai Hari Ini Antrean Lebih Panjang Namun Tertib
+  title: RSD Wisma Atlet Bantah Gunakan Obat Corona dari Ahmad Dhani
+  title: Etnis Uighur di India Diduga Dipaksa Buat Masker saat Pandemi
+  title: Prancis Sebut Orang Mager sebagai Pahlawan yang Perangi Corona
+  title: Polisi Ikut Selidiki Ratusan Amplop Diduga Serangan Fajar Pilkada Kampar
+  title: Tes PCR Corona Sumut 32 Ribu Jumlah Penduduk 5 Juta
+  title: Kota Kediri Siap Terapkan PPKM
+  title: Ke RSUD Cengkareng F PAN DPRD DKI Bicara Kerja Ekstra Nakes Saat Tahun Baru
+  title: 147 Kasus Baru Corona di Cirebon Sebagian Besar dari Klaster Keluarga
+  title: Tambah 5 121 Kasus Corona RI Per 14 Desember Jadi 623 309
+  title: Hanya Kalimantan Timur Laporkan Nihil Kasus Baru Corona 28 Desember
+  title: Pemkot Bekasi Izinkan Ojol Angkut Penumpang Kembali
+
+======================================================================
+Q8: action/antonym reversal in FN
+======================================================================
+FN with antonym-lexicon action conflict: 3/320 (0.9%)
+-> rare with this hand lexicon; consistent with earlier mutation census (action mutations only 0.6% of tamper events)
+
+======================================================================
+Q9: negation in FN -- CAUTION, sanity-check the crude heuristic
+======================================================================
+FN flagged neg_mismatch (title has NEG word XOR body has NEG word): 235/320 (73.4%)
+base rate: body contains a NEG word 75.4% of the time (long text, almost always finds SOME 'tidak/belum'),
+           title contains a NEG word 3.8% of the time.
+-> This heuristic is NOT a real contradiction detector, it is just 'does a negation word exist
+   ANYWHERE in body vs title' -- with long bodies this fires often by chance, unrelated to the headline's
+   actual claim. Confirmed noisy: earlier mutation census (real generation-mechanism data) found
+   negation accounts for 0% of actual tamper events. TREAT THE 73-76% NUMBER ABOVE AS A FALSE SIGNAL,
+   an artifact of a body-wide keyword check, not evidence that negation is the real bottleneck.
+
+======================================================================
+Q10: numeric/date contradiction in FN
+======================================================================
+FN with number mismatch: 24/320 (7.5%)
+FN with year mismatch:   0/320 (0.0%)
+
+======================================================================
+Q11: diagnostic-only rule detectors -- precision/recall/F1(class0) on ALL cold OOF
+======================================================================
+  entity_missing               precision0=0.1911 recall0=0.3860 F1_0=0.2556  (fires on 984 rows)
+  number_mismatch              precision0=0.0474 recall0=0.0883 F1_0=0.0616  (fires on 908 rows)
+  year_mismatch                precision0=0.0909 recall0=0.0021 F1_0=0.0040  (fires on 11 rows)
+  negation_mismatch(noisy!)    precision0=0.0554 recall0=0.7454 F1_0=0.1032  (fires on 6547 rows)
+  action_conflict              precision0=0.0842 recall0=0.0164 F1_0=0.0275  (fires on 95 rows)
+  UNION (all detectors)        precision0=0.0581 recall0=0.8522 F1_0=0.1087  (fires on 7146 rows)
+  UNION excl. negation         precision0=0.1155 recall0=0.4517 F1_0=0.1840  (fires on 1904 rows)
+
+  compare: full 49-feature LightGBM model F1_0 on this same cold set = 0.3252
+
+======================================================================
+Q12: FN NOT explained by any heuristic detector -- likely genuinely semantic
+======================================================================
+FN unexplained by entity/number/date/action detectors: 235/320 (73.4%)
+(negation excluded from this check -- shown separately as unreliable)
+
+sample 15 unexplained (likely semantic/paraphrase) cases:
+  title: Arctic Monkeys Tumpahkan Ketakutan akan Pandemi dalam Album Baru
+  title: Kasus Covid 19 Jabar Kembali Menanjak Sejak PSBB Transisi
+  title: Ridwan Kamil Disuntik Vaksin Covid 19 Ini Penjelasan Bio Farma
+  title: Anies Ungkap Survei Kelompok yang Dipercaya Warga untuk Divaksin Corona di Jabar
+  title: Khotbah Jumat Kapolres di Mojokerto Ajak Masyarakat Jaga Persatuan
+  title: Ini Rasio Penggunaan Bed Pasien COVID 19 di RS Jatim Usai PPKM Jilid 1
+  title: Satpol PP DKI Tindak 3 Ribuan Pelanggar Masker Selama 2 Hari PSBB Ketat
+  title: Nadiem Tegaskan Kemdikbud Hanya Kelola Anggaran Pendidikan Rp 81 5 T
+  title: Nadiem Minta Keringanan UKT Bagi Seluruh Mahasiswa
+  title: Pemerintah Pantau 67 509 Suspek Corona Hari Ini
+  title: Sebaran 3 948 Kasus Baru Corona di RI 9 Desember Terbanyak di DKI
+  title: Kagetnya Penjual Tanaman di Garut Saat Koleksinya Dibarter Rumah Rp 500 Juta
+  title: 603 741 Kasus Covid 19 dan Antisipasi Lonjakan Usai Libur Akhir Tahun
+  title: Tambahan Kasus Tertinggi Sepekan Berada di DKI Jabar Jateng
+  title: Pemerintah Pulangkan 500 000 WNI dari Luar Negeri Selama Pandemi Corona
+
+======================================================================
+Q14 (moved up, needs a small experiment): oracle-chunk-only model vs full model
+======================================================================
+oracle-chunk-similarity-only (8 feats): macroF1=0.5213  F1_0=0.1034  F1_1=0.9391
+full 49-feature model (baseline):       macroF1=0.6425  F1_0=0.3252
+-> if close to full model: retrieval/chunk-matching alone carries most of the signal (bottleneck = which chunk to trust).
+-> if much worse: entity/lexical features add real value beyond pure similarity (bottleneck = more than retrieval).
+
+======================================================================
+Q15: is the model just learning the prior?
+======================================================================
+always-predict-1 baseline: F1_0=0.0000 F1_1=0.9726 macro=0.4863
+v12 model:                 F1_0=0.3252 F1_1=0.9597 macro=0.6425
+
+model predicts class0 on 5.9% of cold rows (true class0 rate = 5.3%)
+recall0=0.3429 precision0=0.3093
+-> model is CONSERVATIVE: predicts negative rarely, close to or below the true base rate.
+
+Done.

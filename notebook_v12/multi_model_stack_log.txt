@@ -1,0 +1,52 @@
+[   3.4s] cold rows: 9120
+[   8.0s] === LightGBM (current best config) ===
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+LightGBM                       macroF1=0.6422 F1_0=0.3241 F1_1=0.9603 P0=0.3124 R0=0.3368
+[  18.9s] === CatBoost ===
+CatBoost                       macroF1=0.6503 F1_0=0.3432 F1_1=0.9573 P0=0.3051 R0=0.3922
+[  63.5s] === XGBoost ===
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:200: UserWarning: [14:38:28] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:200: UserWarning: [14:38:30] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:200: UserWarning: [14:38:32] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:200: UserWarning: [14:38:35] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:200: UserWarning: [14:38:38] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+XGBoost                        macroF1=0.6425 F1_0=0.3230 F1_1=0.9619 P0=0.3237 R0=0.3224
+[  78.0s] === RandomForest ===
+RandomForest                   macroF1=0.6401 F1_0=0.3224 F1_1=0.9579 P0=0.2966 R0=0.3532
+[  95.5s] loading V14 neural OOF...
+V14 neural                     macroF1=0.5178 F1_0=0.0934 F1_1=0.9423 P0=0.0843 R0=0.1047
+[  95.6s] === simple average blend (all 5) ===
+avg(lgb,cat,xgb,rf,v14)        macroF1=0.6547 F1_0=0.3466 F1_1=0.9629 P0=0.3441 R0=0.3491
+[  95.7s] === simple average blend (trees only, no neural) ===
+avg(lgb,cat,xgb,rf)            macroF1=0.6516 F1_0=0.3364 F1_1=0.9668 P0=0.3832 R0=0.2998
+[  95.8s] === grid weight search (trees only) ===
+best weights lgb/cat/xgb/rf = (np.float64(0.0), np.float64(0.5), np.float64(0.25), np.float64(0.25))  macroF1=0.6571
+[  98.3s] === stacking: logistic regression meta-learner on OOF probs (5-fold nested) ===
+stacked (LogReg meta)          macroF1=0.6564 F1_0=0.3497 F1_1=0.9632 P0=0.3483 R0=0.3511
+
+reference: single LightGBM baseline macroF1=0.6422
+[  98.4s] total runtime: 1.6 min

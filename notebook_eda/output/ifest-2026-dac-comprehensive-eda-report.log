@@ -1,0 +1,885 @@
+[{"stream_name":"stderr","time":8.659498512999999,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.659577528,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.659583243,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.659586497,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.484268339,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.484307575,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.484315881,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.484365196,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.762219062,"data":"Python: 3.12.13 | pandas: 2.3.3 | numpy: 2.0.2 | sklearn: 1.6.1 | scipy: 1.16.3\n"}
+,{"stream_name":"stdout","time":13.963099058,"data":"sample_submission.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/sample_submission.csv  (0.04 MB)\n"}
+,{"stream_name":"stdout","time":13.96313948,"data":"train.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/train.csv  (31.74 MB)\n"}
+,{"stream_name":"stdout","time":13.963143589,"data":"test.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/test.csv  (7.78 MB)\n"}
+,{"stream_name":"stdout","time":15.143702326,"data":"[TIMER] data_loading: 1.30s\n"}
+,{"stream_name":"stdout","time":15.14375226,"data":"\n"}
+,{"stream_name":"stdout","time":15.143759999,"data":"train shape: (14397, 4)  test shape: (3603, 3)\n"}
+,{"stream_name":"stdout","time":15.143765249,"data":"\n"}
+,{"stream_name":"stdout","time":15.143770132,"data":"train dtypes:\n"}
+,{"stream_name":"stdout","time":15.143775384,"data":" id         object\n"}
+,{"stream_name":"stdout","time":15.143780219,"data":"title      object\n"}
+,{"stream_name":"stdout","time":15.143786458,"data":"content    object\n"}
+,{"stream_name":"stdout","time":15.14379192,"data":"label       int64\n"}
+,{"stream_name":"stdout","time":15.14379724,"data":"dtype: object\n"}
+,{"stream_name":"stdout","time":15.143802825,"data":"\n"}
+,{"stream_name":"stdout","time":15.143807665,"data":"train memory usage (MB): 35.191887\n"}
+,{"stream_name":"stdout","time":15.143812849,"data":"test memory usage (MB): 8.669149\n"}
+,{"stream_name":"stdout","time":15.143818025,"data":"\n"}
+,{"stream_name":"stdout","time":15.143823559,"data":"Schema verified: train=[id,title,content,label], test=[id,title,content].\n"}
+,{"stream_name":"stdout","time":15.143829473,"data":"`id` will be preserved for reference only — never used as a model feature.\n"}
+,{"stream_name":"stdout","time":15.375675147,"data":"[TIMER] quality_audit: 0.16s\n"}
+,{"stream_name":"stdout","time":15.375714827,"data":"split                           issue  count   pct\n"}
+,{"stream_name":"stdout","time":15.375722778,"data":"train                   missing title      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375728654,"data":"train                 missing content      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375734138,"data":"train     empty/whitespace-only title      0 0.000\n"}
+,{"stream_name":"stdout","time":15.37573935,"data":"train   empty/whitespace-only content      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375744784,"data":"train                   duplicated id      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375771914,"data":"train                duplicated title      3 0.021\n"}
+,{"stream_name":"stdout","time":15.375777475,"data":"train              duplicated content    671 4.661\n"}
+,{"stream_name":"stdout","time":15.375781935,"data":"train duplicated (title,content) pair      3 0.021\n"}
+,{"stream_name":"stdout","time":15.375785961,"data":" test                   missing title      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375789975,"data":" test                 missing content      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375794079,"data":" test     empty/whitespace-only title      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375798146,"data":" test   empty/whitespace-only content      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375802266,"data":" test                   duplicated id      0 0.000\n"}
+,{"stream_name":"stdout","time":15.375806493,"data":" test                duplicated title      1 0.028\n"}
+,{"stream_name":"stdout","time":15.375810917,"data":" test              duplicated content     51 1.415\n"}
+,{"stream_name":"stdout","time":15.375814948,"data":" test duplicated (title,content) pair      1 0.028\n"}
+,{"stream_name":"stdout","time":18.550328498,"data":"split   field                              check  count\n"}
+,{"stream_name":"stdout","time":18.550408737,"data":"train content   repeated punctuation (!!/??/...)      0\n"}
+,{"stream_name":"stdout","time":18.550415827,"data":"train   title   repeated punctuation (!!/??/...)      0\n"}
+,{"stream_name":"stdout","time":18.55042069,"data":"train content                     HTML-like tags      0\n"}
+,{"stream_name":"stdout","time":18.550425557,"data":"train   title                     HTML-like tags      0\n"}
+,{"stream_name":"stdout","time":18.550435435,"data":"train content                               URLs      0\n"}
+,{"stream_name":"stdout","time":18.550439577,"data":"train   title                               URLs      0\n"}
+,{"stream_name":"stdout","time":18.550443504,"data":"train content escaped chars (\\n, \\t, \u0026amp; etc.)      0\n"}
+,{"stream_name":"stdout","time":18.550448257,"data":"train   title escaped chars (\\n, \\t, \u0026amp; etc.)      0\n"}
+,{"stream_name":"stdout","time":18.550452601,"data":"train content                 control characters      0\n"}
+,{"stream_name":"stdout","time":18.550456748,"data":"train   title                 control characters      0\n"}
+,{"stream_name":"stdout","time":18.55046268,"data":"train content       non-ascii / unicode variants   2552\n"}
+,{"stream_name":"stdout","time":18.550470729,"data":"train   title       non-ascii / unicode variants     21\n"}
+,{"stream_name":"stdout","time":18.550473989,"data":" test content   repeated punctuation (!!/??/...)      0\n"}
+,{"stream_name":"stdout","time":18.550476723,"data":" test   title   repeated punctuation (!!/??/...)      0\n"}
+,{"stream_name":"stdout","time":18.5504794,"data":" test content                     HTML-like tags      0\n"}
+,{"stream_name":"stdout","time":18.550482154,"data":" test   title                     HTML-like tags      0\n"}
+,{"stream_name":"stdout","time":18.550485005,"data":" test content                               URLs      0\n"}
+,{"stream_name":"stdout","time":18.550487906,"data":" test   title                               URLs      0\n"}
+,{"stream_name":"stdout","time":18.550490934,"data":" test content escaped chars (\\n, \\t, \u0026amp; etc.)      0\n"}
+,{"stream_name":"stdout","time":18.550512355,"data":" test   title escaped chars (\\n, \\t, \u0026amp; etc.)      0\n"}
+,{"stream_name":"stdout","time":18.550517896,"data":" test content                 control characters      0\n"}
+,{"stream_name":"stdout","time":18.550651554,"data":" test   title                 control characters      0\n"}
+,{"stream_name":"stdout","time":18.550670563,"data":" test content       non-ascii / unicode variants    677\n"}
+,{"stream_name":"stdout","time":18.550676522,"data":" test   title       non-ascii / unicode variants      5\n"}
+,{"stream_name":"stdout","time":18.550681098,"data":"\n"}
+,{"stream_name":"stdout","time":18.550685037,"data":"Extremely short/long rows (train):\n"}
+,{"stream_name":"stdout","time":18.550689346,"data":"title char len min/max: 17 150\n"}
+,{"stream_name":"stdout","time":18.550693289,"data":"content char len min/max: 16 31584\n"}
+,{"stream_name":"stdout","time":18.550697492,"data":"shortest content sample: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":18.558192295,"data":"\n"}
+,{"stream_name":"stdout","time":18.558243952,"data":"[CRITICAL FINDING] rows with ANY sentence-ending punctuation (. ! ?) in content: 0 / 14397 (0.0%)\n"}
+,{"stream_name":"stdout","time":18.55825294,"data":"-\u003e Punctuation has been stripped from the source text at the data-provider level.\n"}
+,{"stream_name":"stdout","time":18.558258844,"data":"   Sentence-boundary detection via '.', '!', '?' is NOT viable on this dataset.\n"}
+,{"stream_name":"stdout","time":18.558264228,"data":"   Sections 6 and 15 below use fixed-size WORD-WINDOW CHUNKS as a pseudo-sentence\n"}
+,{"stream_name":"stdout","time":18.55826877,"data":"   proxy instead, and this is called out explicitly at each use.\n"}
+,{"stream_name":"stdout","time":18.55827327,"data":"[TIMER] unicode_punct_audit: 3.15s\n"}
+,{"stream_name":"stdout","time":18.811321128,"data":"label=0: 1437 (9.98%)   label=1: 12960 (90.02%)   imbalance ratio: 9.02x\n"}
+,{"stream_name":"stdout","time":18.811385534,"data":"\n"}
+,{"stream_name":"stdout","time":18.81139215,"data":"Majority-class (predict all 1):\n"}
+,{"stream_name":"stdout","time":18.811396876,"data":"  precision(1)=0.9002  recall(1)=1.0000  F1(1)=0.9475\n"}
+,{"stream_name":"stdout","time":18.811402016,"data":"  Macro F1=0.4737\n"}
+,{"stream_name":"stdout","time":18.811413218,"data":"\n"}
+,{"stream_name":"stdout","time":18.811417004,"data":"-\u003e Accuracy would read as 90.0% by always predicting 1, while Macro F1 exposes the\n"}
+,{"stream_name":"stdout","time":18.811420585,"data":"   complete failure on class 0 -- this is exactly why Macro F1 is the competition metric.\n"}
+,{"stream_name":"stdout","time":18.811424061,"data":"To make label=0 represent 10% of the data (by subsampling the majority), majority class would need to be cut to 12933 rows (currently 12960).\n"}
+,{"stream_name":"stdout","time":18.811427466,"data":"To make label=0 represent 20% of the data (by subsampling the majority), majority class would need to be cut to 5748 rows (currently 12960).\n"}
+,{"stream_name":"stdout","time":18.811430813,"data":"To make label=0 represent 30% of the data (by subsampling the majority), majority class would need to be cut to 3353 rows (currently 12960).\n"}
+,{"stream_name":"stdout","time":18.811434076,"data":"[TIMER] target_distribution: 0.02s\n"}
+,{"stream_name":"stdout","time":19.89652554,"data":"\n"}
+,{"stream_name":"stdout","time":19.896572379,"data":"=== title_char_len percentiles (train) ===\n"}
+,{"stream_name":"stdout","time":19.896580231,"data":"count    14397.000000\n"}
+,{"stream_name":"stdout","time":19.89658957,"data":"mean        63.781343\n"}
+,{"stream_name":"stdout","time":19.896592855,"data":"std         11.047096\n"}
+,{"stream_name":"stdout","time":19.89659568,"data":"min         17.000000\n"}
+,{"stream_name":"stdout","time":19.896615819,"data":"0%          17.000000\n"}
+,{"stream_name":"stdout","time":19.896619967,"data":"10%         52.000000\n"}
+,{"stream_name":"stdout","time":19.896622658,"data":"25%         57.000000\n"}
+,{"stream_name":"stdout","time":19.896625351,"data":"50%         62.000000\n"}
+,{"stream_name":"stdout","time":19.896627936,"data":"75%         71.000000\n"}
+,{"stream_name":"stdout","time":19.896630522,"data":"90%         76.000000\n"}
+,{"stream_name":"stdout","time":19.896633093,"data":"100%       150.000000\n"}
+,{"stream_name":"stdout","time":19.896635738,"data":"max        150.000000\n"}
+,{"stream_name":"stdout","time":19.896638345,"data":"Name: title_char_len, dtype: float64\n"}
+,{"stream_name":"stdout","time":19.896641019,"data":"\n"}
+,{"stream_name":"stdout","time":19.896643588,"data":"=== content_char_len percentiles (train) ===\n"}
+,{"stream_name":"stdout","time":19.896646337,"data":"count    14397.000000\n"}
+,{"stream_name":"stdout","time":19.896648935,"data":"mean      2126.732375\n"}
+,{"stream_name":"stdout","time":19.896651529,"data":"std       1200.174263\n"}
+,{"stream_name":"stdout","time":19.896654501,"data":"min         16.000000\n"}
+,{"stream_name":"stdout","time":19.896657193,"data":"0%          16.000000\n"}
+,{"stream_name":"stdout","time":19.896659773,"data":"10%       1178.000000\n"}
+,{"stream_name":"stdout","time":19.896662391,"data":"25%       1485.000000\n"}
+,{"stream_name":"stdout","time":19.89666505,"data":"50%       1893.000000\n"}
+,{"stream_name":"stdout","time":19.896667722,"data":"75%       2429.000000\n"}
+,{"stream_name":"stdout","time":19.896670886,"data":"90%       3210.000000\n"}
+,{"stream_name":"stdout","time":19.896674606,"data":"100%     31584.000000\n"}
+,{"stream_name":"stdout","time":19.896678088,"data":"max      31584.000000\n"}
+,{"stream_name":"stdout","time":19.896680718,"data":"Name: content_char_len, dtype: float64\n"}
+,{"stream_name":"stdout","time":19.896683348,"data":"\n"}
+,{"stream_name":"stdout","time":19.896685925,"data":"=== title_word_count percentiles (train) ===\n"}
+,{"stream_name":"stdout","time":19.896688575,"data":"count    14397.000000\n"}
+,{"stream_name":"stdout","time":19.896691158,"data":"mean        10.071821\n"}
+,{"stream_name":"stdout","time":19.896693728,"data":"std          1.966900\n"}
+,{"stream_name":"stdout","time":19.896696438,"data":"min          3.000000\n"}
+,{"stream_name":"stdout","time":19.896709619,"data":"0%           3.000000\n"}
+,{"stream_name":"stdout","time":19.896712368,"data":"10%          8.000000\n"}
+,{"stream_name":"stdout","time":19.896714956,"data":"25%          9.000000\n"}
+,{"stream_name":"stdout","time":19.896717565,"data":"50%         10.000000\n"}
+,{"stream_name":"stdout","time":19.896720193,"data":"75%         11.000000\n"}
+,{"stream_name":"stdout","time":19.896722853,"data":"90%         13.000000\n"}
+,{"stream_name":"stdout","time":19.896725463,"data":"100%        23.000000\n"}
+,{"stream_name":"stdout","time":19.896728054,"data":"max         23.000000\n"}
+,{"stream_name":"stdout","time":19.896730676,"data":"Name: title_word_count, dtype: float64\n"}
+,{"stream_name":"stdout","time":19.89673338,"data":"\n"}
+,{"stream_name":"stdout","time":19.896735929,"data":"=== content_word_count percentiles (train) ===\n"}
+,{"stream_name":"stdout","time":19.896738628,"data":"count    14397.000000\n"}
+,{"stream_name":"stdout","time":19.896741233,"data":"mean       309.949781\n"}
+,{"stream_name":"stdout","time":19.896743887,"data":"std        169.567216\n"}
+,{"stream_name":"stdout","time":19.896749943,"data":"min          3.000000\n"}
+,{"stream_name":"stdout","time":19.896752686,"data":"0%           3.000000\n"}
+,{"stream_name":"stdout","time":19.896755268,"data":"10%        173.000000\n"}
+,{"stream_name":"stdout","time":19.896757936,"data":"25%        218.000000\n"}
+,{"stream_name":"stdout","time":19.896760536,"data":"50%        276.000000\n"}
+,{"stream_name":"stdout","time":19.896763167,"data":"75%        356.000000\n"}
+,{"stream_name":"stdout","time":19.896765765,"data":"90%        466.000000\n"}
+,{"stream_name":"stdout","time":19.896768374,"data":"100%      4238.000000\n"}
+,{"stream_name":"stdout","time":19.896770957,"data":"max       4238.000000\n"}
+,{"stream_name":"stdout","time":19.896773576,"data":"Name: content_word_count, dtype: float64\n"}
+,{"stream_name":"stdout","time":19.896776196,"data":"\n"}
+,{"stream_name":"stdout","time":19.896778739,"data":"=== by label (median) ===\n"}
+,{"stream_name":"stdout","time":19.89678141,"data":"       title_char_len  content_char_len  title_word_count  content_word_count  \\\n"}
+,{"stream_name":"stdout","time":19.896784359,"data":"label                                                                           \n"}
+,{"stream_name":"stdout","time":19.89678731,"data":"0                63.0            2002.0              10.0               297.0   \n"}
+,{"stream_name":"stdout","time":19.89679003,"data":"1                62.0            1879.0              10.0               273.0   \n"}
+,{"stream_name":"stdout","time":19.896792731,"data":"\n"}
+,{"stream_name":"stdout","time":19.896795296,"data":"       title_content_char_ratio  \n"}
+,{"stream_name":"stdout","time":19.896797926,"data":"label                            \n"}
+,{"stream_name":"stdout","time":19.896800533,"data":"0                      0.030878  \n"}
+,{"stream_name":"stdout","time":19.896803122,"data":"1                      0.033333  \n"}
+,{"stream_name":"stdout","time":19.896805857,"data":"[TIMER] length_analysis: 1.00s\n"}
+,{"stream_name":"stdout","time":19.896808529,"data":"Cohen's d for title_char_len (label0 vs label1): +0.029  (negligible effect)\n"}
+,{"stream_name":"stdout","time":19.896813445,"data":"Cohen's d for content_char_len (label0 vs label1): +0.156  (negligible effect)\n"}
+,{"stream_name":"stdout","time":19.896816189,"data":"Cohen's d for title_word_count (label0 vs label1): +0.017  (negligible effect)\n"}
+,{"stream_name":"stdout","time":19.896818899,"data":"Cohen's d for content_word_count (label0 vs label1): +0.180  (negligible effect)\n"}
+,{"stream_name":"stdout","time":19.896821653,"data":"Cohen's d for title_content_char_ratio (label0 vs label1): -0.061  (negligible effect)\n"}
+,{"stream_name":"stdout","time":20.54391231,"data":"Saved eda_length_boxplots.png\n"}
+,{"stream_name":"stdout","time":21.220226824,"data":"[TIMER] title_structure: 0.58s\n"}
+,{"stream_name":"stdout","time":21.220292395,"data":"label                      0          1\n"}
+,{"stream_name":"stdout","time":21.220300582,"data":"word_count         10.101601  10.068519\n"}
+,{"stream_name":"stdout","time":21.220305912,"data":"char_count         64.068198  63.749537\n"}
+,{"stream_name":"stdout","time":21.220311219,"data":"uppercase_ratio     0.157284   0.156688\n"}
+,{"stream_name":"stdout","time":21.220316162,"data":"digit_count         1.364649   1.786343\n"}
+,{"stream_name":"stdout","time":21.220339953,"data":"punct_count         0.002088   0.002932\n"}
+,{"stream_name":"stdout","time":21.220345807,"data":"has_question        0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220350848,"data":"has_exclaim         0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220377152,"data":"has_colon           0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220381977,"data":"has_quote           0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220385934,"data":"has_paren           0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220390074,"data":"has_percent         0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":21.220394655,"data":"has_currency        0.010438   0.009336\n"}
+,{"stream_name":"stdout","time":21.220398796,"data":"has_year            0.029923   0.037577\n"}
+,{"stream_name":"stdout","time":21.22040288,"data":"negation_count      0.030619   0.040586\n"}
+,{"stream_name":"stdout","time":21.220406716,"data":"modal_count         0.018789   0.013117\n"}
+,{"stream_name":"stdout","time":21.220410528,"data":"action_verb_count   0.035491   0.038580\n"}
+,{"stream_name":"stdout","time":21.654609457,"data":"Top tokens skewed toward label=0 (min_df=5):\n"}
+,{"stream_name":"stdout","time":21.654647869,"data":"  lombok               logodds=-2.553  freq0=6  freq1=3\n"}
+,{"stream_name":"stdout","time":21.65465447,"data":"  yurianto             logodds=-2.281  freq0=3  freq1=2\n"}
+,{"stream_name":"stdout","time":21.654659309,"data":"  rupanya              logodds=-2.281  freq0=3  freq1=2\n"}
+,{"stream_name":"stdout","time":21.654664456,"data":"  mangkir              logodds=-2.217  freq0=4  freq1=3\n"}
+,{"stream_name":"stdout","time":21.654669247,"data":"  tindakan             logodds=-1.994  freq0=3  freq1=3\n"}
+,{"stream_name":"stdout","time":21.654673805,"data":"  dewi                 logodds=-1.994  freq0=3  freq1=3\n"}
+,{"stream_name":"stdout","time":21.65467841,"data":"  disimpan             logodds=-1.994  freq0=4  freq1=4\n"}
+,{"stream_name":"stdout","time":21.654683182,"data":"  indikator            logodds=-1.994  freq0=3  freq1=3\n"}
+,{"stream_name":"stdout","time":21.654687692,"data":"  kalimantan           logodds=-1.994  freq0=4  freq1=4\n"}
+,{"stream_name":"stdout","time":21.654692319,"data":"  terpengaruh          logodds=-1.811  freq0=4  freq1=5\n"}
+,{"stream_name":"stdout","time":21.654696876,"data":"  kadis                logodds=-1.811  freq0=4  freq1=5\n"}
+,{"stream_name":"stdout","time":21.654701701,"data":"  beku                 logodds=-1.811  freq0=4  freq1=5\n"}
+,{"stream_name":"stdout","time":21.654706249,"data":"  terkendala           logodds=-1.770  freq0=3  freq1=4\n"}
+,{"stream_name":"stdout","time":21.654710875,"data":"  cengkareng           logodds=-1.770  freq0=3  freq1=4\n"}
+,{"stream_name":"stdout","time":21.654715396,"data":"  pakistan             logodds=-1.770  freq0=3  freq1=4\n"}
+,{"stream_name":"stdout","time":21.654719921,"data":"\n"}
+,{"stream_name":"stdout","time":21.654724221,"data":"Top tokens skewed toward label=1 (min_df=5):\n"}
+,{"stream_name":"stdout","time":21.654728691,"data":"  sehari               logodds=+1.824  freq0=1  freq1=90\n"}
+,{"stream_name":"stdout","time":21.654733242,"data":"  yogya                logodds=+1.791  freq0=0  freq1=43\n"}
+,{"stream_name":"stdout","time":21.654737872,"data":"  imbas                logodds=+1.720  freq0=0  freq1=40\n"}
+,{"stream_name":"stdout","time":21.65474236,"data":"  update               logodds=+1.487  freq0=14  freq1=486\n"}
+,{"stream_name":"stdout","time":21.654746997,"data":"  oranye               logodds=+1.440  freq0=0  freq1=30\n"}
+,{"stream_name":"stdout","time":21.654751625,"data":"  coba                 logodds=+1.440  freq0=0  freq1=30\n"}
+,{"stream_name":"stdout","time":21.654756218,"data":"  igd                  logodds=+1.440  freq0=0  freq1=30\n"}
+,{"stream_name":"stdout","time":21.654784967,"data":"  wajib                logodds=+1.408  freq0=2  freq1=89\n"}
+,{"stream_name":"stdout","time":21.654789618,"data":"  langgar              logodds=+1.374  freq0=2  freq1=86\n"}
+,{"stream_name":"stdout","time":21.654794317,"data":"  kalteng              logodds=+1.356  freq0=1  freq1=56\n"}
+,{"stream_name":"stdout","time":21.654798831,"data":"  agustus              logodds=+1.334  freq0=6  freq1=194\n"}
+,{"stream_name":"stdout","time":21.65480381,"data":"  ppp                  logodds=+1.302  freq0=0  freq1=26\n"}
+,{"stream_name":"stdout","time":21.654808414,"data":"  perdana              logodds=+1.302  freq0=0  freq1=26\n"}
+,{"stream_name":"stdout","time":21.654812785,"data":"  cari                 logodds=+1.265  freq0=0  freq1=25\n"}
+,{"stream_name":"stdout","time":21.654817377,"data":"  bahaya               logodds=+1.265  freq0=0  freq1=25\n"}
+,{"stream_name":"stdout","time":21.700774816,"data":"\n"}
+,{"stream_name":"stdout","time":21.700831592,"data":"Top bigrams skewed toward label=0:\n"}
+,{"stream_name":"stdout","time":21.700836867,"data":"  wagub jabar                    logodds=-2.485\n"}
+,{"stream_name":"stdout","time":21.700840246,"data":"  batuk dan                      logodds=-2.303\n"}
+,{"stream_name":"stdout","time":21.700843364,"data":"  disimpan di                    logodds=-2.303\n"}
+,{"stream_name":"stdout","time":21.700846446,"data":"  corona turun                   logodds=-2.303\n"}
+,{"stream_name":"stdout","time":21.700849433,"data":"  lakukan swab                   logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.700852362,"data":"  alasannya kumparan             logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.70085533,"data":"  lagi jadi                      logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.700858384,"data":"  kpu minta                      logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.700861383,"data":"  pemkot depok                   logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.700864333,"data":"  datangi rumah                  logodds=-2.080\n"}
+,{"stream_name":"stdout","time":21.700867326,"data":"[TIMER] title_discriminative_tokens: 0.44s\n"}
+,{"stream_name":"stdout","time":30.77245142,"data":"[TIMER] content_structure: 8.98s\n"}
+,{"stream_name":"stdout","time":30.772494936,"data":"label                           0          1\n"}
+,{"stream_name":"stdout","time":30.772502279,"data":"sentence_count          13.980515  12.758256\n"}
+,{"stream_name":"stdout","time":30.772507644,"data":"avg_sentence_len_words  23.973590  23.889311\n"}
+,{"stream_name":"stdout","time":30.772515222,"data":"first_sentence_len      25.000000  24.983873\n"}
+,{"stream_name":"stdout","time":30.772525693,"data":"last_sentence_len       12.798887  12.959491\n"}
+,{"stream_name":"stdout","time":30.772529609,"data":"digit_proportion         0.021374   0.022420\n"}
+,{"stream_name":"stdout","time":30.772557827,"data":"punct_proportion         0.000007   0.000009\n"}
+,{"stream_name":"stdout","time":30.77256212,"data":"quote_count              0.130828   0.123380\n"}
+,{"stream_name":"stdout","time":30.772565797,"data":"n_numbers               21.259569  20.431790\n"}
+,{"stream_name":"stdout","time":30.772569848,"data":"n_years                  1.900487   1.867438\n"}
+,{"stream_name":"stdout","time":30.772573549,"data":"n_urls                   0.000000   0.000000\n"}
+,{"stream_name":"stdout","time":30.772577242,"data":"has_boilerplate          0.019485   0.022685\n"}
+,{"stream_name":"stdout","time":31.233445104,"data":"Publisher-boilerplate frequency (5000-row sample of content):\n"}
+,{"stream_name":"stdout","time":31.233516832,"data":"  'detik com': ~4\n"}
+,{"stream_name":"stdout","time":31.233521837,"data":"  'kompas com': ~99\n"}
+,{"stream_name":"stdout","time":31.233524729,"data":"  'liputan6 com': ~1\n"}
+,{"stream_name":"stdout","time":31.233528343,"data":"  'cnn indonesia': ~8\n"}
+,{"stream_name":"stdout","time":31.233548067,"data":"  'cnbc indonesia': ~2\n"}
+,{"stream_name":"stdout","time":31.233552746,"data":"  'okezone com': ~1\n"}
+,{"stream_name":"stdout","time":31.233557342,"data":"  'sindonews com': ~1\n"}
+,{"stream_name":"stdout","time":31.233561955,"data":"  'antaranews com': ~1\n"}
+,{"stream_name":"stdout","time":31.674229885,"data":"\n"}
+,{"stream_name":"stdout","time":31.674291196,"data":"rows with diacritic-like chars: 21\n"}
+,{"stream_name":"stdout","time":31.674298601,"data":"rows with curly-quote/replacement-char unicode: 418\n"}
+,{"stream_name":"stdout","time":31.674303688,"data":"[TIMER] normalization_audit: 0.82s\n"}
+,{"stream_name":"stdout","time":31.674308813,"data":"\n"}
+,{"stream_name":"stdout","time":31.674312886,"data":"Recommendation:\n"}
+,{"stream_name":"stdout","time":31.674316836,"data":"  RAW representation      -\u003e keep untouched, source for character n-gram features\n"}
+,{"stream_name":"stdout","time":31.674321454,"data":"                              (typo/morphology robust) and for entity/number extraction\n"}
+,{"stream_name":"stdout","time":31.674347174,"data":"                              that depends on original casing/punctuation.\n"}
+,{"stream_name":"stdout","time":31.674352361,"data":"  NORMALIZED representation -\u003e NFKC unicode normalize, collapse whitespace, strip HTML/\n"}
+,{"stream_name":"stdout","time":31.674356646,"data":"                              URLs, strip publisher-boilerplate tokens (they are pure\n"}
+,{"stream_name":"stdout","time":31.674360791,"data":"                              metadata / (B) boilerplate, not (D) leakage — they appear\n"}
+,{"stream_name":"stdout","time":31.674366163,"data":"                              in both classes at similar rates per the structure audit\n"}
+,{"stream_name":"stdout","time":31.674370309,"data":"                              above, so they add noise without label signal).\n"}
+,{"stream_name":"stdout","time":31.674374535,"data":"  MODEL representation    -\u003e word+char TF-IDF built on the NORMALIZED text; numbers,\n"}
+,{"stream_name":"stdout","time":31.674378882,"data":"                              negation words and punctuation are deliberately NOT\n"}
+,{"stream_name":"stdout","time":31.674383783,"data":"                              stripped (see Sections 9-11) since those carry the\n"}
+,{"stream_name":"stdout","time":31.674388809,"data":"                              consistency signal this task is about.\n"}
+,{"stream_name":"stdout","time":31.674393686,"data":"\n"}
+,{"stream_name":"stdout","time":32.181283113,"data":"[whitespace] title_vocab=4294 content_vocab=25110 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%\n"}
+,{"stream_name":"stdout","time":32.535807911,"data":"[regex \\w+] title_vocab=4293 content_vocab=24996 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%\n"}
+,{"stream_name":"stdout","time":32.673260911,"data":"[punct-aware] title_vocab=4294 content_vocab=25014 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%\n"}
+,{"stream_name":"stdout","time":32.673303962,"data":"\n"}
+,{"stream_name":"stdout","time":32.673310696,"data":"How regex \\w+ tokenizes formatting-sensitive strings:\n"}
+,{"stream_name":"stdout","time":32.673315398,"data":"  '500.000' -\u003e ['500', '000']\n"}
+,{"stream_name":"stdout","time":32.673370169,"data":"  '50%' -\u003e ['50']\n"}
+,{"stream_name":"stdout","time":32.673375288,"data":"  'Rp10.000' -\u003e ['rp10', '000']\n"}
+,{"stream_name":"stdout","time":32.673379489,"data":"  'Rp 10 juta' -\u003e ['rp', '10', 'juta']\n"}
+,{"stream_name":"stdout","time":32.673383536,"data":"  '21 7 2021' -\u003e ['21', '7', '2021']\n"}
+,{"stream_name":"stdout","time":32.673389486,"data":"  'anti-corona' -\u003e ['anti', 'corona']\n"}
+,{"stream_name":"stdout","time":32.673398124,"data":"  'non-aktif' -\u003e ['non', 'aktif']\n"}
+,{"stream_name":"stdout","time":32.67340109,"data":"[TIMER] tokenization_audit: 0.94s\n"}
+,{"stream_name":"stdout","time":32.911400723,"data":"title stopword%: 9.0%\n"}
+,{"stream_name":"stdout","time":35.006673212,"data":"content stopword%: 20.6%\n"}
+,{"stream_name":"stdout","time":35.249431596,"data":"\n"}
+,{"stream_name":"stdout","time":35.249471415,"data":"Top stopwords, label=0 vs label=1 frequency (rate per 1000 titles):\n"}
+,{"stream_name":"stdout","time":35.249477082,"data":"  ini          label0_rate=84.9  label1_rate=67.8\n"}
+,{"stream_name":"stdout","time":35.249481542,"data":"  akan         label0_rate=43.8  label1_rate=29.0\n"}
+,{"stream_name":"stdout","time":35.24948597,"data":"  dan          label0_rate=81.4  label1_rate=67.7\n"}
+,{"stream_name":"stdout","time":35.249489937,"data":"  untuk        label0_rate=41.8  label1_rate=30.8\n"}
+,{"stream_name":"stdout","time":35.249493767,"data":"  ke           label0_rate=55.7  label1_rate=46.4\n"}
+,{"stream_name":"stdout","time":35.249497554,"data":"  yang         label0_rate=57.8  label1_rate=48.5\n"}
+,{"stream_name":"stdout","time":35.249501523,"data":"  bisa         label0_rate=24.4  label1_rate=17.6\n"}
+,{"stream_name":"stdout","time":35.249505667,"data":"  belum        label0_rate=8.4  label1_rate=15.0\n"}
+,{"stream_name":"stdout","time":35.249509446,"data":"  kembali      label0_rate=7.7  label1_rate=13.3\n"}
+,{"stream_name":"stdout","time":35.249515494,"data":"  di           label0_rate=293.0  label1_rate=298.3\n"}
+,{"stream_name":"stdout","time":35.614225712,"data":"\n"}
+,{"stream_name":"stdout","time":35.614307397,"data":"rows with a negation word in the title: 565 (3.92%)\n"}
+,{"stream_name":"stdout","time":35.614314367,"data":"negation-word rate by label:\n"}
+,{"stream_name":"stdout","time":35.614340532,"data":"       has_negation\n"}
+,{"stream_name":"stdout","time":35.614345075,"data":"label              \n"}
+,{"stream_name":"stdout","time":35.614349024,"data":"0          0.030619\n"}
+,{"stream_name":"stdout","time":35.614353034,"data":"1          0.040201\n"}
+,{"stream_name":"stdout","time":35.614357215,"data":"[TIMER] stopword_analysis: 2.83s\n"}
+,{"stream_name":"stdout","time":36.188119043,"data":"distinct surface forms (sample): 29869\n"}
+,{"stream_name":"stdout","time":36.188163027,"data":"distinct forms after crude stemming: 23962\n"}
+,{"stream_name":"stdout","time":36.188170248,"data":"vocabulary reduction: 19.8%\n"}
+,{"stream_name":"stdout","time":36.188175504,"data":"\n"}
+,{"stream_name":"stdout","time":36.188181392,"data":"Example collapsed groups (stem -\u003e surface forms):\n"}
+,{"stream_name":"stdout","time":36.188187881,"data":"  'buat': ['buatkan', 'dibuatnya', 'buatan', 'buatlah', 'dibuatkan', 'berbuat', 'membuat', 'membuatnya']\n"}
+,{"stream_name":"stdout","time":36.188193517,"data":"  'besar': ['terbesar', 'terbesarnya', 'besarnya', 'sebesar', 'besaran', 'dibesar', 'besar', 'besari']\n"}
+,{"stream_name":"stdout","time":36.188199076,"data":"  'hubung': ['dihubungkan', 'menghubungkan', 'hubungkan', 'menghubungi', 'berhubungan', 'terhubung', 'hubungan', 'menhubungi']\n"}
+,{"stream_name":"stdout","time":36.18822098,"data":"  'urut': ['urutan', 'menurut', 'urut', 'berurutan', 'diurutan', 'menurutnya', 'berurut', 'menyurutkan']\n"}
+,{"stream_name":"stdout","time":36.188242725,"data":"  'dalam': ['terdalam', 'pedalaman', 'mendalami', 'sedalam', 'dalami', 'dalaman', 'didalami', 'didalam']\n"}
+,{"stream_name":"stdout","time":36.18824676,"data":"[TIMER] stemming_diagnostic: 0.49s\n"}
+,{"stream_name":"stdout","time":40.265757466,"data":"label                            0         1\n"}
+,{"stream_name":"stdout","time":40.265802711,"data":"title_has_number          0.411273  0.501003\n"}
+,{"stream_name":"stdout","time":40.265809226,"data":"content_has_number        0.997912  0.998380\n"}
+,{"stream_name":"stdout","time":40.265814029,"data":"same_number_appears       0.325678  0.399923\n"}
+,{"stream_name":"stdout","time":40.265819352,"data":"different_number_appears  0.135003  0.180633\n"}
+,{"stream_name":"stdout","time":40.265824337,"data":"[TIMER] number_analysis: 3.99s\n"}
+,{"stream_name":"stdout","time":40.503286668,"data":"mean fraction of TITLE words that are capitalized: 84.5%\n"}
+,{"stream_name":"stdout","time":40.503359746,"data":"-\u003e Indonesian news headlines are largely Title-Cased, so a naive capitalized-word\n"}
+,{"stream_name":"stdout","time":40.503370183,"data":"   heuristic is NOT discriminative when applied to titles (nearly every word qualifies).\n"}
+,{"stream_name":"stdout","time":40.50337539,"data":"   We therefore extract proxy entities from CONTENT ONLY (normal sentence case)\n"}
+,{"stream_name":"stdout","time":40.503380524,"data":"   and measure their coverage inside the (lowercased) title text instead.\n"}
+,{"stream_name":"stdout","time":42.925858017,"data":"\n"}
+,{"stream_name":"stdout","time":42.925915906,"data":"mean proxy-entity count per article (content): 41.6\n"}
+,{"stream_name":"stdout","time":42.925923434,"data":"       content_entity_count  content_entity_coverage_in_title\n"}
+,{"stream_name":"stdout","time":42.925928962,"data":"label                                                        \n"}
+,{"stream_name":"stdout","time":42.925934201,"data":"0                 45.459986                          0.073200\n"}
+,{"stream_name":"stdout","time":42.925939795,"data":"1                 41.202855                          0.087961\n"}
+,{"stream_name":"stdout","time":42.925945222,"data":"[TIMER] entity_proxy: 2.57s\n"}
+,{"stream_name":"stdout","time":46.954841824,"data":"[TIMER] lexical_overlap: 3.93s\n"}
+,{"stream_name":"stdout","time":46.954884773,"data":"label                           0         1\n"}
+,{"stream_name":"stdout","time":46.954890987,"data":"n_shared         median  8.000000  8.000000\n"}
+,{"stream_name":"stdout","time":46.954897027,"data":"                 mean    7.553932  7.947068\n"}
+,{"stream_name":"stdout","time":46.95490272,"data":"title_coverage   median  0.750000  0.800000\n"}
+,{"stream_name":"stdout","time":46.95490867,"data":"                 mean    0.749509  0.795781\n"}
+,{"stream_name":"stdout","time":46.954914787999996,"data":"content_coverage median  0.043165  0.048780\n"}
+,{"stream_name":"stdout","time":46.954921324,"data":"                 mean    0.046072  0.052735\n"}
+,{"stream_name":"stdout","time":46.954926703,"data":"jaccard          median  0.042424  0.048128\n"}
+,{"stream_name":"stdout","time":46.95493175,"data":"                 mean    0.045310  0.051935\n"}
+,{"stream_name":"stdout","time":46.954936741,"data":"dice             median  0.081395  0.091837\n"}
+,{"stream_name":"stdout","time":46.95494165,"data":"                 mean    0.085961  0.097769\n"}
+,{"stream_name":"stdout","time":46.95496671,"data":"bigram_overlap   median  0.008621  0.012195\n"}
+,{"stream_name":"stdout","time":46.95497087,"data":"                 mean    0.010723  0.014606\n"}
+,{"stream_name":"stdout","time":46.954974764,"data":"trigram_overlap  median  0.000000  0.003273\n"}
+,{"stream_name":"stdout","time":46.954978436,"data":"                 mean    0.003206  0.005118\n"}
+,{"stream_name":"stdout","time":47.479058729,"data":"Saved eda_lexical_overlap.png\n"}
+,{"stream_name":"stdout","time":47.479099149,"data":"\n"}
+,{"stream_name":"stdout","time":47.479105623,"data":"point-biserial correlation(jaccard, label): +0.083\n"}
+,{"stream_name":"stdout","time":47.479110434,"data":"IMPORTANT: this correlation can be small/near-zero even though lexical overlap is\n"}
+,{"stream_name":"stdout","time":47.479115581,"data":"still a useful *feature in combination* with others -- do not assume similarity\n"}
+,{"stream_name":"stdout","time":47.479120241,"data":"must be higher for label=1 without checking (per the Section-0 Meksiko/Corona example).\n"}
+,{"stream_name":"stdout","time":196.392537389,"data":"[TIMER] tfidf_similarity: 148.79s\n"}
+,{"stream_name":"stdout","time":196.392582826,"data":"label                   0         1\n"}
+,{"stream_name":"stdout","time":196.392590289,"data":"word_cos median  0.173085  0.210785\n"}
+,{"stream_name":"stdout","time":196.392595686,"data":"         mean    0.182563  0.219851\n"}
+,{"stream_name":"stdout","time":196.392600603,"data":"         std     0.080168  0.089357\n"}
+,{"stream_name":"stdout","time":196.392605957,"data":"char_cos median  0.227763  0.265225\n"}
+,{"stream_name":"stdout","time":196.392611159,"data":"         mean    0.234373  0.269115\n"}
+,{"stream_name":"stdout","time":196.392616406,"data":"         std     0.073115  0.077438\n"}
+,{"stream_name":"stdout","time":196.392621141,"data":"KS test word_cos: statistic=0.1853 p=2.30e-39  (higher statistic = more separable distributions)\n"}
+,{"stream_name":"stdout","time":196.392627946,"data":"KS test char_cos: statistic=0.1931 p=9.59e-43  (higher statistic = more separable distributions)\n"}
+,{"stream_name":"stdout","time":199.362230361,"data":"[TIMER] sentence_evidence: 2.88s\n"}
+,{"stream_name":"stdout","time":199.362371818,"data":"label                        0         1\n"}
+,{"stream_name":"stdout","time":199.362382009,"data":"max_sim               0.188592  0.228663\n"}
+,{"stream_name":"stdout","time":199.362387501,"data":"second_sim            0.135520  0.155950\n"}
+,{"stream_name":"stdout","time":199.362392621,"data":"top3_mean             0.144090  0.168891\n"}
+,{"stream_name":"stdout","time":199.362397759,"data":"n_above_0.3           0.087683  0.203627\n"}
+,{"stream_name":"stdout","time":199.362402851,"data":"best_match_position   0.222909  0.143110\n"}
+,{"stream_name":"stdout","time":199.36241539,"data":"first_sentence_sim    0.149471  0.196673\n"}
+,{"stream_name":"stdout","time":199.362419656,"data":"first3_sentences_sim  0.105268  0.133416\n"}
+,{"stream_name":"stdout","time":219.839020508,"data":"[TIMER] coverage_analysis: 20.38s\n"}
+,{"stream_name":"stdout","time":219.839071715,"data":"       common_word_coverage  rare_word_coverage  number_coverage  \\\n"}
+,{"stream_name":"stdout","time":219.839080099,"data":"label                                                              \n"}
+,{"stream_name":"stdout","time":219.83908641,"data":"0                  0.749914            0.645813         0.742019   \n"}
+,{"stream_name":"stdout","time":219.839092752,"data":"1                  0.796279            0.735029         0.731226   \n"}
+,{"stream_name":"stdout","time":219.839098367,"data":"\n"}
+,{"stream_name":"stdout","time":219.8391222,"data":"       entity_query_coverage  \n"}
+,{"stream_name":"stdout","time":219.839126837,"data":"label                         \n"}
+,{"stream_name":"stdout","time":219.839130991,"data":"0                   0.073200  \n"}
+,{"stream_name":"stdout","time":219.839134926,"data":"1                   0.087961  \n"}
+,{"stream_name":"stdout","time":225.671626257,"data":"[TIMER] negation_analysis: 5.74s\n"}
+,{"stream_name":"stdout","time":225.671672758,"data":"       title_has_negation  content_has_negation  negation_mismatch\n"}
+,{"stream_name":"stdout","time":225.671695648,"data":"label                                                             \n"}
+,{"stream_name":"stdout","time":225.671701959,"data":"0                0.030619              0.781489           0.755045\n"}
+,{"stream_name":"stdout","time":225.671707759,"data":"1                0.040201              0.750540           0.712191\n"}
+,{"stream_name":"stdout","time":225.671714181,"data":"\n"}
+,{"stream_name":"stdout","time":225.671719801,"data":"Example rows where the TITLE contains a negation word:\n"}
+,{"stream_name":"stdout","time":225.671724974,"data":"  [1] TITLE: Jokowi Divaksin Hari Ini Pesan PKS Jangan Paksa Warga yang Belum Siap\n"}
+,{"stream_name":"stdout","time":225.671730257,"data":"        CONTENT (excerpt): Presiden Joko Widodo Jokowi hari ini divaksin virus Corona COVID 19 PKS berharap proses vaksinasi berjalan lancar tanpa menimbulkan efek samping yang berbahaya \n"}
+,{"stream_name":"stdout","time":225.671737376,"data":"  [1] TITLE: Habib Rizieq Diam diam Keluar RS Kapolda Jabar Bukan Poin Penting\n"}
+,{"stream_name":"stdout","time":225.671744836,"data":"        CONTENT (excerpt): Kapolda Jabar Irjen Ahmad Dofiri berbicara soal Habib Rizieq Shihab yang diam diam meninggalkan Rumah Sakit UMMI Bogor Apa reaksi Dofiri Mungkin barangkali kita\n"}
+,{"stream_name":"stdout","time":225.671754077,"data":"  [1] TITLE: Buka Lowongan  DKI Bantah Sudah Kekurangan Tenaga Medis\n"}
+,{"stream_name":"stdout","time":225.671757657,"data":"        CONTENT (excerpt): Wakil Gubernur DKI Jakarta Ahmad Riza Patria menyatakan bahwa perekrutan tenaga kesehatan dibuka dalam rangka mengoptimalkan penanganan virus corona  Covid 19  \n"}
+,{"stream_name":"stdout","time":225.671761563,"data":"  [1] TITLE: Kimia Farma Bantah Pelaku Pemalsu Swab Test di Soetta Pegawainya\n"}
+,{"stream_name":"stdout","time":225.671765143,"data":"        CONTENT (excerpt): Kimia Farma memberikan klarifikasi terkait adanya oknum pegawai fasilitas rapid test yang diamankan terkait pemalsuan surat swab test di Polresta Bandara Soekar\n"}
+,{"stream_name":"stdout","time":225.671769037,"data":"  [1] TITLE: Hari Kemerdekaan RI  Anies  Saatnya Utamakan Keselamatan  Bukan Kabar Bualan\n"}
+,{"stream_name":"stdout","time":225.671772744,"data":"        CONTENT (excerpt): Gubernur DKI Jakarta Anies Baswedan memimpin upacara kemerdekaan ke 75 Republik Indonesia di Lapangan Balai Kota Jakarta  Senin  17 8 2020  Anies tampak mengena\n"}
+,{"stream_name":"stdout","time":229.259217395,"data":"[TIMER] action_analysis: 3.49s\n"}
+,{"stream_name":"stdout","time":229.259258678,"data":"       title_has_action action_overlap  action_absence\n"}
+,{"stream_name":"stdout","time":229.259265134,"data":"label                                                 \n"}
+,{"stream_name":"stdout","time":229.259270648,"data":"0              0.035491       0.901961        0.003479\n"}
+,{"stream_name":"stdout","time":229.259276361,"data":"1              0.038503       0.953908        0.001775\n"}
+,{"stream_name":"stdout","time":229.259283377,"data":"\n"}
+,{"stream_name":"stdout","time":229.259293043,"data":"rows where title names one of our 15 tracked action verbs: 550 (3.8%)\n"}
+,{"stream_name":"stdout","time":232.029970768,"data":"unique content bodies: 11646 / 14397 rows\n"}
+,{"stream_name":"stdout","time":232.030019688,"data":"content reuse-count distribution (group size -\u003e number of such groups):\n"}
+,{"stream_name":"stdout","time":232.030027278,"data":"1    9120\n"}
+,{"stream_name":"stdout","time":232.030032986,"data":"2    2317\n"}
+,{"stream_name":"stdout","time":232.030038033,"data":"3     198\n"}
+,{"stream_name":"stdout","time":232.030042879,"data":"4      10\n"}
+,{"stream_name":"stdout","time":232.030047745,"data":"9       1\n"}
+,{"stream_name":"stdout","time":232.030054462,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":232.030063915,"data":"\n"}
+,{"stream_name":"stdout","time":232.030067609,"data":"content groups with \u003e1 distinct title: 2525\n"}
+,{"stream_name":"stdout","time":232.030071413,"data":"content groups with BOTH labels present: 874\n"}
+,{"stream_name":"stdout","time":232.030074993,"data":"[TIMER] article_family_analysis: 2.68s\n"}
+,{"stream_name":"stdout","time":232.224000356,"data":"\n"}
+,{"stream_name":"stdout","time":232.224042861,"data":"--- content_hash=0016dd74 (category guess: number_change) ---\n"}
+,{"stream_name":"stdout","time":232.224050396,"data":"CONTENT (excerpt): Menteri Koordinator Bidang Perekonomian sekaligus Ketua Komite Kebijakan Penanganan Covid 19 dan Pemulihan Ekonomi Airlangga Hartarto mengatakan pemerintah akan memberikan Bantuan \n"}
+,{"stream_name":"stdout","time":232.224057936,"data":"TITLE A: Pegawai Gaji Rp5 Juta Dapat BLT Guru Honorer Dipertanyakan  | LABEL A: 0\n"}
+,{"stream_name":"stdout","time":232.224064067,"data":"TITLE B: Pemerintah akan Transfer BLT ke 1 8 Juta Guru Honorer  | LABEL B: 1\n"}
+,{"stream_name":"stdout","time":232.22406945,"data":"\n"}
+,{"stream_name":"stdout","time":232.224074736,"data":"--- content_hash=00867aa7 (category guess: number_change) ---\n"}
+,{"stream_name":"stdout","time":232.224080396,"data":"CONTENT (excerpt): Menteri Riset dan Teknologi Badan Riset dan Inovasi Nasional  Menristek BRIN  Bambang Brodjonegoro enggan berkomentar soal predikat halal vaksin CoronaVac buatan perusahaan China  \n"}
+,{"stream_name":"stdout","time":232.224087009,"data":"TITLE A: Menristek soal Vaksin Corona China Halal  Tanya Bio Farma  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224092391,"data":"TITLE B: Ahli RI soal Covid 19 Dibuat di China Teknologi Belum Mampu  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.224097953,"data":"\n"}
+,{"stream_name":"stdout","time":232.224102881,"data":"--- content_hash=0089ca9c (category guess: unsupported_detail_or_paraphrase) ---\n"}
+,{"stream_name":"stdout","time":232.224109569,"data":"CONTENT (excerpt): Kepala Kantor Staf Presiden KSP Moeldoko menuturkan Indonesia masih menghadapi kendala terkait vaksin virus corona Covid 19 Sinovac Adapun salah satu kendala yang dihadapi Indonesi\n"}
+,{"stream_name":"stdout","time":232.224115759,"data":"TITLE A: Istana Sebut Vaksin Covid 19 Masih Terkendala Suhu  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224121969,"data":"TITLE B: Bio Farma Sebut Vaksin Covid 19 Masih Terkendala Suhu  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.224127452,"data":"\n"}
+,{"stream_name":"stdout","time":232.224132483,"data":"--- content_hash=0092c2b8 (category guess: unsupported_detail_or_paraphrase) ---\n"}
+,{"stream_name":"stdout","time":232.224138249,"data":"CONTENT (excerpt): Wakil Gubernur DKI Jakarta Ahmad Riza Patria menegaskan akan menjatuhkan sanksi berupa denda sebesar dua kali lipat kepada Rizieq Shihab bila kembali melanggar protokol kesehatan p\n"}
+,{"stream_name":"stdout","time":232.224143318,"data":"TITLE A: Wagub Jabar Ancam Denda Rp100 Juta Bila Rizieq Melanggar Lagi  | LABEL A: 0\n"}
+,{"stream_name":"stdout","time":232.224171318,"data":"TITLE B: Wagub DKI Ancam Denda Rp100 Juta Bila Rizieq Melanggar Lagi  | LABEL B: 1\n"}
+,{"stream_name":"stdout","time":232.224176118,"data":"\n"}
+,{"stream_name":"stdout","time":232.224180083,"data":"--- content_hash=009f8279 (category guess: unsupported_detail_or_paraphrase) ---\n"}
+,{"stream_name":"stdout","time":232.224183755,"data":"CONTENT (excerpt): Sebanyak 77 760 vaksin COVID 19 tiba di Jatim pada Senin 4 1 Plt Wali Kota Surabaya Whisnu Sakti Buana bersama Mendagri Menkes dan BNPB rapat koordinasi rakor pada Selasa 5 1 secar\n"}
+,{"stream_name":"stdout","time":232.224190138,"data":"TITLE A: Pemkot Surabaya Akan Koordinasi dengan Pemprov Jatim soal Vaksin COVID 19  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224194127,"data":"TITLE B: Pemprov Jatim Akan Koordinasi dengan Pemkot Surabaya soal Vaksin COVID 19  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.224197982,"data":"\n"}
+,{"stream_name":"stdout","time":232.224201967,"data":"--- content_hash=0124e5c5 (category guess: unsupported_detail_or_paraphrase) ---\n"}
+,{"stream_name":"stdout","time":232.224205787,"data":"CONTENT (excerpt): Dua tenaga kesehatan nakes di Karawang meninggal dalam keadaan positif corona Satgas Penanganan COVID 19 Karawang mengungkap riwayat keduanya terpapar Corona Dua nakes yang meningg\n"}
+,{"stream_name":"stdout","time":232.224210253,"data":"TITLE A: Satgas Karawang Ungkap Riwayat 2 Nakes Meninggal Positif Corona  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224214385,"data":"TITLE B: Satgas Bekasi Ungkap Riwayat 2 Nakes Meninggal Positif Corona  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.224218478,"data":"\n"}
+,{"stream_name":"stdout","time":232.224222337,"data":"--- content_hash=019f2038 (category guess: number_change) ---\n"}
+,{"stream_name":"stdout","time":232.22422674,"data":"CONTENT (excerpt): Kasus virus corona di Indonesia masih terus melonjak bahkan sudah menembus lebih dari 900 ribu orang terpapar Jika penambahan kasus corona harian konsisten di angka 10 ribu maka di\n"}
+,{"stream_name":"stdout","time":232.224230834,"data":"TITLE A: Kabar Baik Corona Rekor Baru Pasien Sembuh Perkembangan Vaksin Merah Putih kumparan com  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224234547,"data":"TITLE B: Uji Vaksin Corona Fase 1 Novavax Tunjukkan Hasil Baik hingga Harapan Vaksin Tersedia pada 2021  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.22423881,"data":"\n"}
+,{"stream_name":"stdout","time":232.224242518,"data":"--- content_hash=022d6ab8 (category guess: unsupported_detail_or_paraphrase) ---\n"}
+,{"stream_name":"stdout","time":232.224247253,"data":"CONTENT (excerpt): Presiden AS Donald Trump tidak akan diberikan vaksin virus Corona sampai ada rekomendasikan dari tim medis Gedung Putih  Hal ini disampaikan oleh seorang pejabat Gedung Putih Dilan\n"}
+,{"stream_name":"stdout","time":232.224251467,"data":"TITLE A: Ini Alasan Trump Belum Akan Divaksin Corona  | LABEL A: 1\n"}
+,{"stream_name":"stdout","time":232.224255443,"data":"TITLE B: Ini Alasan Pence Belum Akan Divaksin Corona  | LABEL B: 0\n"}
+,{"stream_name":"stdout","time":232.22516464,"data":"\n"}
+,{"stream_name":"stdout","time":232.225192103,"data":"Categorized 50 mixed-label content groups (heuristic, semi-automatic):\n"}
+,{"stream_name":"stdout","time":232.225198083,"data":"  unsupported_detail_or_paraphrase: 32 (64.0%)\n"}
+,{"stream_name":"stdout","time":232.225202898,"data":"  number_change: 10 (20.0%)\n"}
+,{"stream_name":"stdout","time":232.225207308,"data":"  topic_or_entity_change: 6 (12.0%)\n"}
+,{"stream_name":"stdout","time":232.225211736,"data":"  negation_change: 2 (4.0%)\n"}
+,{"stream_name":"stdout","time":232.225250955,"data":"[TIMER] mixed_label_group_display: 0.15s\n"}
+,{"stream_name":"stdout","time":232.33681705,"data":"titles reused across \u003e1 distinct content body: 120\n"}
+,{"stream_name":"stdout","time":232.336864821,"data":"titles whose repeated use spans BOTH labels: 117\n"}
+,{"stream_name":"stdout","time":232.336870786,"data":"\n"}
+,{"stream_name":"stdout","time":232.336873691,"data":"Example: same title used with 2 different content bodies\n"}
+,{"stream_name":"stdout","time":232.336876692,"data":"TITLE: Jokowi Kita Segera Melangkah Recovery Vaksin COVID Tiba di Awal Desember\n"}
+,{"stream_name":"stdout","time":232.336879924,"data":"  content excerpt: Jutaan vaksin virus corona COVID 19 sinovac telah tiba di tanah air Meski begitu Presiden Joko Widodo Jokowi menegaskan   | label=0\n"}
+,{"stream_name":"stdout","time":232.336883082,"data":"  content excerpt: Presiden Joko Widodo  Jokowi  menegaskan pandemi COVID 19 belum berakhir  Namun  kata Jokowi  bangsa Indonesia segera me  | label=1\n"}
+,{"stream_name":"stdout","time":232.336885996,"data":"[TIMER] duplicate_title_analysis: 0.02s\n"}
+,{"stream_name":"stdout","time":232.496628777,"data":"exact content-hash matches between train and test: 1264 content bodies (1310 test rows, 36.36% of test)\n"}
+,{"stream_name":"stdout","time":232.496702567,"data":"exact title-hash matches between train and test: 983 titles (983 test rows)\n"}
+,{"stream_name":"stdout","time":234.944025211,"data":"\n"}
+,{"stream_name":"stdout","time":234.944065737,"data":"test rows whose content-prefix hash matches a train article (near-duplicate candidates): 1348 (37.41% of test)\n"}
+,{"stream_name":"stdout","time":234.944071786,"data":"[TIMER] train_test_overlap: 2.52s\n"}
+,{"stream_name":"stdout","time":244.92799881,"data":"groups with ALL label=1: 10268\n"}
+,{"stream_name":"stdout","time":244.928053048,"data":"groups with ALL label=0: 504\n"}
+,{"stream_name":"stdout","time":244.92806266,"data":"groups with MIXED labels: 874\n"}
+,{"stream_name":"stdout","time":244.928068985,"data":"\n"}
+,{"stream_name":"stdout","time":244.928074815,"data":"=\u003e The prediction target is PAIR-SPECIFIC and cannot be inferred from content alone.\n"}
+,{"stream_name":"stdout","time":244.92808242,"data":"[TIMER] content_group_consistency: 9.89s\n"}
+,{"stream_name":"stdout","time":245.011655423,"data":"train id examples: ['tr00000', 'tr00001', 'tr00002'] ... ['tr14394', 'tr14395', 'tr14396']\n"}
+,{"stream_name":"stdout","time":245.011696929,"data":"test id examples: ['te00000', 'te00001', 'te00002'] ... ['te03600', 'te03601', 'te03602']\n"}
+,{"stream_name":"stdout","time":245.011704859,"data":"\n"}
+,{"stream_name":"stdout","time":245.01171062,"data":"train ids look sequential (after removing prefix): True\n"}
+,{"stream_name":"stdout","time":245.011715876,"data":"correlation(id numeric suffix, label): -0.0176\n"}
+,{"stream_name":"stdout","time":245.011721364,"data":"(a correlation near zero means row/collection order carries no obvious label signal;\n"}
+,{"stream_name":"stdout","time":245.011727104,"data":" we do NOT infer publication dates from this ID without further evidence.)\n"}
+,{"stream_name":"stdout","time":245.011732243,"data":"\n"}
+,{"stream_name":"stdout","time":245.01173806,"data":"RECOMMENDATION: DO NOT USE ID as a model feature under any circumstance here.\n"}
+,{"stream_name":"stdout","time":245.011743621,"data":"[TIMER] id_structure_analysis: 0.02s\n"}
+,{"stream_name":"stdout","time":245.661728771,"data":"year-in-title rate by label:\n"}
+,{"stream_name":"stdout","time":245.661770543,"data":"       has_year\n"}
+,{"stream_name":"stdout","time":245.661777565,"data":"label          \n"}
+,{"stream_name":"stdout","time":245.661836679,"data":"0      0.029923\n"}
+,{"stream_name":"stdout","time":245.661842685,"data":"1      0.037577\n"}
+,{"stream_name":"stdout","time":245.661847112,"data":"\n"}
+,{"stream_name":"stdout","time":245.661851048,"data":"label rate in first 287 rows: 0.882\n"}
+,{"stream_name":"stdout","time":245.661855111,"data":"label rate in last 287 rows: 0.895\n"}
+,{"stream_name":"stdout","time":245.661859268,"data":"overall label rate: 0.900\n"}
+,{"stream_name":"stdout","time":245.661863382,"data":"(large deviations between the first/last-window rates and the overall rate would\n"}
+,{"stream_name":"stdout","time":245.661867568,"data":" suggest a row-order effect worth stratifying against; small deviations do not.)\n"}
+,{"stream_name":"stdout","time":245.661872016,"data":"[TIMER] temporal_analysis: 0.58s\n"}
+,{"stream_name":"stdout","time":245.849797919,"data":"quadrant\n"}
+,{"stream_name":"stdout","time":245.849839801,"data":"EASY_POSITIVE    6640\n"}
+,{"stream_name":"stdout","time":245.849845508,"data":"HARD_POSITIVE    6320\n"}
+,{"stream_name":"stdout","time":245.849866221,"data":"EASY_NEGATIVE     871\n"}
+,{"stream_name":"stdout","time":245.849870618,"data":"HARD_NEGATIVE     566\n"}
+,{"stream_name":"stdout","time":245.849875282,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":245.849880067,"data":"quadrant\n"}
+,{"stream_name":"stdout","time":245.849884832,"data":"EASY_POSITIVE    0.461\n"}
+,{"stream_name":"stdout","time":245.849889334,"data":"HARD_POSITIVE    0.439\n"}
+,{"stream_name":"stdout","time":245.849893694,"data":"EASY_NEGATIVE    0.060\n"}
+,{"stream_name":"stdout","time":245.849898013,"data":"HARD_NEGATIVE    0.039\n"}
+,{"stream_name":"stdout","time":245.849902031,"data":"Name: proportion, dtype: float64\n"}
+,{"stream_name":"stdout","time":245.849905982,"data":"\n"}
+,{"stream_name":"stdout","time":245.849909965,"data":"Example HARD_NEGATIVE (label=0 despite high lexical similarity):\n"}
+,{"stream_name":"stdout","time":245.84992036,"data":"  TITLE: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki\n"}
+,{"stream_name":"stdout","time":245.849923751,"data":"  CONTENT (excerpt): Polri merotasi sejumlah perwira tinggi hingga menengah karena dianggap tidak melaksanakan perintah penegakan protokol kesehatan Tidak hanya Kapolda Metro Jaya I\n"}
+,{"stream_name":"stdout","time":245.849926765,"data":"  jaccard=0.089\n"}
+,{"stream_name":"stdout","time":245.849929434,"data":"  TITLE: Amerika Serikat Pecah Rekor Kematian Harian Covid 19 1 092 Jiwa\n"}
+,{"stream_name":"stdout","time":245.849932265,"data":"  CONTENT (excerpt): Brasil melaporkan pecah rekor kematian tertinggi akibat Covid 19 dalam sehari untuk pertama kalinya mencapai 1 092 jiwa Rekor kematian kali ini menjadikan total\n"}
+,{"stream_name":"stdout","time":245.849935194,"data":"  jaccard=0.050\n"}
+,{"stream_name":"stdout","time":245.849937769,"data":"  TITLE: Satu Pegawai Giant Diduga Positif Covid 19 Botani Square Berencana Desinfeksi Mal Berkala\n"}
+,{"stream_name":"stdout","time":245.84994056,"data":"  CONTENT (excerpt): Manajemen Pusat perbelanjaan Margo City di Depok Jawa Barat akan menyemprotkan disinfektan secara berkala menyusul temuan satu pegawai hypermarket Giant diduga \n"}
+,{"stream_name":"stdout","time":245.849943562,"data":"  jaccard=0.065\n"}
+,{"stream_name":"stdout","time":245.849946204,"data":"[TIMER] pair_difficulty: 0.12s\n"}
+,{"stream_name":"stdout","time":245.969572008,"data":"Total HARD_NEGATIVE candidates (label=0, similarity \u003e= median): 566\n"}
+,{"stream_name":"stdout","time":245.969611131,"data":"Total HARD_POSITIVE candidates (label=1, similarity \u003c median): 6320\n"}
+,{"stream_name":"stdout","time":245.969633913,"data":"\n"}
+,{"stream_name":"stdout","time":245.969638304,"data":"=== 20 HARD NEGATIVES (high similarity, label=0) ===\n"}
+,{"stream_name":"stdout","time":245.969642301,"data":"[jaccard=0.22] TITLE: Batuk dan Demam Danramil di Surabaya Rupanya Positif Covid 19 Sang Istri Meninggal karena Corona\n"}
+,{"stream_name":"stdout","time":245.969646707,"data":"    CONTENT: Komandan Rayon Militer Danramil di Probolinggo Kapten A dinyatakan positif Covid 19 Sang istri yang berinisial H rupanya juga baru saja meninggal duni\n"}
+,{"stream_name":"stdout","time":245.969651019,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969655139,"data":"[jaccard=0.17] TITLE: Demam dan Batuk Istrinya Positif Covid 19 Ketua PN Medan Juga Terinfeksi\n"}
+,{"stream_name":"stdout","time":245.969659539,"data":"    CONTENT: Mengalami demam dan batuk Ketua Pengadilan Negeri Medan Sumatera Utara Sutio Jumagi rupanya dinyatakan positif Covid 19 Tak hanya Sutio istrinya pun t\n"}
+,{"stream_name":"stdout","time":245.969663871,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969668121,"data":"[jaccard=0.16] TITLE: 65 ASN Pemprov dan 61 Nakes Jateng Meninggal Terpapar COVID 19 Selama Pandemi\n"}
+,{"stream_name":"stdout","time":245.969672528,"data":"    CONTENT: Selama pandemi COVID 19 banyak orang yang terpapar dan meninggal Termasuk ASN dan tenaga kesehatan nakes yang merawat pasien COVID 19 Gubernur Jawa Ti\n"}
+,{"stream_name":"stdout","time":245.969676979,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969681408,"data":"[jaccard=0.15] TITLE: Daftar Penyakit yang Buat Orang Bisa Divaksin Corona kumparan com\n"}
+,{"stream_name":"stdout","time":245.969686224,"data":"    CONTENT: Vaksinasi menjadi salah satu cara untuk menghentikan penyebaran virus corona Namun ternyata ada golongan orang yang tak bisa divaksin Mereka yang memi\n"}
+,{"stream_name":"stdout","time":245.96969094,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969695466,"data":"[jaccard=0.15] TITLE: Ada Provinsi Bebas Kasus Baru COVID 19 Pada 25 Desember 2020\n"}
+,{"stream_name":"stdout","time":245.969699799,"data":"    CONTENT: Tidak ada provinsi yang bebas kasus baru COVID 19 pada 25 Desember 2020 ini Angka paling sedikit yang dilaporkan satu provinsi adalah empat kasus baru\n"}
+,{"stream_name":"stdout","time":245.969707307,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969712426,"data":"[jaccard=0.14] TITLE: POPULER GLOBAL Qatar Ambil Langkah Berani Menormalisasi Hubungan dengan Israel | Sayap Ayam Beku Impor dari Brasil Positif Virus Corona\n"}
+,{"stream_name":"stdout","time":245.969717508,"data":"    CONTENT: Populer global masih didominasi oleh pengumuman bersejarah antara Israel dan Uni Emirat Arab yang menormalisasi hubungan diplomatik mereka Selengkapny\n"}
+,{"stream_name":"stdout","time":245.969722349,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969726516,"data":"[jaccard=0.13] TITLE: Satgas Jabar Bakal Gelar Operasi Yustisi Cegah Corona Saat Libur Akhir Tahun\n"}
+,{"stream_name":"stdout","time":245.969730568,"data":"    CONTENT: Satuan Tugas Satgas COVID 19 Sumatera Utara bakal menggelar operasi yustisi saat libur akhir tahun Hal ini dilakukan untuk mencegah penyebaran virus C\n"}
+,{"stream_name":"stdout","time":245.96974105,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969745598,"data":"[jaccard=0.12] TITLE: 2 812 Pelaku Kejahatan Ditangkap di 2020 Kapolda Jatim Naik dari 2019\n"}
+,{"stream_name":"stdout","time":245.969750065,"data":"    CONTENT: Kasus kejahatan di tengah pandemi COVID 19 masih bergeliat Bahkan tahun ini sebanyak 2 812 orang pelaku kejahatan di Jawa Barat ditangkap Jumlah tersa\n"}
+,{"stream_name":"stdout","time":245.969754407,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969759048,"data":"[jaccard=0.12] TITLE: Prancis tak Akan Dapat 1 16 Juta Dosis Vaksin COVID 19 hingga Akhir Tahun\n"}
+,{"stream_name":"stdout","time":245.969762798,"data":"    CONTENT: Prancis akan menerima sekitar 1 16 juta dosis vaksin COVID 19 hingga akhir tahun Perdana Menteri Prancis Jean Castex mengatakan akan menambah 2 3 juta\n"}
+,{"stream_name":"stdout","time":245.969766847,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969770746,"data":"[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Jawa Barat 9 Agustus 2020\n"}
+,{"stream_name":"stdout","time":245.969774709,"data":"    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Minggu 9 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Mingg\n"}
+,{"stream_name":"stdout","time":245.969779524,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969785223,"data":"[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Jawa Tengah 31 Agustus 2020\n"}
+,{"stream_name":"stdout","time":245.969789722,"data":"    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Senin 31 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Senin\n"}
+,{"stream_name":"stdout","time":245.969794143,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969799002,"data":"[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Bangka Belitung 26 Agustus 2020\n"}
+,{"stream_name":"stdout","time":245.969804317,"data":"    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Rabu 26 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Rabu p\n"}
+,{"stream_name":"stdout","time":245.969809615,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969814337,"data":"[jaccard=0.11] TITLE: Bertambah 7 Orang yang Meninggal Dunia akibat Covid 19 di Jambi\n"}
+,{"stream_name":"stdout","time":245.96981825,"data":"    CONTENT: Jumlah kasus virus corona atau Covid 19 di Riau bertambah sebanyak 112 orang Sabtu 23 1 2021 Total kasus positif Covid 19 menjadi 28 085 orang Kepala \n"}
+,{"stream_name":"stdout","time":245.96982277,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969827174,"data":"[jaccard=0.11] TITLE: Hanya DKI Laporkan Nihil Kasus Baru COVID 19 pada 4 Desember\n"}
+,{"stream_name":"stdout","time":245.969831549,"data":"    CONTENT: Pemerintah melaporkan hari ini penambahan kasus baru Corona COVID 19 sebanyak 5 803 kasus Hanya Kalimantan Tengah yang melaporkan nihil tambahan kasus\n"}
+,{"stream_name":"stdout","time":245.969841682,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969846099,"data":"[jaccard=0.11] TITLE: Hadapi Pandemi COVID 19 Biden Kembalikan Kerja Sama Korea Selatan dengan WHO kumparan com\n"}
+,{"stream_name":"stdout","time":245.969858151,"data":"    CONTENT: Begitu menjabat sebagai Presiden Amerika Serikat Joe Biden langsung mencanangkan strategi menghadapi pandemi COVID 19 Salah satunya kembali mengganden\n"}
+,{"stream_name":"stdout","time":245.969862557,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.96986716,"data":"[jaccard=0.11] TITLE: Varian Baru Corona Muncul di Inggris Mirip dengan yang Ditemukan di Brasil kumparan com\n"}
+,{"stream_name":"stdout","time":245.969872691,"data":"    CONTENT: Varian virus corona baru ditemukan di Brasil Untuk mencegah penyebaran varian itu Inggris melarang penerbangan dan orang orang dari Brasil masuk negar\n"}
+,{"stream_name":"stdout","time":245.969877202,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969881397,"data":"[jaccard=0.11] TITLE: Mudik Bareng Teman Pakai Mobil Pribadi dari Madiun Pria Ini Positif Covid 19\n"}
+,{"stream_name":"stdout","time":245.96988553,"data":"    CONTENT: Seorang perantau asal Kota Madiun ZA 55 dinyatakan positif Covid 19 setelah mudik dari Kota Surabaya Jawa Timur ZA diketahui positif Covid 19 setelah \n"}
+,{"stream_name":"stdout","time":245.969889932,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969894089,"data":"[jaccard=0.11] TITLE: Resmi Ini SE Larangan Cuti Natal Tahun Baru 2021 untuk ASN di Jabar\n"}
+,{"stream_name":"stdout","time":245.96989803,"data":"    CONTENT: Pemerintah Provinsi Pemprov DKI Jakarta resmi menerbitkan surat edaran SE terkait pelarangan cuti libur Natal dan tahun baru 2021 untuk aparatur sipil\n"}
+,{"stream_name":"stdout","time":245.969904121,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969908411,"data":"[jaccard=0.10] TITLE: Daftar Enam Wilayah di Jateng yang Masuk Zona Merah Corona Minggu Ini kumparan com\n"}
+,{"stream_name":"stdout","time":245.969914541,"data":"    CONTENT: Gubernur Jawa Barat Jabar Ridwan Kamil atau akrab disapa Emil mengungkap enam wilayah di Jabar masuk ke dalam zona merah sebaran corona pada pekan ini\n"}
+,{"stream_name":"stdout","time":245.969918948,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969923014,"data":"[jaccard=0.10] TITLE: Bertambah 6 058 Kasus Total 598 933 Orang Positif Covid 19\n"}
+,{"stream_name":"stdout","time":245.969927888,"data":"    CONTENT: Kasus positif Covid 19 per Kamis 10 12 mencapai 598 933 kasus dengan 491 975 di antaranya sembuh dan 18 336 meninggal Dikutip dari situs Kementerian K\n"}
+,{"stream_name":"stdout","time":245.969932993,"data":"    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.\n"}
+,{"stream_name":"stdout","time":245.969937791,"data":"\n"}
+,{"stream_name":"stdout","time":245.96994213,"data":"=== 20 HARD POSITIVES (low similarity, label=1) ===\n"}
+,{"stream_name":"stdout","time":245.969951621,"data":"[jaccard=0.00] TITLE: Organda DKI Keberatan Imbauan Pasang Lampu Ultraviolet di Bus\n"}
+,{"stream_name":"stdout","time":245.969956332,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.969960362,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.969965318,"data":"[jaccard=0.00] TITLE: Supaya Dapur Tetap Ngebul\n"}
+,{"stream_name":"stdout","time":245.969970634,"data":"    CONTENT: INTERMESOPandemi COVID 19 membuat jatah uang belanja bulanan ibu rumah tangga menurun drastis Bagaimana mereka menyiasatinya Foto Ari Saputra detikcom\n"}
+,{"stream_name":"stdout","time":245.969975204,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.969979293,"data":"[jaccard=0.00] TITLE: BPK Audit Anggaran Penanganan Covid 19 Juli Mendatang\n"}
+,{"stream_name":"stdout","time":245.96998322,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.969987025,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.969991163,"data":"[jaccard=0.00] TITLE: China Ungkap Kasus Baru Corona di Pasar Tradisional Beijing\n"}
+,{"stream_name":"stdout","time":245.969995231,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.969999071,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970003217,"data":"[jaccard=0.00] TITLE: PLN Sebut 98 Persen Tagihan Listrik Naik Karena Pemakaian\n"}
+,{"stream_name":"stdout","time":245.970007212,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970011086,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970015253,"data":"[jaccard=0.00] TITLE: BPK Tangkap Sinyal Permintaan Audit Dana Covid 19 dari Jokowi\n"}
+,{"stream_name":"stdout","time":245.970019263,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970023094,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970029107,"data":"[jaccard=0.00] TITLE: F1 Batalkan GP Azerbaijan dan Jepang\n"}
+,{"stream_name":"stdout","time":245.970049031,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970054057,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970059062,"data":"[jaccard=0.00] TITLE: Pengusaha Minta Kebijakan Jam Kerja Tak Jadi Paksaan\n"}
+,{"stream_name":"stdout","time":245.970063977,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970068417,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970073354,"data":"[jaccard=0.00] TITLE: WHO  Gelombang Baru Covid 19 di Beijing Tembus 100 Kasus\n"}
+,{"stream_name":"stdout","time":245.97007751,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970081257,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.97008542,"data":"[jaccard=0.00] TITLE: BUMN dan Perusahaan Swasta Diimbau Kurangi Jam Kerja\n"}
+,{"stream_name":"stdout","time":245.970089521,"data":"    CONTENT: Gambas Video CNN\n"}
+,{"stream_name":"stdout","time":245.970097517,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970101637,"data":"[jaccard=0.00] TITLE: Refleksi Akhir Tahun 2020\n"}
+,{"stream_name":"stdout","time":245.970106045,"data":"    CONTENT: Tahun 2020 hampir kita tutup Perlu kita merenungkan atau merefleksi secara mendalam bagaimana kita melewati perjalanan bangsa yang kita cintai ini sep\n"}
+,{"stream_name":"stdout","time":245.970110466,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970114611,"data":"[jaccard=0.00] TITLE: Selamat Bertugas  Jenderal\n"}
+,{"stream_name":"stdout","time":245.970118611,"data":"    CONTENT: Dari kebudayaan bisa saja kita berbeda  Dari agama dan warna kulit bisa saja berbeda  Seharusnya perbedaan ini tak membuat kita berbeda  Kenyataan sud\n"}
+,{"stream_name":"stdout","time":245.970122984,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970127167,"data":"[jaccard=0.00] TITLE: Selamat Bertugas Jenderal\n"}
+,{"stream_name":"stdout","time":245.970133212,"data":"    CONTENT: Dari kebudayaan bisa saja kita berbeda Dari agama dan warna kulit bisa saja berbeda Seharusnya perbedaan ini tak membuat kita berbeda Kenyataan sudah \n"}
+,{"stream_name":"stdout","time":245.970153688,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970158702,"data":"[jaccard=0.00] TITLE: Jihad Melawan Liburan\n"}
+,{"stream_name":"stdout","time":245.970163611,"data":"    CONTENT: Liburan seakan wajib Termasuk pada akhir tahun yang dikenal dengan libur Natal dan Tahun Baru Kota besar seperti Jakarta biasanya ditinggalkan penghun\n"}
+,{"stream_name":"stdout","time":245.970168967,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.97017339,"data":"[jaccard=0.00] TITLE: Membidik Saham Ciamik Sambut Vaksin Corona\n"}
+,{"stream_name":"stdout","time":245.970177431,"data":"    CONTENT: Indeks Harga Saham Gabungan  IHSG  pada perdagangan pekan lalu berakhir di level 5 810 atau menguat 0 47 persen  Tercatat  asing melakukan jual bersih\n"}
+,{"stream_name":"stdout","time":245.970182337,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970186454,"data":"[jaccard=0.00] TITLE: Predictive Policing Pemolisian Masa Kini dan Nanti\n"}
+,{"stream_name":"stdout","time":245.970190412,"data":"    CONTENT: 18 Januari 2021 Can our police find ways to work smarter not just harder William A Geller 1997 RingkasanDalam era yang digerakkan oleh data upaya upay\n"}
+,{"stream_name":"stdout","time":245.970194723,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970202821,"data":"[jaccard=0.00] TITLE: Predictive Policing   Pemolisian Masa Kini dan Nanti\n"}
+,{"stream_name":"stdout","time":245.970207649,"data":"    CONTENT: 18 Januari 2021 Can our police       find ways to work smarter  not just harder   William A  Geller  1997 RingkasanDalam era yang digerakkan oleh data\n"}
+,{"stream_name":"stdout","time":245.970211908,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970216062,"data":"[jaccard=0.01] TITLE: Beragam Sikap Menanggapi Vaksin\n"}
+,{"stream_name":"stdout","time":245.970227025,"data":"    CONTENT: Vaksin Covid 19 sudah tiba sebagian Di beberapa negara vaksinasi sudah dimulai Apa boleh buat Vaksin akhirnya menjadi satu satunya harapan untuk kelua\n"}
+,{"stream_name":"stdout","time":245.97023596,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970253914,"data":"[jaccard=0.01] TITLE: Pembelajaran Jarak Jauh Efektif atau Tidak    kumparan com\n"}
+,{"stream_name":"stdout","time":245.970258889,"data":"    CONTENT: Dapat kita ketahui jika Indonesia mulai memberlakukan metode pembelajaran jarak jauh  PJJ  sejak awal April 2020 melalui keputusan Kementrian Pendidik\n"}
+,{"stream_name":"stdout","time":245.970264025,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970268727,"data":"[jaccard=0.01] TITLE: Menyegarkan Kesadaran Publik\n"}
+,{"stream_name":"stdout","time":245.970273606,"data":"    CONTENT: Mengapa pandemi global Covid 19 tidak kunjung berhenti Pertanyaan ini tampaknya perlu menjadi bahan renungan bagi kita semua Pertama karena berbagai u\n"}
+,{"stream_name":"stdout","time":245.970278191,"data":"    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.\n"}
+,{"stream_name":"stdout","time":245.970282408,"data":"[TIMER] manual_case_study: 0.02s\n"}
+,{"stream_name":"stdout","time":246.494949576,"data":"[A_length_only] held-out Macro F1 = 0.4875  (n_features=4)\n"}
+,{"stream_name":"stdout","time":246.494989309,"data":"[B_lexical_overlap_only] held-out Macro F1 = 0.4709  (n_features=7)\n"}
+,{"stream_name":"stdout","time":246.494995532,"data":"[C_cosine_only] held-out Macro F1 = 0.4666  (n_features=2)\n"}
+,{"stream_name":"stdout","time":246.842028521,"data":"[D_relationship_combined] held-out Macro F1 = 0.5014  (n_features=32)\n"}
+,{"stream_name":"stdout","time":246.842066392,"data":"[TIMER] diagnostic_classifiers: 0.68s\n"}
+,{"stream_name":"stdout","time":246.842071557,"data":"\n"}
+,{"stream_name":"stdout","time":246.842075468,"data":"Ranking (how much each feature family alone explains):\n"}
+,{"stream_name":"stdout","time":246.842079589,"data":"  D_relationship_combined: 0.5014\n"}
+,{"stream_name":"stdout","time":246.842083576,"data":"  A_length_only: 0.4875\n"}
+,{"stream_name":"stdout","time":246.842087577,"data":"  B_lexical_overlap_only: 0.4709\n"}
+,{"stream_name":"stdout","time":246.842091573,"data":"  C_cosine_only: 0.4666\n"}
+,{"stream_name":"stdout","time":247.027912867,"data":" threshold  F1_class0  F1_class1    MacroF1   pos_rate\n"}
+,{"stream_name":"stdout","time":247.027954637,"data":"       0.1     0.0000     0.0000     0.4743      1.000\n"}
+,{"stream_name":"stdout","time":247.027960928,"data":"       0.2     0.0461     0.9460     0.4960      0.990\n"}
+,{"stream_name":"stdout","time":247.027965298,"data":"       0.3     0.1670     0.9232     0.5451      0.929\n"}
+,{"stream_name":"stdout","time":247.027969545,"data":"       0.4     0.2453     0.8659     0.5556      0.796\n"}
+,{"stream_name":"stdout","time":247.02797421,"data":"       0.5     0.2487     0.7540     0.5014      0.604\n"}
+,{"stream_name":"stdout","time":247.027978318,"data":"       0.6     0.2214     0.5773     0.3994      0.394\n"}
+,{"stream_name":"stdout","time":247.027982422,"data":"       0.7     0.2041     0.3420     0.2731      0.193\n"}
+,{"stream_name":"stdout","time":247.027986789,"data":"       0.8     0.1857     0.1037     0.1447      0.050\n"}
+,{"stream_name":"stdout","time":247.031648206,"data":"       0.9     0.1786     0.0086     0.0936      0.004\n"}
+,{"stream_name":"stdout","time":247.031714274,"data":"\n"}
+,{"stream_name":"stdout","time":247.031721097,"data":"best threshold in this quick sweep: 0.4 (Macro F1=0.5556)\n"}
+,{"stream_name":"stdout","time":247.031726349,"data":"default-threshold (0.5) positive-prediction rate: 0.604 vs actual label=1 rate: 0.902\n"}
+,{"stream_name":"stdout","time":247.031731064,"data":"[TIMER] threshold_diagnostic: 0.06s\n"}
+,{"stream_name":"stdout","time":247.182560396,"data":"content-group size distribution:\n"}
+,{"stream_name":"stdout","time":247.182620531,"data":"1    9120\n"}
+,{"stream_name":"stdout","time":247.182627627,"data":"2    2317\n"}
+,{"stream_name":"stdout","time":247.182631929,"data":"3     198\n"}
+,{"stream_name":"stdout","time":247.182636527,"data":"4      10\n"}
+,{"stream_name":"stdout","time":247.182641119,"data":"9       1\n"}
+,{"stream_name":"stdout","time":247.182644946,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":247.40015164,"data":"\n"}
+,{"stream_name":"stdout","time":247.400190949,"data":"simulated plain-random 80/20 split: mean fraction of validation content-hashes that ALSO appear in train = 30.95%\n"}
+,{"stream_name":"stdout","time":247.400196827,"data":"\n"}
+,{"stream_name":"stdout","time":247.400201023,"data":"RECOMMENDATION:\n"}
+,{"stream_name":"stdout","time":247.400205182,"data":"  StratifiedGroupKFold grouped on content_hash -- plain StratifiedKFold would leak\n"}
+,{"stream_name":"stdout","time":247.400209546,"data":"  duplicated article bodies across the train/validation boundary (contamination \u003e 0% above).\n"}
+,{"stream_name":"stdout","time":247.400214259,"data":"[TIMER] validation_leakage_analysis: 0.27s\n"}
+,{"stream_name":"stdout","time":247.486129914,"data":"[TIMER] eda_synthesis: 0.00s\n"}
+,{"stream_name":"stdout","time":247.486164688,"data":"Q: Is class imbalance severe?\n"}
+,{"stream_name":"stdout","time":247.486170153,"data":"   evidence: label1=90.0% vs label0=10.0%, ratio=9.0x\n"}
+,{"stream_name":"stdout","time":247.486174519,"data":"   conclusion: Moderate-severe (~9:1)\n"}
+,{"stream_name":"stdout","time":247.486185657,"data":"   implication: Use Macro F1, evaluate class_weight='balanced', stratify all splits.\n"}
+,{"stream_name":"stdout","time":247.486188955,"data":"\n"}
+,{"stream_name":"stdout","time":247.486191684,"data":"Q: Is content duplicated?\n"}
+,{"stream_name":"stdout","time":247.486194414,"data":"   evidence: 2751 duplicate rows across 11646 unique bodies\n"}
+,{"stream_name":"stdout","time":247.486197282,"data":"   conclusion: Yes, non-trivially\n"}
+,{"stream_name":"stdout","time":247.486199937,"data":"   implication: Group validation by content_hash.\n"}
+,{"stream_name":"stdout","time":247.48620272,"data":"\n"}
+,{"stream_name":"stdout","time":247.48620524,"data":"Q: Are mixed-label content groups common?\n"}
+,{"stream_name":"stdout","time":247.486207876,"data":"   evidence: 874 groups with both labels\n"}
+,{"stream_name":"stdout","time":247.486210523,"data":"   conclusion: Present\n"}
+,{"stream_name":"stdout","time":247.486213286,"data":"   implication: Confirms/limits pair-specific framing.\n"}
+,{"stream_name":"stdout","time":247.486215995,"data":"\n"}
+,{"stream_name":"stdout","time":247.486218617,"data":"Q: Is the task pair-specific?\n"}
+,{"stream_name":"stdout","time":247.486221637,"data":"   evidence: Section 19-20 mixed-label / multi-content-per-title evidence\n"}
+,{"stream_name":"stdout","time":247.486241882,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.486246866,"data":"   implication: Content-only or title-only models are insufficient by construction.\n"}
+,{"stream_name":"stdout","time":247.486276777,"data":"\n"}
+,{"stream_name":"stdout","time":247.486280696,"data":"Q: Is lexical similarity useful?\n"}
+,{"stream_name":"stdout","time":247.486284714,"data":"   evidence: KS stats from Sec.14, correlation=+0.083\n"}
+,{"stream_name":"stdout","time":247.486288592,"data":"   conclusion: Partially informative\n"}
+,{"stream_name":"stdout","time":247.486292552,"data":"   implication: Use as one input feature, not a rule.\n"}
+,{"stream_name":"stdout","time":247.486296563,"data":"\n"}
+,{"stream_name":"stdout","time":247.48630238,"data":"Q: Is lexical similarity sufficient?\n"}
+,{"stream_name":"stdout","time":247.486310457,"data":"   evidence: HARD_NEGATIVE / HARD_POSITIVE examples in Sec.25-26\n"}
+,{"stream_name":"stdout","time":247.486313275,"data":"   conclusion: No\n"}
+,{"stream_name":"stdout","time":247.486315901,"data":"   implication: Need number/entity/negation features alongside similarity.\n"}
+,{"stream_name":"stdout","time":247.486354234,"data":"\n"}
+,{"stream_name":"stdout","time":247.486359304,"data":"Q: Are numbers important?\n"}
+,{"stream_name":"stdout","time":247.486364101,"data":"   evidence: Sec.11 number-mismatch rate by label\n"}
+,{"stream_name":"stdout","time":247.486368229,"data":"   conclusion: Weak-moderate, noisy\n"}
+,{"stream_name":"stdout","time":247.486372123,"data":"   implication: Keep as weak feature; note tokenization caveat.\n"}
+,{"stream_name":"stdout","time":247.486376149,"data":"\n"}
+,{"stream_name":"stdout","time":247.486379849,"data":"Q: Are entities important?\n"}
+,{"stream_name":"stdout","time":247.486383654,"data":"   evidence: Sec.12 entity-coverage-in-title by label\n"}
+,{"stream_name":"stdout","time":247.486387619,"data":"   conclusion: Directional signal\n"}
+,{"stream_name":"stdout","time":247.486391463,"data":"   implication: Keep as weak feature (proxy only, no real NER).\n"}
+,{"stream_name":"stdout","time":247.486395489,"data":"\n"}
+,{"stream_name":"stdout","time":247.486399195,"data":"Q: Is negation important?\n"}
+,{"stream_name":"stdout","time":247.486402948,"data":"   evidence: Sec.17 negation_mismatch rate\n"}
+,{"stream_name":"stdout","time":247.4864068,"data":"   conclusion: Rare but semantically sharp\n"}
+,{"stream_name":"stdout","time":247.48641062,"data":"   implication: Keep as weak feature; low recall by itself.\n"}
+,{"stream_name":"stdout","time":247.486414704,"data":"\n"}
+,{"stream_name":"stdout","time":247.486418683,"data":"Q: Is sentence-level evidence stronger than full-body similarity?\n"}
+,{"stream_name":"stdout","time":247.486429445,"data":"   evidence: Sec.15 max_sim vs whole-doc jaccard\n"}
+,{"stream_name":"stdout","time":247.48644822,"data":"   conclusion: See printed comparison\n"}
+,{"stream_name":"stdout","time":247.486453245,"data":"   implication: Prefer first-N-sentence / best-sentence framing over whole-body encoding.\n"}
+,{"stream_name":"stdout","time":247.486457922,"data":"\n"}
+,{"stream_name":"stdout","time":247.486461998,"data":"Q: Are source artifacts present?\n"}
+,{"stream_name":"stdout","time":247.486466872,"data":"   evidence: Sec.7 boilerplate frequency\n"}
+,{"stream_name":"stdout","time":247.486471068,"data":"   conclusion: Yes, low-signal metadata\n"}
+,{"stream_name":"stdout","time":247.486476789,"data":"   implication: Strip in normalized view only.\n"}
+,{"stream_name":"stdout","time":247.486480786,"data":"\n"}
+,{"stream_name":"stdout","time":247.486484546,"data":"Q: Should stopwords be removed?\n"}
+,{"stream_name":"stdout","time":247.48648833,"data":"   evidence: Sec.9 negation-word-as-stopword conflict\n"}
+,{"stream_name":"stdout","time":247.486497288,"data":"   conclusion: Only with negation words excluded\n"}
+,{"stream_name":"stdout","time":247.486501268,"data":"   implication: Custom stopword list or skip removal.\n"}
+,{"stream_name":"stdout","time":247.486505213,"data":"\n"}
+,{"stream_name":"stdout","time":247.486509007,"data":"Q: Should stemming be used?\n"}
+,{"stream_name":"stdout","time":247.48651287,"data":"   evidence: Sec.10 vocabulary-reduction vs meaning-collapse risk\n"}
+,{"stream_name":"stdout","time":247.486516922,"data":"   conclusion: Optional, lean avoid initially\n"}
+,{"stream_name":"stdout","time":247.486520864,"data":"   implication: Prefer char n-grams first.\n"}
+,{"stream_name":"stdout","time":247.48652668,"data":"\n"}
+,{"stream_name":"stdout","time":247.486535949,"data":"Q: Should punctuation be preserved?\n"}
+,{"stream_name":"stdout","time":247.48655352,"data":"   evidence: Sec.2/7/8 audits\n"}
+,{"stream_name":"stdout","time":247.486558018,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.486562554,"data":"   implication: Punctuation removal not justified by evidence found.\n"}
+,{"stream_name":"stdout","time":247.486566902,"data":"\n"}
+,{"stream_name":"stdout","time":247.486571379,"data":"Q: Should numbers be preserved?\n"}
+,{"stream_name":"stdout","time":247.486576003,"data":"   evidence: Sec.11\n"}
+,{"stream_name":"stdout","time":247.486579958,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.48658384,"data":"   implication: Numbers carry factual-consistency signal.\n"}
+,{"stream_name":"stdout","time":247.486587756,"data":"\n"}
+,{"stream_name":"stdout","time":247.486591507,"data":"Q: Should title/content be vectorized separately?\n"}
+,{"stream_name":"stdout","time":247.486595389,"data":"   evidence: Framing in Sec.0 + Sec.4-6 structural differences\n"}
+,{"stream_name":"stdout","time":247.486599326,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.486603395,"data":"   implication: Never concatenate title+content into one field.\n"}
+,{"stream_name":"stdout","time":247.486607406,"data":"\n"}
+,{"stream_name":"stdout","time":247.486611069,"data":"Q: Should character n-grams be used?\n"}
+,{"stream_name":"stdout","time":247.486614899,"data":"   evidence: Sec.8/10 morphology + typo robustness\n"}
+,{"stream_name":"stdout","time":247.486618952,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.486622838,"data":"   implication: Pairs well with linear classifiers per literature.\n"}
+,{"stream_name":"stdout","time":247.486627013,"data":"\n"}
+,{"stream_name":"stdout","time":247.486632715,"data":"Q: Is train/test leakage present?\n"}
+,{"stream_name":"stdout","time":247.486640236,"data":"   evidence: Sec.21 overlap=1348/3603 rows\n"}
+,{"stream_name":"stdout","time":247.486657661,"data":"   conclusion: Non-trivial\n"}
+,{"stream_name":"stdout","time":247.486662453,"data":"   implication: Adjust trust in leaderboard score accordingly.\n"}
+,{"stream_name":"stdout","time":247.486667405,"data":"\n"}
+,{"stream_name":"stdout","time":247.486671905,"data":"Q: Should validation be grouped?\n"}
+,{"stream_name":"stdout","time":247.486676525,"data":"   evidence: Sec.29 simulated contamination\n"}
+,{"stream_name":"stdout","time":247.48668051800001,"data":"   conclusion: Yes\n"}
+,{"stream_name":"stdout","time":247.486684301,"data":"   implication: StratifiedGroupKFold on content_hash.\n"}
+,{"stream_name":"stdout","time":247.486688215,"data":"\n"}
+,{"stream_name":"stdout","time":247.486692033,"data":"Q: Is a lightweight linear model plausible?\n"}
+,{"stream_name":"stdout","time":247.486695937,"data":"   evidence: Sec.27 diagnostic classifier F1s\n"}
+,{"stream_name":"stdout","time":247.486704465,"data":"   conclusion: Yes, as a strong baseline\n"}
+,{"stream_name":"stdout","time":247.48670842,"data":"   implication: TF-IDF + LinearSVC is a reasonable first full model.\n"}
+,{"stream_name":"stdout","time":247.486712327,"data":"\n"}
+,{"stream_name":"stdout","time":247.486716006,"data":"Q: Is semantic embedding likely necessary?\n"}
+,{"stream_name":"stdout","time":247.486719859,"data":"   evidence: Sec.14/27 lexical-only ceiling\n"}
+,{"stream_name":"stdout","time":247.486723727,"data":"   conclusion: Only if lexical baseline underperforms\n"}
+,{"stream_name":"stdout","time":247.486727707,"data":"   implication: Gate behind a Macro F1 threshold (e.g. \u003c0.90) before investing.\n"}
+,{"stream_name":"stdout","time":247.486734399,"data":"\n"}
+,{"stream_name":"stdout","time":247.486742515,"data":"Q: Cheapest next experiment with highest expected information gain?\n"}
+,{"stream_name":"stdout","time":247.486760788,"data":"   evidence: Synthesis of all sections above\n"}
+,{"stream_name":"stdout","time":247.486765313,"data":"   conclusion: Word+char TF-IDF + handcrafted relationship features + LinearSVC, grouped CV\n"}
+,{"stream_name":"stdout","time":247.486770852,"data":"   implication: See Section 31 roadmap.\n"}
+,{"stream_name":"stdout","time":247.486775633,"data":"\n"}
+,{"stream_name":"stdout","time":247.486780195,"data":"Saved eda_synthesis_table.csv\n"}
+,{"stream_name":"stdout","time":247.590715586,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":247.590756754,"data":"EDA EXECUTIVE SUMMARY\n"}
+,{"stream_name":"stdout","time":247.590763815,"data":"Train rows: 14397\n"}
+,{"stream_name":"stdout","time":247.590768936,"data":"Test rows: 3603\n"}
+,{"stream_name":"stdout","time":247.590773255,"data":"Label 0: 10.0%   Label 1: 90.0%\n"}
+,{"stream_name":"stdout","time":247.590778089,"data":"Duplicate contents: 2751 rows across 11646 unique bodies\n"}
+,{"stream_name":"stdout","time":247.590782814,"data":"Mixed-label content groups: 874\n"}
+,{"stream_name":"stdout","time":247.590791393,"data":"Train/Test content overlap: 1348/3603 test rows (37.41%)\n"}
+,{"stream_name":"stdout","time":247.590795567,"data":"Best lexical signal: D_relationship_combined (diagnostic Macro F1=0.5014)\n"}
+,{"stream_name":"stdout","time":247.590799803,"data":"Best structural signal: title/content length (weak, see Cohen's d in Section 4)\n"}
+,{"stream_name":"stdout","time":247.590803889,"data":"Best factual signal: relationship-combined features (numbers+entities+negation), Section 27\n"}
+,{"stream_name":"stdout","time":247.590808099,"data":"Most important hard-negative pattern: high lexical overlap + factual mismatch (Section 25-26)\n"}
+,{"stream_name":"stdout","time":247.59081216,"data":"Most important preprocessing decision: keep numbers/negation/punctuation; vectorize title/content separately\n"}
+,{"stream_name":"stdout","time":247.590816329,"data":"Recommended validation strategy: StratifiedGroupKFold on content_hash\n"}
+,{"stream_name":"stdout","time":247.59082042,"data":"Recommended baseline: Word+char TF-IDF + relationship features + LinearSVC (Experiment 1)\n"}
+,{"stream_name":"stdout","time":247.590824519,"data":"Expected runtime (Experiment 1): a few minutes on CPU\n"}
+,{"stream_name":"stdout","time":247.590828448,"data":"Biggest remaining uncertainty: how much semantic (non-lexical) paraphrase exists in HARD_POSITIVE cases\n"}
+,{"stream_name":"stdout","time":247.590832642,"data":"Next experiment: run Experiment 1 baseline, then gate semantic modeling on its OOF Macro F1\n"}
+,{"stream_name":"stdout","time":247.590836984,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":247.590863325,"data":"\n"}
+,{"stream_name":"stdout","time":247.590867849,"data":"Total EDA runtime: 233.8s (3.9 min)\n"}
+,{"stream_name":"stdout","time":247.590871866,"data":"Runtime within the 10-minute target.\n"}
+,{"stream_name":"stdout","time":247.590876068,"data":"\n"}
+,{"stream_name":"stdout","time":247.59087986,"data":"Per-section timings:\n"}
+,{"stream_name":"stdout","time":247.590883929,"data":"  tfidf_similarity: 148.8s\n"}
+,{"stream_name":"stdout","time":247.590887462,"data":"  coverage_analysis: 20.4s\n"}
+,{"stream_name":"stdout","time":247.590891013,"data":"  content_group_consistency: 9.9s\n"}
+,{"stream_name":"stdout","time":247.590896484,"data":"  content_structure: 9.0s\n"}
+,{"stream_name":"stdout","time":247.590901134,"data":"  negation_analysis: 5.7s\n"}
+,{"stream_name":"stdout","time":247.590905987,"data":"  number_analysis: 4.0s\n"}
+,{"stream_name":"stdout","time":247.59091133,"data":"  lexical_overlap: 3.9s\n"}
+,{"stream_name":"stdout","time":247.5909162,"data":"  action_analysis: 3.5s\n"}
+,{"stream_name":"stdout","time":247.590921209,"data":"  unicode_punct_audit: 3.1s\n"}
+,{"stream_name":"stdout","time":247.59092589,"data":"  sentence_evidence: 2.9s\n"}
+,{"stream_name":"stdout","time":247.590930475,"data":"  stopword_analysis: 2.8s\n"}
+,{"stream_name":"stdout","time":247.590935603,"data":"  article_family_analysis: 2.7s\n"}
+,{"stream_name":"stdout","time":247.590940284,"data":"  entity_proxy: 2.6s\n"}
+,{"stream_name":"stdout","time":247.590943958,"data":"  train_test_overlap: 2.5s\n"}
+,{"stream_name":"stdout","time":247.590947752,"data":"  data_loading: 1.3s\n"}
+,{"stream_name":"stdout","time":247.590951648,"data":"  length_analysis: 1.0s\n"}
+,{"stream_name":"stdout","time":247.590955714,"data":"  tokenization_audit: 0.9s\n"}
+,{"stream_name":"stdout","time":247.590959534,"data":"  normalization_audit: 0.8s\n"}
+,{"stream_name":"stdout","time":247.590963358,"data":"  diagnostic_classifiers: 0.7s\n"}
+,{"stream_name":"stdout","time":247.59096714,"data":"  temporal_analysis: 0.6s\n"}
+,{"stream_name":"stdout","time":247.590971009,"data":"  title_structure: 0.6s\n"}
+,{"stream_name":"stdout","time":247.590974616,"data":"  stemming_diagnostic: 0.5s\n"}
+,{"stream_name":"stdout","time":247.590978668,"data":"  title_discriminative_tokens: 0.4s\n"}
+,{"stream_name":"stdout","time":247.590982535,"data":"  validation_leakage_analysis: 0.3s\n"}
+,{"stream_name":"stdout","time":247.59098658,"data":"  quality_audit: 0.2s\n"}
+,{"stream_name":"stdout","time":247.590990396,"data":"  mixed_label_group_display: 0.2s\n"}
+,{"stream_name":"stdout","time":247.590994951,"data":"  pair_difficulty: 0.1s\n"}
+,{"stream_name":"stdout","time":247.591002724,"data":"  threshold_diagnostic: 0.1s\n"}
+,{"stream_name":"stdout","time":247.591006293,"data":"  target_distribution: 0.0s\n"}
+,{"stream_name":"stdout","time":247.591009914,"data":"  manual_case_study: 0.0s\n"}
+,{"stream_name":"stdout","time":247.591013973,"data":"  duplicate_title_analysis: 0.0s\n"}
+,{"stream_name":"stdout","time":247.59101837,"data":"  id_structure_analysis: 0.0s\n"}
+,{"stream_name":"stdout","time":247.591022528,"data":"  eda_synthesis: 0.0s\n"}
+,{"stream_name":"stderr","time":251.608438468,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":251.608482564,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":251.798218268,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":251.798262024,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":252.722225195,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":253.168677605,"data":"[NbConvertApp] Writing 185965 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":256.45690514,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":257.856831413,"data":"[NbConvertApp] Writing 686231 bytes to __results__.html\n"}
+]

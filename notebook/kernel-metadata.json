@@ -1,0 +1,13 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-indobert-judul-isi-classifier",
+  "title": "IFEST 2026 DAC - IndoBERT Judul-Isi Classifier",
+  "code_file": "ifest2026_dac.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": ["penyisihan-ifest-2026-dac"],
+  "kernel_sources": []
+}

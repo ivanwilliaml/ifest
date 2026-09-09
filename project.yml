@@ -1,0 +1,25 @@
+workflow_version: 1
+
+kaggle:
+  competition: penyisihan-ifest-2026-dac
+  submissions_per_day: 3
+  final_submissions: 2
+
+task:
+  type: binary_classification
+  metric: macro_f1
+  direction: maximize
+  id_col: id
+  label_col: label
+
+rules:
+  pretrained_models_banned: true
+  banned_examples: [IndoBERT, BERT, XLM-R, "FastText pretrained", LLM, VLM, API models]
+  allowed: [TF-IDF, CountVectorizer, BM25, "embeddings trained from scratch on competition data"]
+  label_reconstruction: "dilarang merekonstruksi label -- ambiguous for exact-pair lookup, treated
+    as user-authorized judgment call for this project (see CLAUDE.md)"
+
+paths:
+  data: data
+  modeling: notebook_v12
+  history: modeling/history

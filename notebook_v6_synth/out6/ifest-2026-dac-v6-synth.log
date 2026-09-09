@@ -1,0 +1,214 @@
+[{"stream_name":"stderr","time":6.005276815,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.005331912,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.005336364,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.005338845,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.562028897,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.562057283,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.562087823,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.5620925020000005,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.739641871,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 50.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.806639615,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 389.2/389.2 kB 28.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.873654057,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 38.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.941923169,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 50.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.941955399,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 389.2/389.2 kB 28.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.941961183,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 38.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":11.960222608,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 104.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":12.162019663,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 104.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":30.184941514,"data":"torch: 2.10.0+cu128 | CUDA: True\n"}
+,{"stream_name":"stdout","time":30.184973189,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":38.545557486,"data":"transformers: 5.16.1\n"}
+,{"stream_name":"stdout","time":38.569688861,"data":"{\n"}
+,{"stream_name":"stdout","time":38.56971151,"data":"  \"seed\": 42,\n"}
+,{"stream_name":"stdout","time":38.569716091,"data":"  \"retriever_model\": \"intfloat/multilingual-e5-small\",\n"}
+,{"stream_name":"stdout","time":38.569719994,"data":"  \"chunk_words\": 50,\n"}
+,{"stream_name":"stdout","time":38.56972349,"data":"  \"chunk_stride\": 25,\n"}
+,{"stream_name":"stdout","time":38.569726842,"data":"  \"top_k_semantic\": 3,\n"}
+,{"stream_name":"stdout","time":38.569730335,"data":"  \"top_k_lexical\": 2,\n"}
+,{"stream_name":"stdout","time":38.569735175,"data":"  \"include_first_chunk\": true,\n"}
+,{"stream_name":"stdout","time":38.569742985,"data":"  \"retriever_max_len\": 96,\n"}
+,{"stream_name":"stdout","time":38.569760588,"data":"  \"retriever_batch_size\": 256,\n"}
+,{"stream_name":"stdout","time":38.569763232,"data":"  \"lexical_max_features\": 60000,\n"}
+,{"stream_name":"stdout","time":38.569765554,"data":"  \"classifier_model\": \"indobenchmark/indobert-base-p1\",\n"}
+,{"stream_name":"stdout","time":38.569767893,"data":"  \"max_len\": 384,\n"}
+,{"stream_name":"stdout","time":38.569770095,"data":"  \"batch_size\": 16,\n"}
+,{"stream_name":"stdout","time":38.569772374,"data":"  \"lr\": 2e-05,\n"}
+,{"stream_name":"stdout","time":38.56977463,"data":"  \"epochs\": 3,\n"}
+,{"stream_name":"stdout","time":38.569776821,"data":"  \"early_stopping_patience\": 1,\n"}
+,{"stream_name":"stdout","time":38.569779073,"data":"  \"val_size\": 0.15,\n"}
+,{"stream_name":"stdout","time":38.569781277,"data":"  \"entity_min_count\": 8,\n"}
+,{"stream_name":"stdout","time":38.56978352,"data":"  \"entity_min_purity\": 0.95,\n"}
+,{"stream_name":"stdout","time":38.569785753,"data":"  \"entity_max_title_df\": 0.02,\n"}
+,{"stream_name":"stdout","time":38.569787932,"data":"  \"target_neg_share\": 0.4,\n"}
+,{"stream_name":"stdout","time":38.569790212,"data":"  \"threshold_grid\": [\n"}
+,{"stream_name":"stdout","time":38.5697925,"data":"    0.2,\n"}
+,{"stream_name":"stdout","time":38.569794672,"data":"    0.25,\n"}
+,{"stream_name":"stdout","time":38.569796802,"data":"    0.3,\n"}
+,{"stream_name":"stdout","time":38.569798924,"data":"    0.35,\n"}
+,{"stream_name":"stdout","time":38.569801101,"data":"    0.4,\n"}
+,{"stream_name":"stdout","time":38.569803224,"data":"    0.45,\n"}
+,{"stream_name":"stdout","time":38.569805302,"data":"    0.5,\n"}
+,{"stream_name":"stdout","time":38.569807421,"data":"    0.55,\n"}
+,{"stream_name":"stdout","time":38.569809544,"data":"    0.6,\n"}
+,{"stream_name":"stdout","time":38.569811626,"data":"    0.65,\n"}
+,{"stream_name":"stdout","time":38.569813704,"data":"    0.7,\n"}
+,{"stream_name":"stdout","time":38.569815832,"data":"    0.75,\n"}
+,{"stream_name":"stdout","time":38.569817927,"data":"    0.8\n"}
+,{"stream_name":"stdout","time":38.569820061,"data":"  ]\n"}
+,{"stream_name":"stdout","time":38.569822174,"data":"}\n"}
+,{"stream_name":"stdout","time":39.732630772,"data":"[TIMER] data_loading: 0.9s\n"}
+,{"stream_name":"stdout","time":39.732668013,"data":"train: (14397, 4)  test: (3603, 3)\n"}
+,{"stream_name":"stdout","time":41.755821189,"data":"test rows with an exact (title,content) match in train: 927/3603 (25.7%)\n"}
+,{"stream_name":"stdout","time":41.756076869,"data":"[TIMER] exact_pair_overlap: 0.0s\n"}
+,{"stream_name":"stdout","time":43.102081028,"data":"train rows: 12261   val rows: 2136   (val class-0 share: 0.099)\n"}
+,{"stream_name":"stdout","time":43.102116035,"data":"[TIMER] split: 0.0s\n"}
+,{"stream_name":"stdout","time":45.551893651,"data":"[TIMER] text_cleaning: 2.4s\n"}
+,{"stream_name":"stdout","time":48.892340477,"data":"entity pool: 4867\n"}
+,{"stream_name":"stdout","time":48.892381533,"data":"   DKI        purity=1.00  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892387523,"data":"   Jabar      purity=1.00  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892392265,"data":"   Jokowi     purity=0.99  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892397049,"data":"   Bogor      purity=1.00  in_pool=True\n"}
+,{"stream_name":"stdout","time":48.892401595,"data":"   Tidak      purity=0.05  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892406594,"data":"   Jenazah    purity=0.08  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892426682,"data":"   Corona     purity=0.44  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892431172,"data":"   Presiden   purity=0.86  in_pool=False\n"}
+,{"stream_name":"stdout","time":48.892439684,"data":"context (type) groups: 1326\n"}
+,{"stream_name":"stdout","time":48.892443247,"data":"   after 'Gubernur': ['Aceh', 'Banten', 'Gorontalo', 'Jambi', 'Kalbar', 'Kalteng', 'Kepri', 'Khofifah', 'Koster', 'Riau']\n"}
+,{"stream_name":"stdout","time":48.892447093,"data":"   after 'Pemkot': ['ASN', 'Balikpapan', 'Bandung', 'Bekasi', 'Bogor', 'Cilegon', 'Cimahi', 'Cirebon', 'Depok', 'Jaksel']\n"}
+,{"stream_name":"stdout","time":48.892451006,"data":"   after 'Kapolda': ['Banten', 'Jateng', 'Kalbar', 'Metro', 'NTB', 'Riau', 'Sulut']\n"}
+,{"stream_name":"stdout","time":48.892454703,"data":"[TIMER] entity_mining: 3.3s\n"}
+,{"stream_name":"stdout","time":51.069212175,"data":"[validation-run] 11035 pos / 1226 neg -\u003e wanted 6131, generated 6131 from 8115 attempts (76% success)\n"}
+,{"stream_name":"stdout","time":52.990982432,"data":"[final-retrain] 12960 pos / 1437 neg -\u003e wanted 7203, generated 7203 from 9572 attempts (75% success)\n"}
+,{"stream_name":"stdout","time":52.99102106,"data":"   FAKE: Pasien COVID 19 Melonjak di Peru Satgas Siapkan Tenaga Kontrak Paramedis\n"}
+,{"stream_name":"stdout","time":52.991028058,"data":"   FAKE: Bima Bogor Buka Kemungkinan Panggil Habib Rizieq Terkait Tes Swab\n"}
+,{"stream_name":"stdout","time":52.991033708,"data":"   FAKE: 3 Pemikiran Jokowi Hadapi Konflik Global di Sidang Umum SDGs\n"}
+,{"stream_name":"stdout","time":52.991038574,"data":"[TIMER] synthetic_negative_generation: 4.1s\n"}
+,{"stream_name":"stderr","time":58.64611573,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":58.646144135,"data":"\n"}
+,{"stream_name":"stderr","time":58.646148213000004,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":74.06316098,"data":"[TIMER] retriever_load: 15.7s\n"}
+,{"stream_name":"stdout","time":74.779543185,"data":"unique articles: 13781   chunks: 162481\n"}
+,{"stream_name":"stdout","time":164.388637589,"data":"titles encoded (incl. synthetic): 27096\n"}
+,{"stream_name":"stdout","time":164.388677969,"data":"[TIMER] retrieval_encode: 90.1s\n"}
+,{"stream_name":"stdout","time":190.908035135,"data":"[TIMER] lexical_tfidf: 26.8s\n"}
+,{"stream_name":"stdout","time":206.56152402,"data":"[TIMER] retrieval_apply: 15.6s\n"}
+,{"stream_name":"stdout","time":206.561567457,"data":"rate of 'title entity missing from body' by label (real train rows):\n"}
+,{"stream_name":"stdout","time":206.561574778,"data":"label\n"}
+,{"stream_name":"stdout","time":206.561580248,"data":"0    0.381350\n"}
+,{"stream_name":"stdout","time":206.561587086,"data":"1    0.097762\n"}
+,{"stream_name":"stdout","time":206.561592529,"data":"Name: flag, dtype: float64\n"}
+,{"stream_name":"stdout","time":206.561598008,"data":"same flag on synthetic negatives: 0.314\n"}
+,{"stream_name":"stdout","time":206.603303967,"data":"augmented training set: 18392 rows (class-0 share 0.400); validation kept at 2136 rows (class-0 share 0.099, i.e. the real distribution)\n"}
+,{"stream_name":"stdout","time":206.603333281,"data":"[TIMER] assemble_training_set: 0.0s\n"}
+,{"stream_name":"stderr","time":211.065443971,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":211.065476181,"data":"\n"}
+,{"stream_name":"stderr","time":211.065496467,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":219.023480912,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":219.023514553,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":219.023519728,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":219.023523548,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":219.02352732,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":219.023531272,"data":"\n"}
+,{"stream_name":"stderr","time":219.02353533,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":219.02353895,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":219.02354341,"data":"\n"}
+,{"stream_name":"stderr","time":219.023547306,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":219.023551866,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":219.023556111,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":219.023577671,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":219.023581873,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":219.023586389,"data":"\n"}
+,{"stream_name":"stderr","time":219.023590235,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":219.023594366,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":219.46296875,"data":"class weights: [1.249966025352478, 0.8333484530448914]\n"}
+,{"stream_name":"stdout","time":2691.591629333,"data":"[TIMER] training: 2482.7s\n"}
+,{"stream_name":"stdout","time":2722.665902231,"data":"training time: 2482.7s   peak GPU: 5997 MB\n"}
+,{"stream_name":"stdout","time":2722.665934511,"data":"Macro F1 @0.5: 0.7120\n"}
+,{"stream_name":"stdout","time":2722.665939954,"data":"confusion @0.5:\n"}
+,{"stream_name":"stdout","time":2722.665944887,"data":" [[  98  113]\n"}
+,{"stream_name":"stdout","time":2722.665949973,"data":" [ 100 1825]]\n"}
+,{"stream_name":"stdout","time":2722.708665112,"data":"[cleanup] removed /kaggle/working/ckpt\n"}
+,{"stream_name":"stdout","time":2723.077918518,"data":"[TIMER] threshold_tuning: 0.3s\n"}
+,{"stream_name":"stdout","time":2723.077945988,"data":" threshold  f1_class0  f1_class1  macro_f1  pos_rate\n"}
+,{"stream_name":"stdout","time":2723.077951991,"data":"      0.20   0.463277   0.951506  0.707391  0.933052\n"}
+,{"stream_name":"stdout","time":2723.07795691,"data":"      0.25   0.469613   0.950895  0.710254  0.929307\n"}
+,{"stream_name":"stdout","time":2723.077961693,"data":"      0.30   0.467742   0.949231  0.708486  0.924625\n"}
+,{"stream_name":"stdout","time":2723.077967478,"data":"      0.35   0.472149   0.948909  0.710529  0.922285\n"}
+,{"stream_name":"stdout","time":2723.077971686,"data":"      0.40   0.489691   0.949022  0.719356  0.917135\n"}
+,{"stream_name":"stdout","time":2723.077975965,"data":"      0.45   0.484848   0.947368  0.716108  0.913390\n"}
+,{"stream_name":"stdout","time":2723.077980517,"data":"      0.50   0.479218   0.944862  0.712040  0.907303\n"}
+,{"stream_name":"stdout","time":2723.077985152,"data":"      0.55   0.479810   0.943132  0.711471  0.901685\n"}
+,{"stream_name":"stdout","time":2723.078000779,"data":"      0.60   0.474886   0.940010  0.707448  0.893727\n"}
+,{"stream_name":"stdout","time":2723.078004405,"data":"      0.65   0.469298   0.936583  0.702941  0.885300\n"}
+,{"stream_name":"stdout","time":2723.078008275,"data":"      0.70   0.464819   0.933999  0.699409  0.879213\n"}
+,{"stream_name":"stdout","time":2723.078011667,"data":"      0.75   0.480962   0.931354  0.706158  0.865169\n"}
+,{"stream_name":"stdout","time":2723.078015204,"data":"      0.80   0.456204   0.919979  0.688091  0.842228\n"}
+,{"stream_name":"stdout","time":2723.078018558,"data":"\n"}
+,{"stream_name":"stdout","time":2723.078021681,"data":"Best threshold 0.4 -\u003e Macro F1 0.7194\n"}
+,{"stream_name":"stdout","time":2723.078025446,"data":"confusion at best threshold:\n"}
+,{"stream_name":"stdout","time":2723.078029083,"data":" [[  95  116]\n"}
+,{"stream_name":"stdout","time":2723.078033915,"data":" [  82 1843]]\n"}
+,{"stream_name":"stdout","time":2723.270889027,"data":"best eval epoch was 3 (macro_f1=0.7120); total epochs run: 3.0\n"}
+,{"stream_name":"stdout","time":2723.270919122,"data":"final training set: 21600 rows (class-0 share 0.400), epochs=3\n"}
+,{"stream_name":"stderr","time":2724.206980263,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":2724.207016026,"data":"\n"}
+,{"stream_name":"stderr","time":2724.207020129,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":2725.208826885,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":2725.20885856,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":2725.2088641,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":2725.208868178,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":2725.208872053,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":2725.208875698,"data":"\n"}
+,{"stream_name":"stderr","time":2725.208879683,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":2725.208883369,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":2725.208887551,"data":"\n"}
+,{"stream_name":"stderr","time":2725.208891175,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":2725.208895566,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":2725.208899384,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":2725.208903195,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":2725.20890751,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":2725.208911173,"data":"\n"}
+,{"stream_name":"stderr","time":2725.208915399,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":2725.208918991,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":2725.644706899,"data":"class weights: [1.25, 0.8333333134651184]\n"}
+,{"stream_name":"stdout","time":5513.390780315,"data":"[TIMER] final_training: 2790.3s\n"}
+,{"stream_name":"stdout","time":5513.39084433,"data":"final model trained in 2790.3s\n"}
+,{"stream_name":"stdout","time":5575.091008945,"data":"[TIMER] test_inference: 61.6s\n"}
+,{"stream_name":"stdout","time":5575.091053533,"data":"model positive-rate on test: 0.900\n"}
+,{"stream_name":"stdout","time":5575.091058618,"data":"[TIMER] submission: 0.0s\n"}
+,{"stream_name":"stdout","time":5575.091078867,"data":"label\n"}
+,{"stream_name":"stdout","time":5575.091082617,"data":"1    0.904524\n"}
+,{"stream_name":"stdout","time":5575.091087455,"data":"0    0.095476\n"}
+,{"stream_name":"stdout","time":5575.091090502,"data":"Name: proportion, dtype: float64\n"}
+,{"stream_name":"stdout","time":5575.091093807,"data":"exact-match override applied to 927 rows; final positive-rate 0.905\n"}
+,{"stream_name":"stdout","time":5575.113366446,"data":"=======================================================\n"}
+,{"stream_name":"stdout","time":5575.1133876,"data":"v6 — synthetic negative augmentation\n"}
+,{"stream_name":"stdout","time":5575.113392572,"data":"Validation Macro F1: 0.7194 @ threshold 0.4\n"}
+,{"stream_name":"stdout","time":5575.113396155,"data":"Synthetic negatives: 6131 (val run) / 7203 (final)\n"}
+,{"stream_name":"stdout","time":5575.113405238,"data":"Peak GPU: 5997 MB   Total runtime: 92.3 min\n"}
+,{"stream_name":"stdout","time":5575.113407807,"data":"Submission: /kaggle/working/submission.csv\n"}
+,{"stream_name":"stdout","time":5575.113410483,"data":"=======================================================\n"}
+,{"stream_name":"stdout","time":5575.113426923,"data":"  final_training: 2790.3s\n"}
+,{"stream_name":"stdout","time":5575.113430717,"data":"  training: 2482.7s\n"}
+,{"stream_name":"stdout","time":5575.1134346,"data":"  retrieval_encode: 90.1s\n"}
+,{"stream_name":"stdout","time":5575.113438015,"data":"  test_inference: 61.6s\n"}
+,{"stream_name":"stdout","time":5575.113441868,"data":"  lexical_tfidf: 26.8s\n"}
+,{"stream_name":"stdout","time":5575.113445742,"data":"  retriever_load: 15.7s\n"}
+,{"stream_name":"stdout","time":5575.113448943,"data":"  retrieval_apply: 15.6s\n"}
+,{"stream_name":"stdout","time":5575.113452133,"data":"  synthetic_negative_generation: 4.1s\n"}
+,{"stream_name":"stdout","time":5575.113455677,"data":"  entity_mining: 3.3s\n"}
+,{"stream_name":"stdout","time":5575.113458832,"data":"  text_cleaning: 2.4s\n"}
+,{"stream_name":"stdout","time":5575.113462004,"data":"  data_loading: 0.9s\n"}
+,{"stream_name":"stdout","time":5575.113465173,"data":"  threshold_tuning: 0.3s\n"}
+,{"stream_name":"stdout","time":5575.113468461,"data":"  exact_pair_overlap: 0.0s\n"}
+,{"stream_name":"stdout","time":5575.113476869,"data":"  assemble_training_set: 0.0s\n"}
+,{"stream_name":"stdout","time":5575.113480091,"data":"  split: 0.0s\n"}
+,{"stream_name":"stdout","time":5575.113482412,"data":"  submission: 0.0s\n"}
+,{"stream_name":"stderr","time":5581.176251994,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5581.176291899,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5581.31634342,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5581.316369745,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5581.947666844,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":5582.350738411,"data":"[NbConvertApp] Writing 279652 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":5584.680496865,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5585.622033887,"data":"[NbConvertApp] Writing 626094 bytes to __results__.html\n"}
+]

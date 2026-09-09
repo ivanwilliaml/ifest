@@ -1,0 +1,24 @@
+[   6.1s] cold rows: 9120
+[   9.3s] building BM25 corpus stats...
+[  21.1s] computing expanded BM25 chunk-retrieval features (max/top3/top5/std/first-rank/position)...
+[  23.7s] BM25-sentence features: 6
+[  23.7s] === Exp 1: baseline 48-feature ensemble (reference) vs + BM25-sentence features ===
+48-feat CatBoost (reference)                  macroF1=0.6503 F1_0=0.3432 F1_1=0.9573 P0=0.3051 R0=0.3922
++BM25-sentence CatBoost                       macroF1=0.6563 F1_0=0.3489 F1_1=0.9637 P0=0.3529 R0=0.3450
+48-feat XGBoost (reference)                   macroF1=0.6524 F1_0=0.3405 F1_1=0.9644 P0=0.3557 R0=0.3265
++BM25-sentence XGBoost                        macroF1=0.6471 F1_0=0.3361 F1_1=0.9581 P0=0.3054 R0=0.3737
+48-feat RandomForest (reference)              macroF1=0.6401 F1_0=0.3224 F1_1=0.9579 P0=0.2966 R0=0.3532
++BM25-sentence RandomForest                   macroF1=0.6460 F1_0=0.3288 F1_1=0.9632 P0=0.3377 R0=0.3203
+[ 232.0s] === Exp 2: re-search ensemble weights with expanded features ===
+best weights cat/xgb/rf (with BM25-sentence feats) = (np.float64(0.5), np.float64(0.5), np.float64(0.0))  macroF1=0.6578
+BEST BLEND (48+BM25-sent)                     macroF1=0.6578 F1_0=0.3512 F1_1=0.9643 P0=0.3599 R0=0.3429
+reference (old best, 48 feats only): macroF1=0.6571 F1_0=0.3501
+[ 236.6s] === Exp 3: class-weight sweep on CatBoost (48+BM25-sent feats) ===
+CatBoost class_weight 0:2:1                   macroF1=0.6577 F1_0=0.3555 F1_1=0.9599 P0=0.3265 R0=0.3901
+CatBoost class_weight 0:3:1                   macroF1=0.6543 F1_0=0.3492 F1_1=0.9594 P0=0.3202 R0=0.3840
+CatBoost class_weight 0:4:1                   macroF1=0.6586 F1_0=0.3540 F1_1=0.9632 P0=0.3508 R0=0.3573
+CatBoost class_weight 0:6:1                   macroF1=0.6545 F1_0=0.3482 F1_1=0.9608 P0=0.3291 R0=0.3696
+CatBoost class_weight 0:8:1                   macroF1=0.6507 F1_0=0.3408 F1_1=0.9607 P0=0.3241 R0=0.3593
+
+best class weight for CatBoost: 0:4:1  macroF1=0.6586
+[ 586.3s] total runtime: 9.8 min

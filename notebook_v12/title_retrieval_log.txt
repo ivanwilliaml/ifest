@@ -1,0 +1,46 @@
+[  10.9s] title TF-IDF built: word=(14397, 20000) char=(14397, 20000)
+[  10.9s] collecting regime-B pool (bodies with >=2 distinct titles)...
+[  11.1s] regime-B pool size: 2011
+[  11.1s] building features for regime-B rows (leave-one-title-out memory)...
+[  11.4s]   300/2011
+[  11.6s]   600/2011
+[  11.8s]   900/2011
+[  12.0s]   1200/2011
+[  12.2s]   1500/2011
+[  12.4s]   1800/2011
+[  12.5s] feature matrix: (2011, 28)
+[  12.5s] === BASELINES ===
+A: always predict 1              acc=0.5286  macroF1=0.3458  F1_0=0.0000  F1_1=0.6916
+B: current hard rule             acc=0.8021  macroF1=0.7998  F1_0=0.8212  F1_1=0.7784
+[  12.5s] === C: title-retrieval LightGBM (5-fold OOF) ===
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C: title-retrieval (t=0.300)     acc=0.9876  macroF1=0.9875  F1_0=0.9868  F1_1=0.9883
+[  15.5s] === D: hard rule + retrieval override on disagreements ===
+D: hard rule + confident override acc=0.9876  macroF1=0.9875  F1_0=0.9868  F1_1=0.9883
+[  15.5s] === breakdown by B_has_pos vs B_no_pos (per current rule definition) ===
+
+-- B_has_pos subset (n=1278) --
+  always-1                       acc=0.2848  macroF1=0.2217  F1_0=0.0000  F1_1=0.4434
+  hard rule                      acc=0.7152  macroF1=0.4170  F1_0=0.8339  F1_1=0.0000
+  retrieval                      acc=0.9969  macroF1=0.9962  F1_0=0.9978  F1_1=0.9945
+
+-- B_no_pos subset (n=733) --
+  always-1                       acc=0.9536  macroF1=0.4881  F1_0=0.0000  F1_1=0.9763
+  hard rule                      acc=0.9536  macroF1=0.4881  F1_0=0.0000  F1_1=0.9763
+  retrieval                      acc=0.9714  macroF1=0.8146  F1_0=0.6441  F1_1=0.9851
+[  15.5s] === SUMMARY TABLE ===
+                             name    acc  macro_f1   f1_0   f1_1
+              A: always predict 1 0.5286    0.3458 0.0000 0.6916
+             B: current hard rule 0.8021    0.7998 0.8212 0.7784
+     C: title-retrieval (t=0.300) 0.9876    0.9875 0.9868 0.9883
+D: hard rule + confident override 0.9876    0.9875 0.9868 0.9883
+[  15.5s] total runtime: 0.3 min

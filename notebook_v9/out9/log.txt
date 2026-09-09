@@ -1,0 +1,181 @@
+sklearn 1.6.1
+lightgbm 4.6.0
+{
+  "seed": 42,
+  "n_folds": 5,
+  "val_frac": 0.15,
+  "chunk_words": 50,
+  "chunk_stride": 25,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "top_k": 5,
+  "lsa_dim": 160,
+  "tfidf_word_max": 60000,
+  "tfidf_char_max": 40000,
+  "entity_min_count": 8,
+  "entity_min_purity": 0.95,
+  "entity_max_title_df": 0.02,
+  "USE_RULES": true,
+  "threshold_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95
+  ],
+  "test_mix": {
+    "A_cold": 0.636,
+    "C_exact": 0.257,
+    "B_has_pos": 0.06,
+    "B_no_pos": 0.046
+  }
+}
+[TIMER] load: 0.9s
+train (14397, 6) test (3603, 5) | class0 0.0998
+  A_cold     n= 1455 ( 67.4%)  class0=0.060  rule_acc=nan
+  B_has_pos  n=  131 (  6.1%)  class0=0.977  rule_acc=0.9771
+  B_no_pos   n=   86 (  4.0%)  class0=0.035  rule_acc=0.9651
+  C_exact    n=  488 ( 22.6%)  class0=0.000  rule_acc=1.0000
+
+rules only (cold-start all 1): Macro F1 = 0.8539
+[TIMER] rule_validation: 0.1s
+  fold0: train 11508 val 2889 class0 0.102
+  fold1: train 11537 val 2860 class0 0.093
+  fold2: train 11508 val 2889 class0 0.105
+  fold3: train 11503 val 2894 class0 0.100
+  fold4: train 11532 val 2865 class0 0.099
+[TIMER] split: 3.2s
+[TIMER] clean: 2.1s
+entity pool: 4867
+   DKI      purity=1.00 in_pool=False
+   Jabar    purity=1.00 in_pool=False
+   Jokowi   purity=0.99 in_pool=False
+   Tidak    purity=0.05 in_pool=False
+   Corona   purity=0.44 in_pool=False
+[TIMER] entity_mining: 3.3s
+articles 13781  chunks 162481  avg chunk len 49.0  vocab 62763
+[TIMER] chunk_index: 6.2s
+explained variance: 0.2205
+lsa_cos by label:
+ label
+0    0.4278
+1    0.4543
+Name: lsa_cos, dtype: float64
+[TIMER] lsa: 16.0s
+[TIMER] features: 8.3s
+32 features
+label                      0        1
+n_title_ent_missing   0.4315   0.1203
+swap_signature        0.0703   0.0409
+idf_title_cov         0.6803   0.7455
+bm25_max             29.0247  34.2645
+lsa_cos               0.4278   0.4543
+num_mismatch          0.0856   0.0874
+tamper-target vocabulary mined from full train: 94
+  most frequent targets: ['138', '139', '206', '271', 'AS', 'Aceh', 'Anies', 'Asia', 'Australia', 'BNPB', 'Bahar', 'Bali', 'Bandung', 'Banten', 'Bawaslu']
+  fold0 sparse=0.5409 dense=0.6258
+  fold1 sparse=0.5212 dense=0.6612
+  fold2 sparse=0.5352 dense=0.6673
+  fold3 sparse=0.5323 dense=0.6804
+  fold4 sparse=0.5181 dense=0.6541
+[TIMER] cv: 107.2s
+OOF sparse macroF1@0.5: 0.5299
+OOF dense  macroF1@0.5: 0.6581
+
+top features:
+ lsa_cos            1632
+bm25_std           1418
+bigram_ov          1407
+bm25_max           1342
+idf_title_cov      1338
+bm25_mean          1254
+len_ratio          1182
+bm25_top           1176
+len_content        1149
+jaccard             912
+bm25_argmax_pos     785
+title_cov           775
+content_cov         657
+len_title           376
+n_title_ent         328
+dtype: int32
+blend weight (sparse)=0.10  cold-style OOF macroF1=0.6594
+cold-start analogue rows: 9120 (class0 0.053) vs all-train class0 0.100
+ threshold  global_f1  cold_f1   rec0  prec0
+      0.05     0.8716   0.4883 0.0021 0.5000
+      0.15     0.8747   0.5616 0.0903 0.4632
+      0.25     0.8740   0.6075 0.1725 0.4200
+      0.35     0.8656   0.6252 0.2382 0.3515
+      0.45     0.8499   0.6285 0.3060 0.2899
+      0.55     0.8245   0.6176 0.3758 0.2340
+      0.65     0.7892   0.5996 0.4764 0.1919
+      0.75     0.7283   0.5534 0.5770 0.1418
+      0.85     0.6327   0.4680 0.7043 0.0970
+      0.95     0.4712   0.2558 0.9281 0.0647
+[TIMER] blend_threshold: 1.6s
+chosen threshold 0.2 -> simulated global Macro F1 0.8754
+  rules-only under the same mixture: 0.8715  -> model contributes +0.0039
+model positive rate on test: 0.9761
+[TIMER] final: 25.6s
+  A_cold     n= 2293  positive rate=0.984
+  B_has_pos  n=  216  positive rate=0.000
+  B_no_pos   n=  167  positive rate=1.000
+  C_exact    n=  927  positive rate=0.998
+rows where a rule overrode the model: 194
+[TIMER] submit: 0.0s
+label
+1    0.929503
+0    0.070497
+Name: proportion, dtype: float64
+==========================================================
+V9 — compliant + learned substitution patterns
+OOF sparse/dense/blend : 0.5299 / 0.6581 / 0.6594 (w=0.10)
+rules-only reference   : 0.8539
+simulated global F1    : 0.8754 @ threshold 0.2 (rules-only 0.8715, model +0.0039)
+USE_RULES              : True
+total runtime          : 3.1 min  (CPU only)
+==========================================================
+  cv: 107.2s
+  final: 25.6s
+  lsa: 16.0s
+  features: 8.3s
+  chunk_index: 6.2s
+  entity_mining: 3.3s
+  split: 3.2s
+  clean: 2.1s
+  blend_threshold: 1.6s
+  load: 0.9s
+  rule_validation: 0.1s
+  submit: 0.0s

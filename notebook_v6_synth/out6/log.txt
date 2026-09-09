@@ -1,0 +1,154 @@
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 50.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 389.2/389.2 kB 28.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 38.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 50.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 389.2/389.2 kB 28.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 38.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 104.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 104.7 MB/s eta 0:00:00
+torch: 2.10.0+cu128 | CUDA: True
+GPU: Tesla T4
+transformers: 5.16.1
+{
+  "seed": 42,
+  "retriever_model": "intfloat/multilingual-e5-small",
+  "chunk_words": 50,
+  "chunk_stride": 25,
+  "top_k_semantic": 3,
+  "top_k_lexical": 2,
+  "include_first_chunk": true,
+  "retriever_max_len": 96,
+  "retriever_batch_size": 256,
+  "lexical_max_features": 60000,
+  "classifier_model": "indobenchmark/indobert-base-p1",
+  "max_len": 384,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "epochs": 3,
+  "early_stopping_patience": 1,
+  "val_size": 0.15,
+  "entity_min_count": 8,
+  "entity_min_purity": 0.95,
+  "entity_max_title_df": 0.02,
+  "target_neg_share": 0.4,
+  "threshold_grid": [
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8
+  ]
+}
+[TIMER] data_loading: 0.9s
+train: (14397, 4)  test: (3603, 3)
+test rows with an exact (title,content) match in train: 927/3603 (25.7%)
+[TIMER] exact_pair_overlap: 0.0s
+train rows: 12261   val rows: 2136   (val class-0 share: 0.099)
+[TIMER] split: 0.0s
+[TIMER] text_cleaning: 2.4s
+entity pool: 4867
+   DKI        purity=1.00  in_pool=False
+   Jabar      purity=1.00  in_pool=False
+   Jokowi     purity=0.99  in_pool=False
+   Bogor      purity=1.00  in_pool=True
+   Tidak      purity=0.05  in_pool=False
+   Jenazah    purity=0.08  in_pool=False
+   Corona     purity=0.44  in_pool=False
+   Presiden   purity=0.86  in_pool=False
+context (type) groups: 1326
+   after 'Gubernur': ['Aceh', 'Banten', 'Gorontalo', 'Jambi', 'Kalbar', 'Kalteng', 'Kepri', 'Khofifah', 'Koster', 'Riau']
+   after 'Pemkot': ['ASN', 'Balikpapan', 'Bandung', 'Bekasi', 'Bogor', 'Cilegon', 'Cimahi', 'Cirebon', 'Depok', 'Jaksel']
+   after 'Kapolda': ['Banten', 'Jateng', 'Kalbar', 'Metro', 'NTB', 'Riau', 'Sulut']
+[TIMER] entity_mining: 3.3s
+[validation-run] 11035 pos / 1226 neg -> wanted 6131, generated 6131 from 8115 attempts (76% success)
+[final-retrain] 12960 pos / 1437 neg -> wanted 7203, generated 7203 from 9572 attempts (75% success)
+   FAKE: Pasien COVID 19 Melonjak di Peru Satgas Siapkan Tenaga Kontrak Paramedis
+   FAKE: Bima Bogor Buka Kemungkinan Panggil Habib Rizieq Terkait Tes Swab
+   FAKE: 3 Pemikiran Jokowi Hadapi Konflik Global di Sidang Umum SDGs
+[TIMER] synthetic_negative_generation: 4.1s
+[TIMER] retriever_load: 15.7s
+unique articles: 13781   chunks: 162481
+titles encoded (incl. synthetic): 27096
+[TIMER] retrieval_encode: 90.1s
+[TIMER] lexical_tfidf: 26.8s
+[TIMER] retrieval_apply: 15.6s
+rate of 'title entity missing from body' by label (real train rows):
+label
+0    0.381350
+1    0.097762
+Name: flag, dtype: float64
+same flag on synthetic negatives: 0.314
+augmented training set: 18392 rows (class-0 share 0.400); validation kept at 2136 rows (class-0 share 0.099, i.e. the real distribution)
+[TIMER] assemble_training_set: 0.0s
+class weights: [1.249966025352478, 0.8333484530448914]
+[TIMER] training: 2482.7s
+training time: 2482.7s   peak GPU: 5997 MB
+Macro F1 @0.5: 0.7120
+confusion @0.5:
+ [[  98  113]
+ [ 100 1825]]
+[cleanup] removed /kaggle/working/ckpt
+[TIMER] threshold_tuning: 0.3s
+ threshold  f1_class0  f1_class1  macro_f1  pos_rate
+      0.20   0.463277   0.951506  0.707391  0.933052
+      0.25   0.469613   0.950895  0.710254  0.929307
+      0.30   0.467742   0.949231  0.708486  0.924625
+      0.35   0.472149   0.948909  0.710529  0.922285
+      0.40   0.489691   0.949022  0.719356  0.917135
+      0.45   0.484848   0.947368  0.716108  0.913390
+      0.50   0.479218   0.944862  0.712040  0.907303
+      0.55   0.479810   0.943132  0.711471  0.901685
+      0.60   0.474886   0.940010  0.707448  0.893727
+      0.65   0.469298   0.936583  0.702941  0.885300
+      0.70   0.464819   0.933999  0.699409  0.879213
+      0.75   0.480962   0.931354  0.706158  0.865169
+      0.80   0.456204   0.919979  0.688091  0.842228
+
+Best threshold 0.4 -> Macro F1 0.7194
+confusion at best threshold:
+ [[  95  116]
+ [  82 1843]]
+best eval epoch was 3 (macro_f1=0.7120); total epochs run: 3.0
+final training set: 21600 rows (class-0 share 0.400), epochs=3
+class weights: [1.25, 0.8333333134651184]
+[TIMER] final_training: 2790.3s
+final model trained in 2790.3s
+[TIMER] test_inference: 61.6s
+model positive-rate on test: 0.900
+[TIMER] submission: 0.0s
+label
+1    0.904524
+0    0.095476
+Name: proportion, dtype: float64
+exact-match override applied to 927 rows; final positive-rate 0.905
+=======================================================
+v6 — synthetic negative augmentation
+Validation Macro F1: 0.7194 @ threshold 0.4
+Synthetic negatives: 6131 (val run) / 7203 (final)
+Peak GPU: 5997 MB   Total runtime: 92.3 min
+Submission: /kaggle/working/submission.csv
+=======================================================
+  final_training: 2790.3s
+  training: 2482.7s
+  retrieval_encode: 90.1s
+  test_inference: 61.6s
+  lexical_tfidf: 26.8s
+  retriever_load: 15.7s
+  retrieval_apply: 15.6s
+  synthetic_negative_generation: 4.1s
+  entity_mining: 3.3s
+  text_cleaning: 2.4s
+  data_loading: 0.9s
+  threshold_tuning: 0.3s
+  exact_pair_overlap: 0.0s
+  assemble_training_set: 0.0s
+  split: 0.0s
+  submission: 0.0s

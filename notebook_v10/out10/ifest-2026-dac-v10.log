@@ -1,0 +1,198 @@
+[{"stream_name":"stderr","time":7.753394816,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.753459328,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.753464992,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.753468366,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.495648484,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.495686866,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.495693268,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.495698527,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.394409448,"data":"sklearn 1.6.1\n"}
+,{"stream_name":"stdout","time":15.943337438,"data":"lightgbm 4.6.0\n"}
+,{"stream_name":"stdout","time":15.943381022,"data":"{\n"}
+,{"stream_name":"stdout","time":15.943387985,"data":"  \"seed\": 42,\n"}
+,{"stream_name":"stdout","time":15.94340431,"data":"  \"n_folds\": 5,\n"}
+,{"stream_name":"stdout","time":15.9434103,"data":"  \"val_frac\": 0.15,\n"}
+,{"stream_name":"stdout","time":15.943415789,"data":"  \"chunk_words\": 50,\n"}
+,{"stream_name":"stdout","time":15.943422017,"data":"  \"chunk_stride\": 25,\n"}
+,{"stream_name":"stdout","time":15.943427834,"data":"  \"bm25_k1\": 1.5,\n"}
+,{"stream_name":"stdout","time":15.943433077,"data":"  \"bm25_b\": 0.75,\n"}
+,{"stream_name":"stdout","time":15.943439035,"data":"  \"top_k\": 5,\n"}
+,{"stream_name":"stdout","time":15.94344478,"data":"  \"lsa_dim\": 160,\n"}
+,{"stream_name":"stdout","time":15.943451365,"data":"  \"tfidf_word_max\": 60000,\n"}
+,{"stream_name":"stdout","time":15.943457592,"data":"  \"tfidf_char_max\": 40000,\n"}
+,{"stream_name":"stdout","time":15.943463535,"data":"  \"entity_min_count\": 8,\n"}
+,{"stream_name":"stdout","time":15.943469455,"data":"  \"entity_min_purity\": 0.95,\n"}
+,{"stream_name":"stdout","time":15.943474652,"data":"  \"entity_max_title_df\": 0.02,\n"}
+,{"stream_name":"stdout","time":15.943480702,"data":"  \"USE_RULES\": true,\n"}
+,{"stream_name":"stdout","time":15.94348628,"data":"  \"threshold_grid\": [\n"}
+,{"stream_name":"stdout","time":15.94349168,"data":"    0.05,\n"}
+,{"stream_name":"stdout","time":15.943497514,"data":"    0.075,\n"}
+,{"stream_name":"stdout","time":15.943503463999999,"data":"    0.1,\n"}
+,{"stream_name":"stdout","time":15.943508739,"data":"    0.125,\n"}
+,{"stream_name":"stdout","time":15.943514148,"data":"    0.15,\n"}
+,{"stream_name":"stdout","time":15.94351997,"data":"    0.175,\n"}
+,{"stream_name":"stdout","time":15.943524194,"data":"    0.2,\n"}
+,{"stream_name":"stdout","time":15.943527722,"data":"    0.225,\n"}
+,{"stream_name":"stdout","time":15.943531222,"data":"    0.25,\n"}
+,{"stream_name":"stdout","time":15.943537184,"data":"    0.275,\n"}
+,{"stream_name":"stdout","time":15.94354171,"data":"    0.3,\n"}
+,{"stream_name":"stdout","time":15.943545228,"data":"    0.325,\n"}
+,{"stream_name":"stdout","time":15.943548875,"data":"    0.35,\n"}
+,{"stream_name":"stdout","time":15.943552527,"data":"    0.375,\n"}
+,{"stream_name":"stdout","time":15.943556047,"data":"    0.4,\n"}
+,{"stream_name":"stdout","time":15.94357835,"data":"    0.425,\n"}
+,{"stream_name":"stdout","time":15.943581684,"data":"    0.45,\n"}
+,{"stream_name":"stdout","time":15.943584681,"data":"    0.475,\n"}
+,{"stream_name":"stdout","time":15.943587544,"data":"    0.5,\n"}
+,{"stream_name":"stdout","time":15.943590358,"data":"    0.525,\n"}
+,{"stream_name":"stdout","time":15.943593193,"data":"    0.55,\n"}
+,{"stream_name":"stdout","time":15.943596078,"data":"    0.575,\n"}
+,{"stream_name":"stdout","time":15.943598899,"data":"    0.6,\n"}
+,{"stream_name":"stdout","time":15.943601714,"data":"    0.625,\n"}
+,{"stream_name":"stdout","time":15.94360449,"data":"    0.65,\n"}
+,{"stream_name":"stdout","time":15.943607355,"data":"    0.675,\n"}
+,{"stream_name":"stdout","time":15.943610132,"data":"    0.7,\n"}
+,{"stream_name":"stdout","time":15.943612914,"data":"    0.725,\n"}
+,{"stream_name":"stdout","time":15.943615735,"data":"    0.75,\n"}
+,{"stream_name":"stdout","time":15.943618631,"data":"    0.775,\n"}
+,{"stream_name":"stdout","time":15.943621412,"data":"    0.8,\n"}
+,{"stream_name":"stdout","time":15.943624182,"data":"    0.825,\n"}
+,{"stream_name":"stdout","time":15.943626953,"data":"    0.85,\n"}
+,{"stream_name":"stdout","time":15.943629792,"data":"    0.875,\n"}
+,{"stream_name":"stdout","time":15.943632564,"data":"    0.9,\n"}
+,{"stream_name":"stdout","time":15.943635312,"data":"    0.925,\n"}
+,{"stream_name":"stdout","time":15.943638172,"data":"    0.95\n"}
+,{"stream_name":"stdout","time":15.94364095,"data":"  ],\n"}
+,{"stream_name":"stdout","time":15.943643784,"data":"  \"test_mix\": {\n"}
+,{"stream_name":"stdout","time":15.943646822,"data":"    \"A_cold\": 0.636,\n"}
+,{"stream_name":"stdout","time":15.943649837,"data":"    \"C_exact\": 0.257,\n"}
+,{"stream_name":"stdout","time":15.943652742,"data":"    \"B_has_pos\": 0.06,\n"}
+,{"stream_name":"stdout","time":15.943655768,"data":"    \"B_no_pos\": 0.046\n"}
+,{"stream_name":"stdout","time":15.943658794,"data":"  }\n"}
+,{"stream_name":"stdout","time":15.943661684,"data":"}\n"}
+,{"stream_name":"stdout","time":17.46184966,"data":"[TIMER] load: 1.1s\n"}
+,{"stream_name":"stdout","time":19.650676744,"data":"train (14397, 6) test (3603, 5) | class0 0.0998\n"}
+,{"stream_name":"stdout","time":19.825410314,"data":"  A_cold     n= 1455 ( 67.4%)  class0=0.060  rule_acc=nan\n"}
+,{"stream_name":"stdout","time":19.825447133,"data":"  B_has_pos  n=  131 (  6.1%)  class0=0.977  rule_acc=0.9771\n"}
+,{"stream_name":"stdout","time":19.825454454,"data":"  B_no_pos   n=   86 (  4.0%)  class0=0.035  rule_acc=0.9651\n"}
+,{"stream_name":"stdout","time":19.825460649,"data":"  C_exact    n=  488 ( 22.6%)  class0=0.000  rule_acc=1.0000\n"}
+,{"stream_name":"stdout","time":19.825466561,"data":"\n"}
+,{"stream_name":"stdout","time":19.82547206,"data":"rules only (cold-start all 1): Macro F1 = 0.8539\n"}
+,{"stream_name":"stdout","time":19.825477516,"data":"[TIMER] rule_validation: 0.1s\n"}
+,{"stream_name":"stdout","time":23.984548246,"data":"  fold0: train 11508 val 2889 class0 0.102\n"}
+,{"stream_name":"stdout","time":23.984591354,"data":"  fold1: train 11537 val 2860 class0 0.093\n"}
+,{"stream_name":"stdout","time":23.984598738,"data":"  fold2: train 11508 val 2889 class0 0.105\n"}
+,{"stream_name":"stdout","time":23.984604521,"data":"  fold3: train 11503 val 2894 class0 0.100\n"}
+,{"stream_name":"stdout","time":23.98461014,"data":"  fold4: train 11532 val 2865 class0 0.099\n"}
+,{"stream_name":"stdout","time":23.984615781,"data":"[TIMER] split: 4.1s\n"}
+,{"stream_name":"stdout","time":26.995083179,"data":"[TIMER] clean: 2.7s\n"}
+,{"stream_name":"stdout","time":30.931118212,"data":"entity pool: 4867\n"}
+,{"stream_name":"stdout","time":30.931194995,"data":"   DKI      purity=1.00 in_pool=False\n"}
+,{"stream_name":"stdout","time":30.93120364,"data":"   Jabar    purity=1.00 in_pool=False\n"}
+,{"stream_name":"stdout","time":30.931207652,"data":"   Jokowi   purity=0.99 in_pool=False\n"}
+,{"stream_name":"stdout","time":30.93121142,"data":"   Tidak    purity=0.05 in_pool=False\n"}
+,{"stream_name":"stdout","time":30.9312152,"data":"   Corona   purity=0.44 in_pool=False\n"}
+,{"stream_name":"stdout","time":30.931219148,"data":"[TIMER] entity_mining: 4.2s\n"}
+,{"stream_name":"stdout","time":39.107751941,"data":"articles 13781  chunks 162481  avg chunk len 49.0  vocab 62763\n"}
+,{"stream_name":"stdout","time":39.107796104,"data":"[TIMER] chunk_index: 8.1s\n"}
+,{"stream_name":"stdout","time":59.306516666,"data":"explained variance: 0.2205\n"}
+,{"stream_name":"stdout","time":59.306561559,"data":"lsa_cos by label:\n"}
+,{"stream_name":"stdout","time":59.306568665,"data":" label\n"}
+,{"stream_name":"stdout","time":59.306597213,"data":"0    0.4278\n"}
+,{"stream_name":"stdout","time":59.306603226,"data":"1    0.4543\n"}
+,{"stream_name":"stdout","time":59.306608346,"data":"Name: lsa_cos, dtype: float64\n"}
+,{"stream_name":"stdout","time":59.306613916,"data":"[TIMER] lsa: 20.0s\n"}
+,{"stream_name":"stdout","time":73.387103993,"data":"[TIMER] features: 14.0s\n"}
+,{"stream_name":"stdout","time":73.387147827,"data":"41 features\n"}
+,{"stream_name":"stdout","time":73.387155877,"data":"label                     0       1\n"}
+,{"stream_name":"stdout","time":73.387162412,"data":"n_title_ent_missing  0.4315  0.1203\n"}
+,{"stream_name":"stdout","time":73.387168945,"data":"swap_signature       0.0703  0.0409\n"}
+,{"stream_name":"stdout","time":73.387174915,"data":"sal_maxfirst         0.4801  0.3192\n"}
+,{"stream_name":"stdout","time":73.387181451,"data":"sal_out_of_lead      0.5574  0.3306\n"}
+,{"stream_name":"stdout","time":73.387187523,"data":"sal_singleton        0.5741  0.3971\n"}
+,{"stream_name":"stdout","time":73.387192957,"data":"num_mismatch         0.0856  0.0874\n"}
+,{"stream_name":"stdout","time":82.118617669,"data":"tamper-target vocabulary mined from full train: 94\n"}
+,{"stream_name":"stdout","time":82.118664517,"data":"  most frequent targets: ['138', '139', '206', '271', 'AS', 'Aceh', 'Anies', 'Asia', 'Australia', 'BNPB', 'Bahar', 'Bali', 'Bandung', 'Banten', 'Bawaslu']\n"}
+,{"stream_name":"stdout","time":109.539504978,"data":"  fold0 sparse=0.5409 dense=0.6274\n"}
+,{"stream_name":"stdout","time":137.009266374,"data":"  fold1 sparse=0.5212 dense=0.6694\n"}
+,{"stream_name":"stdout","time":162.965914862,"data":"  fold2 sparse=0.5352 dense=0.6608\n"}
+,{"stream_name":"stdout","time":188.599651166,"data":"  fold3 sparse=0.5323 dense=0.6740\n"}
+,{"stream_name":"stdout","time":214.001970799,"data":"  fold4 sparse=0.5181 dense=0.6829\n"}
+,{"stream_name":"stdout","time":214.002024097,"data":"[TIMER] cv: 131.8s\n"}
+,{"stream_name":"stdout","time":214.002031901,"data":"OOF sparse macroF1@0.5: 0.5299\n"}
+,{"stream_name":"stdout","time":214.002037561,"data":"OOF dense  macroF1@0.5: 0.6631\n"}
+,{"stream_name":"stdout","time":214.002043056,"data":"\n"}
+,{"stream_name":"stdout","time":214.002048329,"data":"top features:\n"}
+,{"stream_name":"stdout","time":214.002053545,"data":" lsa_cos            1511\n"}
+,{"stream_name":"stdout","time":214.002059078,"data":"idf_title_cov      1301\n"}
+,{"stream_name":"stdout","time":214.002084068,"data":"bigram_ov          1205\n"}
+,{"stream_name":"stdout","time":214.002088823,"data":"bm25_mean          1180\n"}
+,{"stream_name":"stdout","time":214.002093165,"data":"bm25_std           1165\n"}
+,{"stream_name":"stdout","time":214.002097592,"data":"bm25_max           1119\n"}
+,{"stream_name":"stdout","time":214.002102111,"data":"len_ratio          1097\n"}
+,{"stream_name":"stdout","time":214.002106543,"data":"bm25_top           1075\n"}
+,{"stream_name":"stdout","time":214.002111158,"data":"len_content         957\n"}
+,{"stream_name":"stdout","time":214.002115791,"data":"jaccard             796\n"}
+,{"stream_name":"stdout","time":214.002119931,"data":"title_cov           722\n"}
+,{"stream_name":"stdout","time":214.002124942,"data":"bm25_argmax_pos     720\n"}
+,{"stream_name":"stdout","time":214.002129542,"data":"sal_meanfirst       682\n"}
+,{"stream_name":"stdout","time":214.002134101,"data":"sal_maxfirst        680\n"}
+,{"stream_name":"stdout","time":214.002138556,"data":"content_cov         542\n"}
+,{"stream_name":"stdout","time":214.002143203,"data":"dtype: int32\n"}
+,{"stream_name":"stdout","time":216.177400665,"data":"blend weight (sparse)=0.30  cold-style OOF macroF1=0.6684\n"}
+,{"stream_name":"stdout","time":216.177439695,"data":"cold-start analogue rows: 9120 (class0 0.053) vs all-train class0 0.100\n"}
+,{"stream_name":"stdout","time":216.177444858,"data":" threshold  global_f1  cold_f1   rec0  prec0\n"}
+,{"stream_name":"stdout","time":216.177448275,"data":"      0.05     0.8715   0.4863 0.0000 0.0000\n"}
+,{"stream_name":"stdout","time":216.177451408,"data":"      0.15     0.8715   0.4903 0.0041 0.4000\n"}
+,{"stream_name":"stdout","time":216.177454475,"data":"      0.25     0.8755   0.5494 0.0719 0.5147\n"}
+,{"stream_name":"stdout","time":216.177457806,"data":"      0.35     0.8753   0.6129 0.1807 0.4335\n"}
+,{"stream_name":"stdout","time":216.177460855,"data":"      0.45     0.8677   0.6448 0.2875 0.3694\n"}
+,{"stream_name":"stdout","time":216.177463805,"data":"      0.55     0.8446   0.6378 0.3655 0.2843\n"}
+,{"stream_name":"stdout","time":216.17746811,"data":"      0.65     0.8086   0.6159 0.4538 0.2184\n"}
+,{"stream_name":"stdout","time":216.177472692,"data":"      0.75     0.7489   0.5747 0.5914 0.1623\n"}
+,{"stream_name":"stdout","time":216.177477305,"data":"      0.85     0.6355   0.4733 0.7598 0.1032\n"}
+,{"stream_name":"stdout","time":216.177481486,"data":"      0.95     0.4382   0.1975 0.9548 0.0605\n"}
+,{"stream_name":"stdout","time":216.177485843,"data":"[TIMER] blend_threshold: 2.1s\n"}
+,{"stream_name":"stdout","time":216.177490221,"data":"chosen threshold 0.325 -\u003e simulated global Macro F1 0.8774\n"}
+,{"stream_name":"stdout","time":216.177495056,"data":"  rules-only under the same mixture: 0.8715  -\u003e model contributes +0.0058\n"}
+,{"stream_name":"stdout","time":248.514477062,"data":"model positive rate on test: 0.9689\n"}
+,{"stream_name":"stdout","time":248.514510275,"data":"[TIMER] final: 32.3s\n"}
+,{"stream_name":"stdout","time":248.514517342,"data":"  A_cold     n= 2293  positive rate=0.981\n"}
+,{"stream_name":"stdout","time":248.514523208,"data":"  B_has_pos  n=  216  positive rate=0.000\n"}
+,{"stream_name":"stdout","time":248.514529052,"data":"  B_no_pos   n=  167  positive rate=1.000\n"}
+,{"stream_name":"stdout","time":248.514534709,"data":"  C_exact    n=  927  positive rate=0.998\n"}
+,{"stream_name":"stdout","time":248.514540452,"data":"rows where a rule overrode the model: 213\n"}
+,{"stream_name":"stdout","time":248.514546061,"data":"[TIMER] submit: 0.0s\n"}
+,{"stream_name":"stdout","time":248.514551554,"data":"label\n"}
+,{"stream_name":"stdout","time":248.514564744,"data":"1    0.92756\n"}
+,{"stream_name":"stdout","time":248.514569738,"data":"0    0.07244\n"}
+,{"stream_name":"stdout","time":248.514574454,"data":"Name: proportion, dtype: float64\n"}
+,{"stream_name":"stdout","time":248.5415157,"data":"==========================================================\n"}
+,{"stream_name":"stdout","time":248.541556067,"data":"V10 — compliant + learned substitution patterns\n"}
+,{"stream_name":"stdout","time":248.541562443,"data":"OOF sparse/dense/blend : 0.5299 / 0.6631 / 0.6684 (w=0.30)\n"}
+,{"stream_name":"stdout","time":248.541567715,"data":"rules-only reference   : 0.8539\n"}
+,{"stream_name":"stdout","time":248.541572748,"data":"simulated global F1    : 0.8774 @ threshold 0.325 (rules-only 0.8715, model +0.0058)\n"}
+,{"stream_name":"stdout","time":248.541577455,"data":"USE_RULES              : True\n"}
+,{"stream_name":"stdout","time":248.541581798,"data":"total runtime          : 3.9 min  (CPU only)\n"}
+,{"stream_name":"stdout","time":248.541586093,"data":"==========================================================\n"}
+,{"stream_name":"stdout","time":248.541590928,"data":"  cv: 131.8s\n"}
+,{"stream_name":"stdout","time":248.541595253,"data":"  final: 32.3s\n"}
+,{"stream_name":"stdout","time":248.541599668,"data":"  lsa: 20.0s\n"}
+,{"stream_name":"stdout","time":248.541604272,"data":"  features: 14.0s\n"}
+,{"stream_name":"stdout","time":248.541608213,"data":"  chunk_index: 8.1s\n"}
+,{"stream_name":"stdout","time":248.541611213,"data":"  entity_mining: 4.2s\n"}
+,{"stream_name":"stdout","time":248.54161421,"data":"  split: 4.1s\n"}
+,{"stream_name":"stdout","time":248.541617174,"data":"  clean: 2.7s\n"}
+,{"stream_name":"stdout","time":248.541620143,"data":"  blend_threshold: 2.1s\n"}
+,{"stream_name":"stdout","time":248.541622997,"data":"  load: 1.1s\n"}
+,{"stream_name":"stdout","time":248.541626463,"data":"  rule_validation: 0.1s\n"}
+,{"stream_name":"stdout","time":248.541630943,"data":"  submit: 0.0s\n"}
+,{"stream_name":"stderr","time":252.48190221,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":252.481939558,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":252.668140411,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":252.668169368,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":253.469166701,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":253.893883394,"data":"[NbConvertApp] Writing 53302 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.090481612,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.28741835,"data":"[NbConvertApp] Writing 450825 bytes to __results__.html\n"}
+]

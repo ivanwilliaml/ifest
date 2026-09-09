@@ -1,0 +1,15 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-neural-scratch",
+  "title": "IFEST 2026 DAC neural scratch",
+  "code_file": "ifest2026_dac_neural_scratch.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [
+    "penyisihan-ifest-2026-dac"
+  ],
+  "kernel_sources": []
+}

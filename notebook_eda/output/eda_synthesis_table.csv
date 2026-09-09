@@ -1,0 +1,23 @@
+QUESTION,EVIDENCE,CONCLUSION,MODELING IMPLICATION
+Is class imbalance severe?,"label1=90.0% vs label0=10.0%, ratio=9.0x",Moderate-severe (~9:1),"Use Macro F1, evaluate class_weight='balanced', stratify all splits."
+Is content duplicated?,2751 duplicate rows across 11646 unique bodies,"Yes, non-trivially",Group validation by content_hash.
+Are mixed-label content groups common?,874 groups with both labels,Present,Confirms/limits pair-specific framing.
+Is the task pair-specific?,Section 19-20 mixed-label / multi-content-per-title evidence,Yes,Content-only or title-only models are insufficient by construction.
+Is lexical similarity useful?,"KS stats from Sec.14, correlation=+0.083",Partially informative,"Use as one input feature, not a rule."
+Is lexical similarity sufficient?,HARD_NEGATIVE / HARD_POSITIVE examples in Sec.25-26,No,Need number/entity/negation features alongside similarity.
+Are numbers important?,Sec.11 number-mismatch rate by label,"Weak-moderate, noisy",Keep as weak feature; note tokenization caveat.
+Are entities important?,Sec.12 entity-coverage-in-title by label,Directional signal,"Keep as weak feature (proxy only, no real NER)."
+Is negation important?,Sec.17 negation_mismatch rate,Rare but semantically sharp,Keep as weak feature; low recall by itself.
+Is sentence-level evidence stronger than full-body similarity?,Sec.15 max_sim vs whole-doc jaccard,See printed comparison,Prefer first-N-sentence / best-sentence framing over whole-body encoding.
+Are source artifacts present?,Sec.7 boilerplate frequency,"Yes, low-signal metadata",Strip in normalized view only.
+Should stopwords be removed?,Sec.9 negation-word-as-stopword conflict,Only with negation words excluded,Custom stopword list or skip removal.
+Should stemming be used?,Sec.10 vocabulary-reduction vs meaning-collapse risk,"Optional, lean avoid initially",Prefer char n-grams first.
+Should punctuation be preserved?,Sec.2/7/8 audits,Yes,Punctuation removal not justified by evidence found.
+Should numbers be preserved?,Sec.11,Yes,Numbers carry factual-consistency signal.
+Should title/content be vectorized separately?,Framing in Sec.0 + Sec.4-6 structural differences,Yes,Never concatenate title+content into one field.
+Should character n-grams be used?,Sec.8/10 morphology + typo robustness,Yes,Pairs well with linear classifiers per literature.
+Is train/test leakage present?,Sec.21 overlap=1348/3603 rows,Non-trivial,Adjust trust in leaderboard score accordingly.
+Should validation be grouped?,Sec.29 simulated contamination,Yes,StratifiedGroupKFold on content_hash.
+Is a lightweight linear model plausible?,Sec.27 diagnostic classifier F1s,"Yes, as a strong baseline",TF-IDF + LinearSVC is a reasonable first full model.
+Is semantic embedding likely necessary?,Sec.14/27 lexical-only ceiling,Only if lexical baseline underperforms,Gate behind a Macro F1 threshold (e.g. <0.90) before investing.
+Cheapest next experiment with highest expected information gain?,Synthesis of all sections above,"Word+char TF-IDF + handcrafted relationship features + LinearSVC, grouped CV",See Section 31 roadmap.

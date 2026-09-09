@@ -1,0 +1,15 @@
+# raw competition data (large, redistribution unclear under competition rules)
+data/
+
+# generated caches (regeneratable from scripts)
+notebook_v12/_diag_cache/
+**/local_out/
+
+# non-compliant model checkpoints (IndoBERT, banned under competition rules -- kept out of git deliberately)
+notebook_v4_lean/out4/indobert_ckpt/
+notebook_retrieval/output_v2/indobert_ckpt/
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

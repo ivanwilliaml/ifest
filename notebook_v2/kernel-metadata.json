@@ -1,0 +1,13 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-fast-tfidf-baseline",
+  "title": "IFEST 2026 DAC - Fast TFIDF Baseline",
+  "code_file": "ifest2026_dac_fast_baseline.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": ["penyisihan-ifest-2026-dac"],
+  "kernel_sources": []
+}

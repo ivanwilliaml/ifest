@@ -1,0 +1,96 @@
+threshold=0.425  FN=320
+strict entity pool: 6933   permissive entity pool: 7309
+newly recovered entities (sample 30): ['Aamiin', 'Abang', 'Abdi', 'Abu', 'Access', 'Adjo', 'Adrian', 'Agung', 'Alan', 'Aliyah', 'Amnesty', 'Analysis', 'Ananda', 'Angel', 'Angga', 'Ani', 'Anies', 'Ansor', 'Anya', 'Apple', 'Aras', 'Aren', 'Ary', 'Asik', 'Asmara', 'Assalamualaikum', 'Atase', 'Atlet', 'Authority', 'Aviation']
+
+=== Q1: entity substitution / entity-role conflict share of FN, permissive pool ===
+entity-substitution / role-conflict (permissive pool + same-context check): 104/320 (32.5%)
+(for reference) any permissive-entity missing from body, regardless of alternative: 104/320 (32.5%)
+
+=== Q2: 'same context + different entity' rule -- precision/recall/F1 class0 on ALL cold ===
+rule fires on 1528/9120 cold rows
+precision0=0.1538  recall0=0.4825  F1_0=0.2333
+(compare: full 49-feature model F1_0=0.3252, best prior union-rule F1_0=0.184, entity_missing-only F1_0=0.256)
+
+=== Q3: 20 clearest subject/entity-substitution examples from top-100 most-confident FN ===
+(22 of top-100 fired the entity-substitution rule)
+
+[1] title-entity MISSING='Jatim'  body-alternative='COVID'  p(class1)=0.9968
+    title: 2 812 Pelaku Kejahatan Ditangkap di 2020 Kapolda Jatim Naik dari 2019
+    body : Kasus kejahatan di tengah pandemi COVID 19 masih bergeliat Bahkan tahun ini sebanyak 2 812 orang pelaku kejahatan di Jawa Barat ditangkap Jumlah tersangka tahun 2020 sebanyak 2 812...
+
+[2] title-entity MISSING='Benediktus'  body-alternative='Paus'  p(class1)=0.9911
+    title: Dokter Pribadi Paus Benediktus Meninggal karena Infeksi Covid
+    body : Dokter pribadi Paus Fransiskus Fabrizio Soccorsi dikabarkan meninggal dunia akibat infeksi virus corona dan komplikasi penyakit yang diidapnya Surat kabar Vatikan L Ozzervatore Rom...
+
+[3] title-entity MISSING='Jabar'  body-alternative='Pemprov'  p(class1)=0.9893
+    title: Resmi Ini SE Larangan Cuti Natal Tahun Baru 2021 untuk ASN di Jabar
+    body : Pemerintah Provinsi Pemprov DKI Jakarta resmi menerbitkan surat edaran SE terkait pelarangan cuti libur Natal dan tahun baru 2021 untuk aparatur sipil negara ASN Hal ini dilakukan ...
+
+[4] title-entity MISSING='Malaysia'  body-alternative='COVID'  p(class1)=0.9856
+    title: Tambah 11 287 Kasus Corona di Malaysia 17 Januari Tembus 900 Ribu
+    body : Pemerintah memperbarui data penambahan kasus COVID 19 di Indonesia hari ini Hari ini dilaporkan total kasus baru COVID 19 di Indonesia lebih dari 11 ribu kasus Data ini disampaikan...
+
+[5] title-entity MISSING='Jatim'  body-alternative='Gubernur'  p(class1)=0.9842
+    title: Ridwan Kamil Dorong UMKM Jatim Pindah Haluan ke Digital
+    body : Gubernur Jawa Barat Ridwan Kamil mendorong pelaku usaha mikro kecil dan menengah UMKM memanfaatkan teknologi untuk mensiasati peluang usaha era Adaptasi Kebiasaan Baru Maklum masya...
+
+[6] title-entity MISSING='Desember'  body-alternative='COVID'  p(class1)=0.9796
+    title: 63 768 Kasus Suspek Corona Dipantau pada 19 Desember
+    body : Puluhan ribu kasus suspek Corona COVID 19 kembali dipantau Hari ini ada 64 071 kasus suspek Corona yang dipantau 64 071 suspek tulis laporan Satgas Penanganan COVID 19 Sabtu 19 12 ...
+
+[7] title-entity MISSING='Satgas'  body-alternative='Anyer'  p(class1)=0.9745
+    title: Satgas Minta Kunjungan ke Pantai di Anyer Dibatasi Sampai Pukul 18 00 WIB
+    body : Polisi sudah berkoordinasi dengan pengelola pantai di Anyer Banten untuk membatasi kunjungan wisatawan sampai pukul 18 00 WIB Aparat gabungan bakal berpatroli di sepanjang Pantai A...
+
+[8] title-entity MISSING='Jabar'  body-alternative='Gubernur'  p(class1)=0.9731
+    title: Kasus Covid 19 Jabar Kembali Menanjak Sejak PSBB Transisi
+    body : Gubernur DKI Jakarta Anies Baswedan mengklaim kasus covid 19 di Ibu Kota menunjukkan pelambatan Klaim ini menjadi salah satu alasan pihaknya menerapkan Pembatasan Sosial Berskala B...
+
+[9] title-entity MISSING='Pinang'  body-alternative='Tito'  p(class1)=0.9716
+    title: Tito Imbau Warga Gelar Panjat Pinang Peringati HUT RI
+    body : Menteri Dalam Negeri Tito Karnavian meminta agar pemerintah daerah dan masyarakat tak menggelar ajang lomba panjat pinang untuk memeriahkan HUT ke 75 Kemerdekaan RI pada 17 Agustus...
+
+[10] title-entity MISSING='Jatim'  body-alternative='Sumedang'  p(class1)=0.9714
+    title: Jatim Hari Ini 16 Korban Longsor Ditemukan Tanaman Hias Dibarter Rumah Rp 500 Juta
+    body : Sebanyak 16 korban jiwa meninggal dunia ditemukan di hari ke empat usai longsor di Kabupaten Sumedang Selain itu Satgas COVID 19 Jabar mengungkap biang kerok Karawang masuk zona me...
+
+[11] title-entity MISSING='Jabar'  body-alternative='Satgas'  p(class1)=0.9710
+    title: Satgas Jabar Bakal Gelar Operasi Yustisi Cegah Corona Saat Libur Akhir Tahun
+    body : Satuan Tugas Satgas COVID 19 Sumatera Utara bakal menggelar operasi yustisi saat libur akhir tahun Hal ini dilakukan untuk mencegah penyebaran virus Corona atua COVID 19 Akan melak...
+
+[12] title-entity MISSING='Covid'  body-alternative='Gubernur'  p(class1)=0.9627
+    title: Anies Sebut Ganjil Genap Pasar Efektif Cegah Covid 19
+    body : Gubernur DKI Jakarta Anies Baswedan menyebut pembatasan operasional pasar dengan sistem ganjil genap tidak efektif selama penerapan PSBB transisi Dalam pelaksanaannya kata Anies me...
+
+[13] title-entity MISSING='Jabar'  body-alternative='COVID'  p(class1)=0.9598
+    title: Update COVID 19 Jabar 718 Kasus Baru Sembuh 358
+    body : Kasus terkonfirmasi positif COVID 19 di Jawa Timur bertambah 718 kasus baru Sehingga total ada 66 817 kasus kumulatif Pasien sembuh bertambah 358 Data yang diterima detikcom dari S...
+
+[14] title-entity MISSING='Jokowi'  body-alternative='Kementerian'  p(class1)=0.9564
+    title: Kemenkes Imbau Warga di Kerumunan Jokowi Lakukan Isolasi Mandiri
+    body : Kementerian Kesehatan Kemenkes mengimbau warga yang ikut dalam kerumunan massa Habib Rizieq melakukan isolasi mandiri Isolasi mandiri ini diminta dilakukan selama 14 hari Atas adan...
+
+[15] title-entity MISSING='Dinkes'  body-alternative='Sleman'  p(class1)=0.9546
+    title: Penjelasan Bupati Sleman soal Dinkes Positif Corona Usai Divaksin 1 Dosis kumparan com
+    body : Bupati Sleman Sri Purnomo terkonfirmasi positif corona Padahal orang nomor 1 di Sleman itu telah divaksin satu dosis Sinovac pada 14 Januari lalu Lalu apa penyebabnya sehingga SP s...
+
+[16] title-entity MISSING='Agung'  body-alternative='Ketua'  p(class1)=0.9528
+    title: Gugus Tugas Lacak 800 Kontak Erat Kasus Corona Gedung Agung
+    body : Gugus Tugas Percepatan Penanggulangan Covid 19 Provinsi Jawa Barat Jabar melakukan pelacakan terhadap mereka yang kontak erat dengan 40 pegawai Gedung Sate yang dinyatakan positif ...
+
+[17] title-entity MISSING='Jabar'  body-alternative='DKI'  p(class1)=0.9527
+    title: Update Corona Jabar 13 Agustus 27 683 Positif 17 836 Sembuh
+    body : Kasus positif virus corona Covid 19 di DKI Jakarta pada Kamis 13 8 bertambah 621 kasus Dengan demikian total kasus positif di ibu kota sampai saat ini sebanyak 27 863 kasus Dari ju...
+
+[18] title-entity MISSING='Covid'  body-alternative='Presiden'  p(class1)=0.9497
+    title: Jokowi Gelombang Kedua Covid di Eropa Kita Teledor
+    body : Presiden Joko Widodo meminta jajarannya mewaspadai lonjakan kedua gelombang virus covid 19 yang terjadi di Eropa Jokowi meminta agar semua pihak tak bersikap teledor yang mengakiba...
+
+[19] title-entity MISSING='Jepang'  body-alternative='Taiwan'  p(class1)=0.9473
+    title: Cara Selandia Baru dan Jepang Tekan Corona Tanpa Vaksinasi
+    body : Taiwan dan Selandia Baru adalah dua negara yang mampu mengendalikan dan menekan kasus infeksi virus corona Covid 19 lebih dari seratus hari tanpa upaya vaksinasi Kedua negara itu m...
+
+[20] title-entity MISSING='City'  body-alternative='Marnell'  p(class1)=0.9460
+    title: Judi di Atlantic City Pakai Uang Bansos Covid Pria AS Dibui
+    body : Kepolisian di Amerika Serikat menangkap seorang lelaki bernama Andrew Marnell 40 karena memalsukan data untuk mendapatkan uang dari program jaring pengaman sosial Covid 19 PPP yang...
+

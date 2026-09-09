@@ -1,0 +1,7 @@
+method,macro_f1,f1_0,f1_1
+baseline: hard rule (always 1),0.4881,0.0,0.9763
+retrieval-only honest CV (max_char),0.5755,0.2253,0.9257
+C1: LogReg all 9 body-contradiction feats,0.5185624427379588,0.09090213054918937,0.9462227549267282
+C2: single combined conflict score,0.4712661032909022,0.03799087255052948,0.904541334031275
+C3: entity-missing alone,0.5344335413102933,0.11725565765503845,0.9516114249655482
+"C4: top3 features (['ent_missing', 'frac_ent_missing', 'n_title_ent'])",0.5421594790914043,0.13403188638435645,0.9502870717984523

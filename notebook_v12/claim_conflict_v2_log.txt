@@ -1,0 +1,28 @@
+[   3.8s] cold rows: 9120
+[   9.4s] typed entity pool: 7282  (LOCATION=130 ORG=46)
+[   9.4s] computing claim-conflict-v2 features for all rows...
+       entity_role_v2  n_typed_entities  ...  n_title_numbers  negation_local_v2
+count      14397.0000        14397.0000  ...       14397.0000         14397.0000
+mean           0.1388            1.7437  ...           0.7167             0.2195
+std            0.3457            1.1843  ...           0.9028             0.4139
+min            0.0000            0.0000  ...           0.0000             0.0000
+25%            0.0000            1.0000  ...           0.0000             0.0000
+50%            0.0000            2.0000  ...           0.0000             0.0000
+75%            0.0000            2.0000  ...           1.0000             0.0000
+max            1.0000            8.0000  ...           5.0000             1.0000
+
+[8 rows x 5 columns]
+[  17.9s] === standalone channel precision/recall (rule-only, no model, threshold at flag=1) ===
+  entity_role_v2         fires=1120  precision0=0.1786  recall0=0.4107  F1_0=0.2489
+  number_conflict_v2     fires= 299  precision0=0.0535  recall0=0.0329  F1_0=0.0407
+  negation_local_v2      fires=2001  precision0=0.0755  recall0=0.3101  F1_0=0.1214
+  action_conflict        fires=  95  precision0=0.0842  recall0=0.0164  F1_0=0.0275
+[  17.9s] === staged ablation (added to true 48-feature baseline) ===
+true baseline (48 feats)                 macroF1=0.6561 F1_0=0.3533 F1_1=0.9590 P0=0.3200 R0=0.3943
++ entity_role_v2 (typed)                 macroF1=0.6596 F1_0=0.3580 F1_1=0.9612 P0=0.3370 R0=0.3819
++ number_conflict_v2                     macroF1=0.6590 F1_0=0.3566 F1_1=0.9614 P0=0.3376 R0=0.3778
++ negation_local_v2                      macroF1=0.6531 F1_0=0.3416 F1_1=0.9646 P0=0.3581 R0=0.3265
++ ALL claim-conflict-v2 combined         macroF1=0.6585 F1_0=0.3484 F1_1=0.9686 P0=0.4160 R0=0.2998
+
+reference: prior best (48-feat + BM25-sentence + class_weight 4:1): macroF1=0.6586 F1_0=0.3540
+[ 217.9s] total runtime: 3.6 min

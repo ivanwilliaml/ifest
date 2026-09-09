@@ -1,0 +1,198 @@
+sklearn 1.8.0
+lightgbm 4.6.0
+{
+  "seed": 42,
+  "n_folds": 5,
+  "val_frac": 0.15,
+  "chunk_words": 50,
+  "chunk_stride": 25,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "top_k": 5,
+  "lsa_dim": 160,
+  "tfidf_word_max": 60000,
+  "tfidf_char_max": 40000,
+  "entity_min_count": 8,
+  "entity_min_purity": 0.95,
+  "entity_max_title_df": 0.02,
+  "struct_topk": 5,
+  "USE_RULES": true,
+  "threshold_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95
+  ],
+  "test_mix": {
+    "A_cold": 0.636,
+    "C_exact": 0.257,
+    "B_has_pos": 0.06,
+    "B_no_pos": 0.046
+  }
+}
+[TIMER] load: 0.8s
+train (14397, 6) test (3603, 5) | class0 0.0998
+  A_cold     n= 1455 ( 67.4%)  class0=0.060  rule_acc=nan
+  B_has_pos  n=  131 (  6.1%)  class0=0.977  rule_acc=0.9771
+  B_no_pos   n=   86 (  4.0%)  class0=0.035  rule_acc=0.0000
+  C_exact    n=  488 ( 22.6%)  class0=0.000  rule_acc=0.0000
+
+rules only (cold-start all 1): Macro F1 = 0.8539
+[TIMER] rule_validation: 0.0s
+  fold0: train 11516 val 2881 class0 0.100
+  fold1: train 11518 val 2879 class0 0.100
+  fold2: train 11518 val 2879 class0 0.100
+  fold3: train 11518 val 2879 class0 0.100
+  fold4: train 11518 val 2879 class0 0.100
+[TIMER] split: 3.6s
+[TIMER] clean: 2.6s
+entity pool: 4867
+   DKI      purity=1.00 in_pool=False
+   Jabar    purity=1.00 in_pool=False
+   Jokowi   purity=0.99 in_pool=False
+   Tidak    purity=0.05 in_pool=False
+   Corona   purity=0.44 in_pool=False
+[TIMER] entity_mining: 3.3s
+articles 13781  chunks 162481  avg chunk len 49.0  vocab 62763
+[TIMER] chunk_index: 6.4s
+explained variance: 0.2205
+lsa_cos by label:
+ label
+0    0.4278
+1    0.4543
+Name: lsa_cos, dtype: float64
+[TIMER] lsa: 17.9s
+[TIMER] features: 14.1s
+41 base features
+articles 13781  total chunks 162481  avg/article 11.8
+[TIMER] structural_index: 7.0s
+[TIMER] structural_features: 1.9s
+48 features total (7 structural)
+label                    0       1
+struct_first_chunk  0.4882  0.5509
+struct_first3_mean  0.4165  0.4624
+struct_max_chunk    0.5704  0.6074
+struct_topk_mean    0.4623  0.4868
+struct_std          0.1324  0.1408
+struct_min_chunk    0.1444  0.1585
+struct_argmax_pos   0.2890  0.2065
+tamper-target vocabulary mined from full train: 94
+  fold0 sparse=0.5408 dense=0.6580
+  fold1 sparse=0.5177 dense=0.6982
+  fold2 sparse=0.5374 dense=0.6887
+  fold3 sparse=0.5374 dense=0.6733
+  fold4 sparse=0.5306 dense=0.6598
+[TIMER] cv: 117.7s
+OOF sparse macroF1@0.5: 0.5328
+OOF dense  macroF1@0.5: 0.6755
+
+top features:
+ struct_std            1002
+bigram_ov              927
+idf_title_cov          923
+bm25_std               876
+struct_min_chunk       840
+struct_first_chunk     828
+bm25_max               822
+bm25_mean              820
+lsa_cos                800
+struct_max_chunk       773
+struct_first3_mean     726
+bm25_top               723
+struct_topk_mean       674
+len_ratio              649
+len_content            604
+title_cov              578
+jaccard                554
+bm25_argmax_pos        512
+sal_meanfirst          486
+struct_argmax_pos      486
+dtype: int32
+blend weight (sparse)=0.40  cold-style OOF macroF1=0.6810
+cold-start analogue rows: 9120 (class0 0.053) target total 14339
+  t=0.050  avg_global_f1=0.8693
+  t=0.150  avg_global_f1=0.8693
+  t=0.250  avg_global_f1=0.8711
+  t=0.350  avg_global_f1=0.8743
+  t=0.450  avg_global_f1=0.8612
+  t=0.550  avg_global_f1=0.8368
+  t=0.650  avg_global_f1=0.7942
+  t=0.750  avg_global_f1=0.7013
+  t=0.850  avg_global_f1=0.5417
+  t=0.950  avg_global_f1=0.2287
+[TIMER] blend_threshold: 6.3s
+chosen threshold 0.325 -> 20-split-averaged simulated global Macro F1 0.8749
+  rules-only under the same mixture: 0.8693 (std across splits 0.0052)  -> model contributes +0.0056
+model-ONLY (no rules), OOF @ threshold 0.325, ALL train rows (leak-free):
+  class0 F1=0.1474  class1 F1=0.9498  macro=0.5486
+model-ONLY, OOF @ threshold 0.325, COLD-START subset only (n=9120, the model's real job):
+  class0 F1=0.1544  class1 F1=0.9734  macro=0.5639
+[TIMER] per_class_breakdown: 0.0s
+model positive rate on test: 0.9795
+[TIMER] final: 32.3s
+  A_cold     n= 2293  positive rate=0.991
+  B_has_pos  n=  216  positive rate=0.000
+  B_no_pos   n=  167  positive rate=0.850
+  C_exact    n=  927  positive rate=0.989
+rows where a rule overrode the model: 197
+[TIMER] submit: 0.5s
+label
+1    0.924785
+0    0.075215
+Name: proportion, dtype: float64
+==========================================================
+V12 — V11 pipeline + structural multi-granularity matching
+OOF sparse/dense/blend : 0.5328 / 0.6755 / 0.6810 (w=0.40)
+rules-only reference   : 0.8539
+simulated global F1    : 0.8749 @ threshold 0.325 (rules-only 0.8693, model +0.0056)
+USE_RULES              : True
+total runtime          : 3.7 min  (CPU only)
+==========================================================
+  cv: 117.7s
+  final: 32.3s
+  lsa: 17.9s
+  features: 14.1s
+  structural_index: 7.0s
+  chunk_index: 6.4s
+  blend_threshold: 6.3s
+  split: 3.6s
+  entity_mining: 3.3s
+  clean: 2.6s
+  structural_features: 1.9s
+  load: 0.8s
+  submit: 0.5s
+  rule_validation: 0.0s
+  per_class_breakdown: 0.0s

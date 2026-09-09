@@ -1,0 +1,32 @@
+[   3.9s] entity mining...
+[   7.1s] chunk index (BM25) + LSA...
+[  30.4s] base41 + struct7 features (v12 pipeline)...
+[  39.5s] base+struct feature matrix: (14397, 48)
+[  41.2s] === random 85/15 split (matches established regime-B validation methodology) ===
+[  42.0s] train regimes: {'C_exact': 12237}
+[  42.0s] val   regimes: {'A_cold': 1455, 'C_exact': 488, 'B_has_pos': 131, 'B_no_pos': 86}
+[  42.0s] === training GLOBAL model (all train rows, base+struct+historical-memory features) ===
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  45.4s] === threshold sweep (global, all val rows) ===
+chosen global threshold: 0.375  (macro F1 on ALL val = 0.7390)
+[  45.5s] === per-regime breakdown at chosen global threshold ===
+ALL val rows                   n=2160 acc=0.9194 macroF1=0.7390 F1_0=0.5220 F1_1=0.9560
+A_cold                         n=1455 acc=0.9375 macroF1=0.6077 F1_0=0.2479 F1_1=0.9674
+B_has_pos                      n= 131 acc=0.6336 macroF1=0.4402 F1_0=0.7692 F1_1=0.1111
+B_no_pos                       n=  86 acc=0.9651 macroF1=0.4911 F1_0=0.0000 F1_1=0.9822
+C_exact                        n= 488 acc=0.9344 macroF1=0.4831 F1_0=0.0000 F1_1=0.9661
+[  45.5s] === compare: global-model B_no_pos vs previous specialist attempts ===
+  hard rule (always 1):        macroF1=0.4881
+  B_no_pos-only LightGBM (B3): macroF1=0.8342 (in-sample threshold -- likely inflated)
+  retrieval-only honest CV:    macroF1=0.5755 (max_char, repeated CV)
+  global model, regime-specific threshold: t=0.775 macroF1=0.6601
+
+=== SUMMARY TABLE ===
+        name    n    acc  macro_f1   f1_0   f1_1
+ALL val rows 2160 0.9194    0.7390 0.5220 0.9560
+      A_cold 1455 0.9375    0.6077 0.2479 0.9674
+   B_has_pos  131 0.6336    0.4402 0.7692 0.1111
+    B_no_pos   86 0.9651    0.4911 0.0000 0.9822
+     C_exact  488 0.9344    0.4831 0.0000 0.9661
+[  45.5s] total runtime: 0.8 min

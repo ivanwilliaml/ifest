@@ -1,0 +1,52 @@
+[   4.3s] entity mining...
+[   7.5s] chunk index + LSA...
+[  31.8s] base41 + struct7 features...
+[  42.4s] features: (14397, 49)
+[  42.5s] cold rows: 9120
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  48.2s]   fold0 done
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  49.4s]   fold1 done
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  50.3s]   fold2 done
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  51.1s]   fold3 done
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[  52.0s]   fold4 done
+[  53.7s] cache saved to _diag_cache/
+chosen threshold=0.425  macroF1=0.6425  F1_0=0.3252  F1_1=0.9597
+
+False Negatives (actual=0, predicted=1): 320
+False Positives (actual=1, predicted=0): 373
+
+=== FALSE NEGATIVE (real fake headline, model said OK) error taxonomy (n=320) ===
+  negation_mismatch              n= 235  ( 73.4%)
+  entity_missing                 n=  61  ( 19.1%)
+  semantic_paraphrase_or_other   n=  43  ( 13.4%)
+  number_mismatch                n=  24  (  7.5%)
+  low_lexical_overlap_other      n=  20  (  6.2%)
+  action_antonym_conflict        n=   3  (  0.9%)
+
+=== FALSE POSITIVE (real valid headline, model said fake) error taxonomy (n=373) ===
+  negation_mismatch              n= 284  ( 76.1%)
+  entity_missing                 n= 218  ( 58.4%)
+  number_mismatch                n=  37  (  9.9%)
+  low_lexical_overlap_other      n=  22  (  5.9%)
+  semantic_paraphrase_or_other   n=   9  (  2.4%)
+  action_antonym_conflict        n=   6  (  1.6%)
+  date_year_mismatch             n=   2  (  0.5%)
+Traceback (most recent call last):
+  File "D:\Lomba\IFEST2026_DAC\notebook_v12\diagnostic_123.py", line 257, in <module>
+    log("=== \u2461 distribution comparison: class0 vs class1 (A_cold) ===")
+  File "D:\Lomba\IFEST2026_DAC\notebook_v12\diagnostic_123.py", line 23, in log
+    def log(m): print(f"[{time.time()-T0:6.1f}s] {m}", flush=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2461' in position 14: character maps to <undefined>

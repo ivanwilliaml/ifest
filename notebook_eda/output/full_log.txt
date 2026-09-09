@@ -1,0 +1,868 @@
+Python: 3.12.13 | pandas: 2.3.3 | numpy: 2.0.2 | sklearn: 1.6.1 | scipy: 1.16.3
+sample_submission.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/sample_submission.csv  (0.04 MB)
+train.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/train.csv  (31.74 MB)
+test.csv: /kaggle/input/competitions/penyisihan-ifest-2026-dac/test.csv  (7.78 MB)
+[TIMER] data_loading: 1.30s
+
+train shape: (14397, 4)  test shape: (3603, 3)
+
+train dtypes:
+ id         object
+title      object
+content    object
+label       int64
+dtype: object
+
+train memory usage (MB): 35.191887
+test memory usage (MB): 8.669149
+
+Schema verified: train=[id,title,content,label], test=[id,title,content].
+`id` will be preserved for reference only � never used as a model feature.
+[TIMER] quality_audit: 0.16s
+split                           issue  count   pct
+train                   missing title      0 0.000
+train                 missing content      0 0.000
+train     empty/whitespace-only title      0 0.000
+train   empty/whitespace-only content      0 0.000
+train                   duplicated id      0 0.000
+train                duplicated title      3 0.021
+train              duplicated content    671 4.661
+train duplicated (title,content) pair      3 0.021
+ test                   missing title      0 0.000
+ test                 missing content      0 0.000
+ test     empty/whitespace-only title      0 0.000
+ test   empty/whitespace-only content      0 0.000
+ test                   duplicated id      0 0.000
+ test                duplicated title      1 0.028
+ test              duplicated content     51 1.415
+ test duplicated (title,content) pair      1 0.028
+split   field                              check  count
+train content   repeated punctuation (!!/??/...)      0
+train   title   repeated punctuation (!!/??/...)      0
+train content                     HTML-like tags      0
+train   title                     HTML-like tags      0
+train content                               URLs      0
+train   title                               URLs      0
+train content escaped chars (\n, \t, &amp; etc.)      0
+train   title escaped chars (\n, \t, &amp; etc.)      0
+train content                 control characters      0
+train   title                 control characters      0
+train content       non-ascii / unicode variants   2552
+train   title       non-ascii / unicode variants     21
+ test content   repeated punctuation (!!/??/...)      0
+ test   title   repeated punctuation (!!/??/...)      0
+ test content                     HTML-like tags      0
+ test   title                     HTML-like tags      0
+ test content                               URLs      0
+ test   title                               URLs      0
+ test content escaped chars (\n, \t, &amp; etc.)      0
+ test   title escaped chars (\n, \t, &amp; etc.)      0
+ test content                 control characters      0
+ test   title                 control characters      0
+ test content       non-ascii / unicode variants    677
+ test   title       non-ascii / unicode variants      5
+
+Extremely short/long rows (train):
+title char len min/max: 17 150
+content char len min/max: 16 31584
+shortest content sample: Gambas Video CNN
+
+[CRITICAL FINDING] rows with ANY sentence-ending punctuation (. ! ?) in content: 0 / 14397 (0.0%)
+-> Punctuation has been stripped from the source text at the data-provider level.
+   Sentence-boundary detection via '.', '!', '?' is NOT viable on this dataset.
+   Sections 6 and 15 below use fixed-size WORD-WINDOW CHUNKS as a pseudo-sentence
+   proxy instead, and this is called out explicitly at each use.
+[TIMER] unicode_punct_audit: 3.15s
+label=0: 1437 (9.98%)   label=1: 12960 (90.02%)   imbalance ratio: 9.02x
+
+Majority-class (predict all 1):
+  precision(1)=0.9002  recall(1)=1.0000  F1(1)=0.9475
+  Macro F1=0.4737
+
+-> Accuracy would read as 90.0% by always predicting 1, while Macro F1 exposes the
+   complete failure on class 0 -- this is exactly why Macro F1 is the competition metric.
+To make label=0 represent 10% of the data (by subsampling the majority), majority class would need to be cut to 12933 rows (currently 12960).
+To make label=0 represent 20% of the data (by subsampling the majority), majority class would need to be cut to 5748 rows (currently 12960).
+To make label=0 represent 30% of the data (by subsampling the majority), majority class would need to be cut to 3353 rows (currently 12960).
+[TIMER] target_distribution: 0.02s
+
+=== title_char_len percentiles (train) ===
+count    14397.000000
+mean        63.781343
+std         11.047096
+min         17.000000
+0%          17.000000
+10%         52.000000
+25%         57.000000
+50%         62.000000
+75%         71.000000
+90%         76.000000
+100%       150.000000
+max        150.000000
+Name: title_char_len, dtype: float64
+
+=== content_char_len percentiles (train) ===
+count    14397.000000
+mean      2126.732375
+std       1200.174263
+min         16.000000
+0%          16.000000
+10%       1178.000000
+25%       1485.000000
+50%       1893.000000
+75%       2429.000000
+90%       3210.000000
+100%     31584.000000
+max      31584.000000
+Name: content_char_len, dtype: float64
+
+=== title_word_count percentiles (train) ===
+count    14397.000000
+mean        10.071821
+std          1.966900
+min          3.000000
+0%           3.000000
+10%          8.000000
+25%          9.000000
+50%         10.000000
+75%         11.000000
+90%         13.000000
+100%        23.000000
+max         23.000000
+Name: title_word_count, dtype: float64
+
+=== content_word_count percentiles (train) ===
+count    14397.000000
+mean       309.949781
+std        169.567216
+min          3.000000
+0%           3.000000
+10%        173.000000
+25%        218.000000
+50%        276.000000
+75%        356.000000
+90%        466.000000
+100%      4238.000000
+max       4238.000000
+Name: content_word_count, dtype: float64
+
+=== by label (median) ===
+       title_char_len  content_char_len  title_word_count  content_word_count  \
+label                                                                           
+0                63.0            2002.0              10.0               297.0   
+1                62.0            1879.0              10.0               273.0   
+
+       title_content_char_ratio  
+label                            
+0                      0.030878  
+1                      0.033333  
+[TIMER] length_analysis: 1.00s
+Cohen's d for title_char_len (label0 vs label1): +0.029  (negligible effect)
+Cohen's d for content_char_len (label0 vs label1): +0.156  (negligible effect)
+Cohen's d for title_word_count (label0 vs label1): +0.017  (negligible effect)
+Cohen's d for content_word_count (label0 vs label1): +0.180  (negligible effect)
+Cohen's d for title_content_char_ratio (label0 vs label1): -0.061  (negligible effect)
+Saved eda_length_boxplots.png
+[TIMER] title_structure: 0.58s
+label                      0          1
+word_count         10.101601  10.068519
+char_count         64.068198  63.749537
+uppercase_ratio     0.157284   0.156688
+digit_count         1.364649   1.786343
+punct_count         0.002088   0.002932
+has_question        0.000000   0.000000
+has_exclaim         0.000000   0.000000
+has_colon           0.000000   0.000000
+has_quote           0.000000   0.000000
+has_paren           0.000000   0.000000
+has_percent         0.000000   0.000000
+has_currency        0.010438   0.009336
+has_year            0.029923   0.037577
+negation_count      0.030619   0.040586
+modal_count         0.018789   0.013117
+action_verb_count   0.035491   0.038580
+Top tokens skewed toward label=0 (min_df=5):
+  lombok               logodds=-2.553  freq0=6  freq1=3
+  yurianto             logodds=-2.281  freq0=3  freq1=2
+  rupanya              logodds=-2.281  freq0=3  freq1=2
+  mangkir              logodds=-2.217  freq0=4  freq1=3
+  tindakan             logodds=-1.994  freq0=3  freq1=3
+  dewi                 logodds=-1.994  freq0=3  freq1=3
+  disimpan             logodds=-1.994  freq0=4  freq1=4
+  indikator            logodds=-1.994  freq0=3  freq1=3
+  kalimantan           logodds=-1.994  freq0=4  freq1=4
+  terpengaruh          logodds=-1.811  freq0=4  freq1=5
+  kadis                logodds=-1.811  freq0=4  freq1=5
+  beku                 logodds=-1.811  freq0=4  freq1=5
+  terkendala           logodds=-1.770  freq0=3  freq1=4
+  cengkareng           logodds=-1.770  freq0=3  freq1=4
+  pakistan             logodds=-1.770  freq0=3  freq1=4
+
+Top tokens skewed toward label=1 (min_df=5):
+  sehari               logodds=+1.824  freq0=1  freq1=90
+  yogya                logodds=+1.791  freq0=0  freq1=43
+  imbas                logodds=+1.720  freq0=0  freq1=40
+  update               logodds=+1.487  freq0=14  freq1=486
+  oranye               logodds=+1.440  freq0=0  freq1=30
+  coba                 logodds=+1.440  freq0=0  freq1=30
+  igd                  logodds=+1.440  freq0=0  freq1=30
+  wajib                logodds=+1.408  freq0=2  freq1=89
+  langgar              logodds=+1.374  freq0=2  freq1=86
+  kalteng              logodds=+1.356  freq0=1  freq1=56
+  agustus              logodds=+1.334  freq0=6  freq1=194
+  ppp                  logodds=+1.302  freq0=0  freq1=26
+  perdana              logodds=+1.302  freq0=0  freq1=26
+  cari                 logodds=+1.265  freq0=0  freq1=25
+  bahaya               logodds=+1.265  freq0=0  freq1=25
+
+Top bigrams skewed toward label=0:
+  wagub jabar                    logodds=-2.485
+  batuk dan                      logodds=-2.303
+  disimpan di                    logodds=-2.303
+  corona turun                   logodds=-2.303
+  lakukan swab                   logodds=-2.080
+  alasannya kumparan             logodds=-2.080
+  lagi jadi                      logodds=-2.080
+  kpu minta                      logodds=-2.080
+  pemkot depok                   logodds=-2.080
+  datangi rumah                  logodds=-2.080
+[TIMER] title_discriminative_tokens: 0.44s
+[TIMER] content_structure: 8.98s
+label                           0          1
+sentence_count          13.980515  12.758256
+avg_sentence_len_words  23.973590  23.889311
+first_sentence_len      25.000000  24.983873
+last_sentence_len       12.798887  12.959491
+digit_proportion         0.021374   0.022420
+punct_proportion         0.000007   0.000009
+quote_count              0.130828   0.123380
+n_numbers               21.259569  20.431790
+n_years                  1.900487   1.867438
+n_urls                   0.000000   0.000000
+has_boilerplate          0.019485   0.022685
+Publisher-boilerplate frequency (5000-row sample of content):
+  'detik com': ~4
+  'kompas com': ~99
+  'liputan6 com': ~1
+  'cnn indonesia': ~8
+  'cnbc indonesia': ~2
+  'okezone com': ~1
+  'sindonews com': ~1
+  'antaranews com': ~1
+
+rows with diacritic-like chars: 21
+rows with curly-quote/replacement-char unicode: 418
+[TIMER] normalization_audit: 0.82s
+
+Recommendation:
+  RAW representation      -> keep untouched, source for character n-gram features
+                              (typo/morphology robust) and for entity/number extraction
+                              that depends on original casing/punctuation.
+  NORMALIZED representation -> NFKC unicode normalize, collapse whitespace, strip HTML/
+                              URLs, strip publisher-boilerplate tokens (they are pure
+                              metadata / (B) boilerplate, not (D) leakage � they appear
+                              in both classes at similar rates per the structure audit
+                              above, so they add noise without label signal).
+  MODEL representation    -> word+char TF-IDF built on the NORMALIZED text; numbers,
+                              negation words and punctuation are deliberately NOT
+                              stripped (see Sections 9-11) since those carry the
+                              consistency signal this task is about.
+
+[whitespace] title_vocab=4294 content_vocab=25110 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%
+[regex \w+] title_vocab=4293 content_vocab=24996 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%
+[punct-aware] title_vocab=4294 content_vocab=25014 avg_tok_len(title)=5.37 avg_tok_len(content)=5.80 title-tokens-OOV-vs-content=4.4%
+
+How regex \w+ tokenizes formatting-sensitive strings:
+  '500.000' -> ['500', '000']
+  '50%' -> ['50']
+  'Rp10.000' -> ['rp10', '000']
+  'Rp 10 juta' -> ['rp', '10', 'juta']
+  '21 7 2021' -> ['21', '7', '2021']
+  'anti-corona' -> ['anti', 'corona']
+  'non-aktif' -> ['non', 'aktif']
+[TIMER] tokenization_audit: 0.94s
+title stopword%: 9.0%
+content stopword%: 20.6%
+
+Top stopwords, label=0 vs label=1 frequency (rate per 1000 titles):
+  ini          label0_rate=84.9  label1_rate=67.8
+  akan         label0_rate=43.8  label1_rate=29.0
+  dan          label0_rate=81.4  label1_rate=67.7
+  untuk        label0_rate=41.8  label1_rate=30.8
+  ke           label0_rate=55.7  label1_rate=46.4
+  yang         label0_rate=57.8  label1_rate=48.5
+  bisa         label0_rate=24.4  label1_rate=17.6
+  belum        label0_rate=8.4  label1_rate=15.0
+  kembali      label0_rate=7.7  label1_rate=13.3
+  di           label0_rate=293.0  label1_rate=298.3
+
+rows with a negation word in the title: 565 (3.92%)
+negation-word rate by label:
+       has_negation
+label              
+0          0.030619
+1          0.040201
+[TIMER] stopword_analysis: 2.83s
+distinct surface forms (sample): 29869
+distinct forms after crude stemming: 23962
+vocabulary reduction: 19.8%
+
+Example collapsed groups (stem -> surface forms):
+  'buat': ['buatkan', 'dibuatnya', 'buatan', 'buatlah', 'dibuatkan', 'berbuat', 'membuat', 'membuatnya']
+  'besar': ['terbesar', 'terbesarnya', 'besarnya', 'sebesar', 'besaran', 'dibesar', 'besar', 'besari']
+  'hubung': ['dihubungkan', 'menghubungkan', 'hubungkan', 'menghubungi', 'berhubungan', 'terhubung', 'hubungan', 'menhubungi']
+  'urut': ['urutan', 'menurut', 'urut', 'berurutan', 'diurutan', 'menurutnya', 'berurut', 'menyurutkan']
+  'dalam': ['terdalam', 'pedalaman', 'mendalami', 'sedalam', 'dalami', 'dalaman', 'didalami', 'didalam']
+[TIMER] stemming_diagnostic: 0.49s
+label                            0         1
+title_has_number          0.411273  0.501003
+content_has_number        0.997912  0.998380
+same_number_appears       0.325678  0.399923
+different_number_appears  0.135003  0.180633
+[TIMER] number_analysis: 3.99s
+mean fraction of TITLE words that are capitalized: 84.5%
+-> Indonesian news headlines are largely Title-Cased, so a naive capitalized-word
+   heuristic is NOT discriminative when applied to titles (nearly every word qualifies).
+   We therefore extract proxy entities from CONTENT ONLY (normal sentence case)
+   and measure their coverage inside the (lowercased) title text instead.
+
+mean proxy-entity count per article (content): 41.6
+       content_entity_count  content_entity_coverage_in_title
+label                                                        
+0                 45.459986                          0.073200
+1                 41.202855                          0.087961
+[TIMER] entity_proxy: 2.57s
+[TIMER] lexical_overlap: 3.93s
+label                           0         1
+n_shared         median  8.000000  8.000000
+                 mean    7.553932  7.947068
+title_coverage   median  0.750000  0.800000
+                 mean    0.749509  0.795781
+content_coverage median  0.043165  0.048780
+                 mean    0.046072  0.052735
+jaccard          median  0.042424  0.048128
+                 mean    0.045310  0.051935
+dice             median  0.081395  0.091837
+                 mean    0.085961  0.097769
+bigram_overlap   median  0.008621  0.012195
+                 mean    0.010723  0.014606
+trigram_overlap  median  0.000000  0.003273
+                 mean    0.003206  0.005118
+Saved eda_lexical_overlap.png
+
+point-biserial correlation(jaccard, label): +0.083
+IMPORTANT: this correlation can be small/near-zero even though lexical overlap is
+still a useful *feature in combination* with others -- do not assume similarity
+must be higher for label=1 without checking (per the Section-0 Meksiko/Corona example).
+[TIMER] tfidf_similarity: 148.79s
+label                   0         1
+word_cos median  0.173085  0.210785
+         mean    0.182563  0.219851
+         std     0.080168  0.089357
+char_cos median  0.227763  0.265225
+         mean    0.234373  0.269115
+         std     0.073115  0.077438
+KS test word_cos: statistic=0.1853 p=2.30e-39  (higher statistic = more separable distributions)
+KS test char_cos: statistic=0.1931 p=9.59e-43  (higher statistic = more separable distributions)
+[TIMER] sentence_evidence: 2.88s
+label                        0         1
+max_sim               0.188592  0.228663
+second_sim            0.135520  0.155950
+top3_mean             0.144090  0.168891
+n_above_0.3           0.087683  0.203627
+best_match_position   0.222909  0.143110
+first_sentence_sim    0.149471  0.196673
+first3_sentences_sim  0.105268  0.133416
+[TIMER] coverage_analysis: 20.38s
+       common_word_coverage  rare_word_coverage  number_coverage  \
+label                                                              
+0                  0.749914            0.645813         0.742019   
+1                  0.796279            0.735029         0.731226   
+
+       entity_query_coverage  
+label                         
+0                   0.073200  
+1                   0.087961  
+[TIMER] negation_analysis: 5.74s
+       title_has_negation  content_has_negation  negation_mismatch
+label                                                             
+0                0.030619              0.781489           0.755045
+1                0.040201              0.750540           0.712191
+
+Example rows where the TITLE contains a negation word:
+  [1] TITLE: Jokowi Divaksin Hari Ini Pesan PKS Jangan Paksa Warga yang Belum Siap
+        CONTENT (excerpt): Presiden Joko Widodo Jokowi hari ini divaksin virus Corona COVID 19 PKS berharap proses vaksinasi berjalan lancar tanpa menimbulkan efek samping yang berbahaya 
+  [1] TITLE: Habib Rizieq Diam diam Keluar RS Kapolda Jabar Bukan Poin Penting
+        CONTENT (excerpt): Kapolda Jabar Irjen Ahmad Dofiri berbicara soal Habib Rizieq Shihab yang diam diam meninggalkan Rumah Sakit UMMI Bogor Apa reaksi Dofiri Mungkin barangkali kita
+  [1] TITLE: Buka Lowongan  DKI Bantah Sudah Kekurangan Tenaga Medis
+        CONTENT (excerpt): Wakil Gubernur DKI Jakarta Ahmad Riza Patria menyatakan bahwa perekrutan tenaga kesehatan dibuka dalam rangka mengoptimalkan penanganan virus corona  Covid 19  
+  [1] TITLE: Kimia Farma Bantah Pelaku Pemalsu Swab Test di Soetta Pegawainya
+        CONTENT (excerpt): Kimia Farma memberikan klarifikasi terkait adanya oknum pegawai fasilitas rapid test yang diamankan terkait pemalsuan surat swab test di Polresta Bandara Soekar
+  [1] TITLE: Hari Kemerdekaan RI  Anies  Saatnya Utamakan Keselamatan  Bukan Kabar Bualan
+        CONTENT (excerpt): Gubernur DKI Jakarta Anies Baswedan memimpin upacara kemerdekaan ke 75 Republik Indonesia di Lapangan Balai Kota Jakarta  Senin  17 8 2020  Anies tampak mengena
+[TIMER] action_analysis: 3.49s
+       title_has_action action_overlap  action_absence
+label                                                 
+0              0.035491       0.901961        0.003479
+1              0.038503       0.953908        0.001775
+
+rows where title names one of our 15 tracked action verbs: 550 (3.8%)
+unique content bodies: 11646 / 14397 rows
+content reuse-count distribution (group size -> number of such groups):
+1    9120
+2    2317
+3     198
+4      10
+9       1
+Name: count, dtype: int64
+
+content groups with >1 distinct title: 2525
+content groups with BOTH labels present: 874
+[TIMER] article_family_analysis: 2.68s
+
+--- content_hash=0016dd74 (category guess: number_change) ---
+CONTENT (excerpt): Menteri Koordinator Bidang Perekonomian sekaligus Ketua Komite Kebijakan Penanganan Covid 19 dan Pemulihan Ekonomi Airlangga Hartarto mengatakan pemerintah akan memberikan Bantuan 
+TITLE A: Pegawai Gaji Rp5 Juta Dapat BLT Guru Honorer Dipertanyakan  | LABEL A: 0
+TITLE B: Pemerintah akan Transfer BLT ke 1 8 Juta Guru Honorer  | LABEL B: 1
+
+--- content_hash=00867aa7 (category guess: number_change) ---
+CONTENT (excerpt): Menteri Riset dan Teknologi Badan Riset dan Inovasi Nasional  Menristek BRIN  Bambang Brodjonegoro�enggan berkomentar soal predikat halal vaksin CoronaVac buatan perusahaan China  
+TITLE A: Menristek soal Vaksin Corona China Halal  Tanya Bio Farma  | LABEL A: 1
+TITLE B: Ahli RI soal Covid 19 Dibuat di China Teknologi Belum Mampu  | LABEL B: 0
+
+--- content_hash=0089ca9c (category guess: unsupported_detail_or_paraphrase) ---
+CONTENT (excerpt): Kepala Kantor Staf Presiden KSP Moeldoko menuturkan Indonesia masih menghadapi kendala terkait vaksin virus corona Covid 19 Sinovac Adapun salah satu kendala yang dihadapi Indonesi
+TITLE A: Istana Sebut Vaksin Covid 19 Masih Terkendala Suhu  | LABEL A: 1
+TITLE B: Bio Farma Sebut Vaksin Covid 19 Masih Terkendala Suhu  | LABEL B: 0
+
+--- content_hash=0092c2b8 (category guess: unsupported_detail_or_paraphrase) ---
+CONTENT (excerpt): Wakil Gubernur DKI Jakarta Ahmad Riza Patria menegaskan akan menjatuhkan sanksi berupa denda sebesar dua kali lipat kepada Rizieq Shihab bila kembali melanggar protokol kesehatan p
+TITLE A: Wagub Jabar Ancam Denda Rp100 Juta Bila Rizieq Melanggar Lagi  | LABEL A: 0
+TITLE B: Wagub DKI Ancam Denda Rp100 Juta Bila Rizieq Melanggar Lagi  | LABEL B: 1
+
+--- content_hash=009f8279 (category guess: unsupported_detail_or_paraphrase) ---
+CONTENT (excerpt): Sebanyak 77 760 vaksin COVID 19 tiba di Jatim pada Senin 4 1 Plt Wali Kota Surabaya Whisnu Sakti Buana bersama Mendagri Menkes dan BNPB rapat koordinasi rakor pada Selasa 5 1 secar
+TITLE A: Pemkot Surabaya Akan Koordinasi dengan Pemprov Jatim soal Vaksin COVID 19  | LABEL A: 1
+TITLE B: Pemprov Jatim Akan Koordinasi dengan Pemkot Surabaya soal Vaksin COVID 19  | LABEL B: 0
+
+--- content_hash=0124e5c5 (category guess: unsupported_detail_or_paraphrase) ---
+CONTENT (excerpt): Dua tenaga kesehatan nakes di Karawang meninggal dalam keadaan positif corona Satgas Penanganan COVID 19 Karawang mengungkap riwayat keduanya terpapar Corona Dua nakes yang meningg
+TITLE A: Satgas Karawang Ungkap Riwayat 2 Nakes Meninggal Positif Corona  | LABEL A: 1
+TITLE B: Satgas Bekasi Ungkap Riwayat 2 Nakes Meninggal Positif Corona  | LABEL B: 0
+
+--- content_hash=019f2038 (category guess: number_change) ---
+CONTENT (excerpt): Kasus virus corona di Indonesia masih terus melonjak bahkan sudah menembus lebih dari 900 ribu orang terpapar Jika penambahan kasus corona harian konsisten di angka 10 ribu maka di
+TITLE A: Kabar Baik Corona Rekor Baru Pasien Sembuh Perkembangan Vaksin Merah Putih kumparan com  | LABEL A: 1
+TITLE B: Uji Vaksin Corona Fase 1 Novavax Tunjukkan Hasil Baik hingga Harapan Vaksin Tersedia pada 2021  | LABEL B: 0
+
+--- content_hash=022d6ab8 (category guess: unsupported_detail_or_paraphrase) ---
+CONTENT (excerpt): Presiden AS Donald Trump tidak akan diberikan vaksin virus Corona sampai ada rekomendasikan dari tim medis Gedung Putih  Hal ini disampaikan oleh seorang pejabat Gedung Putih Dilan
+TITLE A: Ini Alasan Trump Belum Akan Divaksin Corona  | LABEL A: 1
+TITLE B: Ini Alasan Pence Belum Akan Divaksin Corona  | LABEL B: 0
+
+Categorized 50 mixed-label content groups (heuristic, semi-automatic):
+  unsupported_detail_or_paraphrase: 32 (64.0%)
+  number_change: 10 (20.0%)
+  topic_or_entity_change: 6 (12.0%)
+  negation_change: 2 (4.0%)
+[TIMER] mixed_label_group_display: 0.15s
+titles reused across >1 distinct content body: 120
+titles whose repeated use spans BOTH labels: 117
+
+Example: same title used with 2 different content bodies
+TITLE: Jokowi Kita Segera Melangkah Recovery Vaksin COVID Tiba di Awal Desember
+  content excerpt: Jutaan vaksin virus corona COVID 19 sinovac telah tiba di tanah air Meski begitu Presiden Joko Widodo Jokowi menegaskan   | label=0
+  content excerpt: Presiden Joko Widodo  Jokowi  menegaskan pandemi COVID 19 belum berakhir  Namun  kata Jokowi  bangsa Indonesia segera me  | label=1
+[TIMER] duplicate_title_analysis: 0.02s
+exact content-hash matches between train and test: 1264 content bodies (1310 test rows, 36.36% of test)
+exact title-hash matches between train and test: 983 titles (983 test rows)
+
+test rows whose content-prefix hash matches a train article (near-duplicate candidates): 1348 (37.41% of test)
+[TIMER] train_test_overlap: 2.52s
+groups with ALL label=1: 10268
+groups with ALL label=0: 504
+groups with MIXED labels: 874
+
+=> The prediction target is PAIR-SPECIFIC and cannot be inferred from content alone.
+[TIMER] content_group_consistency: 9.89s
+train id examples: ['tr00000', 'tr00001', 'tr00002'] ... ['tr14394', 'tr14395', 'tr14396']
+test id examples: ['te00000', 'te00001', 'te00002'] ... ['te03600', 'te03601', 'te03602']
+
+train ids look sequential (after removing prefix): True
+correlation(id numeric suffix, label): -0.0176
+(a correlation near zero means row/collection order carries no obvious label signal;
+ we do NOT infer publication dates from this ID without further evidence.)
+
+RECOMMENDATION: DO NOT USE ID as a model feature under any circumstance here.
+[TIMER] id_structure_analysis: 0.02s
+year-in-title rate by label:
+       has_year
+label          
+0      0.029923
+1      0.037577
+
+label rate in first 287 rows: 0.882
+label rate in last 287 rows: 0.895
+overall label rate: 0.900
+(large deviations between the first/last-window rates and the overall rate would
+ suggest a row-order effect worth stratifying against; small deviations do not.)
+[TIMER] temporal_analysis: 0.58s
+quadrant
+EASY_POSITIVE    6640
+HARD_POSITIVE    6320
+EASY_NEGATIVE     871
+HARD_NEGATIVE     566
+Name: count, dtype: int64
+quadrant
+EASY_POSITIVE    0.461
+HARD_POSITIVE    0.439
+EASY_NEGATIVE    0.060
+HARD_NEGATIVE    0.039
+Name: proportion, dtype: float64
+
+Example HARD_NEGATIVE (label=0 despite high lexical similarity):
+  TITLE: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki
+  CONTENT (excerpt): Polri merotasi sejumlah perwira tinggi hingga menengah karena dianggap tidak melaksanakan perintah penegakan protokol kesehatan Tidak hanya Kapolda Metro Jaya I
+  jaccard=0.089
+  TITLE: Amerika Serikat Pecah Rekor Kematian Harian Covid 19 1 092 Jiwa
+  CONTENT (excerpt): Brasil melaporkan pecah rekor kematian tertinggi akibat Covid 19 dalam sehari untuk pertama kalinya mencapai 1 092 jiwa Rekor kematian kali ini menjadikan total
+  jaccard=0.050
+  TITLE: Satu Pegawai Giant Diduga Positif Covid 19 Botani Square Berencana Desinfeksi Mal Berkala
+  CONTENT (excerpt): Manajemen Pusat perbelanjaan Margo City di Depok Jawa Barat akan menyemprotkan disinfektan secara berkala menyusul temuan satu pegawai hypermarket Giant diduga 
+  jaccard=0.065
+[TIMER] pair_difficulty: 0.12s
+Total HARD_NEGATIVE candidates (label=0, similarity >= median): 566
+Total HARD_POSITIVE candidates (label=1, similarity < median): 6320
+
+=== 20 HARD NEGATIVES (high similarity, label=0) ===
+[jaccard=0.22] TITLE: Batuk dan Demam Danramil di Surabaya Rupanya Positif Covid 19 Sang Istri Meninggal karena Corona
+    CONTENT: Komandan Rayon Militer Danramil di Probolinggo Kapten A dinyatakan positif Covid 19 Sang istri yang berinisial H rupanya juga baru saja meninggal duni
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.17] TITLE: Demam dan Batuk Istrinya Positif Covid 19 Ketua PN Medan Juga Terinfeksi
+    CONTENT: Mengalami demam dan batuk Ketua Pengadilan Negeri Medan Sumatera Utara Sutio Jumagi rupanya dinyatakan positif Covid 19 Tak hanya Sutio istrinya pun t
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.16] TITLE: 65 ASN Pemprov dan 61 Nakes Jateng Meninggal Terpapar COVID 19 Selama Pandemi
+    CONTENT: Selama pandemi COVID 19 banyak orang yang terpapar dan meninggal Termasuk ASN dan tenaga kesehatan nakes yang merawat pasien COVID 19 Gubernur Jawa Ti
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.15] TITLE: Daftar Penyakit yang Buat Orang Bisa Divaksin Corona kumparan com
+    CONTENT: Vaksinasi menjadi salah satu cara untuk menghentikan penyebaran virus corona Namun ternyata ada golongan orang yang tak bisa divaksin Mereka yang memi
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.15] TITLE: Ada Provinsi Bebas Kasus Baru COVID 19 Pada 25 Desember 2020
+    CONTENT: Tidak ada provinsi yang bebas kasus baru COVID 19 pada 25 Desember 2020 ini Angka paling sedikit yang dilaporkan satu provinsi adalah empat kasus baru
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.14] TITLE: POPULER GLOBAL Qatar Ambil Langkah Berani Menormalisasi Hubungan dengan Israel | Sayap Ayam Beku Impor dari Brasil Positif Virus Corona
+    CONTENT: Populer global masih didominasi oleh pengumuman bersejarah antara Israel dan Uni Emirat Arab yang menormalisasi hubungan diplomatik mereka Selengkapny
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.13] TITLE: Satgas Jabar Bakal Gelar Operasi Yustisi Cegah Corona Saat Libur Akhir Tahun
+    CONTENT: Satuan Tugas Satgas COVID 19 Sumatera Utara bakal menggelar operasi yustisi saat libur akhir tahun Hal ini dilakukan untuk mencegah penyebaran virus C
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.12] TITLE: 2 812 Pelaku Kejahatan Ditangkap di 2020 Kapolda Jatim Naik dari 2019
+    CONTENT: Kasus kejahatan di tengah pandemi COVID 19 masih bergeliat Bahkan tahun ini sebanyak 2 812 orang pelaku kejahatan di Jawa Barat ditangkap Jumlah tersa
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.12] TITLE: Prancis tak Akan Dapat 1 16 Juta Dosis Vaksin COVID 19 hingga Akhir Tahun
+    CONTENT: Prancis akan menerima sekitar 1 16 juta dosis vaksin COVID 19 hingga akhir tahun Perdana Menteri Prancis Jean Castex mengatakan akan menambah 2 3 juta
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Jawa Barat 9 Agustus 2020
+    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Minggu 9 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Mingg
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Jawa Tengah 31 Agustus 2020
+    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Senin 31 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Senin
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: UPDATE Covid 19 di Jabar Jateng Banten Sumsel Babel dan Bangka Belitung 26 Agustus 2020
+    CONTENT: Pemerintah kembali memperbarui data kasus Covid 19 di Indonesia pada Rabu 26 8 2020 sore Berdasarkan data dalam 24 jam terakhir hingga hari ini Rabu p
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Bertambah 7 Orang yang Meninggal Dunia akibat Covid 19 di Jambi
+    CONTENT: Jumlah kasus virus corona atau Covid 19 di Riau bertambah sebanyak 112 orang Sabtu 23 1 2021 Total kasus positif Covid 19 menjadi 28 085 orang Kepala 
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Hanya DKI Laporkan Nihil Kasus Baru COVID 19 pada 4 Desember
+    CONTENT: Pemerintah melaporkan hari ini penambahan kasus baru Corona COVID 19 sebanyak 5 803 kasus Hanya Kalimantan Tengah yang melaporkan nihil tambahan kasus
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Hadapi Pandemi COVID 19 Biden Kembalikan Kerja Sama Korea Selatan dengan WHO kumparan com
+    CONTENT: Begitu menjabat sebagai Presiden Amerika Serikat Joe Biden langsung mencanangkan strategi menghadapi pandemi COVID 19 Salah satunya kembali mengganden
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Varian Baru Corona Muncul di Inggris Mirip dengan yang Ditemukan di Brasil kumparan com
+    CONTENT: Varian virus corona baru ditemukan di Brasil Untuk mencegah penyebaran varian itu Inggris melarang penerbangan dan orang orang dari Brasil masuk negar
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Mudik Bareng Teman Pakai Mobil Pribadi dari Madiun Pria Ini Positif Covid 19
+    CONTENT: Seorang perantau asal Kota Madiun ZA 55 dinyatakan positif Covid 19 setelah mudik dari Kota Surabaya Jawa Timur ZA diketahui positif Covid 19 setelah 
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.11] TITLE: Resmi Ini SE Larangan Cuti Natal Tahun Baru 2021 untuk ASN di Jabar
+    CONTENT: Pemerintah Provinsi Pemprov DKI Jakarta resmi menerbitkan surat edaran SE terkait pelarangan cuti libur Natal dan tahun baru 2021 untuk aparatur sipil
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.10] TITLE: Daftar Enam Wilayah di Jateng yang Masuk Zona Merah Corona Minggu Ini kumparan com
+    CONTENT: Gubernur Jawa Barat Jabar Ridwan Kamil atau akrab disapa Emil mengungkap enam wilayah di Jabar masuk ke dalam zona merah sebaran corona pada pekan ini
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+[jaccard=0.10] TITLE: Bertambah 6 058 Kasus Total 598 933 Orang Positif Covid 19
+    CONTENT: Kasus positif Covid 19 per Kamis 10 12 mencapai 598 933 kasus dengan 491 975 di antaranya sembuh dan 18 336 meninggal Dikutip dari situs Kementerian K
+    WHY INTERESTING: high lexical overlap but still marked inconsistent -- check for a number/entity/negation change.
+
+=== 20 HARD POSITIVES (low similarity, label=1) ===
+[jaccard=0.00] TITLE: Organda DKI Keberatan Imbauan Pasang Lampu Ultraviolet di Bus
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Supaya Dapur Tetap Ngebul
+    CONTENT: INTERMESOPandemi COVID 19 membuat jatah uang belanja bulanan ibu rumah tangga menurun drastis Bagaimana mereka menyiasatinya Foto Ari Saputra detikcom
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: BPK Audit Anggaran Penanganan Covid 19 Juli Mendatang
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: China Ungkap Kasus Baru Corona di Pasar Tradisional Beijing
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: PLN Sebut 98 Persen Tagihan Listrik Naik Karena Pemakaian
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: BPK Tangkap Sinyal Permintaan Audit Dana Covid 19 dari Jokowi
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: F1 Batalkan GP Azerbaijan dan Jepang
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Pengusaha Minta Kebijakan Jam Kerja Tak Jadi Paksaan
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: WHO  Gelombang Baru Covid 19 di Beijing Tembus 100 Kasus
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: BUMN dan Perusahaan Swasta Diimbau Kurangi Jam Kerja
+    CONTENT: Gambas Video CNN
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Refleksi Akhir Tahun 2020
+    CONTENT: Tahun 2020 hampir kita tutup Perlu kita merenungkan atau merefleksi secara mendalam bagaimana kita melewati perjalanan bangsa yang kita cintai ini sep
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Selamat Bertugas  Jenderal
+    CONTENT: Dari kebudayaan bisa saja kita berbeda  Dari agama dan warna kulit bisa saja berbeda  Seharusnya perbedaan ini tak membuat kita berbeda  Kenyataan sud
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Selamat Bertugas Jenderal
+    CONTENT: Dari kebudayaan bisa saja kita berbeda Dari agama dan warna kulit bisa saja berbeda Seharusnya perbedaan ini tak membuat kita berbeda Kenyataan sudah 
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Jihad Melawan Liburan
+    CONTENT: Liburan seakan wajib Termasuk pada akhir tahun yang dikenal dengan libur Natal dan Tahun Baru Kota besar seperti Jakarta biasanya ditinggalkan penghun
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Membidik Saham Ciamik Sambut Vaksin Corona
+    CONTENT: Indeks Harga�Saham Gabungan  IHSG  pada perdagangan pekan lalu berakhir di level 5 810 atau menguat 0 47 persen  Tercatat  asing melakukan jual bersih
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Predictive Policing Pemolisian Masa Kini dan Nanti
+    CONTENT: 18 Januari 2021 Can our police find ways to work smarter not just harder William A Geller 1997 RingkasanDalam era yang digerakkan oleh data upaya upay
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.00] TITLE: Predictive Policing   Pemolisian Masa Kini dan Nanti
+    CONTENT: 18 Januari 2021 Can our police       find ways to work smarter  not just harder   William A  Geller  1997 RingkasanDalam era yang digerakkan oleh data
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.01] TITLE: Beragam Sikap Menanggapi Vaksin
+    CONTENT: Vaksin Covid 19 sudah tiba sebagian Di beberapa negara vaksinasi sudah dimulai Apa boleh buat Vaksin akhirnya menjadi satu satunya harapan untuk kelua
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.01] TITLE: Pembelajaran Jarak Jauh Efektif atau Tidak    kumparan com
+    CONTENT: Dapat kita ketahui jika Indonesia mulai memberlakukan metode pembelajaran jarak jauh  PJJ  sejak awal April 2020 melalui keputusan Kementrian Pendidik
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[jaccard=0.01] TITLE: Menyegarkan Kesadaran Publik
+    CONTENT: Mengapa pandemi global Covid 19 tidak kunjung berhenti Pertanyaan ini tampaknya perlu menjadi bahan renungan bagi kita semua Pertama karena berbagai u
+    WHY INTERESTING: low lexical overlap yet still marked consistent -- likely a paraphrase, not a mismatch.
+[TIMER] manual_case_study: 0.02s
+[A_length_only] held-out Macro F1 = 0.4875  (n_features=4)
+[B_lexical_overlap_only] held-out Macro F1 = 0.4709  (n_features=7)
+[C_cosine_only] held-out Macro F1 = 0.4666  (n_features=2)
+[D_relationship_combined] held-out Macro F1 = 0.5014  (n_features=32)
+[TIMER] diagnostic_classifiers: 0.68s
+
+Ranking (how much each feature family alone explains):
+  D_relationship_combined: 0.5014
+  A_length_only: 0.4875
+  B_lexical_overlap_only: 0.4709
+  C_cosine_only: 0.4666
+ threshold  F1_class0  F1_class1    MacroF1   pos_rate
+       0.1     0.0000     0.0000     0.4743      1.000
+       0.2     0.0461     0.9460     0.4960      0.990
+       0.3     0.1670     0.9232     0.5451      0.929
+       0.4     0.2453     0.8659     0.5556      0.796
+       0.5     0.2487     0.7540     0.5014      0.604
+       0.6     0.2214     0.5773     0.3994      0.394
+       0.7     0.2041     0.3420     0.2731      0.193
+       0.8     0.1857     0.1037     0.1447      0.050
+       0.9     0.1786     0.0086     0.0936      0.004
+
+best threshold in this quick sweep: 0.4 (Macro F1=0.5556)
+default-threshold (0.5) positive-prediction rate: 0.604 vs actual label=1 rate: 0.902
+[TIMER] threshold_diagnostic: 0.06s
+content-group size distribution:
+1    9120
+2    2317
+3     198
+4      10
+9       1
+Name: count, dtype: int64
+
+simulated plain-random 80/20 split: mean fraction of validation content-hashes that ALSO appear in train = 30.95%
+
+RECOMMENDATION:
+  StratifiedGroupKFold grouped on content_hash -- plain StratifiedKFold would leak
+  duplicated article bodies across the train/validation boundary (contamination > 0% above).
+[TIMER] validation_leakage_analysis: 0.27s
+[TIMER] eda_synthesis: 0.00s
+Q: Is class imbalance severe?
+   evidence: label1=90.0% vs label0=10.0%, ratio=9.0x
+   conclusion: Moderate-severe (~9:1)
+   implication: Use Macro F1, evaluate class_weight='balanced', stratify all splits.
+
+Q: Is content duplicated?
+   evidence: 2751 duplicate rows across 11646 unique bodies
+   conclusion: Yes, non-trivially
+   implication: Group validation by content_hash.
+
+Q: Are mixed-label content groups common?
+   evidence: 874 groups with both labels
+   conclusion: Present
+   implication: Confirms/limits pair-specific framing.
+
+Q: Is the task pair-specific?
+   evidence: Section 19-20 mixed-label / multi-content-per-title evidence
+   conclusion: Yes
+   implication: Content-only or title-only models are insufficient by construction.
+
+Q: Is lexical similarity useful?
+   evidence: KS stats from Sec.14, correlation=+0.083
+   conclusion: Partially informative
+   implication: Use as one input feature, not a rule.
+
+Q: Is lexical similarity sufficient?
+   evidence: HARD_NEGATIVE / HARD_POSITIVE examples in Sec.25-26
+   conclusion: No
+   implication: Need number/entity/negation features alongside similarity.
+
+Q: Are numbers important?
+   evidence: Sec.11 number-mismatch rate by label
+   conclusion: Weak-moderate, noisy
+   implication: Keep as weak feature; note tokenization caveat.
+
+Q: Are entities important?
+   evidence: Sec.12 entity-coverage-in-title by label
+   conclusion: Directional signal
+   implication: Keep as weak feature (proxy only, no real NER).
+
+Q: Is negation important?
+   evidence: Sec.17 negation_mismatch rate
+   conclusion: Rare but semantically sharp
+   implication: Keep as weak feature; low recall by itself.
+
+Q: Is sentence-level evidence stronger than full-body similarity?
+   evidence: Sec.15 max_sim vs whole-doc jaccard
+   conclusion: See printed comparison
+   implication: Prefer first-N-sentence / best-sentence framing over whole-body encoding.
+
+Q: Are source artifacts present?
+   evidence: Sec.7 boilerplate frequency
+   conclusion: Yes, low-signal metadata
+   implication: Strip in normalized view only.
+
+Q: Should stopwords be removed?
+   evidence: Sec.9 negation-word-as-stopword conflict
+   conclusion: Only with negation words excluded
+   implication: Custom stopword list or skip removal.
+
+Q: Should stemming be used?
+   evidence: Sec.10 vocabulary-reduction vs meaning-collapse risk
+   conclusion: Optional, lean avoid initially
+   implication: Prefer char n-grams first.
+
+Q: Should punctuation be preserved?
+   evidence: Sec.2/7/8 audits
+   conclusion: Yes
+   implication: Punctuation removal not justified by evidence found.
+
+Q: Should numbers be preserved?
+   evidence: Sec.11
+   conclusion: Yes
+   implication: Numbers carry factual-consistency signal.
+
+Q: Should title/content be vectorized separately?
+   evidence: Framing in Sec.0 + Sec.4-6 structural differences
+   conclusion: Yes
+   implication: Never concatenate title+content into one field.
+
+Q: Should character n-grams be used?
+   evidence: Sec.8/10 morphology + typo robustness
+   conclusion: Yes
+   implication: Pairs well with linear classifiers per literature.
+
+Q: Is train/test leakage present?
+   evidence: Sec.21 overlap=1348/3603 rows
+   conclusion: Non-trivial
+   implication: Adjust trust in leaderboard score accordingly.
+
+Q: Should validation be grouped?
+   evidence: Sec.29 simulated contamination
+   conclusion: Yes
+   implication: StratifiedGroupKFold on content_hash.
+
+Q: Is a lightweight linear model plausible?
+   evidence: Sec.27 diagnostic classifier F1s
+   conclusion: Yes, as a strong baseline
+   implication: TF-IDF + LinearSVC is a reasonable first full model.
+
+Q: Is semantic embedding likely necessary?
+   evidence: Sec.14/27 lexical-only ceiling
+   conclusion: Only if lexical baseline underperforms
+   implication: Gate behind a Macro F1 threshold (e.g. <0.90) before investing.
+
+Q: Cheapest next experiment with highest expected information gain?
+   evidence: Synthesis of all sections above
+   conclusion: Word+char TF-IDF + handcrafted relationship features + LinearSVC, grouped CV
+   implication: See Section 31 roadmap.
+
+Saved eda_synthesis_table.csv
+============================================================
+EDA EXECUTIVE SUMMARY
+Train rows: 14397
+Test rows: 3603
+Label 0: 10.0%   Label 1: 90.0%
+Duplicate contents: 2751 rows across 11646 unique bodies
+Mixed-label content groups: 874
+Train/Test content overlap: 1348/3603 test rows (37.41%)
+Best lexical signal: D_relationship_combined (diagnostic Macro F1=0.5014)
+Best structural signal: title/content length (weak, see Cohen's d in Section 4)
+Best factual signal: relationship-combined features (numbers+entities+negation), Section 27
+Most important hard-negative pattern: high lexical overlap + factual mismatch (Section 25-26)
+Most important preprocessing decision: keep numbers/negation/punctuation; vectorize title/content separately
+Recommended validation strategy: StratifiedGroupKFold on content_hash
+Recommended baseline: Word+char TF-IDF + relationship features + LinearSVC (Experiment 1)
+Expected runtime (Experiment 1): a few minutes on CPU
+Biggest remaining uncertainty: how much semantic (non-lexical) paraphrase exists in HARD_POSITIVE cases
+Next experiment: run Experiment 1 baseline, then gate semantic modeling on its OOF Macro F1
+============================================================
+
+Total EDA runtime: 233.8s (3.9 min)
+Runtime within the 10-minute target.
+
+Per-section timings:
+  tfidf_similarity: 148.8s
+  coverage_analysis: 20.4s
+  content_group_consistency: 9.9s
+  content_structure: 9.0s
+  negation_analysis: 5.7s
+  number_analysis: 4.0s
+  lexical_overlap: 3.9s
+  action_analysis: 3.5s
+  unicode_punct_audit: 3.1s
+  sentence_evidence: 2.9s
+  stopword_analysis: 2.8s
+  article_family_analysis: 2.7s
+  entity_proxy: 2.6s
+  train_test_overlap: 2.5s
+  data_loading: 1.3s
+  length_analysis: 1.0s
+  tokenization_audit: 0.9s
+  normalization_audit: 0.8s
+  diagnostic_classifiers: 0.7s
+  temporal_analysis: 0.6s
+  title_structure: 0.6s
+  stemming_diagnostic: 0.5s
+  title_discriminative_tokens: 0.4s
+  validation_leakage_analysis: 0.3s
+  quality_audit: 0.2s
+  mixed_label_group_display: 0.2s
+  pair_difficulty: 0.1s
+  threshold_diagnostic: 0.1s
+  target_distribution: 0.0s
+  manual_case_study: 0.0s
+  duplicate_title_analysis: 0.0s
+  id_structure_analysis: 0.0s
+  eda_synthesis: 0.0s

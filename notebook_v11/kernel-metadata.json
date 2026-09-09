@@ -1,0 +1,13 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-v11",
+  "title": "IFEST 2026 DAC v11",
+  "code_file": "ifest2026_dac_v11.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": ["penyisihan-ifest-2026-dac"],
+  "kernel_sources": []
+}

@@ -1,0 +1,23 @@
+[   4.3s] cold rows: 9120
+[  10.4s] entity pool: 4867
+[  10.4s] building entity co-occurrence graph from corpus...
+[  13.4s] co-occurrence graph built for 4867 entities
+[  13.4s] computing graph-context features for all rows...
+       hop1_local_match  hop1_n_checked  hop2_indirect_support  hop2_n_missing
+count        14397.0000      14397.0000             14397.0000      14397.0000
+mean             0.1002          1.2393                 0.1255          0.1514
+std              0.1239          1.0448                 0.3313          0.4859
+min              0.0000          0.0000                 0.0000          0.0000
+25%              0.0000          0.0000                 0.0000          0.0000
+50%              0.0625          1.0000                 0.0000          0.0000
+75%              0.1667          2.0000                 0.0000          0.0000
+max              0.8750          7.0000                 1.0000          7.0000
+[  15.0s] === Exp 1: 48-feat CatBoost(w=4) baseline vs + graph-context ===
+48-feat CatBoost w=4:1 (baseline)             macroF1=0.6561 F1_0=0.3533 F1_1=0.9590 P0=0.3200 R0=0.3943
++ graph-context (4 feats)                     macroF1=0.6506 F1_0=0.3429 F1_1=0.9584 P0=0.3110 R0=0.3819
+[ 125.4s] === Exp 2: difficulty-aware majority undersampling (uses oof_base as difficulty score) ===
+difficulty-aware keep_frac=1.0                macroF1=0.6533 F1_0=0.3436 F1_1=0.9631 P0=0.3443 R0=0.3429
+difficulty-aware keep_frac=0.75               macroF1=0.6501 F1_0=0.3422 F1_1=0.9581 P0=0.3086 R0=0.3840
+difficulty-aware keep_frac=0.5                macroF1=0.6280 F1_0=0.2930 F1_1=0.9630 P0=0.3159 R0=0.2731
+difficulty-aware keep_frac=0.3                macroF1=0.4972 F1_0=0.0729 F1_1=0.9214 P0=0.0554 R0=0.1068
+[ 298.4s] === Exp 3: combine graph-context + difficulty-aware (best keep_frac) ===

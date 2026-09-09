@@ -1,0 +1,39 @@
+[   4.2s] title TF-IDF built: word=(14397, 20000) char=(14397, 20000)
+[   4.4s] collecting B_no_pos pool...
+[   4.5s] pool size: 733
+[   4.5s] === DIAGNOSTIC: negative-cluster coherence ===
+bodies with >=2 negatives: 36
+mean pairwise negative-negative similarity: 0.4248  (std=0.3734)
+  quantiles: 10%=0.000 50%=0.463 90%=0.834
+[   4.6s] computing candidate scores...
+[   6.0s] scored rows: 733  class0=34
+[   6.0s] === B0.1-B0.4: comparing simple scoring schemes (repeated 5x5 CV) ===
+max_word     macroF1=0.5462(+/-0.0461)  F1_0=0.1855(+/-0.1061)  F1_1=0.9070  thr=0.1607(+/-0.0843)
+max_char     macroF1=0.5755(+/-0.0520)  F1_0=0.2253(+/-0.1025)  F1_1=0.9257  thr=0.1498(+/-0.0212)
+max_bm25     macroF1=0.4881(+/-0.0041)  F1_0=0.0000(+/-0.0000)  F1_1=0.9762  thr=0.0000(+/-0.0000)
+top2_word    macroF1=0.5438(+/-0.0426)  F1_0=0.1671(+/-0.0934)  F1_1=0.9205  thr=0.1087(+/-0.0649)
+top3_word    macroF1=0.5368(+/-0.0431)  F1_0=0.1532(+/-0.0967)  F1_1=0.9205  thr=0.1067(+/-0.0653)
+rrf_max      macroF1=0.4881(+/-0.0041)  F1_0=0.0000(+/-0.0000)  F1_1=0.9762  thr=0.0487(+/-0.0000)
+proto_sim    macroF1=0.5414(+/-0.0431)  F1_0=0.1699(+/-0.0983)  F1_1=0.9130  thr=0.1353(+/-0.0778)
+combo_avg    macroF1=0.5503(+/-0.0512)  F1_0=0.1757(+/-0.1092)  F1_1=0.9249  thr=0.4172(+/-0.0347)
+[  22.0s] === full-sample (single best threshold, whole pool) reference, for comparison to B0's 0.9167 ===
+max_word     (in-sample best t=0.2200) macro=0.5707 F1_0=0.2526 F1_1=0.8887
+max_char     (in-sample best t=0.1610) macro=0.5920 F1_0=0.2609 F1_1=0.9232
+max_bm25     (in-sample best t=0.0000) macro=0.4881 F1_0=0.0000 F1_1=0.9763
+top2_word    (in-sample best t=0.0800) macro=0.5774 F1_0=0.2182 F1_1=0.9366
+top3_word    (in-sample best t=0.0600) macro=0.5841 F1_0=0.2198 F1_1=0.9484
+rrf_max      (in-sample best t=0.0487) macro=0.4881 F1_0=0.0000 F1_1=0.9763
+proto_sim    (in-sample best t=0.1000) macro=0.5733 F1_0=0.2205 F1_1=0.9261
+combo_avg    (in-sample best t=0.4264) macro=0.5798 F1_0=0.2370 F1_1=0.9226
+
+=== SUMMARY (sorted by mean CV macro F1, honest out-of-fold) ===
+   scheme  mean_macro  std_macro  mean_f1_0  std_f1_0  mean_f1_1  mean_thr  std_thr
+ max_char      0.5755     0.0520     0.2253    0.1025     0.9257    0.1498   0.0212
+combo_avg      0.5503     0.0512     0.1757    0.1092     0.9249    0.4172   0.0347
+ max_word      0.5462     0.0461     0.1855    0.1061     0.9070    0.1607   0.0843
+top2_word      0.5438     0.0426     0.1671    0.0934     0.9205    0.1087   0.0649
+proto_sim      0.5414     0.0431     0.1699    0.0983     0.9130    0.1353   0.0778
+top3_word      0.5368     0.0431     0.1532    0.0967     0.9205    0.1067   0.0653
+ max_bm25      0.4881     0.0041     0.0000    0.0000     0.9762    0.0000   0.0000
+  rrf_max      0.4881     0.0041     0.0000    0.0000     0.9762    0.0487   0.0000
+[  23.1s] total runtime: 0.4 min

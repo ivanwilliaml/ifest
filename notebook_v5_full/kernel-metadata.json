@@ -1,0 +1,13 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-v5-full",
+  "title": "IFEST 2026 DAC v5 Full",
+  "code_file": "ifest2026_dac_v5_full.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": ["penyisihan-ifest-2026-dac"],
+  "kernel_sources": []
+}

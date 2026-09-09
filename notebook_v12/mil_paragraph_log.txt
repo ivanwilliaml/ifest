@@ -1,0 +1,29 @@
+[   4.0s] cold rows: 9120
+[   9.5s] splitting bodies into paragraph-proxy chunks...
+[   9.9s] avg paragraphs/article: 4.36  (min=1 max=53)
+[   9.9s] building BM25 over paragraph units...
+[  13.0s] fitting from-scratch LSA (title + all paragraphs)...
+[  26.3s] embedding paragraphs...
+[  29.6s] building paragraph-instance feature rows...
+[  33.8s] total paragraph instances: 62841
+[  33.8s] === training paragraph-level CatBoost (article label as instance label, MIL) ===
+[  45.0s]   fold done (50117 train instances, 12724 val instances)
+[  57.3s]   fold done (50320 train instances, 12521 val instances)
+[  69.0s]   fold done (50396 train instances, 12445 val instances)
+[  82.0s]   fold done (50060 train instances, 12781 val instances)
+[  93.5s]   fold done (50471 train instances, 12370 val instances)
+[  93.5s] aggregating paragraph OOF predictions back to article level...
+[  93.6s] === computing whole-body baseline (48 feats, CatBoost w=4:1, for the 0.7/0.3 blend) ===
+whole-body baseline (48 feats) macroF1=0.6561 F1_0=0.3533 F1_1=0.9590 P0=0.3200 R0=0.3943
+paragraph max                  macroF1=0.5989 F1_0=0.2534 F1_1=0.9445 P0=0.2062 R0=0.3285
+paragraph top2                 macroF1=0.6049 F1_0=0.2596 F1_1=0.9503 P0=0.2254 R0=0.3060
+paragraph top3                 macroF1=0.6061 F1_0=0.2660 F1_1=0.9461 P0=0.2181 R0=0.3409
+paragraph top5                 macroF1=0.6196 F1_0=0.2844 F1_1=0.9548 P0=0.2584 R0=0.3162
+paragraph p90                  macroF1=0.6063 F1_0=0.2665 F1_1=0.9462 P0=0.2187 R0=0.3409
+[ 151.5s] === 0.7*best_paragraph(max) + 0.3*whole_body ===
+0.7*para_max + 0.3*whole       macroF1=0.6411 F1_0=0.3262 F1_1=0.9561 P0=0.2893 R0=0.3737
+[ 151.6s] === 0.7*best_paragraph(top3) + 0.3*whole_body ===
+0.7*para_top3 + 0.3*whole      macroF1=0.6463 F1_0=0.3374 F1_1=0.9552 P0=0.2915 R0=0.4004
+
+reference baseline (whole-body 48-feat + BM25-sent, from prior run): macroF1=0.6586 F1_0=0.3540
+[ 151.6s] total runtime: 2.5 min

@@ -1,0 +1,43 @@
+[    1.6s] loaded train=(14397, 4) test=(3603, 3)
+[   10.6s] cold rows: 9120 / 14397
+[   10.6s] entity mining...
+[   14.6s] entity pool: 4867
+[   14.6s] chunk index (BM25 + LSA)...
+[   42.9s] NMF topic space (100d, non-negative TF-IDF)...
+[  170.0s] chunk LSA vectors (for structural + distribution features)...
+[  177.9s] base 41 features (v11/v12 consistency features)...
+[  189.9s] base features: 41
+[  189.9s] [B] chunk-distribution features...
+[  195.1s] chunk-dist features: 18
+[  195.1s] [C] support vs conflict separation...
+[  195.2s] [topic] NMF cosine + KL/JS divergence...
+[  195.7s] topic features: 4
+[  195.7s] === EXPERIMENT A: baseline v12 (base41 + struct7) ===
+[  206.7s] A done: macro_all=0.6732 macro_cold=0.6509 f1_0_cold=0.3403
+[  206.7s] === EXPERIMENT B: + chunk-distribution features ===
+[  215.7s] B done: macro_all=0.6668 macro_cold=0.6376 f1_0_cold=0.3183
+[  215.7s] === EXPERIMENT C: + support/conflict separation ===
+[  225.2s] C done: macro_all=0.6694 macro_cold=0.6369 f1_0_cold=0.3205
+[  225.2s] === EXPERIMENT D: + NMF topic + KL/JS divergence ===
+[  235.8s] D done: macro_all=0.6682 macro_cold=0.6392 f1_0_cold=0.3175
+[  235.8s] === EXPERIMENT E: class-weight sweep (cold subset, best feature set D) ===
+[  246.9s]   w0=1.0: macro_cold=0.6493 f1_0_cold=0.3351 f1_1_cold=0.9635
+[  257.2s]   w0=1.5: macro_cold=0.6409 f1_0_cold=0.3160 f1_1_cold=0.9659
+[  266.5s]   w0=2.0: macro_cold=0.6518 f1_0_cold=0.3419 f1_1_cold=0.9616
+[  276.4s]   w0=3.0: macro_cold=0.6485 f1_0_cold=0.3417 f1_1_cold=0.9553
+[  286.2s]   w0=4.0: macro_cold=0.6505 f1_0_cold=0.3387 f1_1_cold=0.9622
+[  286.2s] === EXPERIMENT F: threshold optimized for F1-0 alone (best class-weight model, cold subset) ===
+[  286.3s] F done: t=0.675 f1_0=0.3419 f1_1=0.9616 macro=0.6518
+[  286.3s] === SUMMARY TABLE ===
+                                          experiment  n_feats  macro_all  f1_0_all  f1_1_all  macro_cold  f1_0_cold  f1_1_cold
+                      A: baseline v12 (base+struct7)       48     0.6732    0.4124    0.9339      0.6509     0.3403     0.9615
+B: + chunk-distribution (quantiles/topk/entropy/run)       66     0.6668    0.4003    0.9333      0.6376     0.3183     0.9568
+                 C: + support/conflict/margin scores       69     0.6694    0.4104    0.9284      0.6369     0.3205     0.9533
+            D: + NMF topic cosine + KL/JS divergence       73     0.6682    0.4093    0.9270      0.6392     0.3175     0.9609
+                E: class_weight 0:1.0:1 (cold-tuned)       73        NaN       NaN       NaN      0.6493     0.3351     0.9635
+                E: class_weight 0:1.5:1 (cold-tuned)       73        NaN       NaN       NaN      0.6409     0.3160     0.9659
+                E: class_weight 0:2.0:1 (cold-tuned)       73        NaN       NaN       NaN      0.6518     0.3419     0.9616
+                E: class_weight 0:3.0:1 (cold-tuned)       73        NaN       NaN       NaN      0.6485     0.3417     0.9553
+                E: class_weight 0:4.0:1 (cold-tuned)       73        NaN       NaN       NaN      0.6505     0.3387     0.9622
+          F: threshold tuned for F1-0 only (t=0.675)       73        NaN       NaN       NaN      0.6518     0.3419     0.9616
+[  286.3s] total runtime: 4.8 min

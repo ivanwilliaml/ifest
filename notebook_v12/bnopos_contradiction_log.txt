@@ -1,0 +1,31 @@
+[   7.3s] collecting B_no_pos pool (leave-one-title-out)...
+[   7.5s] pool size: 733
+[   7.7s] feature matrix: (733, 9) class0=34 class1=699
+label                  0       1
+jaccard           0.0378  0.0476
+title_cov         0.7735  0.7952
+ent_missing       0.2941  0.0887
+frac_ent_missing  0.1985  0.0559
+n_title_ent       1.3824  1.4893
+num_mismatch      0.1176  0.0758
+year_mismatch     0.0000  0.0014
+neg_mismatch      0.7059  0.7396
+action_conflict   0.0000  0.0100
+[   7.7s] === C1: Logistic Regression, all 9 body-contradiction features ===
+macroF1=0.5186(+/-0.0503) F1_0=0.0909(+/-0.0985) F1_1=0.9462
+[   9.1s] === C2: single combined score (sum of conflict indicators) + threshold ===
+macroF1=0.4713(+/-0.0279) F1_0=0.0380(+/-0.0521) F1_1=0.9045
+[  10.3s] === C3: single feature -- entity/frac_ent_missing alone ===
+macroF1=0.5344(+/-0.0463) F1_0=0.1173(+/-0.1006) F1_1=0.9516
+[  11.5s] === C4: LogReg, only the 3 strongest-looking features (by class mean gap) ===
+  top3 by class-mean gap: ['ent_missing', 'frac_ent_missing', 'n_title_ent']
+macroF1=0.5422(+/-0.0483) F1_0=0.1340(+/-0.1020) F1_1=0.9503
+[  12.8s] === SUMMARY ===
+                                                                method  macro_f1   f1_0   f1_1
+                                        baseline: hard rule (always 1)    0.4881 0.0000 0.9763
+                                   retrieval-only honest CV (max_char)    0.5755 0.2253 0.9257
+                             C1: LogReg all 9 body-contradiction feats    0.5186 0.0909 0.9462
+                                    C2: single combined conflict score    0.4713 0.0380 0.9045
+                                              C3: entity-missing alone    0.5344 0.1173 0.9516
+C4: top3 features (['ent_missing', 'frac_ent_missing', 'n_title_ent'])    0.5422 0.1340 0.9503
+[  12.8s] total runtime: 0.2 min

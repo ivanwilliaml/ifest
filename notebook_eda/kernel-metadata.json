@@ -1,0 +1,13 @@
+{
+  "id": "ivanwllm/ifest-2026-dac-comprehensive-eda-report",
+  "title": "IFEST 2026 DAC - Comprehensive EDA Report",
+  "code_file": "ifest2026_dac_eda_report.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": ["penyisihan-ifest-2026-dac"],
+  "kernel_sources": []
+}

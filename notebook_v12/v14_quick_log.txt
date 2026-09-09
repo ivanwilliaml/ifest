@@ -1,0 +1,10 @@
+[    0.0s] device=cpu
+[    4.3s] train shape (14397, 7)
+[    5.0s] vocab size 25000
+[    5.0s] pre-tokenizing (title ids, chunk ids, chunk mask)...
+[    6.9s] tokenizing done
+[    9.5s] QUICK DRY RUN: fold0 only, epochs=2
+[   24.0s]     epoch 1/2 loss=1.0149
+[   35.4s]     epoch 2/2 loss=0.9775
+quick dry-run fold0 subsample: macroF1=0.4907 @ t=0.60
+(subsample is tiny, this is a SANITY CHECK only, not a real result)
