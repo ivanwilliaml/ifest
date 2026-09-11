@@ -1,0 +1,8 @@
+[TIMER] claim_representation: 48.6s
+A_cold feature count: 71
+features ready in 61.5s
+seed=7: w=1 -> 0.6901 (thr=0.69) | w=4 -> 0.6843 (thr=0.37) | w=5 -> 0.6813 (thr=0.38)  | best: w=1  (149.3s)
+seed=123: w=1 -> 0.6928 (thr=0.67) | w=4 -> 0.6815 (thr=0.44) | w=5 -> 0.6863 (thr=0.41)  | best: w=1  (149.2s)
+seed=2026: w=1 -> 0.6889 (thr=0.62) | w=4 -> 0.6847 (thr=0.37) | w=5 -> 0.6839 (thr=0.38)  | best: w=1  (144.9s)
+
+TOTAL wall time: 504.9s

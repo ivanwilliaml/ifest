@@ -1,0 +1,153 @@
+[{"stream_name":"stderr","time":6.396956119,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.397018211,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.397022312,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.397024977,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.002145555,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.002183188,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.002187021,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.002189641,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.30876061,"data":"sklearn 1.6.1\n"}
+,{"stream_name":"stdout","time":11.434814713,"data":"catboost 1.2.10\n"}
+,{"stream_name":"stdout","time":11.4348488,"data":"Sastrawi unavailable, falling back to identity stemmer: No module named 'Sastrawi'\n"}
+,{"stream_name":"stdout","time":12.601293124,"data":"[TIMER] load: 0.9s\n"}
+,{"stream_name":"stdout","time":16.926125451,"data":"train (14397, 8) test (3603, 7) class0 0.0998\n"}
+,{"stream_name":"stdout","time":17.450309373,"data":"antonym pairs: 549  synonym pairs: 4625\n"}
+,{"stream_name":"stdout","time":17.450342628,"data":"provinces: 34  regencies: 488\n"}
+,{"stream_name":"stdout","time":20.801617678,"data":"[TIMER] entity_mining: 3.3s\n"}
+,{"stream_name":"stdout","time":20.801654417,"data":"abbreviation alias table: 26/28 resolved against loaded gazetteer\n"}
+,{"stream_name":"stdout","time":20.801659955,"data":"entity pool: 5176  phrase gazetteer: 238  role markers: 73\n"}
+,{"stream_name":"stdout","time":27.538958075,"data":"[TIMER] chunk_index: 6.5s\n"}
+,{"stream_name":"stdout","time":41.003666685,"data":"[TIMER] lsa: 13.3s\n"}
+,{"stream_name":"stdout","time":93.172272432,"data":"[TIMER] char_tfidf: 48.0s\n"}
+,{"stream_name":"stdout","time":174.637113578,"data":"[TIMER] base_features: 13.2s\n"}
+,{"stream_name":"stdout","time":174.637183224,"data":"49 base+structural features\n"}
+,{"stream_name":"stdout","time":215.210617904,"data":"[TIMER] claim_representation: 40.5s\n"}
+,{"stream_name":"stdout","time":215.210664134,"data":"A_cold feature count: 71\n"}
+,{"stream_name":"stdout","time":218.078150094,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 771.2/771.2 kB 4.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":218.280830909,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 771.2/771.2 kB 4.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":224.773783497,"data":"CUDA available: True\n"}
+,{"stream_name":"stderr","time":241.672832263,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":241.67287445,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":241.672885287,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":241.672950407,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":241.673082675,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":241.673241959,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":241.67369162,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":241.67370103,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":241.673704725,"data":"Exception encountered at \"In [10]\":\n"}
+,{"stream_name":"stderr","time":241.673708538,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":241.673712279,"data":"AcceleratorError                          Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":241.67371582,"data":"/tmp/ipykernel_22/1978165859.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":241.673719737,"data":"     17     m = TabPFNClassifier(random_state=SEED, device=device, ignore_pretraining_limits=True)\n"}
+,{"stream_name":"stderr","time":241.673723627,"data":"     18     m.fit(Xa[a], y[a])\n"}
+,{"stream_name":"stderr","time":241.673733142,"data":"---\u003e 19     oof[b] = m.predict_proba(Xa[b])[:,1]\n"}
+,{"stream_name":"stderr","time":241.673750453,"data":"     20     print(f\"fold {i+1}/5 done in {time.time()-t1:.1f}s\")\n"}
+,{"stream_name":"stderr","time":241.673754787,"data":"     21 \n"}
+,{"stream_name":"stderr","time":241.673758637,"data":"\n"}
+,{"stream_name":"stderr","time":241.673762198,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/classifier.py in predict_proba(self, X)\n"}
+,{"stream_name":"stderr","time":241.6737666,"data":"   1479             Shape (n_samples, n_classes).\n"}
+,{"stream_name":"stderr","time":241.673770304,"data":"   1480         \"\"\"\n"}
+,{"stream_name":"stderr","time":241.673773759,"data":"-\u003e 1481         return self._predict_proba(X)\n"}
+,{"stream_name":"stderr","time":241.673777193,"data":"   1482 \n"}
+,{"stream_name":"stderr","time":241.673780405,"data":"   1483     @config_context(transform_output=\"default\")  # type: ignore\n"}
+,{"stream_name":"stderr","time":241.673783842,"data":"\n"}
+,{"stream_name":"stderr","time":241.673786977,"data":"/usr/lib/python3.12/contextlib.py in inner(*args, **kwds)\n"}
+,{"stream_name":"stderr","time":241.673790305,"data":"     79         def inner(*args, **kwds):\n"}
+,{"stream_name":"stderr","time":241.673793643,"data":"     80             with self._recreate_cm():\n"}
+,{"stream_name":"stderr","time":241.673796983,"data":"---\u003e 81                 return func(*args, **kwds)\n"}
+,{"stream_name":"stderr","time":241.67380037,"data":"     82         return inner\n"}
+,{"stream_name":"stderr","time":241.673803583,"data":"     83 \n"}
+,{"stream_name":"stderr","time":241.673806745,"data":"\n"}
+,{"stream_name":"stderr","time":241.673809877,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/classifier.py in _predict_proba(self, X)\n"}
+,{"stream_name":"stderr","time":241.673815087,"data":"   1493         \"\"\"\n"}
+,{"stream_name":"stderr","time":241.673821688,"data":"   1494         probas = (\n"}
+,{"stream_name":"stderr","time":241.673823934,"data":"-\u003e 1495             self._raw_predict(X, return_logits=False).float().detach().cpu().numpy()\n"}
+,{"stream_name":"stderr","time":241.673826295,"data":"   1496         )\n"}
+,{"stream_name":"stderr","time":241.673828494,"data":"   1497         probas = self._maybe_reweight_probas(probas=probas)\n"}
+,{"stream_name":"stderr","time":241.673830774,"data":"\n"}
+,{"stream_name":"stderr","time":241.673833427,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/classifier.py in _raw_predict(self, X, return_logits, return_raw_logits)\n"}
+,{"stream_name":"stderr","time":241.673859115,"data":"   1405             n_features=getattr(self, \"n_features_in_\", None),\n"}
+,{"stream_name":"stderr","time":241.673863808,"data":"   1406         ):\n"}
+,{"stream_name":"stderr","time":241.673867127,"data":"-\u003e 1407             return self.forward(\n"}
+,{"stream_name":"stderr","time":241.673870555,"data":"   1408                 X,\n"}
+,{"stream_name":"stderr","time":241.673873812,"data":"   1409                 use_inference_mode=True,\n"}
+,{"stream_name":"stderr","time":241.673877112,"data":"\n"}
+,{"stream_name":"stderr","time":241.673880286,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/classifier.py in forward(self, X, use_inference_mode, return_logits, return_raw_logits)\n"}
+,{"stream_name":"stderr","time":241.673883829,"data":"   1739 \n"}
+,{"stream_name":"stderr","time":241.673886932,"data":"   1740         outputs = []\n"}
+,{"stream_name":"stderr","time":241.673890159,"data":"-\u003e 1741         for output, config in tqdm(\n"}
+,{"stream_name":"stderr","time":241.67389419,"data":"   1742             self.executor_.iter_outputs(\n"}
+,{"stream_name":"stderr","time":241.67391805,"data":"   1743                 X,\n"}
+,{"stream_name":"stderr","time":241.673921592,"data":"\n"}
+,{"stream_name":"stderr","time":241.673925206,"data":"/usr/local/lib/python3.12/dist-packages/tqdm/notebook.py in __iter__(self)\n"}
+,{"stream_name":"stderr","time":241.673929857,"data":"    248         try:\n"}
+,{"stream_name":"stderr","time":241.673933627,"data":"    249             it = super().__iter__()\n"}
+,{"stream_name":"stderr","time":241.673937328,"data":"--\u003e 250             yield from it\n"}
+,{"stream_name":"stderr","time":241.673941691,"data":"    251         # NB: except ... [ as ...] breaks IPython async KeyboardInterrupt\n"}
+,{"stream_name":"stderr","time":241.673945859,"data":"    252         except:  # NOQA\n"}
+,{"stream_name":"stderr","time":241.673950055,"data":"\n"}
+,{"stream_name":"stderr","time":241.673954104,"data":"/usr/local/lib/python3.12/dist-packages/tqdm/std.py in __iter__(self)\n"}
+,{"stream_name":"stderr","time":241.673957801,"data":"   1167         # (note: keep this check outside the loop for performance)\n"}
+,{"stream_name":"stderr","time":241.673960858,"data":"   1168         if self.disable:\n"}
+,{"stream_name":"stderr","time":241.673963968,"data":"-\u003e 1169             for obj in iterable:\n"}
+,{"stream_name":"stderr","time":241.673967834,"data":"   1170                 yield obj\n"}
+,{"stream_name":"stderr","time":241.673971606,"data":"   1171             return\n"}
+,{"stream_name":"stderr","time":241.673975514,"data":"\n"}
+,{"stream_name":"stderr","time":241.6739791,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/inference.py in iter_outputs(self, X, autocast, task_type, only_return_standard_out)\n"}
+,{"stream_name":"stderr","time":241.673983021,"data":"    751         )\n"}
+,{"stream_name":"stderr","time":241.67398703,"data":"    752 \n"}
+,{"stream_name":"stderr","time":241.673990371,"data":"--\u003e 753         for output, ensemble_member in zip(\n"}
+,{"stream_name":"stderr","time":241.673994727,"data":"    754             timed_outputs, self.ensemble_members, strict=True\n"}
+,{"stream_name":"stderr","time":241.67399862,"data":"    755         ):\n"}
+,{"stream_name":"stderr","time":241.674002978,"data":"\n"}
+,{"stream_name":"stderr","time":241.674006474,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/inference.py in __next__(self)\n"}
+,{"stream_name":"stderr","time":241.674010745,"data":"     69     def __next__(self) -\u003e _T:\n"}
+,{"stream_name":"stderr","time":241.674021193,"data":"     70         start = time.perf_counter()\n"}
+,{"stream_name":"stderr","time":241.674025187,"data":"---\u003e 71         value = next(self._inner)\n"}
+,{"stream_name":"stderr","time":241.674029202,"data":"     72         if self._synchronize:\n"}
+,{"stream_name":"stderr","time":241.674033167,"data":"     73             if self._device.type == \"cuda\":\n"}
+,{"stream_name":"stderr","time":241.674037903,"data":"\n"}
+,{"stream_name":"stderr","time":241.674041671,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/parallel_execute.py in parallel_execute(devices, functions, prewarm_lapack)\n"}
+,{"stream_name":"stderr","time":241.674046748,"data":"     84     if len(devices) == 1:\n"}
+,{"stream_name":"stderr","time":241.67405131,"data":"     85         # If we only have one device then just use the current thread to avoid overhead.\n"}
+,{"stream_name":"stderr","time":241.674055016,"data":"---\u003e 86         yield from _execute_in_current_thread(devices[0], functions)\n"}
+,{"stream_name":"stderr","time":241.674058342,"data":"     87     else:\n"}
+,{"stream_name":"stderr","time":241.674062605,"data":"     88         yield from _execute_with_multithreading(\n"}
+,{"stream_name":"stderr","time":241.674066085,"data":"\n"}
+,{"stream_name":"stderr","time":241.674069486,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/parallel_execute.py in _execute_in_current_thread(device, functions)\n"}
+,{"stream_name":"stderr","time":241.674073492,"data":"     95 ) -\u003e Generator[R_co]:\n"}
+,{"stream_name":"stderr","time":241.67407685,"data":"     96     for function in functions:\n"}
+,{"stream_name":"stderr","time":241.67408069,"data":"---\u003e 97         yield function(device=device)\n"}
+,{"stream_name":"stderr","time":241.674083865,"data":"     98 \n"}
+,{"stream_name":"stderr","time":241.674088168,"data":"     99 \n"}
+,{"stream_name":"stderr","time":241.67409195,"data":"\n"}
+,{"stream_name":"stderr","time":241.674096715,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/inference.py in _call_model(self, device, X_train, X_test, y_train, feature_schema, autocast, only_return_standard_out, model_index, save_peak_mem, gpu_preprocessor, task_type)\n"}
+,{"stream_name":"stderr","time":241.67410307,"data":"    782         model = self.model_caches[model_index].get(device)\n"}
+,{"stream_name":"stderr","time":241.674106583,"data":"    783 \n"}
+,{"stream_name":"stderr","time":241.674111413,"data":"--\u003e 784         X_full, y_train = _prepare_model_inputs(\n"}
+,{"stream_name":"stderr","time":241.674115112,"data":"    785             device, self.force_inference_dtype, X_train, X_test, y_train\n"}
+,{"stream_name":"stderr","time":241.674119434,"data":"    786         )\n"}
+,{"stream_name":"stderr","time":241.67412322,"data":"\n"}
+,{"stream_name":"stderr","time":241.674127017,"data":"/usr/local/lib/python3.12/dist-packages/tabpfn/inference.py in _prepare_model_inputs(device, force_inference_dtype, X_train, X_test, y_train)\n"}
+,{"stream_name":"stderr","time":241.674132161,"data":"   1309     X_train = torch.as_tensor(X_train, dtype=dtype, device=device)\n"}
+,{"stream_name":"stderr","time":241.674137197,"data":"   1310     X_test = torch.as_tensor(X_test, dtype=dtype, device=device)\n"}
+,{"stream_name":"stderr","time":241.674141058,"data":"-\u003e 1311     X_full = torch.cat([X_train, X_test], dim=0).unsqueeze(1)\n"}
+,{"stream_name":"stderr","time":241.67414506,"data":"   1312     y_train = torch.as_tensor(y_train, dtype=dtype, device=device)\n"}
+,{"stream_name":"stderr","time":241.674149115,"data":"   1313     return X_full, y_train\n"}
+,{"stream_name":"stderr","time":241.674153534,"data":"\n"}
+,{"stream_name":"stderr","time":241.674160915,"data":"AcceleratorError: CUDA error: no kernel image is available for execution on the device\n"}
+,{"stream_name":"stderr","time":241.674164695,"data":"Search for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n"}
+,{"stream_name":"stderr","time":241.67416876,"data":"CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\n"}
+,{"stream_name":"stderr","time":241.674173267,"data":"For debugging consider passing CUDA_LAUNCH_BLOCKING=1\n"}
+,{"stream_name":"stderr","time":241.6741769,"data":"Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n"}
+,{"stream_name":"stderr","time":241.674180789,"data":"\n"}
+,{"stream_name":"stderr","time":241.67418423,"data":"\n"}
+,{"stream_name":"stderr","time":244.016741,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":244.016775231,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":244.170194168,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":244.170219353,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":244.806268692,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":245.135893466,"data":"[NbConvertApp] Writing 229295 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":247.631629372,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":249.389303501,"data":"[NbConvertApp] Writing 1425710 bytes to __results__.html\n"}
+]

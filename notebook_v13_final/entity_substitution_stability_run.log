@@ -1,0 +1,23 @@
+[TIMER] claim_representation: 52.6s
+A_cold feature count: 76
+features ready in 66.8s
+baseline feature count (must be 71): 71
+seed=7: base MacroF1=0.6874 F1-0=0.4082 | corrected MacroF1=0.6819 F1-0=0.3946 | delta_vs_ref=-0.0176 (63.8s)
+seed=42: base MacroF1=0.6995 F1-0=0.4267 | corrected MacroF1=0.7017 F1-0=0.4316 | delta_vs_ref=+0.0022 (63.3s)
+seed=123: base MacroF1=0.6911 F1-0=0.4140 | corrected MacroF1=0.6891 F1-0=0.4102 | delta_vs_ref=-0.0104 (65.6s)
+seed=2026: base MacroF1=0.6878 F1-0=0.4051 | corrected MacroF1=0.6864 F1-0=0.4014 | delta_vs_ref=-0.0131 (64.0s)
+seed=777: base MacroF1=0.6890 F1-0=0.4050 | corrected MacroF1=0.6890 F1-0=0.4050 | delta_vs_ref=-0.0105 (62.3s)
+
+  seed  base_MacroF1  corr_MacroF1  delta_vs_0.6995  corr_F1-0
+     7        0.6874        0.6819          -0.0176     0.3946
+    42        0.6995        0.7017          +0.0022     0.4316
+   123        0.6911        0.6891          -0.0104     0.4102
+  2026        0.6878        0.6864          -0.0131     0.4014
+   777        0.6890        0.6890          -0.0105     0.4050
+
+=== SUMMARY across 5 seeds ===
+corrected Macro F1: mean=0.6896  std=0.0073
+corrected F1-0    : mean=0.4086  std=0.0141
+baseline Macro F1 : mean=0.6909  std=0.0050
+seeds with corrected MacroF1 > 0.6995: 1/5
+TOTAL wall time: 385.8s

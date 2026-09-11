@@ -1,0 +1,30 @@
+[TIMER] claim_representation: 44.6s
+A_cold feature count: 71
+features ready in 66.0s, n_features=71
+weight=  1  thr=0.630  F1_0=0.4255  F1_1=0.9721  MacroF1=0.6988  (41.5s)
+weight=  2  thr=0.540  F1_0=0.4111  F1_1=0.9694  MacroF1=0.6903  (43.3s)
+weight=  3  thr=0.460  F1_0=0.4143  F1_1=0.9697  MacroF1=0.6920  (41.7s)
+weight=  4  thr=0.400  F1_0=0.4222  F1_1=0.9707  MacroF1=0.6965  (43.4s)
+weight=  5  thr=0.400  F1_0=0.4278  F1_1=0.9681  MacroF1=0.6980  (42.4s)
+weight=  6  thr=0.340  F1_0=0.4233  F1_1=0.9703  MacroF1=0.6968  (43.9s)
+weight=  8  thr=0.320  F1_0=0.4108  F1_1=0.9673  MacroF1=0.6891  (44.2s)
+weight= 10  thr=0.280  F1_0=0.4000  F1_1=0.9670  MacroF1=0.6835  (44.2s)
+weight= 12  thr=0.230  F1_0=0.4099  F1_1=0.9696  MacroF1=0.6897  (42.4s)
+weight= 16  thr=0.210  F1_0=0.4103  F1_1=0.9681  MacroF1=0.6892  (45.5s)
+weight= 20  thr=0.170  F1_0=0.4018  F1_1=0.9685  MacroF1=0.6852  (48.1s)
+
+=== summary (sorted by Macro F1) ===
+  w=  1  thr=0.630  F1_0=0.4255  F1_1=0.9721  MacroF1=0.6988
+  w=  5  thr=0.400  F1_0=0.4278  F1_1=0.9681  MacroF1=0.6980
+  w=  6  thr=0.340  F1_0=0.4233  F1_1=0.9703  MacroF1=0.6968
+  w=  4  thr=0.400  F1_0=0.4222  F1_1=0.9707  MacroF1=0.6965
+  w=  3  thr=0.460  F1_0=0.4143  F1_1=0.9697  MacroF1=0.6920
+  w=  2  thr=0.540  F1_0=0.4111  F1_1=0.9694  MacroF1=0.6903
+  w= 12  thr=0.230  F1_0=0.4099  F1_1=0.9696  MacroF1=0.6897
+  w= 16  thr=0.210  F1_0=0.4103  F1_1=0.9681  MacroF1=0.6892
+  w=  8  thr=0.320  F1_0=0.4108  F1_1=0.9673  MacroF1=0.6891
+  w= 20  thr=0.170  F1_0=0.4018  F1_1=0.9685  MacroF1=0.6852
+  w= 10  thr=0.280  F1_0=0.4000  F1_1=0.9670  MacroF1=0.6835
+
+(reference: current production weight=4 -> 0.6965 via full StratifiedGroupKFold at 0.400 threshold)
+TOTAL wall time: 549.0s

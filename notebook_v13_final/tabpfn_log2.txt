@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[TIMER] claim_representation: 46.1s
+A_cold feature count: 71
+features ready in 58.8s, n_features=71
+Traceback (most recent call last):
+  File "D:\Lomba\IFEST2026_DAC\notebook_v13_final\tabpfn_only.py", line 33, in <module>
+    m.fit(Xa[a], y[a])
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\tabpfn\classifier.py", line 843, in fit
+    ensemble_configs, X, y = self._initialize_dataset_preprocessing(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\tabpfn\classifier.py", line 719, in _initialize_dataset_preprocessing
+    X, y, feature_names, n_features, original_y_name = ensure_compatible_fit_inputs(
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\tabpfn\validation.py", line 82, in ensure_compatible_fit_inputs
+    validate_dataset_size(
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\tabpfn\validation.py", line 150, in validate_dataset_size
+    _validate_num_samples_for_cpu(
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\tabpfn\validation.py", line 304, in _validate_num_samples_for_cpu
+    raise RuntimeError(
+RuntimeError: Running on CPU with more than 5000 samples is not allowed by default due to slow performance.
+To override this behavior, set the environment variable TABPFN_ALLOW_CPU_LARGE_DATASET=1 or set ignore_pretraining_limits=True.
+Alternatively, consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client

@@ -1,0 +1,164 @@
+sklearn 1.8.0
+catboost 1.2.10
+[TIMER] load: 0.4s
+train (14397, 8) test (3603, 7) class0 0.0998
+antonym pairs: 549  synonym pairs: 4625
+provinces: 34  regencies: 488
+[TIMER] entity_mining: 3.1s
+abbreviation alias table: 26/28 resolved against loaded gazetteer
+entity pool: 5176  phrase gazetteer: 238  role markers: 73
+[TIMER] chunk_index: 5.4s
+[TIMER] lsa: 11.1s
+[TIMER] base_features: 10.7s
+48 base+structural features
+[TIMER] claim_representation: 43.8s
+A_cold feature count: 69
+C_exact lookup validated: 12587 unique (title,content) pairs, 0 label conflicts
+test regime counts: {'C_exact': 927, 'B_has_pos': 216, 'B_no_pos': 167, 'A_cold': 2293}
+C_exact resolved: 927 of 927
+B regime training pool: 2011 rows, 26 features
+[TIMER] B_regime_training_pool: 1.4s
+[TIMER] B_regime_fit: 1.6s
+[TIMER] B_regime_predict: 0.5s
+B regime test rows: 383
+A_cold OOF macroF1=0.6908 @ threshold=0.450
+--- A_cold reproducibility record (this notebook, this run) ---
+  n_features    : 69
+  model         : single CatBoostClassifier (NOT an ensemble -- multi-model
+                  stacking was explored in experiments but is not part of
+                  this notebook's committed best config)
+  iterations    : 800
+  depth         : 6
+  learning_rate : 0.03
+  class_weights : [4, 1]
+  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)
+  threshold     : 0.450 (selected on OOF cold predictions only, no test labels)
+  OOF Macro F1  : 0.6908
+  OOF F1-0      : 0.4142
+  OOF F1-1      : 0.9674
+--- A_cold OOF confusion matrix (rows=true, cols=pred; labels=[0,1]) ---
+[[ 199  288]
+ [ 275 8358]]
+--- A_cold OOF classification report ---
+              precision    recall  f1-score   support
+
+           0     0.4198    0.4086    0.4142       487
+           1     0.9667    0.9681    0.9674      8633
+
+    accuracy                         0.9383      9120
+   macro avg     0.6933    0.6884    0.6908      9120
+weighted avg     0.9375    0.9383    0.9379      9120
+
+[TIMER] A_cold_cv_threshold: 43.2s
+[TIMER] A_cold_final_fit: 8.4s
+A_cold test rows: 2293
+  C_exact    n=  927  positive_rate=0.998
+  B_has_pos  n=  216  positive_rate=0.023
+  B_no_pos   n=  167  positive_rate=1.000
+  A_cold     n= 2293  positive_rate=0.947
+label
+1    0.907299
+0    0.092701
+Name: proportion, dtype: float64
+==========================================================
+V13 — full regime router (C rule + B title-retrieval + A_cold claim-representation)
+A_cold OOF macro F1  : 0.6908  (F1-0=0.4142, F1-1=0.9674) @ threshold 0.450
+total runtime        : 2.4 min
+==========================================================
+  claim_representation: 43.8s
+  A_cold_cv_threshold: 43.2s
+  lsa: 11.1s
+  base_features: 10.7s
+  A_cold_final_fit: 8.4s
+  chunk_index: 5.4s
+  entity_mining: 3.1s
+  B_regime_fit: 1.6s
+  B_regime_training_pool: 1.4s
+  B_regime_predict: 0.5s
+  load: 0.4s
+Total FP (current best model): 288
+rows with exactly 2 title entities + matched predicate: 44 / 288
+of those, body window found with both entities near matching predicate: 16
+of those, order REVERSED (candidate role-swap signal): 5
+
+=== ALL candidates with order comparison (read for precision) ===
+[tr00555] same order  match=exact
+  TITLE: Nadiem Minta Keringanan UKT Bagi Seluruh Mahasiswa
+  entities: Nadiem / UKT  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: Menteri Nadiem telah menerbitkan Permendikbud No 25 Tahun 2020 yang mengatur bahwa PTN bisa memberikan keringanan UKT terhadap mahasiswa yang terkendala ekonomi Itu jadi kemenangan sementara Konteks sementara dalam arti
+
+[tr02729] *** REVERSED ***  match=exact
+  TITLE: 4 Poin Pernyataan Maaf Pihak Klinik Bumame Farmasi soal Pemalsuan PCR
+  entities: Bumame / PCR  title_order=e1_first  body_order=e2_first
+  BODY WINDOW: kesalahan daripada kami kenakalan anak anak remaja itu poin pertama kata David Berikut 4 poin pernyataan pihak keluarga selebgram erlanggs dkk terkait pemalsuan surat PCR tersebut 1 Bumame Farmasi Tak
+
+[tr02813] *** REVERSED ***  match=exact
+  TITLE: Varian Baru Corona Muncul di Inggris Mirip dengan yang Ditemukan di Brasil kumparan com
+  entities: Inggris / Brasil  title_order=e1_first  body_order=e2_first
+  BODY WINDOW: Varian virus corona baru ditemukan di Brasil Untuk mencegah penyebaran varian itu Inggris melarang penerbangan dan orang orang
+
+[tr02866] same order  match=exact
+  TITLE: 27 PMI Terdeteksi COVID Setibanya di Taiwan BP2MI Sidak Sejumlah Perusahaan
+  entities: PMI / Taiwan  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: positif COVID 19 BP2MI mengatakan 85 PMI di Taiwan terkonfirmasi positif COVID 19 itu yang tiba pada bulan Oktober November 2020 Otoritas Taiwan menetapkan suspensi terhadap penempatan PMI ke Taiwan
+
+[tr03515] same order  match=exact
+  TITLE: Kata Bupati Pati Soal Viral Foto Ganjar Tak Bermasker di Acara Pernikahan
+  entities: Pati / Ganjar  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: Foto Bupati Pati Haryanto tanpa masker saat menghadiri acara pernikahan viral di media sosial Gubernur Jawa Tengah Ganjar Pranowo angkat bicara Ganjar mengaku sudah
+
+[tr05109] *** REVERSED ***  match=exact
+  TITLE: Ditemui Indra Catri Warga Daerah Tertinggal Sumbar Curhat Ada Internet
+  entities: Catri / Sumbar  title_order=e1_first  body_order=e2_first
+  BODY WINDOW: Cawagub Sumbar Indra Catri beberapa kali menerima keluhan soal belum adanya jaringan internet di sejumlah daerah tertinggal di Sumatera Barat Salah satu pihak yang curhat soal jaringan internet adalah Warga
+
+[tr05898] same order  match=exact
+  TITLE: Hanya 110 Unit Sepeda Model Brompton Bamsoet Dijual Rp 13 5 Juta
+  entities: Brompton / Bamsoet  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: Brompton bermerek Bamsoet Pembuatan sepeda ini melibatkan sekitar 18 UMKM di Bandung Dibanderol dengan harga jual Rp 13 5 juta memiliki kualitas tak kalah dibanding sepeda lipat impor buatan Inggris
+
+[tr06902] same order  match=exact
+  TITLE: Tembus Rekor Harian 4 850 Kasus Jawa Barat Terbanyak
+  entities: Jawa / Barat  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: rekor sebelumnya pada 25 September lalu yakni 4 823 kasus Tiga daerah dengan sebaran kasus terbanyak yakni DKI Jakarta dengan 1 182 kasus Jawa Barat 597 kasus dan Jawa Tengah
+
+[tr06983] same order  match=exact
+  TITLE: Direktur RSI Amal Sehat Sragen Meninggal Terpapar Corona
+  entities: RSI / Sragen  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: Wakil Direktur Non Medis RSI Amal Sehat Kabupaten Sragen Jawa Tengah Bambang HP meninggal dunia dengan status positif virus Corona atau
+
+[tr09300] same order  match=exact
+  TITLE: 8 Fakta Lurah Petamburan Positif Corona Terkait Kerumunan HRS
+  entities: Petamburan / HRS  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: 2020 Yusri mengatakan Setiyanto telah dirujuk ke RS Polri Kramat Jati Jakarta Timur Berikut 8 fakta Lurah Petamburan positif Corona tak terkait kerumunan HRS Kemenkes Sarankan Contact TracingKementerian Kesehatan pun
+
+[tr09778] same order  match=exact
+  TITLE: KBRI Doha Bebaskan Denda dan Pulangkan 140 WNI Overstay ke RI
+  entities: KBRI / WNI  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: KBRI Riyadh membebaskan denda dan memulangkan sebanyak 140 WNI overstay Mayoritas dari WNI tersebut pernah merasakan dinginnya
+
+[tr10021] same order  match=exact
+  TITLE: Cerita Giring Ganesha Positif Covid 19 Bersyukur Tularkan ke Anak dan Istri
+  entities: Giring / Ganesha  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: sekaligus politisi Giring Ganesha menambah deretan selebritas Indonesia yang terpapar virus corona Giring kabarnya dinyatakan positif Covid 19 pada 21 Desember lalu Mantan vokalis Nidji ini akhirnya menjalani isolasi mandiri
+
+[tr10596] same order  match=exact
+  TITLE: HOAKS Covid 19 Disebut Nyata Catut Profesor dari Cornell University
+  entities: Cornell / University  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: Berdasarkan verifikasi Kompas com sejauh ini informasi ini tidak benar Beredar narasi Covid 19 tidak nyata dengan mencatut nama Robert Oswald ahli virologi dan ahli imunologi dari Cornell University sebagai
+
+[tr10716] *** REVERSED ***  match=exact
+  TITLE: Travel Bubble Australia dan Selandia Baru Kemungkinan Dimulai Kuartal I 2021
+  entities: Australia / Selandia  title_order=e1_first  body_order=e2_first
+  BODY WINDOW: kembali perjalanan lintas negara dan menggenjot sektor pariwisata yang lumpuh selama pandemi Covid 19 Selandia Baru dan Australia menjadi negara pelopor yang mencetuskan ide mengenai travel bubble ini Travel bubble
+
+[tr13312] *** REVERSED ***  match=exact
+  TITLE: Tak Pernah Jadi Episenter Corona di Australia Kini Victoria Nihil Kasus Baru kumparan com
+  entities: Australia / Victoria  title_order=e1_first  body_order=e2_first
+  BODY WINDOW: Negara Bagian Victoria di Australia melaporkan tidak ada kasus baru corona selama 16 hari Victoria kemudian memutuskan untuk melonggarkan aturan pembatasan Saat Australia berhadapan
+
+[tr14213] same order  match=exact
+  TITLE: RI Amankan Kuota 50 Juta Vaksin Corona Sinovac dan 50 Juta Novavax
+  entities: Sinovac / Novavax  title_order=e1_first  body_order=e1_first
+  BODY WINDOW: dari kedua produsen vaksin Corona tersebut Selain vaksin Sinovac hari ini kita kita juga berhasil mengamankan suplai vaksin yaitu dari AstraZeneca dan Novavax Masing masing sebesar 50 juta dosis kata
+

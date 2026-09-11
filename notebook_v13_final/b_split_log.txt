@@ -1,0 +1,97 @@
+sklearn 1.8.0
+catboost 1.2.10
+[TIMER] load: 0.6s
+train (14397, 8) test (3603, 7) class0 0.0998
+antonym pairs: 549  synonym pairs: 4625
+provinces: 34  regencies: 488
+[TIMER] entity_mining: 3.8s
+abbreviation alias table: 26/28 resolved against loaded gazetteer
+entity pool: 5176  phrase gazetteer: 238  role markers: 73
+[TIMER] chunk_index: 6.9s
+[TIMER] lsa: 12.3s
+[TIMER] base_features: 10.8s
+48 base+structural features
+[TIMER] claim_representation: 44.9s
+A_cold feature count: 69
+C_exact lookup validated: 12587 unique (title,content) pairs, 0 label conflicts
+test regime counts: {'C_exact': 927, 'B_has_pos': 216, 'B_no_pos': 167, 'A_cold': 2293}
+C_exact resolved: 927 of 927
+B regime training pool: 2011 rows, 26 features
+[TIMER] B_regime_training_pool: 1.6s
+[TIMER] B_regime_fit: 3.2s
+[TIMER] B_regime_predict: 0.6s
+B regime test rows: 383
+A_cold OOF macroF1=0.6908 @ threshold=0.450
+--- A_cold reproducibility record (this notebook, this run) ---
+  n_features    : 69
+  model         : single CatBoostClassifier (NOT an ensemble -- multi-model
+                  stacking was explored in experiments but is not part of
+                  this notebook's committed best config)
+  iterations    : 800
+  depth         : 6
+  learning_rate : 0.03
+  class_weights : [4, 1]
+  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)
+  threshold     : 0.450 (selected on OOF cold predictions only, no test labels)
+  OOF Macro F1  : 0.6908
+  OOF F1-0      : 0.4142
+  OOF F1-1      : 0.9674
+--- A_cold OOF confusion matrix (rows=true, cols=pred; labels=[0,1]) ---
+[[ 199  288]
+ [ 275 8358]]
+--- A_cold OOF classification report ---
+              precision    recall  f1-score   support
+
+           0     0.4198    0.4086    0.4142       487
+           1     0.9667    0.9681    0.9674      8633
+
+    accuracy                         0.9383      9120
+   macro avg     0.6933    0.6884    0.6908      9120
+weighted avg     0.9375    0.9383    0.9379      9120
+
+[TIMER] A_cold_cv_threshold: 61.2s
+[TIMER] A_cold_final_fit: 12.1s
+A_cold test rows: 2293
+  C_exact    n=  927  positive_rate=0.998
+  B_has_pos  n=  216  positive_rate=0.023
+  B_no_pos   n=  167  positive_rate=1.000
+  A_cold     n= 2293  positive_rate=0.947
+label
+1    0.907299
+0    0.092701
+Name: proportion, dtype: float64
+==========================================================
+V13 — full regime router (C rule + B title-retrieval + A_cold claim-representation)
+A_cold OOF macro F1  : 0.6908  (F1-0=0.4142, F1-1=0.9674) @ threshold 0.450
+total runtime        : 2.9 min
+==========================================================
+  A_cold_cv_threshold: 61.2s
+  claim_representation: 44.9s
+  lsa: 12.3s
+  A_cold_final_fit: 12.1s
+  base_features: 10.8s
+  chunk_index: 6.9s
+  entity_mining: 3.8s
+  B_regime_fit: 3.2s
+  B_regime_training_pool: 1.6s
+  B_regime_predict: 0.6s
+  load: 0.6s
+B_df pool: 2011 rows total
+  rows where has_pos=1 (body has a known positive title): 1278
+  rows where has_pos=0 (no known positive -- B_no_pos-like): 733
+  label=0 rate | has_pos=1 subset: 0.7152
+  label=0 rate | has_pos=0 subset: 0.0464
+
+=== threshold=0.3 ===
+OVERALL (n=2011): Macro F1 = 0.9840
+  has_pos=1 subset (n=1278): Macro F1 = 0.9952  (this is the B_has_pos-like part)
+  has_pos=0 subset (n=733): Macro F1 = 0.6766  (this is the B_no_pos-like part)
+  has_pos=0 confusion: [[8, 26], [1, 698]]
+  has_pos=0 predicted-positive rate: 0.9877  (true positive rate: 0.9536)
+
+=== threshold=0.5 ===
+OVERALL (n=2011): Macro F1 = 0.9840
+  has_pos=1 subset (n=1278): Macro F1 = 0.9942  (this is the B_has_pos-like part)
+  has_pos=0 subset (n=733): Macro F1 = 0.7200  (this is the B_no_pos-like part)
+  has_pos=0 confusion: [[11, 23], [3, 696]]
+  has_pos=0 predicted-positive rate: 0.9809  (true positive rate: 0.9536)

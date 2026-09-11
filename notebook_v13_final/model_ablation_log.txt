@@ -1,0 +1,47 @@
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[TIMER] claim_representation: 46.1s
+A_cold feature count: 71
+features ready in 58.1s, n_features=71
+CatBoost   : Macro F1 = 0.6965 @ thr=0.400  (41.7s)
+LightGBM   : Macro F1 = 0.6874 @ thr=0.400  (9.0s)
+XGBoost    : Macro F1 = 0.6868 @ thr=0.800  (15.5s)
+ExtraTrees : Macro F1 = 0.6834 @ thr=0.650  (14.2s)
+
+TabPFN requires a one-time license acceptance to download model weights for local inference.
+Opening your browser to complete login/registration…
+
+  https://ux.priorlabs.ai/login?callback=http://localhost:52842&hf_repo_id=tabpfn_3
+
+Waiting for login to complete…
+
+Having trouble? You can also authenticate manually:
+  1. Open https://ux.priorlabs.ai/account in a browser (log in or register if needed)
+  2. Accept the license at https://ux.priorlabs.ai/account/licenses
+  3. Copy your API Key
+  4. Paste the API key below
+
+API key (or press Enter to keep waiting): TabPFN failed: OSError: [WinError 10038] An operation was attempted on something that is not a socket
+
+=== Individual model ranking ===
+  CatBoost     0.6965
+  LightGBM     0.6874
+  XGBoost      0.6868
+  ExtraTrees   0.6834
+
+=== Ensemble: top-3 average ===
+  using: ['CatBoost', 'LightGBM', 'XGBoost']
+  top-3 avg: Macro F1 = 0.6948 @ thr=0.550
+
+=== Ensemble: all-5 stacking meta-learner (LogisticRegression, honest 2nd-layer CV) ===
+  meta-learner (models: ['CatBoost', 'LightGBM', 'XGBoost', 'ExtraTrees']): Macro F1 = 0.6976 @ thr=0.625
+
+TOTAL wall time: 150.8s

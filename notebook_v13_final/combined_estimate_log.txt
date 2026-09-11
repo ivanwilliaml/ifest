@@ -1,0 +1,95 @@
+sklearn 1.8.0
+catboost 1.2.10
+[TIMER] load: 0.5s
+train (14397, 8) test (3603, 7) class0 0.0998
+antonym pairs: 549  synonym pairs: 4625
+provinces: 34  regencies: 488
+[TIMER] entity_mining: 3.1s
+entity pool: 5176  phrase gazetteer: 238  role markers: 73
+[TIMER] chunk_index: 6.0s
+[TIMER] lsa: 12.5s
+[TIMER] base_features: 12.6s
+48 base+structural features
+[TIMER] claim_representation: 26.3s
+A_cold feature count: 64
+C_exact lookup validated: 12587 unique (title,content) pairs, 0 label conflicts
+test regime counts: {'C_exact': 927, 'B_has_pos': 216, 'B_no_pos': 167, 'A_cold': 2293}
+C_exact resolved: 927 of 927
+B regime training pool: 2011 rows, 26 features
+[TIMER] B_regime_training_pool: 1.9s
+[TIMER] B_regime_fit: 2.2s
+[TIMER] B_regime_predict: 0.6s
+B regime test rows: 383
+A_cold OOF macroF1=0.6732 @ threshold=0.425
+--- A_cold reproducibility record (this notebook, this run) ---
+  n_features    : 64
+  model         : single CatBoostClassifier (NOT an ensemble -- multi-model
+                  stacking was explored in experiments but is not part of
+                  this notebook's committed best config)
+  iterations    : 800
+  depth         : 6
+  learning_rate : 0.03
+  class_weights : [4, 1]
+  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)
+  threshold     : 0.425 (selected on OOF cold predictions only, no test labels)
+  OOF Macro F1  : 0.6732
+  OOF F1-0      : 0.3789
+  OOF F1-1      : 0.9675
+--- A_cold OOF confusion matrix (rows=true, cols=pred; labels=[0,1]) ---
+[[ 172  315]
+ [ 249 8384]]
+--- A_cold OOF classification report ---
+              precision    recall  f1-score   support
+
+           0     0.4086    0.3532    0.3789       487
+           1     0.9638    0.9712    0.9675      8633
+
+    accuracy                         0.9382      9120
+   macro avg     0.6862    0.6622    0.6732      9120
+weighted avg     0.9341    0.9382    0.9360      9120
+
+[TIMER] A_cold_cv_threshold: 1417.0s
+[TIMER] A_cold_final_fit: 8.3s
+A_cold test rows: 2293
+  C_exact    n=  927  positive_rate=0.998
+  B_has_pos  n=  216  positive_rate=0.023
+  B_no_pos   n=  167  positive_rate=1.000
+  A_cold     n= 2293  positive_rate=0.950
+label
+1    0.908965
+0    0.091035
+Name: proportion, dtype: float64
+==========================================================
+V13 — full regime router (C rule + B title-retrieval + A_cold claim-representation)
+A_cold OOF macro F1  : 0.6732  (F1-0=0.3789, F1-1=0.9675) @ threshold 0.425
+total runtime        : 25.2 min
+==========================================================
+  A_cold_cv_threshold: 1417.0s
+  claim_representation: 26.3s
+  base_features: 12.6s
+  lsa: 12.5s
+  A_cold_final_fit: 8.3s
+  chunk_index: 6.0s
+  entity_mining: 3.1s
+  B_regime_fit: 2.2s
+  B_regime_training_pool: 1.9s
+  B_regime_predict: 0.6s
+  load: 0.5s
+B regime honest 5-fold CV (n=2011, threshold=0.3): Macro F1=0.9840
+B confusion matrix [[TN,FP],[FN,TP]]:
+[[ 921   27]
+ [   5 1058]]
+
+=== Combined regime-weighted confusion matrix (scaled to actual test-set sizes) ===
+  C_exact  n=  927  (perfect by construction)
+  B        n=  383  (honest 5-fold CV, Macro F1=0.9840)
+  A_cold   n= 2293  (honest grouped OOF, Macro F1=0.6732)
+  total test rows covered: 3603 / 3603
+
+combined confusion matrix: [[TN=220.7, FP=84.3], [FN=63.6, TP=3234.4]]
+F1-0 = 0.7490   F1-1 = 0.9776
+ESTIMATED combined Macro F1 (local, honest CV, not a real submission) = 0.8633
+
+(for reference) naive size-weighted AVERAGE of per-regime macro-F1s = 0.7903
+(this naive number is NOT how macro-F1 combines across subpopulations -- shown only
+ to make the gap explicit; the confusion-matrix combination above is the correct one)

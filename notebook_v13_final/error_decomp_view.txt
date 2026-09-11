@@ -1,0 +1,923 @@
+[0] p=0.995 FLAGS=[NUMMIS,QTYC,NOPRED]
+TITLE: Wisatawan ke Garut Pemprov Siapkan 5 000 Alat Rapid Antigen
+LEAD: Pemkab Garut menyiapkan ribuan alat rapid test antigen Alat tersebut diperuntukkan mendeteksi virus Corona di kalangan wisatawan yang tengah berlibur di Garut Antigen kita ada ribuan lah Lima ribuan ribu kita siapkan ucap Bupati Garut Rudy Gunawan Senin 28 12 2020 Alat rapid test antigen ...
+
+[1] p=0.993 FLAGS=[none]
+TITLE: Prancis tak Akan Dapat 1 16 Juta Dosis Vaksin COVID 19 hingga Akhir Tahun
+LEAD: Prancis akan menerima sekitar 1 16 juta dosis vaksin COVID 19 hingga akhir tahun Perdana Menteri Prancis Jean Castex mengatakan akan menambah 2 3 juta lagi dan akan tiba dalam dua bulan ke depan Seperti dilansir AFP Kamis 17 12 2020 pemberian sekitar 3 9 ...
+
+[2] p=0.992 FLAGS=[PERSC,NEGMIS]
+TITLE: Penjelasan Bupati Sleman soal Dinkes Positif Corona Usai Divaksin 1 Dosis kumparan com
+LEAD: Bupati Sleman Sri Purnomo terkonfirmasi positif corona Padahal orang nomor 1 di Sleman itu telah divaksin satu dosis Sinovac pada 14 Januari lalu Lalu apa penyebabnya sehingga SP sapaan akrab Sri Purnomo ini positif corona Kepala Dinas Kesehatan Kabupaten Sleman Joko Hastaryo menjelaskan bahwa SP ...
+
+[3] p=0.991 FLAGS=[PERSC,POL-]
+TITLE: Tak Pernah Jadi Episenter Corona di Australia Kini Victoria Nihil Kasus Baru kumparan com
+LEAD: Negara Bagian Victoria di Australia melaporkan tidak ada kasus baru corona selama 16 hari Victoria kemudian memutuskan untuk melonggarkan aturan pembatasan Saat Australia berhadapan dengan gelombang baru virus corona Negara Bagian Victoria adalah episenter penyebaran kasus lokal Victoria sebelumnya telah melakukan lockdown ketat Aturan pembatasan ...
+
+[4] p=0.989 FLAGS=[PERSC,NEGMIS]
+TITLE: Terawan Andalkan Telemedicine Atasi Faskes Merata
+LEAD: Menteri Kesehatan Terawan Agus Putranto akan membangun alat pelayanan jarak jauh atau telemedicine untuk mengatasi masalah fasilitas kesehatan di Indonesia tidak merata di tengah pandemi virus corona Covid 19 Kita bangun telemedicine ini untuk aksesibilitas bagi masyarakat Dalam situasi pandemi Kemenkes progresif bekerja sama dengan ...
+
+[5] p=0.988 FLAGS=[PERSC]
+TITLE: Korea Selatan Mulai Berikan Vaksin Corona Untuk Pasukannya di Korea Selatan
+LEAD: Amerika Serikat memulai kampanye vaksin virus Corona untuk pasukannya yang ditempatkan di Korea Selatan Pasukan AS Korea USFK memberikan dosis awal vaksin Moderna untuk petugas kesehatan militer dan sipil Dilansir AFP Rabu 30 12 2020 Washington memiliki sekitar 28 500 tentara yang ditempatkan di Korea ...
+
+[6] p=0.987 FLAGS=[PERSC,NEGMIS,NUMMIS]
+TITLE: Keluar Masuk Makassar Perlu Lagi Surat Bebas Covid 19
+LEAD: Pemerintah Kota Makassar Sulawesi Selatan menghentikan aturan harus mengantongi surat keterangan Suket bebas Covid 19 untuk keluar masuk wilayah tersebut Namun pos di perbatasan akan tetap dijaga sejumlah petugas Kasubag Pemberitaan Humas Pemkot Makassar Hamzah Bakrie Muhammad mengatakan jumlah petugas yang berjaga di perbatasan telah ...
+
+[7] p=0.985 FLAGS=[PERSC]
+TITLE: Varian Baru Corona Muncul di Inggris Mirip dengan yang Ditemukan di Brasil kumparan com
+LEAD: Varian virus corona baru ditemukan di Brasil Untuk mencegah penyebaran varian itu Inggris melarang penerbangan dan orang orang dari Brasil masuk negaranya Inggris sebagai negara yang paling terdampak varian baru bergerak cepat mendengar kabar dari Brasil PM Boris Johnson bahkan membenarkan dirinya begitu khawatir mendengar ...
+
+[8] p=0.982 FLAGS=[PERSC,QTYC]
+TITLE: Tambah 5 121 Kasus Corona RI Per 14 Desember Jadi 623 309
+LEAD: Pemerintah kembali memperbarui informasi soal penanganan wabah virus Corona COVID 19 Hari ini dilaporkan kasus COVID 19 di Indonesia lebih dari 623 ribu kasus Berdasarkan data Kementerian Kesehatan Kemenkes dilaporkan ada 5 489 kasus baru Corona pada Senin 14 12 2020 sehingga sejak Maret sudah ...
+
+[9] p=0.981 FLAGS=[PERSC,NEGMIS]
+TITLE: Pemerintah Swedia Kritik soal Perlindungan Lansia dari Corona
+LEAD: Raja Swedia Carl XVI Gustaf mengkritik pemerintah setempat karena dinilai gagal melindungi kelompok masyarakat lanjut usia lansia dari virus corona Covid 19 Saya pikir kita gagal Jumlah korban meninggal sangat besar dan ini menyedihkan Ini adalah hal yang menjadi penderitaan kita semua kata Raja Carl ...
+
+[10] p=0.981 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Khotbah Jumat Kapolres di Mojokerto Ajak Masyarakat Jaga Persatuan
+LEAD: Para Bhabinkamtibmas menjadi khatib salat Jumat secara serentak di 848 masjid di Kabupaten Mojokerto Pada khotbahnya polisi mengajak masyarakat menjaga persatuan dan kesatuan serta Pilbup 2020 aman dan damai Seperti di Masjid Baitul Mustakim Desa Kembangringgit Kecamatan Pungging Bhabinkamtibmas Kembangringgit didapuk menjadi khatib pada salat ...
+
+[11] p=0.980 FLAGS=[PERSC,QTYC]
+TITLE: Polisi Belanda Tangkap 240 Orang dalam Aksi Memprotes Lockdown
+LEAD: Ratusan perusuh menjarah toko toko membakar dan terlibat bentrok dengan polisi di beberapa kota di Belanda pada Minggu 24 1 waktu setempat Media lokal Belanda dan polisi melaporkan ada lebih dari 240 orang ditangkap terkait peristiwa itu Dilansir dari Reuters Senin 25 1 2021 kerusuhan ...
+
+[12] p=0.980 FLAGS=[PERSC]
+TITLE: Direktur RSI Amal Sehat Sragen Meninggal Terpapar Corona
+LEAD: Wakil Direktur Non Medis RSI Amal Sehat Kabupaten Sragen Jawa Tengah Bambang HP meninggal dunia dengan status positif virus Corona atau COVID 19 Pihak rumah sakit telah melakukan tracing dan sebanyak 18 orang dengan kontak erat dengan almarhum menjalani tes swab Betul Wakil Direktur RSI ...
+
+[13] p=0.980 FLAGS=[PERSC,NEGMIS]
+TITLE: Ridwan Kamil Disuntik Vaksin Covid 19 Ini Penjelasan Bio Farma
+LEAD: PT Bio Farma menyatakan Gubernur Jawa Barat Ridwan Kamil belum disuntik vaksin Covid 19 hingga 15 Agustus 2020 Namun Ridwan Kamil telah terdaftar sebagai relawan uji vaksin “Namun Ridwan Kamil sudah terdaftar sebagai relawan uji klinis fase 3 vaksin Covid 19 ” ujar Head of ...
+
+[14] p=0.979 FLAGS=[NEGMIS]
+TITLE: Cerita Giring Ganesha Positif Covid 19 Bersyukur Tularkan ke Anak dan Istri
+LEAD: Penyanyi sekaligus politisi Giring Ganesha menambah deretan selebritas Indonesia yang terpapar virus corona Giring kabarnya dinyatakan positif Covid 19 pada 21 Desember lalu Mantan vokalis Nidji ini akhirnya menjalani isolasi mandiri di rumahnya Sejak dinyatakan positif terpapar virus corona Giring Ganesha merasa badannya pegal linu ...
+
+[15] p=0.979 FLAGS=[PERSC,NOPRED]
+TITLE: Diiringi Lantunan Tahlil Syekh Ali Jaber Dimakamkan di Ponpes Tebuireng
+LEAD: Jenazah Syekh Ali Jaber tiba di Pondok Pesantren Ponpes Daarul Quran Tangerang Banten Prosesi pemakaman pun dimulai Pantauan di lokasi jenazah Syekh Ali Jaber sudah tampak tiba di area pemakaman sekitar pukul 16 40 WIB Kamis 14 1 2021 Tampak keluarga dan para pelayat mengantarkan ...
+
+[16] p=0.978 FLAGS=[PERSC,NEGMIS]
+TITLE: Tanggapan BP2MI soal 27 Pekerja Migran Terdeteksi COVID 19 Setibanya di Taiwan
+LEAD: Kabar mengenai 27 pekerja migran Indonesia PMI terpapar virus corona COVID 19 di Taiwan diklarifikasi kantor perwakilan Taiwan di Indonesia TETO Taipei Economic and Trade Office Apa tanggapannya Bermula dari Badan Pelindungan Pekerja Migran Indonesia BP2MI melakukan inspeksi mendadak atau sidak di Perusahaan Penempatan Pekerja ...
+
+[17] p=0.978 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Jokowi Gelombang Kedua Covid di Eropa Kita Teledor
+LEAD: Presiden Joko Widodo meminta jajarannya mewaspadai lonjakan kedua gelombang virus covid 19 yang terjadi di Eropa Jokowi meminta agar semua pihak tak bersikap teledor yang mengakibatkan lonjakan kedua gelombang covid 19 juga terjadi di Indonesia Berkaitan dengan covid 19 saya ingin menekankan sekali lagi hati ...
+
+[18] p=0.978 FLAGS=[PERSC,NEGMIS]
+TITLE: 4 Poin Pernyataan Maaf Pihak Klinik Bumame Farmasi soal Pemalsuan PCR
+LEAD: Pihak keluarga buka suara soal kasus pemalsuan surat swab PCR selebgram erlanggs atau Erlangga Alfreda Davian dkk Pihak keluarga meminta maaf atas kejadian yang merugikan Klinik Bumame Farmasi Dalam jumpa pers yang digelar di Ascott Sudirman Jakarta Selatan Jumat 8 1 2020 malam juru bicara ...
+
+[19] p=0.977 FLAGS=[PERSC,NOPRED]
+TITLE: Menkes Sebut Akan Gelar Vaksinasi Corona Tanpa Izin BPOM
+LEAD: Menteri Kesehatan Menkes Budi Gunadi Sadikin menegaskan pemerintah tidak akan memulai vaksinasi Covid 19 jika tidak mendapat restu dari Badan Pengawas Obat dan Makanan BPOM Sebab BPOM adalah lembaga independen yang berwenang menentukan vaksin boleh digunakan atau tidak Kita tidak akan melakukan vaksinasi sebelum approval ...
+
+[20] p=0.977 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: Golkar Kirim Bantuan Rp 4 75 M untuk Korban Bencana di Jakarta hingga Sulbar
+LEAD: Partai Golkar mengirim bantuan bencana yang terdiri dari bahan pangan hingga kebutuhan lainnya senilai Rp 4 75 Miliar Penyerahan bantuan itu ditujukan pada korban bencana banjir di Kalimantan Selatan Kalsel dan gempa di Sulawesi Barat Sulbar Saya mendorong bahwa seluruh bantuan yang diserahkan hari ini ...
+
+[21] p=0.976 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: PMI Surabaya Terima 1 200 Kantong Plasma Konvalesen Hingga Saat Ini
+LEAD: Pendonor darah plasma konvalesen di UTD PMI Surabaya hingga saat ini sudah ada 1 200 orang Per orang yang mendonor plasma konvalesen bisa sebanyak tiga kantong Kabag Pelayanan dan Humas PMI Surabaya dr Martono Adi mengatakan jumlah plasma konvalesen saat ini sudah mencapai sekitar 3 ...
+
+[22] p=0.976 FLAGS=[PERSC,PERSSUB,NEGMIS]
+TITLE: Aktivis 98 Menilai Habib Rizieq Tumpul Hadapi Simpatisan Ridwan Kamil
+LEAD: Kalangan Aktivis 98 melihat Gubernur Jawa Barat Jabar Ridwan Kamil tumpul dalam menghadapi massa simpatisan Habib Rizieq Shihab HRS di tengah pandemi COVID 19 Ketidaktegasan gubernur yang juga Ketua Komite Penanganan COVID 19 dan Pemulihan Ekonomi Daerah Provinsi Jabar justru bisa membuat klaster baru dengan ...
+
+[23] p=0.976 FLAGS=[PERSC]
+TITLE: 42 Orang Wisatawan ke Aceh Positif Corona Selama Libur Natal
+LEAD: Satgas Penanganan COVID 19 Jawa Barat melakukan rapid tes antigen acak terhadap wisatawan yang masuk ke Jabar Dari tiga ribu wisatawan yang dites 42 di antaranya positif COVID 19 Saya laporkan ada tiga ribu turis yang dites kemarin diberbagai titik Terdapat positif 42 orang ujar ...
+
+[24] p=0.976 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Jatim Tertinggi Ini Sebaran 4 490 Kasus Sembuh Corona pada 12 Desember
+LEAD: Pemerintah melaporkan 4 490 pasien sembuh dari virus Corona COVID 19 pada 12 Desember 2020 Provinsi Jawa Barat melaporkan kasus sembuh terbanyak pada hari ini yaitu 1 003 kasus Berdasarkan data yang diterima dari Satuan Tugas Satgas penanganan COVID 19 Sabtu 12 12 2020 dengan ...
+
+[25] p=0.975 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: UPDATE 936 132 Kasus Covid 19 di RI Publik Diminta Cermati Klaim Temuan Obat Herbal
+LEAD: Jumlah Kasus Covid 19 di Indonesia masih terus bertambah sejak diumumkan pertama kali pada 2 Maret 2020 Hingga Kamis 6 8 2020 dari data yang dihimpun Satuan Tugas Penanganan Covid 19 pukul 12 00 WIB ada penambahan 1 882 kasus baru positif Covid 19 Penambahan ...
+
+[26] p=0.975 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Brigjen Prasetijo Klaim Tahu Djoko Tjandra Buron Saat Bertemu di Pontianak
+LEAD: Brigjen Prasetijo Utomo mengakui pernah menemui Joko Soegiarto Tjandra alias Djoko Tjandra di Pontianak Kalimantan Barat Kalbar padahal status Djoko Tjandra buron kala itu Prasetijo mengklaim tidak tahu mengenai status Djoko Tjandra itu Saya dari Jakarta menuju Pontianak Bersama Anita dan Pak Joni ajudan Prasetijo ...
+
+[27] p=0.974 FLAGS=[PERSC,NEGMIS]
+TITLE: Antisipasi Harga Naik di Libur Nataru Polisi Sidak Pasar Banyuwangi
+LEAD: Satgas Pangan Banyuwangi menggelar monitoring harga dan ketersediaan bahan pokok di sejumlah pasar di Banyuwangi pada libur Natal dan Tahun baru Nataru Sidak pasar itu sekaligus sosialisasi pencegahan penularan COVID 19 Tim Satgas Pangan Banyuwangi yang terdiri dari Kepolisian Dinas Koperasi dan UMKM Dinas Pertanian ...
+
+[28] p=0.974 FLAGS=[PERSC]
+TITLE: Tim Gabungan di Solo Apel Kesiapsiagaan Tangani Bencana Musim Hujan
+LEAD: Tim gabungan di Tuban menggelar apel kesiapsiagaan terpadu Apel digelar untuk menghadapi musim hujan serta ancaman bencana hidrometeorologi Kapolres Tuban AKBP Ruruh Wicaksono mengatakan Tuban merupakan salah satu wilayah di Jawa timur yang memiliki lautan dan aliran Sungai Bengawan solo Sehingga Bumi Wali memiliki risiko ...
+
+[29] p=0.974 FLAGS=[PERSC,NEGMIS,NUMMIS,NOPRED]
+TITLE: Lomba TikTok di Kafe Ini Dibubarkan Gegara Patuh Protokol COVID 19
+LEAD: Lomba TikTok di food court area Hilal point Kota Parepare Sulawesi Selatan dibubarkan paksa oleh aparat pemerintah daerah Lomba itu mengabaikan protokol kesehatan pencegahan COVID 19 Lomba itu melibatkan anak anak Bahkan beberapa pengunjung tidak mengenakan masker dan menjaga jarak sesuai dengan anjuran Peraturan Wali ...
+
+[30] p=0.974 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Dokter Pribadi Paus Benediktus Meninggal karena Infeksi Covid
+LEAD: Dokter pribadi Paus Fransiskus Fabrizio Soccorsi dikabarkan meninggal dunia akibat infeksi virus corona dan komplikasi penyakit yang diidapnya Surat kabar Vatikan L Ozzervatore Romano mengumumkan pada Sabtu 9 1 jika Soccorsi meninggal dunia dalam usia 78 tahun Mengutip CNN Soccorsi sempat mendapat perawatan di rumah ...
+
+[31] p=0.973 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Pupuk Indonesia Dorong Distributor Tebus Pupuk Bersubsidi
+LEAD: Petrokimia Gresik anggota holding Pupuk Indonesia mendorong seluruh distributor pupuk bersubsidi di daerah untuk segera melakukan penebusan pupuk bersubsidi Penebusan dimaksudkan agar pupuk bersubsidi dapat segera didistribusikan kepada petani melalui kios kios resmi yang tersebar di penjuru daerah Direktur Operasi dan Produksi Petrokimia Gresik Digna ...
+
+[32] p=0.973 FLAGS=[PERSC,QTYC]
+TITLE: Tembus Rekor Harian 4 850 Kasus Jawa Barat Terbanyak
+LEAD: Penambahan harian kasus positif covid 19 menembus rekor tertinggi 4 850 per Kamis 8 10 Jumlah kumulatif kasus positif menjadi berjumlah 320 564 kasus Tambahan kasus harian ini berbeda tipis dengan catatan rekor sebelumnya pada 25 September lalu yakni 4 823 kasus Tiga daerah dengan ...
+
+[33] p=0.973 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: 105 Calon Penumpang Daftar Rapid Test Antigen di Stasiun Senen Per 08 30 WIB
+LEAD: Seluruh calon penumpang kereta api KA jarak jauh diwajibkan untuk melakukan rapid test antigen COVID 19 sebelum menempuh perjalanan Untuk itu pelayanan rapid test antigen sudah mulai dilakukan sejak kemarin di beberapa stasiun termasuk Stasiun Senen Hari ini ada di Stasiun Senen antreannya sudah 564 ...
+
+[34] p=0.972 FLAGS=[PERSC,QTYC]
+TITLE: 165 Positif Corona Tambahan Kasus Jateng Tertinggi Hari Ini
+LEAD: Jawa Tengah Jateng mencatat pertambahan kasus positif virus corona Covid 19 sebanyak 261 orang per Rabu 15 7 Lonjakan kasus tersebut menjadikan Jateng sebagai provinsi penyumbang kasus terbanyak hari ini Jawa tengah melaporkan kasus baru sebanyak 261 orang namun juga melaporkan kasus sembuh sebanyak 120 ...
+
+[35] p=0.972 FLAGS=[PERSC,NEGMIS]
+TITLE: Positif COVID 19 Ketua KPU Jakarta Meninggal Dunia
+LEAD: Ketua Komisi Pemilihan Umum Sumatera Selatan KPU Sumsel Kelly Mariana meninggal dunia Kelly dikabarkan meninggal dalam kondisi terkonfirmasi positif COVID 19 Iya pagi tadi meninggal terpapar COVID 19 mohon doanya kata anggota KPU Sumsel Bidang Sosdiklih Parmas dan SDM Amrah Sulaiman dilansir Antara Minggu 17 ...
+
+[36] p=0.972 FLAGS=[PERSC,NEGMIS]
+TITLE: KBRI Doha Bebaskan Denda dan Pulangkan 140 WNI Overstay ke RI
+LEAD: KBRI Riyadh membebaskan denda dan memulangkan sebanyak 140 WNI overstay Mayoritas dari WNI tersebut pernah merasakan dinginnya ruang tahanan di Arab Saudi Ke 140 WNI tersebut diterbangkan dengan Saudia Airlines SV816 pada Rabu 18 11 malam Mereka sudah tiba di Tanah Air pada Kamis 19 ...
+
+[37] p=0.971 FLAGS=[PERSC,NOPRED]
+TITLE: PB HMI Serahkan Bantuan untuk Korban Banjir di Tapan Pesisir Selatan
+LEAD: Kabareskrim Komjen Listyo Sigit Prabowo menyerahkan bantuan untuk korban banjir di wilayah Tapan Pesisir Selatan Dia berharap bantuan tersebut bisa meringankan beban masyarakat yang terdampak banjir Bantuan yang diberikan berupa 1 000 paket sembako Bantuan ini disalurkan melalui Badan Koordinasi Nasional Lembaga Ekonomi Mahasiswa Islam ...
+
+[38] p=0.970 FLAGS=[PERSC,NEGMIS]
+TITLE: 16 Ribu Orang Teken Petisi Tolak Ganjil Genap Motor Anies
+LEAD: Ketua Fraksi NasDem DPRD DKI Jakarta Wibi Andrino mengatakan kebijakan ganjil genap sepeda motor yang bakal diterapkan Gubernur DKI Jakarta Anies Baswedan hanya mempersulit masyarakat yang bekerja saat pandemi virus corona Covid 19 Ganjil genap motor hanya akan membuat masyarakat semakin sulit mencari nafkah ditambah ...
+
+[39] p=0.970 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: KPU Paksa Pasien Covid Gunakan Hak Pilih di Pilkada
+LEAD: Komisioner Komisi Pemilihan Umum KPU I Dewa Kade Wiarsa Raka Sandi mengatakan pihaknya tidak memaksa pasien covid 19 harus menggunakan hak pilihnya dalam Pilkada Serentak 2020 Jadi prinsip harus diutamakan tapi tidak dipaksakan Ini soal hak Gimana kalau ada pemilih pasien covid 19 misalnya keadaan ...
+
+[40] p=0.970 FLAGS=[PERSC,NUMMIS,NOPRED]
+TITLE: Kepala Bea Cukai Jember Meninggal Terpapar COVID 19
+LEAD: Kepala Kantor Bea Cukai Banyuwangi R Evy Suhartantyo meninggal terpapar COVID 19 Ia mengembuskan napas terakhir setelah menjalani perawatan intensif selama 7 hari di rumah sakit Benar Almarhum Kepala Bea Cukai meninggal dunia karena terpapar COVID 19 kata Kepala Dinas Kesehatan Banyuwangi dr Widji Lestariono ...
+
+[41] p=0.970 FLAGS=[PERSC]
+TITLE: Kata Bupati Pati Soal Viral Foto Ganjar Tak Bermasker di Acara Pernikahan
+LEAD: Foto Bupati Pati Haryanto tanpa masker saat menghadiri acara pernikahan viral di media sosial Gubernur Jawa Tengah Ganjar Pranowo angkat bicara Ganjar mengaku sudah mendapatkan klarifikasi yang menyebutkan masker Bupati Pati dilepas hanya saat sesi foto dengan pengantin Yang saya terima yang berita Bupati Pati ...
+
+[42] p=0.970 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Potensi Kerumunan Berjejal Jadi Alasan Buka Masjid Istiqlal
+LEAD: Masjid Istiqlal di Jakarta sudah selesai direnovasi dan diresmikan Presiden Jokowi Tetapi Masjid Istiqlal belum dibuka untuk umum untuk mengantisipasi kerumunan masyarakat di tengah pandemi Corona COVID 19 Kerumunan menjadi salah satu faktor terjadinya penularan virus Corona Pihak Masjid Istiqlal pun juga memiliki pertimbangan belum ...
+
+[43] p=0.970 FLAGS=[PERSC,POL-,NEGMIS,NUMMIS]
+TITLE: Anies Sebut Ganjil Genap Pasar Efektif Cegah Covid 19
+LEAD: Gubernur DKI Jakarta Anies Baswedan menyebut pembatasan operasional pasar dengan sistem ganjil genap tidak efektif selama penerapan PSBB transisi Dalam pelaksanaannya kata Anies metode ganjil genap tak berhasil mempengaruhi kedatangan pengunjung Kebijakan itu juga bisa disiasati oleh pedagang Praktiknya penjual tetap datang Hari ganjil penjual ...
+
+[44] p=0.970 FLAGS=[PERSC,NEGMIS,NUMMIS]
+TITLE: Kadisnaker Sebut Banyak Perusahaan di Kabupaten Bekasi Lapor jika Karyawannya Terpapar Covid 19
+LEAD: Kepala Dinas Ketenagakerjaan Kabupaten Bekasi Suhup menyampaikan banyak perusahaan di wilayahnya yang tidak terbuka jika karyawannya terpapar Covid 19 “Salah satu kelemahan dari perusahaan ketika ada awal kejadian mereka terkadang tidak proaktif melapor kepada kita ” ujar Suhup saat dihubungi Selasa 25 8 2020 Menurut ...
+
+[45] p=0.970 FLAGS=[PERSC,NEGMIS]
+TITLE: Tito Imbau Warga Gelar Panjat Pinang Peringati HUT RI
+LEAD: Menteri Dalam Negeri Tito Karnavian meminta agar pemerintah daerah dan masyarakat tak menggelar ajang lomba panjat pinang untuk memeriahkan HUT ke 75 Kemerdekaan RI pada 17 Agustus nanti Tito menyatakan lomba memiliki potensi penularan virus corona Covid 19 Mau 17 Agustus orang mau panjat pinang ...
+
+[46] p=0.970 FLAGS=[PERSC,NEGMIS]
+TITLE: Arctic Monkeys Tumpahkan Ketakutan akan Pandemi dalam Album Baru
+LEAD: Ketakutan para personel Fleet Foxes terhadap ketidakpastian di tengah pandemi Covid 19 terekam dalam album baru bertajuk Shore yang dirilis pada Selasa 22 9 Pentolan Fleet Foxes Robin Pecknold mengatakan bahwa lirik 15 lagu yang terdapat dalam album Shore merupakan hasil refleksi dari situasi para ...
+
+[47] p=0.970 FLAGS=[PERSC,NUMMIS]
+TITLE: Jokowi Sebut Pembangunan Terpukul Mundur akibat Pandemi Covid 19
+LEAD: Wakil Presiden Ma ruf Amin mengatakan seluruh capaian pembangunan di Tanah Air terpukul mundur oleh munculnya pandemi Covid 19 Hal tersebut disampaikan Ma ruf saat memberikan sambutan dalam peringatan Hari Konstitusi 2020 secara virtual Selasa 18 8 2020 Kita semua telah menyaksikan dan merasakan bagaimana ...
+
+[48] p=0.969 FLAGS=[PERSC,NEGMIS]
+TITLE: Panglima TNI Akan Bentuk Satuan Khusus Cegah Serangan Biologi
+LEAD: Panglima TNI Marsekal Hadi Tjahjanto mengungkap keinginannya mengembangbiakan virus dan membangun laboratorium khusus di kawasan Rumah Sakit Darurat Covid 19 Pulau Galang Kepulauan Riau Hadi mengungkapkan hal ini dalam wawancara di akun youtube resmi milik Puspen TNI Kata dia ke depan TNI akan mengajukan pembangunan ...
+
+[49] p=0.967 FLAGS=[PERSC,QTYC]
+TITLE: RI Amankan Kuota 50 Juta Vaksin Corona Sinovac dan 50 Juta Novavax
+LEAD: Pemerintah Indonesia resmi menjalin kerja sama dengan produsen vaksin Corona AstraZeneca dan Novavax Pemerintah menyatakan akan mendapatkan masing masing 50 juta dosis dari kedua produsen vaksin Corona tersebut Selain vaksin Sinovac hari ini kita kita juga berhasil mengamankan suplai vaksin yaitu dari AstraZeneca dan Novavax ...
+
+[50] p=0.967 FLAGS=[PERSC,NOPRED]
+TITLE: Saat Pasien COVID 19 Kaget Lihat Dokter Yahudi Punya Tato Nazi
+LEAD: Seorang dokter Yahudi yang bekerja di California Amerika Serikat kaget melihat tato neo Nazi di tubuh seorang pasien Corona yang ditanganinya Dia berbagi cerita tentang kekagetannya itu Dilansir dari AFP Kamis 3 12 2020 saat timnya termasuk seorang perawat kulit hitam dan spesialis pernapasan keturunan ...
+
+[51] p=0.967 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Rizieq Kirim Karangan Bunga ke Dewi Tanjung Saya Doakan Sembuh COVID
+LEAD: Politikus PDIP Dewi Tanjung mengirimkan karangan bunga kepada Habib Rizieq Syihab Karangan bunga itu menurutnya adalah bentuk dukungannya kepada Rizieq Syihab agar kesehatannya segera pulih Iya kemarin udah dikirim karangan bunga Nggak ada maksud apa apa itu cuma bentuk perhatian rasa sayang saya kepada Bapak ...
+
+[52] p=0.966 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Hanya 110 Unit Sepeda Model Brompton Bamsoet Dijual Rp 13 5 Juta
+LEAD: Ketua MPR RI Bambang Soesatyo Bamsoet bersama Animo Indonesia meluncurkan sepeda kuning lipat special edition model Brompton bermerek Bamsoet Pembuatan sepeda ini melibatkan sekitar 18 UMKM di Bandung Dibanderol dengan harga jual Rp 13 5 juta memiliki kualitas tak kalah dibanding sepeda lipat impor buatan ...
+
+[53] p=0.966 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Gelombang II Inggris Catat Lonjakan 3 412 Kasus Baru Corona
+LEAD: Inggris mencatat lonjakan baru infeksi virus corona sebanyak lebih dari 3 000 kasus pada Rabu 7 10 Pemerintah melaporkan saat ini tengah menghadapi gelombang kedua pandemi Covid 19 Data pemerintah Inggris melaporkan hingga saat ini ada 561 638 kasus dan 42 592 kematian akibat Covid ...
+
+[54] p=0.966 FLAGS=[PERSC,PERSSUB,POL-,QTYC]
+TITLE: Tak ada 2 056 Kasus Corona Aktif di Sumut 567 Orang Diisolasi di RS
+LEAD: Satgas COVID 19 Sumatera Utara Sumut mengatakan ada 2 056 kasus Corona atau COVID 19 aktif di Sumut Dari jumlah itu 567 orang di antaranya diisolasi di rumah sakit RS Sisa penderita yang masih ada saat ini sebanyak 2 056 orang di mana 1 489 ...
+
+[55] p=0.966 FLAGS=[NEGMIS,QTYC]
+TITLE: Kematian Covid di Sultra Meningkat 363 Persen dalam 2 Bulan
+LEAD: Angka kematian virus corona di Provinsi Sulawesi Tenggara Sultra mengalami peningkatan sampai 300 persen dalam dua bulan terakhir Pada 30 Juni 2020 kasus meninggal akibat Covid 19 sebanyak 6 orang namun pada 25 Agustus 2020 jumlah kematian menjadi 24 kasus Jumlah kematian bertambah 18 orang ...
+
+[56] p=0.965 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Kemenkes Imbau Warga di Kerumunan Jokowi Lakukan Isolasi Mandiri
+LEAD: Kementerian Kesehatan Kemenkes mengimbau warga yang ikut dalam kerumunan massa Habib Rizieq melakukan isolasi mandiri Isolasi mandiri ini diminta dilakukan selama 14 hari Atas adanya kerumunan pada kegiatan yang dilakukan dalam rangka acara keagamaan dan pernikahan tersebut Kemenkes mengimbau semua orang yang mengikuti acara tersebut ...
+
+[57] p=0.964 FLAGS=[NEGMIS,NOPRED]
+TITLE: Danrem Wijayakusuma Instruksikan Kodim Kawal Distribusi Pelaksanaan Vaksin
+LEAD: Komandan Korem Danrem 061 Surya Kancana Brigjen TNI Achmad Fauzi menginstruksikan setiap Kodim di bawahnya untuk ikut mengawal pendistribusian hingga pelaksanaan pemberian vaksin COVID 19 Sesuai dengan Perpres nomor 99 tahun 2020 TNITNI Polri terlibat mulai dari pengiriman pendistribusian hingga pelaksanaan vaksinasi ujar dia saat ...
+
+[58] p=0.964 FLAGS=[PERSC,PERSSUB,NEGMIS,NOPRED]
+TITLE: Satgas Pemberian Masker di Acara Habib Rizieq Upaya Dukung Acara
+LEAD: Ketua Satgas Penanganan COVID 19 Doni Monardo menegaskan bagi bagi masker di acara Habib Rizieq Syihab tadi malam bukan mendukung acara yang diselenggarakan Doni mengatakan upaya itu semata mata untuk mencegah penularan Corona Pemberian masker ini bukanlah bagian dari upaya mendukung acara dari awal kami ...
+
+[59] p=0.963 FLAGS=[PERSC,QTYC]
+TITLE: 23 Sopir Positif COVID 19 Kendaraan Logistik Gagal Menyeberang ke Bali
+LEAD: Ratusan sopir truk logistik dan bus mendapat layanan rapid test antigen gratis oleh Kantor Kesehatan Pelabuhan KKP Kelas II Probolinggo wilayah kerja Wilker Banyuwangi Kegiatan yang menggandeng Pemprov Jawa Timur itu ditemukan 5 sopir truk logistik yang positif COVID 19 Kegiatan rapid test antigen gratis ...
+
+[60] p=0.961 FLAGS=[PERSC,NEGMIS]
+TITLE: Ditemui Indra Catri Warga Daerah Tertinggal Sumbar Curhat Ada Internet
+LEAD: Jaringan internet kini jadi salah satu isu utama di Pilgub Sumbar Cawagub Sumbar Indra Catri beberapa kali menerima keluhan soal belum adanya jaringan internet di sejumlah daerah tertinggal di Sumatera Barat Salah satu pihak yang curhat soal jaringan internet adalah Warga Nagari Sarik Alahan Tigo ...
+
+[61] p=0.961 FLAGS=[PERSC,QTYC]
+TITLE: Pemerintah Pulangkan 500 000 WNI dari Luar Negeri Selama Pandemi Corona
+LEAD: Pandemi COVID 19 masih mewabah di sejumlah negara termasuk Indonesia Menteri Luar Negeri Menlu Retno Marsudi mengatakan pemerintah telah memulangkan 180 045 WNI ke Tanah Air Sejak awal pandemi di tahun 2020 kita juga telah mengevakuasi dan memberikan repatriasi kembali ke Indonesia kepada 180 045 ...
+
+[62] p=0.960 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Ketua KPK Pakai Masker Karena Mau Nyanyi Indonesia Raya
+LEAD: Koordinator Masyarakat Anti Korupsi Indonesia MAKI Boyamin Saiman melaporkan Ketua Komisi Pemberantasan Korupsi KPK Firli Bahuri ke Dewan Pengawas KPK karena tak mematuhi protokol kesehatan Covid 19 Firli dilaporkan karena tidak memakai masker dan menjaga jarak saat bertemu anak anak ketika melakukan ziarah Kami telah ...
+
+[63] p=0.960 FLAGS=[PERSC]
+TITLE: Satgas COVID 19 Kembali Imbau Bepergian Jika Tak Mendesak
+LEAD: Periode libur akhir tahun semakin dekat Pemerintah melalui Satuan Tugas Satgas Penanganan COVID 19 kembali mengingatkan masyarakat untuk menahan diri dalam bepergian jika tidak terlalu mendesak Hal ini dilakukan sebab lonjakan kasus positif COVID 19 selalu terjadi setelah libur panjang Bila terpaksa untuk bepergian masyarakat ...
+
+[64] p=0.958 FLAGS=[PERSC]
+TITLE: Survei Kepercayaan Publik Terhadap Anies Atasi Corona Turun
+LEAD: Lembaga survei Indikator Politik mencatat penurunan tingkat kepercayaan publik terhadap Presiden Joko Widodo dan Menteri Kesehatan Menkes Terawan Agus Putranto di bulan Juli 2020 Direktur Eksekutif Indikator Politik Burhanuddin Muhtadi menyebut kepercayaan publik terhadap Jokowi dalam penanganan pandemi corona saat ini menurun dari bulan Mei ...
+
+[65] p=0.958 FLAGS=[PERSC,NEGMIS]
+TITLE: Nadiem Minta Keringanan UKT Bagi Seluruh Mahasiswa
+LEAD: Koordinator bidang pendidikan Aliansi Badan Eksekutif Mahasiswa Seluruh Indonesia BEM SI Zainal Arifin menilai kebijakan uang kuliah tunggal UKT yang diteken Menteri Pendidikan dan Kebudayaan Nadiem Makarim belum memenuhi seluruh tuntutan pihaknya Sebelumnya Menteri Nadiem telah menerbitkan Permendikbud No 25 Tahun 2020 yang mengatur bahwa ...
+
+[66] p=0.957 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: UNICEF Sebut 100 Juta Anak Dunia Kesulitan Belajar Jarak Jauh
+LEAD: Yayasan Perserikatan Bangsa Bangsa untuk Anak anak UNICEF menerbitkan laporan yang menyatakan 463 juta anak di dunia kesulitan melakukan pembelajaran jarak jauh di tengah pandemi virus corona Covid 19 Banyaknya anak anak yang pendidikannya benar benar terganggu selama berbulan bulan merupakan keadaan darurat bagi pendidikan ...
+
+[67] p=0.956 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: 17 Relawan Vaksin Corona Lagi Jadi Peserta Uji Klinis
+LEAD: Sebanyak 17 relawan uji klinis fase ketiga vaksin virus corona Covid 19 Sinovac di Bandung Jawa Barat keluar atau drop out dari keikutsertaannya Belasan orang itu tidak lagi menjadi objek penelitian untuk tahap berikutnya Kendati demikian Tim Uji Klinis Vaksin Covid 19 menegaskan 17 relawan ...
+
+[68] p=0.956 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Pemerintah Menanti Masukan UU Kesehatan Lewat Portal Online
+LEAD: Menteri Koordinator Bidang Perekonomian Airlangga Hartarto mengatakan pemerintah tengah bergegas menyusun semua peraturan pelaksanaan PP UU Cipta Kerja Hal ini sesuai dengan ketentuan pasal 185 dalam UU tersebut paling lama 3 bulan setelah diundangkan pada 2 November 2020 PP arus ditetapkan Menurut Airlangga pemerintah juga ...
+
+[69] p=0.956 FLAGS=[PERSC]
+TITLE: Ini Alasan Polisi Tetapkan Nakes Wisma Atlet Jadi Tersangka Mesum
+LEAD: Polisi menetapkan pasien yang mesum sesama jenis di Rumah Sakit Darurat Wisma Atlet sebagai tersangka sedangkan tenaga kesehatan nakes masih berstatus sebagai saksi Apa alasan polisi menetapkan pasien sebagai tersangka Iya tersangka karena dia adalah penyebarnya dilaporkan adalah penyebar akun Ada tiga akun yang disebarkan ...
+
+[70] p=0.955 FLAGS=[PERSC,NEGMIS]
+TITLE: Apel Pengamanan Tahun Baru Kapolda Riau Minta Ada Pesta Kembang Api
+LEAD: Polda Riau menggelar Operasi Lilin Lancang Kuning 2020 untuk persiapan Natal dan Tahun Baru Nataru Apel dipimpin Kapolda Riau Irjen Agung Setya Pantauan detikcom apel gelar pasukan di Mapolda Riau Jalan Partimura Pekanbaru Riau Apel diikuti 1 200 personel gabungan dari TNI Polri BPBD Dinas ...
+
+[71] p=0.955 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Erick Thohir Deg degan Siapkan 160 Juta Dosis Vaksin Corona
+LEAD: Menteri BUMN Erick Thohir mengaku deg degan mengemban tugas dari Presiden Joko Widodo untuk memastikan BUMN siap menyediakan 320 juta sampai 380 juta dosis vaksin covid 19 hingga 2021 Pasalnya jumlah tersebut berkisar 10 kali lipat dari kemampuan produksi normal PT Bio Farma Persero sebesar ...
+
+[72] p=0.955 FLAGS=[PERSC,NEGMIS,NUMMIS,NOPRED]
+TITLE: Rapid Antigen Pemain Elekton dan Penyelenggara Hajatan 1 Warga Positif
+LEAD: Hiburan musik elekton untuk memeriahkan hajatan sunatan di Bojonegoro dibubarkan polisi Hajatan dibubarkan terjadi di Desa Sumengko Kecamatan Kalitidu Bojonegoro Sabtu 26 12 2020 sekitar pukul 21 00 WIB Warga setempat sengaja mengundang musik elekton untuk menghibur tamu di hajatan sunatan Warga dan tetangga yang ...
+
+[73] p=0.955 FLAGS=[PERSC,QTYC]
+TITLE: 2 325 Kasus Baru Covid 19 Indonesia Kembali Catat Rekor Tertinggi
+LEAD: Indonesia kembali mencatat rekor penambahan harian pasien positif virus corona atau kasus baru Covid 19 Berdasarkan data pemerintah yang masuk hingga Jumat 28 8 2020 pukul 12 00 WIB tercatat ada penambahan pasien positif Covid 19 sebanyak 3 003 orang dalam 24 jam terakhir Angka ...
+
+[74] p=0.954 FLAGS=[POL-]
+TITLE: Tak ada Penyekatan untuk Jaring yang Konvoi Malam Tahun Baru di Kota Kediri
+LEAD: Polisi Kediri Kota melakukan penyekatan dan penutupan akses masuk kota Ini sebagai upaya mencegah arak arakan motor dalam perayaan malam tahun baru Polresta Kediri melarang warga berkerumun dan merayakan pesta pergantian tahun Sebab pandemi COVID 19 belum berakhir Untuk itu pihaknya telah menyiapkan langkah langkah ...
+
+[75] p=0.954 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Zona Hijau Corona Bertambah Jadi 866 Daerah
+LEAD: Epidemiolog Gugus Tugas Penanganan Covid 19 Dewi Nur Aisyah mengatakan ada perubahan zonasi risiko penularan virus corona di Indonesia per data 5 Juli 2020 Dewi menyebut ada penambahan zona hijau di Indonesia hingga berjumlah 104 sementara zona merah berada di angka 53 Provinsi yang berhasil ...
+
+[76] p=0.954 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Ragam Pendapat 75 Persen WFH di Ibu Kota demi Corona Berlipat
+LEAD: Kebijakan pemerintah menambah kuota karyawan work from home WFH menjadi 75 persen demi mengantisipasi lonjakan kasus COVID 19 pascalibur Natal dan tahun baru menuai beragam pendapat Kalangan ahli hingga Dewan angkat bicara Arahan tersebut awalnya disampaikan Wakil Ketua Komite Penanganan COVID‐19 dan Pemulihan Ekonomi Nasional ...
+
+[77] p=0.954 FLAGS=[PERSC,NOPRED]
+TITLE: Dokter Sebut Virus Corona tak Bisa Sebabkan Diabetes
+LEAD: Hubungan yang terbangun antara diabetes dan Covid 19 masih belum selesai diperdebatkan Sejumlah dokter mengatakan kasus infeksi virus corona dapat sebabkan diabetes Sebelumnya telah terbukti dan diketahui secara umum bahwa diabetes dapat meningkatkan risiko komplikasi akibat Covid 19 Orang dengan diabetes menjadi kelompok paling berisiko ...
+
+[78] p=0.954 FLAGS=[PERSC,NEGMIS]
+TITLE: AHY soal Covid 19 First Wave Tentu Kita Lampaui
+LEAD: Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono AHY mengingatkan pemerintah ihwal jumlah kasus positif virus corona Covid 19 yang terus meningkat bahkan telah melampaui China Menurutnya pemerintah tidak boleh menganggap keadaan saat ini baik baik saja Dia cemas pandemi Covid 19 semakin tak terkendali Seolah ...
+
+[79] p=0.954 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: 28 Hari Isolasi Mandiri Ariza Kembali Jalani Swab Test
+LEAD: Gubernur DKI Jakarta Anies Baswedan telah menjalani isolasi mandiri di rumah dinasnya di Menteng Jakarta Pusat selama 28 hari setelah dinyatakan positif COVID 19 Wagub DKI Jakarta Ahmad Riza Patria menyebut rekan kerjanya itu hari ini kembali menjalani swab test Ya doakan saja Pak Anies ...
+
+[80] p=0.954 FLAGS=[PERSC,PERSSUB,NEGMIS]
+TITLE: 8 Fakta Lurah Petamburan Positif Corona Terkait Kerumunan HRS
+LEAD: Lurah Petamburan Setiyanto dinyatakan positif terjangkit virus Corona COVID 19 Setiyanto dipastikan terpapar virus COVID 19 bukan dari acara yang digelar Habib Rizieq Syihab HRS Awalnya Polda Metro Jaya mengundang sejumlah pejabat terkait kerumunan di acara Habib Rizieq pada Selasa 17 November 2020 Para pejabat ...
+
+[81] p=0.954 FLAGS=[PERSC,PERSSUB]
+TITLE: Bupati Luwu Timur Sebut Gubernur Sulsel Sudah Negatif COVID Sebelum Wafat
+LEAD: Gubernur Sulawesi Selatan Sulsel Nurdin Abdullah memimpin pelepasan jenazah Bupati Luwu Timur terpilih Thoriq Husler di RS Wahidin Makassar Nurdin menerima laporan RS Wahidin bahwa Thoriq dinyatakan negatif virus Corona COVID 19 sesaat sebelum wafat Beliau kena COVID dan dirawat di beberapa rumah sakit Terakhir ...
+
+[82] p=0.953 FLAGS=[PERSC,NEGMIS]
+TITLE: Pelayat yang Datang ke Rumah Duka Syekh Ali Jaber Jalani Swab Antigen
+LEAD: Ustaz Yusuf Mansur mendatangi rumah duka Syekh Ali Jaber yang terletak di kawasan Pulogadung Jakarta Timur Dia mengungkap alasan jenazah Syekh Ali Jaber dimakamkan di pondok pesantren miliknya yakni Daarul Quran Karena termasuk yang pertama tama Syekh Ali itu di Indonesia ya di Daarul Quran ...
+
+[83] p=0.952 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Bakal Jadi RS Darurat Corona Hotel di Surabaya Sepakat
+LEAD: Gugus Tugas Percepatan Penanganan Covid 19 meninjau kesiapan Hotel Grand Surabaya yang bakal dialihfungsikan sementara menjadi rumah sakit darurat untuk penanganan pasien Virus Corona ataupun penginapan tenaga medis Namun pihak manajemen hotel tak tahu menahu perihal rencana tersebut Selain itu masih ada penolakan dari pihak ...
+
+[84] p=0.952 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Marquez Bisa Tampil di MotoGP Eropa
+LEAD: Pembalap Yamaha Valentino Rossi diperkirakan akan kembali membalap di musim ini di MotoGP Eropa 2020 di Sirkuit Ricardo Tormo 8 November usai pulih dari virus corona Rossi dinyatakan positif Covid 19 pada pekan lalu dan harus absen di MotoGP Aragon di Sirkuit Aragon Dengan menjalani ...
+
+[85] p=0.952 FLAGS=[PERSC,NEGMIS]
+TITLE: Dinkes DKI Ungkap Tempat Isolasi Pasien COVID 19 di Jakarta Penuh
+LEAD: Wakil Ketua DPRD DKI Jakarta M Taufik mengungkap ruang perawatan untuk pasien COVID 19 di Ibu Kota telah terisi penuh Kondisi ini terjadi di rumah sakit umum daerah RSUD maupun di wisma wisma Yang pertama rasanya ruang ruang perawatan untuk COVID di Jakarta rumah sakit ...
+
+[86] p=0.951 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Anies Minta Sekda Marullah Matali Perbaiki Sektor Kesehatan Ekonomi di DKI
+LEAD: Marullah Matali telah resmi dilantik sebagai Sekda DKI Jakarta Marullah Matali sebelumnya menjabat Wali Kota Jakarta Selatan Meski demikian Gubernur DKI Jakarta Anies Baswedan tetap mempercayakan jabatan Plt Wali Kota Jakarta Selatan kepada Marullah Kabar tersebut dibenarkan Wakil Wali Kota Jakarta Selatan Isnawa Adji Iya ...
+
+[87] p=0.951 FLAGS=[PERSC,NEGMIS]
+TITLE: Covid 19 Bisa Disebut sebagai Virus Musiman seperti Flu Ini Penjelasan Ahli
+LEAD: Orang orang di seluruh dunia terus terinfeksi Covid 19 bahkan angka kematian juga terus meningkat sejak pandemi ini muncul awal tahun 2020 Banyak ahli yang meramalkan penyakit yang disebabkan oleh infeksi virus corona baru ini akan menjadi flu atau virus musiman Kendati demikian seperti dikutip ...
+
+[88] p=0.951 FLAGS=[PERSC,PERSSUB]
+TITLE: Tes Corona Turun Saat Libur Pemda Minta Satgas Konsisten Kelola Laboratorium
+LEAD: Satuan Tugas Satgas COVID 19 menyoroti penurunan jumlah tes yang dilakukan pada saat hari libur Satgas meminta pemerintah daerah konsisten terus melakukan penanganan Corona Diketahui pula pada pekan liburan terjadi penurunan jumlah orang yang diperiksa yang mengakibatkan jumlah kumulatif positif serta positivity rate minggu turun ...
+
+[89] p=0.950 FLAGS=[PERSC]
+TITLE: Cerita Prof Abdul Suntikkan Vaksin Corona ke Jokowi Bapak Tak Merasa Sakit
+LEAD: Momen Prof dr Abdul Muthalib Wakil Ketua Tim Dokter Kepresidenan RI menyuntikkan vaksin corona Sinovac ke Presiden Joko Widodo menjadi sorotan Tayangan yang fokus menyorot lengan presiden yang akan disuntik memperlihatkan tangan sang dokter yang gemetar Getaran tersebut lumayan hebat apalagi ketika sang profesor sempat ...
+
+[90] p=0.950 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Mahfud MD Siapkan Sanksi Aparat yang Biarkan Kerumunan Massa
+LEAD: Menko Polhukam Mahfud Md menyampaikan sikap pemerintah terhadap kerumunan massa dari acara yang dihadiri Pemimpin FPI Habib Rizieq Syihab Respon pemerintah yang disampaikan melalui konferensi pers di Jakarta Senin 16 11 2020 menyoroti pelanggaran protokol kesehatan Pemerintah menyesalkan terjadinya pelanggaran protokol kesehatan pada pelaksanaan pesta ...
+
+[91] p=0.949 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Dewan Pers Dorong Prioritas Vaksinasi COVID 19 untuk Wartawan
+LEAD: Ketua MPR RI Bambang Soesatyo mendorong pemerintah untuk memasukkan kalangan wartawan sebagai salah satu klaster prioritas vaksinasi COVID 19 Bamsoet menilai peran jurnalistik menuntut wartawan bertemu banyak orang sebagaimana dengan tenaga kesehatan dan TNI Polri Karenanya wartawan juga dinilai sangat rentan terpapar COVID 19 Berdasarkan ...
+
+[92] p=0.949 FLAGS=[PERSC]
+TITLE: Pemerintah Soroti Jakarta Kesembuhan Rendah Kematian Tinggi
+LEAD: Menteri Koordinator bidang Perekonomian Airlangga Hartarto mengungkapkan Provinsi Jawa Tengah menjadi daerah dengan angka kesembuhan yang rendah namun memiliki tingkat kematian yang tinggi terkait virus corona Covid 19 Selain Jawa Tengah Provinsi Jawa Barat juga memiliki tingkat kesembuhan yang rendah Ada beberapa Provinsi dengan recovery ...
+
+[93] p=0.947 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Guru SMPN 3 Jekulo Semarang yang Wafat Kena Corona Bertambah Jadi 5
+LEAD: Kabar duka kembali menyelimuti SMP Negeri 3 Jekulo Kabupaten Kudus Jawa Tengah Jumlah guru yang wafat terkonfirmasi positif virus Corona atau COVID 19 di sekolah itu bertambah satu menjadi lima orang Iya guru SMP Negeri 3 Jekulo yang wafat ada satu lagi Ini dirawat di ...
+
+[94] p=0.946 FLAGS=[PERSC,NEGMIS]
+TITLE: POPULER GLOBAL Qatar Ambil Langkah Berani Menormalisasi Hubungan dengan Israel | Sayap Ayam Beku Impor dari Brasil Positif Virus Corona
+LEAD: Populer global masih didominasi oleh pengumuman bersejarah antara Israel dan Uni Emirat Arab yang menormalisasi hubungan diplomatik mereka Selengkapnya dapat Anda simak berikut ini Uni Emirat Arab mengatakan pada Kamis 13 8 2020 bahwa bertekad untuk mengambil langkah berani yaitu menormalisasi hubungan dengan Israel sebagai ...
+
+[95] p=0.946 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Diputuskan Sore Ini Menko PMK Berharap Pemangkasan Libur Bikin Gaduh
+LEAD: Menko Pembangunan Manusia dan Kebudayaan PMK Muhadjir Effendy angkat bicara mengenai libur akhir tahun Ia memastikan jumlah hari libur akhir tahun akan dikurangi Natal kan tidak mungkin tidak libur 1 Januari kan tidak mungkin tidak libur Gitu aja yang lain bisa kita kurangi kata Muhadjir ...
+
+[96] p=0.946 FLAGS=[PERSC,NOPRED]
+TITLE: Vaksin Corona Sinovac Disimpan di PT Kimia Farma Akan Dites BPOM
+LEAD: Vaksin Corona COVID 19 buatan Sinovac yang tiba di Indonesia kemarin malam langsung dibawa ke PT Bio Farma di Bandung Jawa Barat Setelah itu sampel vaksin Corona Sinovac akan dites tim BPOM dan Bio Farma Dikutip dari siaran pers Sekretariat Presiden Senin 7 12 2020 ...
+
+[97] p=0.945 FLAGS=[PERSC,NEGMIS]
+TITLE: Sempat Lolos Screening Gubernur Sulsel Akhirnya Disuntik Vaksin kumparan com
+LEAD: Gubernur Sulawesi Selatan Nurdin Abdullah akhirnya menerima suntikan vaksin COVID 19 hari ini Jumat 22 1 Ia batal menjadi orang pertama di daerah Sulsel yang suntik vaksin karena tidak lolos screening pada tahap awal vaksinasi di sana Setelah tertunda beberapa saat lalu karena tidak memenuhi ...
+
+[98] p=0.944 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Anies Sebut 4 Provinsi Tingkat Kematian Tertinggi Covid 19
+LEAD: Presiden Joko Widodo Jokowi mengungkap empat provinsi yang menjadi penyumbang tingkat kematian tertinggi akibat virus corona Covid 19 Empat provinsi tersebut adalah Bengkulu Sumatera Selatan Jawa Tengah dan Jawa Timur Kalau kita melihat lebih detail tingkat kematian tinggi itu disebabkan empat provinsi yang tingkat kematiannya ...
+
+[99] p=0.944 FLAGS=[PERSC,NEGMIS]
+TITLE: DKI Tambah 1 500 Petak Makam di Marunda untuk Korban Covid
+LEAD: Wakil Gubernur DKI Jakarta Ahmad Riza Patria memastikan bakal menambah lahan pemakaman baru bagi jenazah yang meninggal karena Covid 19 Riza mengatakan lahan baru itu bisa menampung hingga 1 500 petak makam Menurut Riza makam bagi korban Covid itu disiapkan di Tempat Pemakaman Umum TPU ...
+
+[100] p=0.944 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Cerita Perawat di Wisma Atlet Jakabaring Lelah Makian dan Harapan
+LEAD: Sampai saat ini tenaga medis masih menjadi ujung tombak negara untuk memerangi Covid 19 Mereka masih menjadi garda terdepan walau satu per satu mulai berjatuhan dari dokter perawat hingga sopir ambulans sekalipun Rasa takut tertular mau tidak mau dipendam dalam dalam Semua dilakukan hanya demi ...
+
+[101] p=0.944 FLAGS=[PERSC,NEGMIS]
+TITLE: PD Soal Ada Sebutan Kabinet Capres 2024 Tagih Penanganan Dampak COVID
+LEAD: Partai Demokrat PD menilai wajar soal anggapan Presiden Joko Widodo Jokowi membentuk kabinet capres 2024 Namun PD tak menyoal itu yang terpenting kabinet ini dapat bekerja cepat mengatasi dampak COVID 19 Saya pikir sah sah saja ada pengamat atau publik menilai seperti itu Tapi menurut ...
+
+[102] p=0.942 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Ahli RI Bongkar Klaim Vaksin Moderna 196 Persen Cegah Corona
+LEAD: Moderna mengklaim bahwa vaksin buatannya 100 persen dapat mencegah gejala berat dalam kasus Covid 19 Klaim ini berdasarkan analisa hasil kajian uji coba Fase III vaksin yang melibatkan 30 ribu penduduk Amerika Serikat AS Ahli biologi molekuler Ahmad Rusdan Handoyo menjelaskan angka tersebut didapat Moderna ...
+
+[103] p=0.942 FLAGS=[PERSC,PERSSUB,NEGMIS,NOPRED]
+TITLE: Pemprov Jabar Fasilitasi Warga Cek Mandiri Antigen Via Online
+LEAD: Berbagai inovasi dalam pelacakan kontak atau tracking kasus positif COVID 19 terus dilakukan Pemprov Jabar Salah satu yang terbaru adalah pemesanan alat tes antigen secara online berikut surat hasil tesnya Direktur Utama PT Jasa Sarana Hanif Mantiq mengatakan pihaknya tak hanya mendistribusikan alat tes antigen ...
+
+[104] p=0.942 FLAGS=[PERSC,NEGMIS]
+TITLE: Khamenei Tokoh Muslim Berpengaruh hingga Cerita Selandia Baru
+LEAD: Sejumlah peristiwa terjadi pada Selasa 15 12 yang dirangkum dalam kilas internasional Mulai dari Erdogan menjadi tokoh muslim paling berpengaruh di dunia hingga dubes Tantowi Yahya menceritakan kehidupan di Selandia Baru yang kini bebas Covid 19 Presiden Turki Recep Tayyip Erdogan dinobatkan menjadi tokoh Muslim ...
+
+[105] p=0.942 FLAGS=[PERSC,NEGMIS,NUMMIS,QTYC]
+TITLE: CGV Buka 4 Bioskop di Jakarta Besok Harga Tiket Naik
+LEAD: Jaringan bioskop CGV akan membuka empat bioskop di DKI Jakarta mulai Rabu 21 10 besok Kabar itu disampaikan pihak CGV melalui akun Twitter resmi dengan mengunggah posterPada poster yang diunggah CGV ID terlihat mereka akan membuka bioskop di Grand Indonesia Green Pramuka Mall Transmart Cempaka ...
+
+[106] p=0.941 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Hari Ini 83 500 Orang Diprediksi Tinggalkan Banten Via Bandara Soetta
+LEAD: Sebanyak 83 500 orang diperkirakan akan meninggalkan Jakarta menggunakan pesawat hari ini Data tersebut tercatat dari keberangkatan pesawat di Bandara Soekarno Hatta Soetta Tangerang Banten Pada hari ini Rabu 23 Desember 2020 jumlah penumpang pesawat diperkirakan mencapai sekitar 83 500 orang dengan sebanyak 846 penerbangan ...
+
+[107] p=0.940 FLAGS=[PERSC,NEGMIS]
+TITLE: Dikbud Minta Guru Pukul Rata Cara Mengajar Kala Pandemi
+LEAD: Direktur Jenderal Guru dan Tenaga Kependidikan Kementerian Pendidikan dan Kebudayaan Iwan Syahril menilai guru tidak bisa memukul rata cara mengajar semua siswa di tengah pandemi Covid 19 Harus ada yang namanya mengajar secara student centered yang personalisasi seperti itulah kira kira Walaupun dalam konteks yang ...
+
+[108] p=0.940 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Jadi Co Chairs COVAX Menlu RI Harus Mampu Wakili Negara Berkembang
+LEAD: Menteri Luar Negeri Republik Indonesia Menlu RI Retno Marsudi terpilih menjadi salah satu co chairs COVAX dengan perolehan suara terbanyak yakni 41 persen dari total suara yang masuk Pemilihan dilakukan melalui e voting dan diumumkan pada 12 Januari malam waktu Jenewa Selain Menlu RI Menteri ...
+
+[109] p=0.939 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Reaksi yang Dialami Relawan Uji Klinis Vaksin Covid 19 dan Cara Mengatasinya
+LEAD: PT Bio Farma persero menyatakan uji klinis vaksin Covid 19 buatan Sinovac China masih berlanjut Juru bicara tim Uji Klinis Fase 3 Vaksin Covid 19 Rodman Tarigan mengatakan pihaknya belum menemukan laporan dampak negatif dari vaksin buatan Sinovac Sejauh ini belum ada laporan mengenai Kejadian ...
+
+[110] p=0.939 FLAGS=[PERSC,PERSSUB,NEGMIS]
+TITLE: Ilmuwan Inggris Khawatir Varian Baru Corona Lebih Resistan terhadap Vaksin
+LEAD: Ada kekhawatiran bahwa varian baru COVID 19 di Afrika Selatan dapat melemahkan dampak vaksin Reuters Para ilmuwan di Afrika Selatan mengatakan ada kekhawatiran yang masuk akal bahwa varian baru COVID 19 yang menyebar di seluruh negara itu mungkin terbukti lebih resistan terhadap vaksin yang saat ...
+
+[111] p=0.938 FLAGS=[PERSC,NEGMIS]
+TITLE: Emak emak Ngamuk Ditegur TNI Gegara Bermasker Ternyata ODGJ
+LEAD: Seorang emak emak ngamuk saat diingatkan anggota TNI di Garut karena berkeliaran tidak menggunakan masker Polisi menyatakan perempuan tersebut mengalami gangguan kejiwaan Hal tersebut diungkap Kapolsek Bungbulang Iptu Endang Mulyana Endang mengatakan emak emak ngamuk tersebut terdata sebagai Orang Dengan Gangguan Kejiwaan ODGJ Berdasarkan hasil ...
+
+[112] p=0.938 FLAGS=[PERSC]
+TITLE: Kemenhan Jadi Klaster Covid Terbesar di DKI
+LEAD: Kantor Kementerian Perhubungan Kemenhub menjadi klaster Covid 19 dengan kasus aktif terbesar di DKI Jakarta Berdasarkan data pada laman https corona jakarta go id id data visualisasi hingga 30 September Kemenhub masih memiliki 76 kasus konfirmasi positif dan merupakan kasus aktif Kasus aktif sendiri merupakan ...
+
+[113] p=0.937 FLAGS=[PERSC,NEGMIS]
+TITLE: Cek Vaksinasi Corona di Demak Kudus Hartopo Cepat Digenjot
+LEAD: Gubernur Jawa Tengah Ganjar Pranowo mengecek pelaksanaan vaksinasi virus Corona atau COVID 19 di fasilitas kesehatan di Kabupaten Demak dan Kudus Ganjar mengaku akan melakukan percepatan pelaksanaan vaksinasi Kita memastikan rantai dini itu betul agar kualitasnya bisa terjaga Saya lihat ini Kudus hari Kedua berjalan ...
+
+[114] p=0.937 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Masuk Daftar Pembatasan Baru Bupati Ciamis Kita Pertegas Prokes
+LEAD: Kabupaten Ciamis tidak masuk dalam daftar pembatasan baru yang dilakukan oleh pemerintah pusat Meski begitu Pemkab Ciamis akan semakin memperketat penerapan protokol kesehatan demi menekan penyebaran COVID 19 Sekalipun tidak masuk daftar karena level oranye kita akan tegas memberlakukan protokol kesehatan karena saat ini kasus ...
+
+[115] p=0.936 FLAGS=[PERSC,POL-]
+TITLE: PSBB Total Dinilai Jelas Anies Gagal Rangkul Bodetabek
+LEAD: Wali Kota Bogor Bima Arya mengungkapkan belum ada kesepakatan apapun dalam rapat antara sejumlah kepala daerah wilayah penyangga dengan Gubernur DKI Jakarta Anies Baswedan mengenai PSBB total di ibu kota Dalam rapat itu kata Bima Kepala daerah se Jabodetabek meminta agar DKI terlebih dulu berkoordinasi ...
+
+[116] p=0.936 FLAGS=[PERSC,NEGMIS]
+TITLE: Gubri Buat Sederet Syarat Ketat Jika Kabupaten Kota Mau Sekolah Tatap Muka
+LEAD: Gubernur Sumut Gubsu Edy Rahmayadi membuat sederet syarat ketat bagi kabupaten kota yang hendak menggelar pembelajaran tatap muka di sekolah saat pandemi Corona Syarat itu kata Edy harus dipenuhi seluruhnya Ada dua yang harus kita bargaining kan Yang pertama anak dalam pendidikan tatap muka hasilnya ...
+
+[117] p=0.935 FLAGS=[NOPRED]
+TITLE: Pengusaha Pasrah Resesi tapi Berharap Tak Sampai Depresi
+LEAD: Sejumlah pelaku usaha mikro kecil dan menengah UMKM mengaku pasrah dengan ekonomi dalam negeri yang diprediksi mengalami resesi pada kuartal III tahun ini Pasalnya usaha mereka memang sudah terpuruk akibat pandemi Covid 19 sejak kuartal II lalu Salah satu pengusaha percetakan suvernir dan undangan pesta ...
+
+[118] p=0.935 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Nadiem Tegaskan Kemdikbud Hanya Kelola Anggaran Pendidikan Rp 81 5 T
+LEAD: Kementerian Pendidikan dan Kebudayaan menggelontorkan bantuan subsidi kuota internet sebagai bagian dari program Pemulihan Ekonomi Nasional Bantuan dengan anggaran senilai Rp 5 5 triliun tersebut sudah dirasakan manfaatnya oleh 35 5 juta siswa guru mahasiswa dan dosen di seluruh Indonesia Belum pernah Pemerintah Indonesia menyalurkan ...
+
+[119] p=0.935 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Trump Janji Vaksinasi 100 Juta Warga AS dalam 100 Hari Pertama Menjabat
+LEAD: Presiden AS terpilih Joe Biden menetapkan target 100 juta vaksinasi Covid 19 dalam 100 hari pertamanya menjabat sebagai presiden Ia menjanjikan hal itu saat memperkenalkan tim kesehatannya pada Selasa 08 12 Ia juga mendesak orang Amerika untuk mengenakan masker selama 100 hari Di hari yang ...
+
+[120] p=0.934 FLAGS=[PERSC,NEGMIS]
+TITLE: Ridwan Kamil Porsi Vaksin untuk Nakes di Bodebek dan Bekasi Raya Lebih Banyak kumparan com
+LEAD: Pemerintah telah menetapkan jadwal vaksinasi corona dimulai pada Rabu 14 Januari atau sehari setelah Presiden Jokowi menerima vaksin Pada gelombang pertama vaksinasi diprioritaskan bagi tenaga kesehatan nakes Gubernur Jawa Barat Ridwan Kamil mengatakan vaksinasi pada tahap awal bakal diprioritaskan bagi tenaga kesehatan dengan kasus corona ...
+
+[121] p=0.933 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Muhammadiyah Ingatkan Anies Potensi Klaster Sekolah
+LEAD: Ketua Majelis Pendidikan Dasar dan Menengah PP Muhammadiyah Kasiyarno meminta Menteri Pendidikan dan Kebudayaan Nadiem Makarim tak gegabah membuka sekolah yang berada di zona kuning atau risiko rendah penyebaran virus corona Covid 19 Kalau kementerian mau membuka kan pasti ada kemungkinan menjadi penyebab klaster baru ...
+
+[122] p=0.932 FLAGS=[NEGMIS,QTYC,NOPRED]
+TITLE: Kemenkes Pantau 4 465 Klaster Covid 19 di Seluruh Indonesia
+LEAD: Staf Khusus Menteri Kesehatan Bidang Peningkatan Sumber Daya Manusia Kesehatan Mariya Mubarika mengatakan ada 1 146 klaster penyebaran Covid 19 di seluruh Indonesia berdasarkan data 22 September lalu Kementerian Kesehatan Kemenkes terus memantau ketat klaster tersebut Kita pantau secara ketat dan terus menerus oleh unsur ...
+
+[123] p=0.931 FLAGS=[PERSC]
+TITLE: Warga Pertanyakan Pengawasan tak Pakai Masker di Dalam Rumah
+LEAD: Sejumlah masyarakat mempertanyakan bentuk pengawasan protokol kesehatan terkait Covid 19 yang mewajibkan setiap orang memakai masker di dalam rumah Meskipun sebagian masyarakat setuju dengan protokol kesehatan di lingkungan keluarga Vanya Fahira seorang mahasiswa di Tangerang Selatan Banten mengaku dirinya sudah menerapkan protokol kesehatan ketika tinggal ...
+
+[124] p=0.931 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Erick Thohir Akan Paksa Masyarakat untuk Divaksin Corona
+LEAD: Menteri BUMN Erick Thohir menyatakan pemerintah tak akan memaksa masyarakat untuk ikut dalam program vaksinasi covid 19 Pasalnya berdasarkan survei yang telah dilakukan hanya sekitar 66 persen masyarakat yang percaya dan mau divaksinasi virus corona Ada juga yang 16 persen tidak mau divaksin kami juga ...
+
+[125] p=0.931 FLAGS=[PERSC,NEGMIS]
+TITLE: Petani Ajak Bamsoet Pertahankan Desa sebagai Lumbung Pangan Nasional
+LEAD: Ketua MPR RI Bambang Soesatyo Bamsoet mengungkapkan selama ini sektor pertanian selalu diidentikkan dengan kehidupan desa yang tak jarang dipandang sebelah mata Padahal sektor pertanian lah yang menopang kehidupan manusia Kini seiring perkembangan zaman berbagai desa telah tumbuh menjadi sentra perekonomian dalam skala kecil dan ...
+
+[126] p=0.929 FLAGS=[PERSC,PERSSUB]
+TITLE: Kapolda Jatim Siapkan Personel Gabungan Wujudkan Aman dan Patuh Prokes
+LEAD: Sebanyak 16 789 personel gabungan dari Polri TNI dan instansi terkait disiagakan dalam Operasi Lilin Semeru 2020 Operasi tersebut disiagakan dalam rangka menyambut Natal dan Tahun Baru Nataru 2021 Adapun rincian personel gabungan itu yakni Polda Jatim sebanyak 8 823 personel TNI menerjunkan 1 863 ...
+
+[127] p=0.928 FLAGS=[PERSC,QTYC]
+TITLE: Sebaran 3 948 Kasus Baru Corona di RI 9 Desember Terbanyak di DKI
+LEAD: Kasus COVID 19 bertambah 6 058 pada hari ini Provinsi DKI Jakarta menjadi provinsi terbanyak yang menyumbang kasus baru Berdasarkan data dari Satgas Penanganan COVID 19 Rabu 9 12 2020 total jumlah kasus di RI hari ini tercatat 592 900 orang Data ini dihimpun secara ...
+
+[128] p=0.928 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: Corona Jakarta Melonjak 2 858 Kasus sejak Long Weekend
+LEAD: Kepala Bidang Pencegahan dan Pengendalian Penyakit Dinas Kesehatan Provinsi DKI Jakarta Dwi Oktavia menyatakan kasus positif virus corona Covid 19 di wilayah DKI Jakarta bertambah bertambah 1 114 kasus Dengan demikian kasus positif di Jakarta menjadi 39 037 kasus Hari ini pada Minggu 30 8 ...
+
+[129] p=0.927 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Pemerintah Pantau 67 509 Suspek Corona Hari Ini
+LEAD: Jumlah kasus suspek Corona COVID 19 yang dipantau pemerintah pada hari ini bertambah dibanding hari sebelumnya Hari ini dilaporkan lebih dari 69 ribu kasus suspek Corona yang dipantau Data terkait suspek COVID 19 ini dirilis Satgas Penanganan COVID 19 dan dibagikan BNPB pada Selasa 22 ...
+
+[130] p=0.925 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Gugus Tugas Lacak 800 Kontak Erat Kasus Corona Gedung Agung
+LEAD: Gugus Tugas Percepatan Penanggulangan Covid 19 Provinsi Jawa Barat Jabar melakukan pelacakan terhadap mereka yang kontak erat dengan 40 pegawai Gedung Sate yang dinyatakan positif terinfeksi virus corona Ketua Harian Gugus Tugas Jabar yang juga Sekretaris Daerah Jabar Setiawan Wangsaatmaja mengatakan sekurangnya 40 persen dari ...
+
+[131] p=0.925 FLAGS=[PERSC,NEGMIS]
+TITLE: Ahli Kritik Alat Cek Corona GeNose Lemah dengan Rokok Petai
+LEAD: Sejumlah ahli mengkritik penerapan alat deteksi Covid 19 GeNose di Indonesia Epidemiolog asal Universitas Indonesia UI Pandu Riono mengatakan status GeNose masih tahap eksperimental belum bisa dipakai dalam pelayanan publik khususnya screening virus corona Ia menyatakan yang dimaksud dengan izin edar dengan kedaruratan yang hanya ...
+
+[132] p=0.925 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Gubsu Edy soal Corona Allah yang Akan Ambil Virus Ini Vaksin
+LEAD: Gubernur Sumatera Utara Gubsu Edy Rahmayadi bercerita soal penyebaran virus Corona atau COVID 19 di Sumut yang mengubah banyak kebiasaan warga Salah satunya kata Edy semua orang harus menggunakan masker demi mencegah penularan Corona Akibat COVID 19 ini kita semua pakai masker Yang biasa cantik ...
+
+[133] p=0.924 FLAGS=[NEGMIS,QTYC,NOPRED]
+TITLE: Satgas Minta Kunjungan ke Pantai di Anyer Dibatasi Sampai Pukul 18 00 WIB
+LEAD: Polisi sudah berkoordinasi dengan pengelola pantai di Anyer Banten untuk membatasi kunjungan wisatawan sampai pukul 18 00 WIB Aparat gabungan bakal berpatroli di sepanjang Pantai Anyer Kapolres Cilegon AKBP Sigit Haryono mengatakan bakal patroli sore hari mengimbau wisatawan agar berhenti berenang dan nongkrong di pinggir ...
+
+[134] p=0.924 FLAGS=[PERSC,PERSSUB,QTYC,NOPRED]
+TITLE: DKI Pecah Rekor Lagi Ini Sebaran 66 619 Kasus Corona RI 8 Januari
+LEAD: Kasus positif Corona COVID 19 di DKI Jakarta pecah rekor lagi Tercatat 2 959 kasus positif baru yang ditemukan hari ini Data tersebut berasal dari Kementerian Kesehatan Kemenkes dan dipubilkasikan BNPB pada Jumat 8 1 2020 Selain DKI kasus positif baru yang tertinggi hari ini ...
+
+[135] p=0.923 FLAGS=[PERSC]
+TITLE: Sambut Tahun Baru 2021 Ma ruf Amin Harap Kehidupan Sosial Ekonomi Cepat Pulih
+LEAD: Pergantian tahun 2020 ke 2021 tinggal beberapa jam lagi Pemerintah melarang masyarakat untuk merayakan momen tahun baru 2021 dengan berkerumun karena masih pandemi COVID 19 Wakil Presiden RI Ma ruf Amin meminta kepada masyarakat untuk menjadikan pergantian tahun baru sebagai momen instrospeksi diri Menurutnya perayaan ...
+
+[136] p=0.922 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Antapani Geser Andir Jadi Penyumbang Kasus Corona Tertinggi di Bandung
+LEAD: Kasus positif aktif COVID 19 di Kota Bandung Jawa Barat terus meningkat Kecamatan Andir menempati urutan pertama penyumbang kasus positif aktif COVID 19 di Kota Bandung Rabu 2 12 2020 Dari informasi yang dihimpun di laman Pusat Informasi COVID 19 Pusicov Kota Bandung jumlah positif ...
+
+[137] p=0.920 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Kemendikbud Klaim Putar Dokumenter Netflix Pakai APBN
+LEAD: Direktur Jenderal Kebudayaan Kementerian Pendidikan dan Kebudayaan Hilmar Farid mengatakan kerja sama pihaknya dengan Netflix soal Program Belajar di Rumah BdR di TVRI tak menggunakan uang negara serta melalui proses kurasi yang ketat terkait tayangannya Film film ini nilainya untuk hak siarannya jutaan dolar dan ...
+
+[138] p=0.920 FLAGS=[PERSC,NEGMIS,PRED-]
+TITLE: Bill Gates Amerika Serikat Mampu Atasi Pandemi Corona
+LEAD: Pendiri Microsoft Bill Gates mengatakan bahwa pemerintah Amerika Serikat AS sejauh ini belum mampu menanggulangi pandemi virus corona SARS CoV 2 Covid 19 yang telah menginfeksi sepuluh juta orang di dunia Pernyataan itu ia sampaikan kepada jurnalis CNN Anderson Cooper dan Dokter Sanjay Gupta Selasa ...
+
+[139] p=0.918 FLAGS=[PERSC,POL-]
+TITLE: PERSI Minta Dokter Tak Terpengaruh Cemoohan selama Pandemi
+LEAD: Wakil Ketua Umum Pengurus Besar Ikatan Dokter Indonesia PB IDI Slamet Budiarto mengimbau para dokter dan tenaga kesehatan tidak mengkhawatirkan cemoohan dari sejumlah pihak selama pandemi Covid 19 Slamet meminta setiap dokter tetap fokus memberikan pelayanan kesehatan terbaik pada pasien Ia bahkan mengimbau dokter menganggap ...
+
+[140] p=0.917 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Transaksi e Commerce Naik Nyaris Dua Kali Lipat saat Pandemi
+LEAD: Bank Indonesia BI memprediksi sebanyak 12 juta pelaku usaha mikro kecil dan menengah UMKM akan menggunakan alat pembayaran digital QR Code Indonesian Standard QRIS pada 2021 Kondisi itu tak lepas dari ekonomi digital RI berkembang pesat di tengah pandemi covid 19 Peningkatan itu tercermin dari ...
+
+[141] p=0.917 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Liga 1 dan IBL Masih Terkendala Izin Menpora
+LEAD: Sedikitnya dua kompetisi olahraga yang sedianya bakal dimulai awal 2021 yakni Liga 1 2020 dan Indonesia Basketball League IBL 2021 sampai hari ini belum jelas karena terkendala izin kepolisian Lanjutan Liga 1 2020 yang sempat berhenti pada 2020 karena pandemi Covid 19 rencananya akan bergulir ...
+
+[142] p=0.917 FLAGS=[PERSC,NEGMIS]
+TITLE: Kalbar Tetap Sanksi Batik Air karena Mau Dianggap Toleransi Pelanggar
+LEAD: Gubernur Kalimantan Barat Sutarmidji tetap memberikan sanksi kepada maskapai Batik Air berupa larangan terbang ke Pontianak terkait temuan penumpang positif Corona COVID 19 Hal ini dilakukan agar tidak ada toleransi kepada pelanggar Larangan ini berlaku hingga hingga 10 hari ke depan per 24 Desember 2020 ...
+
+[143] p=0.917 FLAGS=[NEGMIS]
+TITLE: Tweet Melania Positif Covid 19 Pecah Rekor Terbanyak Dapat Like
+LEAD: Kicauan Presiden Amerika Serikat AS Donald Trump yang berisikan pengumuman dirinya serta istrinya Melania Trump positif virus corona Covid 19 menjadi tweet yang paling banyak dikicau ulang retweet dan paling banyak disukai Sebagaimana dilansir Axios kicauan itu diunggah pada 00 54 dini waktu setempat hari ...
+
+[144] p=0.916 FLAGS=[PERSC,PERSSUB,NEGMIS,QTYC,NOPRED]
+TITLE: 63 768 Kasus Suspek Corona Dipantau pada 19 Desember
+LEAD: Puluhan ribu kasus suspek Corona COVID 19 kembali dipantau Hari ini ada 64 071 kasus suspek Corona yang dipantau 64 071 suspek tulis laporan Satgas Penanganan COVID 19 Sabtu 19 12 2020 Selain kasus suspek Corona terdapat 63 768 spesimen terkait Corona yang diperiksa Dari ...
+
+[145] p=0.915 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Bantuan Kuota Internet Kemendibud Sudah Diberikan ke 35 5 Juta Penerima
+LEAD: Menteri Pendidikan dan Kebudayaan Nadiem Makarim mengumumkan subsidi bantuan kuota internet untuk pembelajaran jarak jauh PJJ sejak sebulan lalu Anggaran untuk program ini mencapai Rp7 2 triliun Ia menyebutnya sebagai jawaban atas kecemasan masyarakat di sektor pendidikan kala pandemi Covid 19 Kami telah melakukan perjuangan ...
+
+[146] p=0.915 FLAGS=[PERSC,NEGMIS]
+TITLE: Ke RSUD Cengkareng F PAN DPRD DKI Bicara Kerja Ekstra Nakes Saat Tahun Baru
+LEAD: Fraksi PAN DPRD DKI Jakarta meninjau RSUD Tarakan Jakarta Pusat PAN DKI menyoroti jumlah kasus Corona yang meningkat di Ibu Kota sehingga berimbas kepada beban kerja tenaga kesehatan Saat ini angka COVID meningkat drastis Menurut laporan per 31 Desember kemarin persentase kasus sepekan terakhir 12 ...
+
+[147] p=0.915 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: PPKM 11 Januari Satgas Ungkap Kondisi Ranjang Ruang ICU RS di Bali
+LEAD: Pemberlakuan pembatasan kegiatan masyarakat PPKM untuk sebagian Jawa dan sebagian Bali berlaku 11 Januari hingga 2 pekan ke depan Satuan Tugas Penanganan COVID 19 mengungkapkan data data kondisi ranjang dan ruang ICU RS di DKI Jakarta Posisi bed occupancy rate untuk DKI untuk ruang isolasi ...
+
+[148] p=0.914 FLAGS=[PERSC,NEGMIS]
+TITLE: Pengamat Komite Baru Jokowi Potensi Perpanjang Birokrasi
+LEAD: Presiden Joko Widodo Jokowi membentuk lembaga ad hoc baru untuk menangani dampak pandemi virus corona Covid 19 bernama Komite Penanganan Covid 19 dan Pemulihan Ekonomi Nasional Komite ini terdiri dari tiga yakni Komite Kebijakan Satuan Tugas Penanganan Covid 19 dan Satuan Tugas Pemulihan dan Transformasi ...
+
+[149] p=0.913 FLAGS=[PERSC,NEGMIS]
+TITLE: Pria Lebih Patuh Protokol Kesehatan Daripada Perempuan
+LEAD: Selama obat dan vaksin Covid 19 belum ditemukan protokol kesehatan 3M yaitu Memakai masker Menjaga jarak dan Menghindari kerumunan menjadi salah satu cara yang paling efektif mencegah penularan Sayangnya tingkat kepatuhan masyarakat masih sangat rendah untuk melaksanakan protokol kesehatan tersebut Survei yang dilakukan oleh Satgas ...
+
+[150] p=0.912 FLAGS=[PERSC]
+TITLE: Tambahan Kasus Tertinggi Sepekan Berada di DKI Jabar Jateng
+LEAD: Satuan Tugas Penanganan Covid 19 memaparkan data yang menunjukkan Jawa Tengah Jawa Barat dan DKI Jakarta menjadi tiga provinsi dengan penambahan kasus positif virus corona Covid 19 mingguan terbanyak dalam sepekan ini atau periode 1 8 November 2020 Bila diurutkan posisi pertama ditempati Jawa Tengah ...
+
+[151] p=0.912 FLAGS=[PERSC,NEGMIS]
+TITLE: Ahli Colek Pemerintah 3T Kunci Basmi Covid 19 Vaksin
+LEAD: Para ahli Epidemiologi Indonesia meminta agar pemerintah tak hanya fokus ke pengembangan vaksin tapi juga ke strategi dasar 3T testing tracing dan treatment dalam pengendalian pandemi virus corona Covid 19 Ahli meminta agar pemerintah meningkatkan kapasitas 3T yang menjadi strategi utama pengendalian pandemi Ahli Epidemiolog ...
+
+[152] p=0.910 FLAGS=[PERSC,NEGMIS]
+TITLE: Ada 3 Komponen Anies Sebut Berisiko Jika PSBB Dilonggarkan
+LEAD: Pembatasan Sosial Berskala Besar PSBB transisi di Jakarta kembali diperpanjang oleh Gubernur Anies Baswedan PSBB berskema pelonggaran ini diperpanjang di tengah tingginya kasus virus corona PSBB transisi sendiri diterapkan DKI Jakarta ketika pemerintah pusat mulai menyerukan tatanan hidup baru atau new normal di tengah pandemi ...
+
+[153] p=0.909 FLAGS=[PERSC,NEGMIS]
+TITLE: Polisi Temukan Obat Ilegal Terkait Covid Dijual Online
+LEAD: Badan Pengawas Obat dan Makanan BPOM RI menemukan obat dan jamu tanpa izin edar dan mengandung bahan kimia berbahaya dijual secara daring Beberapa di antaranya adalah obat yang biasa digunakan untuk pasien positif terinfeksi virus corona Covid 19 seperti Hydroxychloroquine Asimptomisin dan Dexamethasone Khususnya terkait ...
+
+[154] p=0.908 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Saksi Rizieq Klaim Ada Kasus Corona Usai Pernikahan dan Maulid di Petamburan kumparan com
+LEAD: Kuasa hukum Habib Rizieq kembali menghadirkan saksi dalam sidang praperadilan di PN Jakarta Selatan Kamis 7 1 Saksi yang kali ini dihadirkan ialah warga asli Petamburan Abdul Qadir Salah satu yang dipertanyakan kepada Abdul ialah soal kasus corona di wilayahnya Ia yang mengaku tidak ada ...
+
+[155] p=0.907 FLAGS=[PERSC,PRED-]
+TITLE: Dilarang ke Pontianak Bagaimana Penumpang Batik Air yang Sudah Beli Tiket
+LEAD: Kabar mengenai adanya penumpang positif Corona di pesawat Batik Air tengah menjadi perbincangan setelah Gubernur Kalimantan Barat Sutarmidji melarang maskapai tersebut masuk ke Pontianak Anggota Komisi VI DPR Andre Rosiade meminta ini dijadikan momentum untuk memeriksa penerapan physical distancing di dalam pesawat terutama di maskapai ...
+
+[156] p=0.907 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: 4 686 Nakes di Cianjur tak Masuk Tahap Awal Disuntik Vaksin Corona
+LEAD: Vaksin Corona atau COVID 19 untuk Cianjur akan mulai diterima pertengahan Januari 2021 Dari total 1 6 juta vaksin yang diajukan pada tahap awal akan diterima 4 686 vaksin untuk tenaga medis nakes Kalau vaksinnya kami juga masih menunggu kemungkinan di pertengahan Januari ini Tapi ...
+
+[157] p=0.907 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Jokowi Buka Suara soal Keluhan PDIP Atas Bansos Corona
+LEAD: Ketua Dewan Pimpinan Pusat Partai Demokrasi Indonesia Perjuangan DPP PDIP Eriko Sotarduga menyatakan Menteri Sosial Mensos Juliari Batubara tidak bisa kerja sembarangan dalam menyalurkan bantuan sosial bansos ke masyarakat di tengah pandemi virus corona Covid 19 Pernyataan ini disampaikan Eriko merespons kelambanan penyaluran bansos yang ...
+
+[158] p=0.905 FLAGS=[PERSC,NEGMIS]
+TITLE: Neymar Positif Corona
+LEAD: Bintang Paris Saint Germain Kylian Mbappe dinyatakan positif terpapar virus corona sehingga tak dapat ikut serta dalam laga Prancis melawan Kroasia di UEFA Nations League Kylian Mbappe tak akan ikut dalam laga melawan Kroasia Hasil tes Covid 19 yang dilakukan UEFA pagi ini menunjukkan bahwa ...
+
+[159] p=0.904 FLAGS=[PERSC,NEGMIS]
+TITLE: Penyintas Corona Bisa Alami Kerusakan Paru Jangka Panjang
+LEAD: Sebagian orang yang terinfeksi virus corona Covid 19 pulih total dalam beberapa minggu Namun ada beberapa orang yang terus mengalami gejala setelah pemulihan awal mereka bahkan memiliki versi ringan penyakit Orang orang ini mendeskripsikan diri mereka sebagai long haulers atau penyintas Covid 19 Dan kondisinya ...
+
+[160] p=0.903 FLAGS=[CANC,PERSC,NEGMIS,NUMMIS,NOPRED]
+TITLE: RK Ingin DKI Satu Irama dengan Jabar Menangani Covid 19
+LEAD: Gubernur Jawa Barat Ridwan Kamil menginginkan satu irama dalam penanganan virus corona Covid 19 di Depok Bogor dan Bekasi Bodebek dengan DKI Jakarta Itu dilontarkannya karena banyak warga Bodebek yang bekerja di Jakarta Saat ini banyak mengemuka pasien Covid 19 terjadi di Depok Bogor dan ...
+
+[161] p=0.903 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: 603 741 Kasus Covid 19 dan Antisipasi Lonjakan Usai Libur Akhir Tahun
+LEAD: Hampir sepuluh bulan pandemi berjalan di Indonesia tetapi belum ada tanda tanda penyebaran Covid 19 dapat dikendalikan Selain itu Indonesia pun saat ini tengah berupaya mencegah masuknya penyebaran varian baru virus corona B117 yang ditemukan di Inggris Kasus Covid 19 di Indonesia masih terus bertambah ...
+
+[162] p=0.902 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Jemaat Pastor Dites COVID Begini Penerapan Prokes di Katedral Jaksel
+LEAD: Gereja Katedral Jakarta Pusat melaksanakan ibadat misa Natal tatap muka Pelaksanaan misa Natal tatap muka di Katedral hanya dibatasi hingga 20 persen atau sekitar 309 jemaat Juru bicara Keuskupan Agung Katedral Susyana Suswadie memastikan seluruh jemaat yang hadir hari ini dalam kondisi sehat Mereka sudah ...
+
+[163] p=0.902 FLAGS=[PERSC,NEGMIS,NUMMIS,QTYC,NOPRED]
+TITLE: Mendagri Tito Usul Vaksin Covid Pakai Data Pemilu 2019
+LEAD: Mendagri Muhammad Tito Karnavian mengapresiasi langkah yang diambil Menkes Budi Gunadi Sadikin terkait penggunaan data KPU sebagai basis data program vaksinasi COVID 19 Data itu disebut Tito berasal dari data faktual di lapangan yang telah divalidasi sebelumnya oleh pihak Kemendagri Hal itu diutarakannya Tito dalam ...
+
+[164] p=0.901 FLAGS=[PERSC,POL-,NEGMIS,NUMMIS]
+TITLE: Jokowi Tegaskan Ada Pembubaran Satgas Covid 19
+LEAD: Presiden Joko Widodo menegaskan tidak ada pembubaran Satuan Tugas Penanganan Covid 19 di pusat maupun daerah Jokowi mengatakan bahwa pemerintah tetap memprioritaskan penanganan kesehatan masyarakat di tengah pandemi virus corona Saya perlu menekankan tidak ada pembubaran Satgas Covid 19 baik di pusat dan daerah harus ...
+
+[165] p=0.899 FLAGS=[PERSC,POL-,NEGMIS,NUMMIS]
+TITLE: Pantau Jalur Keluar Masuk Jatim Kakorlantas Sebut Ada Penurunan Wisatawan 90
+LEAD: Kepala Korps Lalu Lintas Kakorlantas Polri Irjen Istiono mengatakan bahwa terjadi penurunan jumlah wisatawan di Bali dari Banyuwangi sebesar 90 Pasalnya dirinya memantau langsung kondisi di Bandara I Gusti Ngurah Rai Bali dan Pelabuhan Ketapang Banyuwangi hari ini Hari ini kami melakukan pemantauan di kedatangan ...
+
+[166] p=0.899 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Pemerintah Pantau 19 514 Suspek Corona Hari Ini
+LEAD: Pemerintah memantau 62 717 suspek Corona COVID 19 hari ini Jumlah kasus yang dipantau lebih banyak dari kemarin yaitu sebanyak 62 250 kasus Data perkembangan pandemi COVID 19 di Indonesia ini disampaikan Badan Nasional Penanggulangan Bencana BNPB pada Jumat 18 12 2020 Data diperbarui setiap ...
+
+[167] p=0.898 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: 27 PMI Terdeteksi COVID Setibanya di Taiwan BP2MI Sidak Sejumlah Perusahaan
+LEAD: Badan Pelindungan Pekerja Migran Indonesia BP2MI mengaku telah melakukan langkah antisipasi terkait adanya tindakan otoritas Taiwan yang menghentikan sementara penempatan Pekerja Migran Indonesia PMI Penghentian sementara itu dilakukan Taiwan akibat adanya 85 PMI yang terkonfirmasi positif COVID 19 BP2MI mengatakan 85 PMI di Taiwan terkonfirmasi ...
+
+[168] p=0.898 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: Rupiah Melorot ke Rp14 128 Terseret Lonjakan Kasus Covid 19
+LEAD: Nilai tukar rupiah berada di posisi Rp14 120 per dolar AS pada perdagangan pasar spot Senin 30 11 sore Mata uang Garuda melemah 0 21 persen dibandingkan perdagangan Jumat 27 11 sore di level Rp14 090 per dolar AS Sementara itu kurs referensi Bank Indonesia ...
+
+[169] p=0.898 FLAGS=[PERSC,NEGMIS]
+TITLE: LPAI Sebut Gawai sampai Pendidikan Problem Anak saat Pandemi
+LEAD: Komisi Perlindungan Anak Indonesia KPAI mengungkapkan terdapat tiga problem perlindungan anak di masa pandemi Covid 19 yakni perlindungan anak dari penyalahgunaan gawai kesehatan dan pendidikan KPAI menilai ketiganya perlu dicermati oleh pemerintah Ketua KPAI Susanto mengatakan isu pertama adalah perlindungan anak dari gawai lantaran anak ...
+
+[170] p=0.896 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: Ini Sebaran 4 192 Kasus Sembuh Corona di RI pada 24 November
+LEAD: Pasien sembuh dari Corona bertambah 2 927 pada hari ini Tambahan pasien sembuh virus Corona tersebut paling banyak di DKI Jakarta dan Jawa Barat Berdasarkan data dari Satgas Penanganan COVID 19 Selasa 24 11 2020 total pasien sembuh hingga hari ini 425 313 Data ini ...
+
+[171] p=0.895 FLAGS=[PERSC,QTYC,NOPRED]
+TITLE: Dukung Jakarta Bermasker Polres Pelabuhan Tj Priok Bagi bagi 3 779 Masker
+LEAD: Dalam rangka mencegah penyebaran virus COVID 19 Kapolda Metro Jaya Irjen Muhammad Fadil Imran mencanangkan program Jakarta Bermasker Ini selaras dengan Kebijakan program PriokBermasker Kapolres Pelabuhan Tanjung Priok AKBP Ahrie Sonta yang telah diluncurkan dan dijalankan sejak November 2020 lalu Menindaklanjuti program Jakarta Bermasker tersebut ...
+
+[172] p=0.895 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Virus Corona Tahan 28 Hari di Uang Kertas dan Layar Ponsel
+LEAD: Penelitian terbaru menunjukkan virus corona bisa bertahan di permukaan handphone HP hingga 28 hari pada suhu dingin Berdasarkan percobaan yang dilakukan para peneliti Australia virus corona SARS CoV 2 mampu bertahan hingga 28 hari dengan kondisi suhu ruangan tercatat 20 derajat Celcius Tapi pada kondisi ...
+
+[173] p=0.894 FLAGS=[PERSC,NEGMIS,QTYC]
+TITLE: Ini 24 Pemenang Lomba Jurnalistik Pertamina Wilayah Sumatra Bagian Barat
+LEAD: Pertamina mengumumkan daftar Anugerah Jurnalistik Pertamina AJP 2020 untuk wilayah Jawa Bagian Barat JBB Usai melalui proses seleksi ketat ditetapkan sebanyak 24 karya jurnalistik menjadi juara dalam 8 kategori lomba Executive General Manager Pertamina Regional JBB Werry Prayogi mengatakan sejak ajang AJP JBB 2020 diumumkan ...
+
+[174] p=0.893 FLAGS=[PERSC,NEGMIS]
+TITLE: Gowes 24 Jam Berakhir di Solo Komunitas Ini Sukses Promosikan Wisata Pasuruan
+LEAD: Komunitas sepeda Road Cycling Community BRCC sukses menggelar event bersepeda sejauh 500 KM untuk mempromosikan Banyuwangi Mereka akhirnya finish di Solo tepat 24 jam mereka mengayuh sepeda Bersepeda itu dilakukan pada Kamis 24 12 2020 Tepat pukul 00 01 mereka melaju ke arah barat berkarir ...
+
+[175] p=0.892 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: PA 212 Kukuh Gelar Reuni di Senayan dengan Protokol Covid
+LEAD: Ketua Persaudaraan Alumni PA 212 Bernard Abdul Jabbar mengatakan tetap berencana menggelar Reuni 212 dengan mematuhi protokol kesehatan di Monumen Nasional Monas pada 2 Desember mendatang Hal itu merespons Pimpinan Pondok Pesantren Buntet Cirebon Jawa Barat Adib Rofiuddin Izza yang berharap rencana reuni PA 212 ...
+
+[176] p=0.890 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Ketua KPU Minta Tensi Politik di Tasikmalaya Mereda
+LEAD: Menyikapi kekisruhan dalam Pilkada Kabupaten Tasikmalaya Wakil Gubernur Jawa Barat Uu Ruzhanul Ulum meminta semua pihak yang terlibat menurunkan tensi politik Mantan Bupati Tasikmalaya dua periode ini meminta agar politisi yang bertarung dalam kontestasi Pilkada menahan diri sambil menunggu penetapan Komisi Pemilihan Umum Yang namanya ...
+
+[177] p=0.887 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Polda Jabar Tetapkan Tersangka Kasus Kerumunan Habib Rizieq
+LEAD: Polda Jabar meningkatkan status hukum kasus dugaan pelanggaran protokol kesehatan COVID 19 berupa acara Habib Rizieq Syihab yang memicu kerumunan massa ke penyidikan Direktur Reserse Kriminal Umum Polda Jabar Kombes CH Patoppoi mengatakan sejauh ini belum ada penetapan tersangka meski status hukumnya sudah penyidikan Nantinya ...
+
+[178] p=0.886 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Pandemi di Jabar Manufaktur Terpukul Pertanian Paling Kebal
+LEAD: Gubernur Jawa Barat Jabar Ridwan Kamil RK mengajak generasi muda mengembangkan sektor pertanian dengan pendekatan digital di wilayah pedesaan Jabar Ia mengimbau para anak muda tak kembali ke Jakarta untuk bekerja di tengah pandemi virus corona Covid 19 Kita lagi kampanye sudah lah jangan ngantor ...
+
+[179] p=0.885 FLAGS=[PERSC,NOPRED]
+TITLE: KPU Minta Yuri Tetap Pakai Tinta Celup Tak Tularkan Corona
+LEAD: Direktur Jenderal Pencegahan dan Pengendalian Penyakit Kementerian Kesehatan Achmad Yurianto mengkritik langkah Komisi Pemilihan Umum KPU yang mengganti tinta celup dengan tinta oles dalam Pilkada serentak 2020 Tinta biasa digunakan petugas TPS untuk menandakan warga telah menggunakan hak pilihnya dalam pemilihan Dari sekian kali penyelenggaraan ...
+
+[180] p=0.884 FLAGS=[CANC,QTYC]
+TITLE: Update COVID 19 Jabar 718 Kasus Baru Sembuh 358
+LEAD: Kasus terkonfirmasi positif COVID 19 di Jawa Timur bertambah 718 kasus baru Sehingga total ada 66 817 kasus kumulatif Pasien sembuh bertambah 358 Data yang diterima detikcom dari Satgas COVID 19 Jatim tambahan 718 kasus baru yakni 119 dari Jember 55 dari Kab Kediri 49 ...
+
+[181] p=0.883 FLAGS=[PERSC,PERSSUB,POL-,NEGMIS]
+TITLE: Demam dan Batuk Istrinya Positif Covid 19 Ketua PN Medan Juga Terinfeksi
+LEAD: Mengalami demam dan batuk Ketua Pengadilan Negeri Medan Sumatera Utara Sutio Jumagi rupanya dinyatakan positif Covid 19 Tak hanya Sutio istrinya pun terinfeksi corona berdasarkan hasil tes swab Sutio mengeluh demam dan batuk Ia kemudian berobat ke Rumah Sakit Sufina Aziz Sutio sempat menjalani rapid ...
+
+[182] p=0.881 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Viral Bule Ajak WNA Pindah ke Bali di Masa Pandemi Imigrasi Saat Ini Bisa
+LEAD: Viral warga negara asing WNA bernama Kristen Gray mengajak WNA lain tinggal di Bali Kadiv Imigrasi Kantor Wilayah Kemenkum HAM Bali Eko Budianto menegaskan Indonesia saat ini masih menutup pintu untuk WNA Bisa bohong atau bisa nanti maunya dia setelah dibuka terus diproses gitu Tapi ...
+
+[183] p=0.879 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Anies Monitor Jenazah Pasien COVID di ICU RSUD Cengkareng Ini Fiksi
+LEAD: Gubernur DKI Jakarta Anies Baswedan memonitori jenazah salah satu pasien COVID 19 di ruang ICU RSUD Cengkareng Anies menyaksikan jasad tersebut ditutup kain putih dari sebuah layar monitor di ruang kontrol rumah sakit Siang itu menjelang pukul 14 di RSUD Cengkareng berdiri di depan layar ...
+
+[184] p=0.878 FLAGS=[PERSC,NEGMIS]
+TITLE: Operasi Yustisi PSBB DKI Gandeng 351 Komunitas Termasuk Ojol
+LEAD: Aparat gabungan memberikan sanksi terhadap 82 114 pelanggar protokol kesehatan sejak pengetatan Pembatasan Sosial Berskala Besar PSBB di Jakarta Sanksi tersebut merupakan hasil penindakan dalam Operasi Yustisi yang digelar sejak Senin 14 9 hingga Kamis 24 9 kemarin Total sanksi ada 82 114 orang kata ...
+
+[185] p=0.878 FLAGS=[CANC,PERSC,QTYC]
+TITLE: 2 812 Pelaku Kejahatan Ditangkap di 2020 Kapolda Jatim Naik dari 2019
+LEAD: Kasus kejahatan di tengah pandemi COVID 19 masih bergeliat Bahkan tahun ini sebanyak 2 812 orang pelaku kejahatan di Jawa Barat ditangkap Jumlah tersangka tahun 2020 sebanyak 2 812 orang Dibandingkan tahun 2019 sebanyak 2 774 orang naik 1 36 persen atau 38 orang ujar ...
+
+[186] p=0.877 FLAGS=[NEGMIS,NUMMIS,NOPRED]
+TITLE: 5 Pekan Karawang Zona Merah Kenapa Dapat Vaksin COVID 19
+LEAD: Kabupaten Karawang tak masuk ke dalam tujuh daerah yang pertama kali mendapatkan vaksinasi COVID 19 di Jawa Barat Jabar pada Kamis 14 1 2021 Padahal Karawang masuk ke dalam daerah dengan tingkat kerawanan COVID 19 yang tinggi atau zona merah Gubernur Jawa Barat Ridwan Kamil ...
+
+[187] p=0.877 FLAGS=[PERSC,NEGMIS,NUMMIS]
+TITLE: Jerman Gunakan Obat Berbasis Antibodi di Tengah Kekurangan Vaksin COVID 19
+LEAD: Raksasa farmasi AstraZeneca telah menepis laporan media Jerman yang melaporkan bahwa vaksin COVID 19 produksi mereka bersama Universitas Oxford sebagian besar tidak efektif kepada orang yang berusia di atas 65 tahun Laporan bahwa kemanjuran vaksin AstraZeneca Oxford serendah 8 pada orang dewasa di atas 65 ...
+
+[188] p=0.876 FLAGS=[PERSC,NEGMIS,NUMMIS]
+TITLE: Pendapat Ahli soal CDC Sebut OTG Perlu Tes Covid 19
+LEAD: Ahli Epidemiolog dan Kesehatan Masyarakat dari Universitas Indonesia Pandu Riono menilai setiap orang yang pernah kontak dekat dengan pasien positif virus corona idealnya menjalani tes Sekalipun orang tersebut tanpa gejala Covid 19 asimptomatik ataupun belum menunjukkan gejala presimtomatik Pendapat Pandu merespons pembaruan panduan tes Covid ...
+
+[189] p=0.874 FLAGS=[PERSC,NEGMIS]
+TITLE: Jadi Orang Pertama yang Divaksin di Jateng Ganjar Kayak Dicokot Semut
+LEAD: Gubernur Jawa Tengah Ganjar Pranowo menyebut penyuntikan vaksin virus Corona atau COVID 19 diutamakan kepada para tenaga kesehatan nakes terlebih dahulu Sementara itu rumah sakit di Jateng belum ada yang membuka pre order vaksin Corona Katanya untuk fasilitasnya diberikan pada nakes dulu Kita ikut sajalah ...
+
+[190] p=0.873 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Safari Kapolda Metro Fadil Imran dari Pangdam ke Basuki Tjahaja Purnama
+LEAD: Setelah dilantik sebagai Kapolda Metro Jaya Irjen Fadil Imran langsung tancap gas Mengawali masa jabatannya sebagai orang nomor 1 di Polda Metro Jaya ia melakukan safari dengan mengunjungi Pangdam Jaya Mayjen TNI Dudung Abdurachman hingga Gubernur DKI Jakarta Anies Baswedan Tiga hari pasca dilantik sebagai ...
+
+[191] p=0.872 FLAGS=[PERSC,NUMMIS,NOPRED]
+TITLE: Bupati dan 7 Pejabat Brebes Tak Lolos Syarat Ikuti Vaksinasi Corona
+LEAD: Bupati Brebes Jawa Tengah Idza Priyanti sempat nyaris gagal disuntik vaksin COVID 19 hari ini karena tekanan darah tinggi Idza mengaku dia sempat grogi saat diukur tekanan darahnya sebelum vaksinasi virus Corona Tadi tensinya sampai 159 98 jadi tidak bisa divaksin Mungkin tadi sempat grogi ...
+
+[192] p=0.869 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Polda Metro Jaya Tindak 104 Tersangka Penyebar Hoax soal COVID 19 17 Ditahan
+LEAD: Bareskrim Polri mencatat ada 104 orang yang dijadikan tersangka karena menyebarkan berita hoax soal COVID 19 Sebanyak 17 orang ditahan sedangkan 87 orang lainnya tidak ditahan Data tersebut merupakan gabungan dari seluruh jajaran Polda secara nasional Data dikumpulkan dalam kurun waktu 30 Januari 24 November ...
+
+[193] p=0.865 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Kiprah Achmad Yurianto Sang Pengabar Corona di Layar Kaca
+LEAD: Ada perubahan besar besaran dalam pemaparan data harian perkembangan virus corona Covid 19 di Indonesia Selasa 21 7 Kini pengabar perkembangan pandemi Covid 19 bukan lagi Dirjen P2P Kemenkes Achmad Yurianto Setelah Gugus Tugas Percepatan Penanganan Covid 19 dibubarkan posisi Yurianto sebagai juru bicara pemerintah ...
+
+[194] p=0.864 FLAGS=[PERSC]
+TITLE: Soroti Kelompok Pelanggar Aturan Mahfud Negara Tak Boleh Kalah
+LEAD: Sepekan terakhir selepas kedatangan Habib Rizieq Syihab kerumunan massa tercipta di mana mana Pemerintah pun mengaku tidak menutup mata akan hal itu Menteri Koordinator Bidang Politik Hukum dan Keamanan Menko Polhukam Mahfud Md menegaskan pemerintah akan menindak tegas siapapun yang melanggar protokol kesehatan COVID 19 ...
+
+[195] p=0.861 FLAGS=[PERSC]
+TITLE: Muradi Nilai Kinerja Risma dan Budi Gunadi tak Akan Paling Disorot
+LEAD: Presiden Joko Widodo mengumumkan formasi anyar Kabinet Maju dari Istana Negara Jakarta Pusat pada Selasa 22 12 Enam tokoh diperkenalkan sebagai menteri baru mulai dari Sandiaga Uno hingga Tri Rismaharani Pengamat sekaligus Guru Besar Ilmu Politik dan Keamanan Unpad Muradi menilai ada dua menteri yang ...
+
+[196] p=0.860 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Tes 7 5 Juta Orang China Temukan Tambahan Kasus Corona
+LEAD: Pemerintah kota Qingdao China menyatakan sejauh ini telah melakukan pengetesan virus corona terhadap lebih dari 7 5 juta warganya Sejauh ini hasil tes belum menemukan penambahan kasus baru positif Covid 19 Wakil direktur kota Qingdao Chen Wansheng dalam konferensi pers Rabu 14 10 mengatakan saat ...
+
+[197] p=0.860 FLAGS=[PERSC,NEGMIS]
+TITLE: Survei Indikator Sebut Kepercayaan Publik ke Jokowi Naik
+LEAD: Survei Indikator Politik Indonesia memperlihatkan tingkat kepercayaan publik kepada Menteri Kesehatan Terawan Agus Putranto dalam mengatasi pandemi virus corona Covid 19 cenderung meningkat pada September 2020 Direktur Eksekutif Indikator Politik Indonesia Burhanuddin Muhtadi menyatakan sekitar 45 persen responden percaya terhadap Terawan mengatasi pandemi Sementara 17 ...
+
+[198] p=0.857 FLAGS=[NEGMIS]
+TITLE: Satgas Apresiasi Keberanian Lurah Kemang Razia Prokes Waroeng Brothers
+LEAD: Juru bicara Satgas Penanganan COVID 19 Wiku Adisasmito mengapresiasi keberanian Lurah Cipete Utara Nurcahya saat melakukan razia protokol kesehatan prokes Keberanian Nurcahya diharapkan menjadi inspirasi bagi kepala daerah lainnya Satgas pusat mendengar pengeroyokan terhadap lurah di Jaksel saat razia prokes Kejadian ini tak seharusnya terjadi ...
+
+[199] p=0.857 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Petinggi KAMI Gatot Nurmantyo Sudah 10 Hari Dirawat di RS
+LEAD: Ketua Komite Eksekutif Koalisi Aksi Menyelamatkan Indonesia KAMI Ahmad Yani dirawat di rumah sakit Kondisinya tersebut diketahui saat Ahmad Yani mengikuti acara KAMI secara virtual dari ranjang rumah sakit Dilansir CNN Indonesia Jumat 27 11 2020 Ahmad Yani tampak hadir di pertemuan zoom sekitar pukul ...
+
+[200] p=0.851 FLAGS=[PERSC,NEGMIS]
+TITLE: Isyaratkan Kemungkinan Pemerintahan Baru Trump Waktu yang Akan Menjawab
+LEAD: Presiden Amerika Serikat AS Donald Trump akan meninggalkan Washington DC sebelum Presiden terpilih AS Joe Biden dilantik sehingga dia tidak akan menyambutnya di Gedung Putih Di akhir masa kepresidenan Trump AS menjatuhkan sanksi baru untuk Iran dan China Trump dilaporkan akan terbang ke klub golf ...
+
+[201] p=0.848 FLAGS=[PERSC]
+TITLE: Menu Motor Matik Bekas di Bawah Rp 10 Juta belum Dapat Unit Tahun Muda
+LEAD: Penjualan sepeda motor bekas diklaim pedagang mengalami peningkatan dibandingkan saat awal pandemi Covid 19 Akan tetapi untuk harga jual sepeda motor seken belum bisa pulih yakni masih di bawah harga normal Sejak awal pandemi harga motor bekas memang mengalami penurunan yakni mulai Rp 2 juta ...
+
+[202] p=0.841 FLAGS=[PERSC,NEGMIS]
+TITLE: Australia Akan Lebih Banyak Gunakan Vaksin AstraZeneca yang Diproduksi di Sydney
+LEAD: Meskipun vaksin COVID 19 buatan Pfizer tampaknya akan menjadi yang pertama mendapatkan persetujuan penggunaan di Australia namun program vaksinasi akan lebih banyak menggunakan vaksin buatan AstraZeneca yang saat ini sedang diproduksi di Melbourne Hal itu disampaikan oleh Pejabat Tertinggi Bidang Medis Profesor Paul Kelly di ...
+
+[203] p=0.840 FLAGS=[PERSC,NOPRED]
+TITLE: Kafe di Jakbar Disegel Gegara Terus terusan Membandel
+LEAD: Pemerintah memberlakukan pelaksanaan pembatasan kegiatan masyarakat PPKM demi memutus mata rantai penyebaran Covid 19 Dalam pelaksanaan PPKM ini pemerintah mengatur sejumlah kegiatan usaha salah satunya kafe dengan batasan operasional hingga pukul 19 00 WIB Namun pada kenyataannya masih saja ada beberapa kafe yang melanggar aturan ...
+
+[204] p=0.839 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Mensos Juliari Tersangka Korupsi KPK Minta Program Bansos COVID Dibenahi
+LEAD: Indonesia Corruption Watch ICW menilai pengungkapan perkara korupsi yang menjerat Menteri Sosial Mensos Juliari Batubara sebagai momentum pemerintah memperbaiki program bansos COVID 19 ICW meminta agar pemerintah memperbaiki Pengadaan Barang dan Jasa PBJ terkait penanganan COVID 19 Peneliti ICW Almas Sjafrina mengatakan sejak awal telah ...
+
+[205] p=0.838 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Kemenko PMK Ungkap Dampak Negatif Pembelajaran Jarak Jauh bagi Siswa
+LEAD: Sejumlah pihak mulai mengkhawatirkan dampak pandemi Covid 19 terhadap angka putus sekolah Namun Kementerian Koordinator Pembangunan Manusia dan Kebudayaan PMK menilai corona tidak akan berdampak banyak terhadap angka partisipasi pendidikan Kalau angka partisipasi kasar menurut saya tidak terlalu terdampak Karena proses pembelajaran tetap berlangsung ujar ...
+
+[206] p=0.835 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Judi di Atlantic City Pakai Uang Bansos Covid Pria AS Dibui
+LEAD: Kepolisian di Amerika Serikat menangkap seorang lelaki bernama Andrew Marnell 40 karena memalsukan data untuk mendapatkan uang dari program jaring pengaman sosial Covid 19 PPP yang kemudian dipakai berjudi di kasino Las Vegas Nevada Seperti dilansir AFP 17 7 Marnell yang merupakan penduduk Beverly Grove ...
+
+[207] p=0.833 FLAGS=[PERSC,NEGMIS]
+TITLE: Ahli Sebut Rekor Sembuh Indikator Pengendalian Corona
+LEAD: Ahli Epidemiologi FKM Universitas Indonesia UI Iwan Ariawan mengatakan rekor baik pasien sembuh Covid 19 tak berarti menandakan tren positif pengendalian Covid 19 di Indonesia Tambahan kasus sembuh di Indonesia pada Kamis 15 10 lalu sebanyak 5 810 orang dengan akumulasi mencapai 273 661 orang ...
+
+[208] p=0.833 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: MUI Ungkap Alasan Penyelenggara Acara Megamendung Mangkir Diperiksa
+LEAD: Dua orang panitia penyelenggara acara yang menimbulkan kerumunan di Megamendung Bogor mangkir dari pemeriksaan Polda Jabar Apa alasan kedua orang diduga penyelenggara itu mangkir Ada agenda yang sudah terjadwal sebelumnya ujar Wakil Sekretaris Umum FPI Aziz Yanuar kepada detikcom Rabu 9 12 2020 Dua orang ...
+
+[209] p=0.828 FLAGS=[PERSC,NEGMIS]
+TITLE: Anies Peringatkan Satgas Covid soal Kapasitas RS Sejak Juli
+LEAD: Ketua Satuan Tugas Penanganan Covid 19 Doni Monardo mengatakan sempat memperingatkan Gubernur DKI Jakarta Anies Baswedan soal peningkatan kapasitas rumah sakit sejak Juli lalu Dari 67 rumah sakit rujukan Covid 19 di Jakarta sebanyak 20 di antaranya telah terisi penuh Saya sejak 23 Juli lalu ...
+
+[210] p=0.828 FLAGS=[PERSC,NEGMIS]
+TITLE: Aa Gym Positif COVID 19 Masjid Al Azhar Ditutup untuk Umum
+LEAD: Penceramah kondang Abdullah Gymnastiar mengumumkan dirinya positif COVID 19 Kabar itu disampaikan pria yang akrab disapa Aa Gym itu melalui saluran YouTube dan Instagramnya pada Selasa 29 12 2020 Bagaimana kondisi terkini di Masjid Daarut Tauhiid yang jadi pusat kegiatan Aa Gym menyiarkan dakwah Masjid ...
+
+[211] p=0.827 FLAGS=[PERSC,POL-,NEGMIS]
+TITLE: Larang Batik Air ke Pontianak Gubernur Kalbar Ada Maladministrasi
+LEAD: Gubernur Kalimantan Barat Sutarmidji melarang maskapai Batik Air terbang ke Pontianak hingga 10 hari ke depan terkait temuan penumpang positif Corona COVID 19 Sutarmidji menegaskan kebijakan dalam penanganan saat pandemi tidak bisa disamakan dengan masa normal Kondisi penanganan pandemi jangan berdebat dengan aturan di masa ...
+
+[212] p=0.825 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Tantangan Pembatasan Polri untuk Melawan Covid Ada di Pemda
+LEAD: Pengamat militer dari Institute for Security and Strategic Studies ISESS Khairul Fahmi menyebut pelibatan unsur TNI dalam Inpres Nomor 6 Tahun 2020 Tentang Peningkatan Disiplin dan Penegakan Hukum Protokol Kesehatan dalam Pencegahan dan Pengendalian Covid 19 harus dibarengi dengan turunan hukum dari masing masing Kepala ...
+
+[213] p=0.824 FLAGS=[POL-,NEGMIS]
+TITLE: HOAKS Covid 19 Disebut Nyata Catut Profesor dari Cornell University
+LEAD: Berdasarkan verifikasi Kompas com sejauh ini informasi ini tidak benar Beredar narasi Covid 19 tidak nyata dengan mencatut nama Robert Oswald ahli virologi dan ahli imunologi dari Cornell University sebagai pembuat narasi Dalam narasi itu disebutkan Oswald dan tim peneliti mendapati bahwa Covid 19 hanyalah ...
+
+[214] p=0.823 FLAGS=[PERSC,NEGMIS,QTYC,NOPRED]
+TITLE: Menkes Gaungkan Flattening The Curve di Momen Kasus Corona Tembus 1 Juta
+LEAD: Menteri Kesehatan Menkes Budi Gunadi Sadikin mengungkap dua langkah yang mesti ditingkatkan untuk menangani pandemi Covid 19 usai jumlah kasus positif Covid 19 di Indonesia menembus angka 1 juta Budi mengatakan cara pertama adalah memperketat kedisiplinan di masyarakat Menurutnya hal ini jadi cara paling ampuh ...
+
+[215] p=0.822 FLAGS=[PERSC,NEGMIS]
+TITLE: Peringatkan Fase Baru Pandemi Penasihat Covid Dikritik Biden
+LEAD: Presiden Donald Trump mengkritik penasihat virus corona Gedung Putih Deborah Birx usai dia memperingatkan Amerika Serikat telah masuki fase baru pandemi Trump menyebut kondisi sebaliknya bahwa pandemi virus corona di AS sudah dapat dikendalikan Dia bahkan berpikir untuk membuka kembali sekolah dan bisnis Yah saya ...
+
+[216] p=0.820 FLAGS=[PERSC,NEGMIS,ARGBIND]
+TITLE: Ambulans RSUD dr Iskak Malang Tabrak Biker di Blitar
+LEAD: Sebuah ambulans RSUD dr Iskak Tulungagung terlibat kecelakaan di Blitar Ambulans menabrak pemotor dari arah berlawanan hingga korban harus mendapat perawatan di rumah sakit Kecelakaan itu terjadi pukul 14 00 WIB Lokasinya di Jalan Umum menikung Desa Mronjo Kecamatan Selopuro Kabupaten Blitar Dua kendaraan yang ...
+
+[217] p=0.819 FLAGS=[PERSC,PERSSUB,QTYC,NOPRED]
+TITLE: Pemprov DKI Sebut Makam di TPU Tegar Alur Sisa 400 Liang
+LEAD: Lahan pemakaman blok muslim di TPU Tegal Alur telah terisi penuh oleh jenazah pasien COVID 19 Pemakaman hanya melayani sistem tumpang Bisa dengan sistem tumpang Untuk memakai peti hanya muat satu jenazah COVID 19 kata Kasatpel TPU Tegal Alur Wawin Wahyudi saat dihubungi Rabu 13 ...
+
+[218] p=0.816 FLAGS=[PERSC,NEGMIS]
+TITLE: Mensos Tersangka KPK Kemensos Pastikan Penyaluran Bansos Terkendala
+LEAD: Menteri Sosial Mensos Juliari Batubara menjadi tersangka dugaan suap bantuan sosial bansos untuk penanganan COVID 19 Kementerian Sosial Kemensos menyebut penyaluran bansos ke masyarakat tidak mengalami kendala Oh tidak ada kendala penyaluran bansos Kita kan penyerapan anggaran sudah 97 2 persen ya kita menyelesaikan dan ...
+
+[219] p=0.815 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Risma Ucapkan Terima Kasih ke Rakyat dan Eri Armudji
+LEAD: Eri Cahyadi dan Armudji dalam debat publik Pilkada Surabaya berterima kasih kepada berbagai elemen di Kota Pahlawan sebagai bentuk respek atas gotong royong warga dan Pemkot Surabaya dalam membangun kota selama ini Terima kasih kepada para kiai bu nyai tokoh agama tokoh masyarakat yang memberikan ...
+
+[220] p=0.814 FLAGS=[PERSC,NEGMIS]
+TITLE: Kerahkan Backhoe Eceng Gondok Penyebab Banjir Solo Dibersihkan
+LEAD: Lebatnya eceng gondok yang tumbuh di sepanjang aliran Sungai Bengawan Jero menjadi salah satu penyebab banjir yang terjadi di beberapa kecamatan di Lamongan Eceng gondok ini mengakibatkan terhambatnya arus air Pemkab Lamongan mengerahkan backhoe amphibi untuk membantu pengerukan eceng gondok Backhoe amphibi ini bekerja bersama ...
+
+[221] p=0.812 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Kemenkes Bakal Rilis Izin Penggunaan Darurat Vaksin Corona
+LEAD: Badan Pengawas Obat dan Makanan BPOM tengah menganalisis keamanan dan efektivitas vaksin corona buatan Sinovac Setelah hasil analisa keluar BPOM akan memberikan izin penggunaan darurat Emergency Use of Authorization EUA agar vaksin bisa segera bisa didistribusikan BPOM akan berikan EUA pada waktunya Saat ini data ...
+
+[222] p=0.812 FLAGS=[PERSC,NOPRED]
+TITLE: Terungkap Pelesiran Pinangki ke Paman Sam Hanya soal Hidung Dioperasi
+LEAD: Jaksa Pinangki Sirna Malasari menggunakan sebagian uang suap yang diberikan Djoko Tjandra di Amerika Serikat AS Jaksa Pinangki menggunakan uang tersebut dari mulai melakukan operasi plastik hingga kontrol payudara Hal tersebut diungkap adik Pinangki Pungki Primarini yang bersaksi dalam persidangan yang digelar di PN Tipikor ...
+
+[223] p=0.811 FLAGS=[PERSC,NEGMIS]
+TITLE: Satgas Sebut Kerumunan Perburuk Sebaran COVID 19 di Jawa Barat
+LEAD: Empat daerah di Banten yaitu Cilegon Kabupaten Serang Tangerang Selatan Tangsel dan Kota Tangerang kembali menjadi zona merah penyebaran COVID 19 Perubahan zona tersebut salah satunya karena semakin tidak disiplinnya masyarakat terhadap protokol kesehatan dan diperburuk kebiasaan berkerumun Masyarakat belum disiplin mematuhi protokol kesehatan hal ...
+
+[224] p=0.810 FLAGS=[PERSC]
+TITLE: Rapid Antigen di Bandara Ngurah Rai Hari Ini Antrean Lebih Panjang Namun Tertib
+LEAD: Antrean calon penumpang yang rapid antigen di Bandara Juanda Surabaya lebih panjang ketimbang Selasa 22 12 Namun antrean lebih tertib Informasi itu disampaikan seorang calon penumpang bernama Luky Mundiwardani Menurutnya pelayanan yang diterapkan Bandara Juanda lebih baik ketimbang kemarin Ya lebih banyak hari ini cuma ...
+
+[225] p=0.810 FLAGS=[PERSC,NEGMIS]
+TITLE: Sempat Disinggung dr Tirta 3 Pemalsu Hasil Swab PCR Dibekuk Polda Metro
+LEAD: Hasil tes Corona yang menjadi aturan wajib jika ingin melakukan perjalanan di Indonesia justru dipalsukan untuk mencari keuntungan Untungnya polisi bergerak cepat menangkap para sindikat pemalsu surat hasil tes Corona Dirangkum detikcom Minggu 17 1 2021 sejumlah sindikat pemalsu surat tes hasil tes Corona baik ...
+
+[226] p=0.808 FLAGS=[PERSC,NEGMIS,ARGBIND]
+TITLE: Satu Vaksin Corona yang Dikembangkan Rusia Diklaim Sukses Fase Uji Klinis
+LEAD: Sebuah vaksin COVID 19 yang dikembangkan di China diklaim sejumlah pakar menunjukkan sinyal kesuksesan dalam fase uji klinis Saat ini terdapat sejumlah vaksin yang tengah dikaji di China beberapa di antaranya telah mendapat persetujuan dari otoritas kesehatan Awal November lalu vaksin yang dikembangkan Sinovac Biotech ...
+
+[227] p=0.805 FLAGS=[PERSC,NEGMIS,NOPRED]
+TITLE: Dirut RS UMMI Kena COVID Dinkes Akan Tracing Pihak RS sampai Polres
+LEAD: Wali Kota Bogor Bima Arya datang ke Rumah Sakit RS UMMI Bima datang untuk meminta Habib Rizieq Syihab HRS bersedia melakukan swab test Saya terima laporan dari team swab satgas bahwa HRS menolak swab ulang Saya akan datangi langsung ke RS UMMI kata Bima melalui ...
+
+[228] p=0.804 FLAGS=[CANC,PERSC,NEGMIS,NUMMIS,QTYC]
+TITLE: Jabar Bakal Tambah 96 Tempat Tidur di Ruang Isolasi dan ICU
+LEAD: Kepala Bidang Kesehatan Masyarakat Dinas Kesehatan DKI Jakarta Fify Mulyani mengatakan pihaknya berencana menambah kapasitas tempat tidur di ruang isolasi dan Intensive Care Unit ICU untuk pasien Covid 19 Fify merinci akan menambah 94 tempat tidur di ruang isolasi dan 2 tempat tidur di ruang ...
+
+[229] p=0.801 FLAGS=[PERSC,NEGMIS]
+TITLE: Yogyakarta Kembali Tutup Puskesmas usai 20 Nakes Positif Covid 19
+LEAD: Pemerintah Kota Pemkot Solo Jawa Tengah menutup sementara Puskesmas Kratonan Kamis 21 1 setelah lebih dari 20 tenaga kesehatan nakes nya terkonfirmasi positif Covid 19 Ketua Pelaksana Harian Satgas Covid 19 Solo Ahyani memastikan puluhan tenaga kesehatan dan karyawan puskesmas itu belum mendapatkan vaksin Covid ...
+
+[230] p=0.800 FLAGS=[PERSC,NEGMIS,ARGBIND]
+TITLE: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki
+LEAD: Polri merotasi sejumlah perwira tinggi hingga menengah karena dianggap tidak melaksanakan perintah penegakan protokol kesehatan Tidak hanya Kapolda Metro Jaya Irjen Nana Sudjana yang dicopot dari jabatannya Kapolres Metro Jakarta Pusat Kombes Heru Novianto juga dicopot Dalam Surat Telegram bernomor ST 3222 XI KEP 2020 ...

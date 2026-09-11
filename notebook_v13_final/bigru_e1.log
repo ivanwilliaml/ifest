@@ -1,0 +1,13 @@
+[TIMER] claim_representation: 48.3s
+A_cold feature count: 71
+71 base features ready in 61.8s
+fold 0: vocab=15000 bigru+cv done in 326.1s
+fold 1: vocab=15000 bigru+cv done in 320.1s
+fold 2: vocab=15000 bigru+cv done in 390.6s
+fold 3: vocab=15000 bigru+cv done in 340.3s
+fold 4: vocab=15000 bigru+cv done in 323.2s
+
+E1 (71 feats + bigru_cosine + bigru_dist): OOF Macro F1 = 0.6686 @ thr=0.625
+OOF F1-0 = 0.3692  OOF F1-1 = 0.9679
+Delta vs 0.6995 baseline: -0.0309
+TOTAL wall time: 1765.7s

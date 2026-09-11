@@ -1,0 +1,10 @@
+[TIMER] claim_representation: 66.9s
+A_cold feature count: 71
+features ready in 84.8s
+base model OOF: Macro F1 = 0.6988 @ thr=0.630  (61.3s)
+specialist features: base_p + ['entity_conflict', 'entity_conflict_fullbody', 'num_mismatch', 'qty_context_conflict', 'neg_mismatch', 'argument_binding_conflict', 'claim_conflict_score', 'canonical_entity_conflict']
+specialist-corrected: Macro F1 = 0.6944 @ thr=0.580  (8.9s)
+specialist (LogisticRegression): Macro F1 = 0.6935 @ thr=0.690  (0.3s)
+
+(reference: base model alone = 0.6988)
+TOTAL wall time: 158.4s

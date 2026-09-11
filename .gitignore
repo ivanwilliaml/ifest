@@ -4,6 +4,7 @@ data/
 # generated caches (regeneratable from scripts)
 notebook_v12/_diag_cache/
 **/local_out/
+**/_cache.dill
 
 # non-compliant model checkpoints (IndoBERT, banned under competition rules -- kept out of git deliberately)
 notebook_v4_lean/out4/indobert_ckpt/

@@ -1,0 +1,153 @@
+sklearn 1.8.0
+catboost 1.2.10
+[TIMER] load: 0.6s
+train (14397, 8) test (3603, 7) class0 0.0998
+antonym pairs: 549  synonym pairs: 4625
+provinces: 34  regencies: 488
+[TIMER] entity_mining: 3.1s
+abbreviation alias table: 26/28 resolved against loaded gazetteer
+entity pool: 5176  phrase gazetteer: 238  role markers: 73
+[TIMER] chunk_index: 5.6s
+[TIMER] lsa: 11.9s
+[TIMER] base_features: 12.8s
+48 base+structural features
+[TIMER] claim_representation: 47.8s
+A_cold feature count: 69
+C_exact lookup validated: 12587 unique (title,content) pairs, 0 label conflicts
+test regime counts: {'C_exact': 927, 'B_has_pos': 216, 'B_no_pos': 167, 'A_cold': 2293}
+C_exact resolved: 927 of 927
+B regime training pool: 2011 rows, 26 features
+[TIMER] B_regime_training_pool: 1.8s
+[TIMER] B_regime_fit: 2.7s
+[TIMER] B_regime_predict: 0.6s
+B regime test rows: 383
+A_cold OOF macroF1=0.6908 @ threshold=0.450
+--- A_cold reproducibility record (this notebook, this run) ---
+  n_features    : 69
+  model         : single CatBoostClassifier (NOT an ensemble -- multi-model
+                  stacking was explored in experiments but is not part of
+                  this notebook's committed best config)
+  iterations    : 800
+  depth         : 6
+  learning_rate : 0.03
+  class_weights : [4, 1]
+  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)
+  threshold     : 0.450 (selected on OOF cold predictions only, no test labels)
+  OOF Macro F1  : 0.6908
+  OOF F1-0      : 0.4142
+  OOF F1-1      : 0.9674
+--- A_cold OOF confusion matrix (rows=true, cols=pred; labels=[0,1]) ---
+[[ 199  288]
+ [ 275 8358]]
+--- A_cold OOF classification report ---
+              precision    recall  f1-score   support
+
+           0     0.4198    0.4086    0.4142       487
+           1     0.9667    0.9681    0.9674      8633
+
+    accuracy                         0.9383      9120
+   macro avg     0.6933    0.6884    0.6908      9120
+weighted avg     0.9375    0.9383    0.9379      9120
+
+[TIMER] A_cold_cv_threshold: 73.4s
+[TIMER] A_cold_final_fit: 13.1s
+A_cold test rows: 2293
+  C_exact    n=  927  positive_rate=0.998
+  B_has_pos  n=  216  positive_rate=0.023
+  B_no_pos   n=  167  positive_rate=1.000
+  A_cold     n= 2293  positive_rate=0.947
+label
+1    0.907299
+0    0.092701
+Name: proportion, dtype: float64
+==========================================================
+V13 — full regime router (C rule + B title-retrieval + A_cold claim-representation)
+A_cold OOF macro F1  : 0.6908  (F1-0=0.4142, F1-1=0.9674) @ threshold 0.450
+total runtime        : 3.2 min
+==========================================================
+  A_cold_cv_threshold: 73.4s
+  claim_representation: 47.8s
+  A_cold_final_fit: 13.1s
+  base_features: 12.8s
+  lsa: 11.9s
+  chunk_index: 5.6s
+  entity_mining: 3.1s
+  B_regime_fit: 2.7s
+  B_regime_training_pool: 1.8s
+  load: 0.6s
+  B_regime_predict: 0.6s
+Total cold rows: 9120   FP (true=0, pred=1): 288
+
+=== FP category breakdown (n=288, categories can overlap) ===
+  entity_substitution_missed         42  ( 14.6%)
+  entity_evidence_full_only           1  (  0.3%)
+  contradiction_polarity            217  ( 75.3%)
+  quantity_substitution              23  (  8.0%)
+  predicate_antonym_present           2  (  0.7%)
+  no_predicate_evidence_found       110  ( 38.2%)
+  no_signal_at_all                   65  ( 22.6%)
+
+=== avg model confidence (OOF prob) per category ===
+  entity_substitution_missed       mean_proba=0.624
+  entity_evidence_full_only        mean_proba=0.828
+  contradiction_polarity           mean_proba=0.751
+  quantity_substitution            mean_proba=0.790
+  predicate_antonym_present        mean_proba=0.759
+  no_predicate_evidence_found      mean_proba=0.764
+  no_signal_at_all                 mean_proba=0.793
+
+--- sample: entity_substitution_missed ---
+  [proba=0.870] TITLE: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki
+           BODY(0:220): Polri merotasi sejumlah perwira tinggi hingga menengah karena dianggap tidak melaksanakan perintah penegakan protokol kesehatan Tidak hanya Kapolda Metro Jaya Irjen Nana Sudjana yang dicopot dari jabatannya Kapolres Metr
+  [proba=0.484] TITLE: Menristek Ingin GeNose ITB Rapid Test Unpad Jadi Alat Utama Screening Corona
+           BODY(0:220): Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan Menko PMK Muhadjir Effendy menerima alat GeNose C19 buatan Univeristas Gadjah Mada UGM dan rapid test antigen produksi Universitas Padjajaran Unpad Dalam acar
+  [proba=0.455] TITLE: Alasan Pilkada Dipakai Wabup OKI Mangkir Panggilan KPK
+           BODY(0:220): Berkas dugaan korupsi tanah kuburan Wakil Bupati Ogan Komering Ulu OKU Johan Anuar dinyatakan lengkap Namun Johan mangkir panggilan KPK Alasannya adalah pilkada KPK memanggil Johan pada Jumat 4 12 2020 Berkasnya dinyatak
+  [proba=0.551] TITLE: Rapid Antigen di Bandara Ngurah Rai Hari Ini Antrean Lebih Panjang Namun Tertib
+           BODY(0:220): Antrean calon penumpang yang rapid antigen di Bandara Juanda Surabaya lebih panjang ketimbang Selasa 22 12 Namun antrean lebih tertib Informasi itu disampaikan seorang calon penumpang bernama Luky Mundiwardani Menurutnya
+
+--- sample: entity_evidence_full_only ---
+  [proba=0.828] TITLE: 216 Personel TNI Amankan Debat Ketiga Pilwali Kota Surabaya
+           BODY(0:220): Sebanyak 216 personel dari Polrestabes Surabaya disiapkan untuk mengamankan jalannya debat terbuka ketiga Pilwali Kota Surabaya Nantinya di lokasi aparat akan disebar di beberapa ring penjagaan Jumlah pengamanannya 216 i
+
+--- sample: contradiction_polarity ---
+  [proba=0.870] TITLE: Kapolres Jakpus Bogor Juga Dicopot Digantikan AKBP Harun Kombes Hengki
+           BODY(0:220): Polri merotasi sejumlah perwira tinggi hingga menengah karena dianggap tidak melaksanakan perintah penegakan protokol kesehatan Tidak hanya Kapolda Metro Jaya Irjen Nana Sudjana yang dicopot dari jabatannya Kapolres Metr
+  [proba=0.944] TITLE: Arctic Monkeys Tumpahkan Ketakutan akan Pandemi dalam Album Baru
+           BODY(0:220): Ketakutan para personel Fleet Foxes terhadap ketidakpastian di tengah pandemi Covid 19 terekam dalam album baru bertajuk Shore yang dirilis pada Selasa 22 9 Pentolan Fleet Foxes Robin Pecknold mengatakan bahwa lirik 15 l
+  [proba=0.484] TITLE: Menristek Ingin GeNose ITB Rapid Test Unpad Jadi Alat Utama Screening Corona
+           BODY(0:220): Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan Menko PMK Muhadjir Effendy menerima alat GeNose C19 buatan Univeristas Gadjah Mada UGM dan rapid test antigen produksi Universitas Padjajaran Unpad Dalam acar
+  [proba=0.632] TITLE: Kasus Covid 19 Jabar Kembali Menanjak Sejak PSBB Transisi
+           BODY(0:220): Gubernur DKI Jakarta Anies Baswedan mengklaim kasus covid 19 di Ibu Kota menunjukkan pelambatan Klaim ini menjadi salah satu alasan pihaknya menerapkan Pembatasan Sosial Berskala Besar PSBB transisi di DKI Jakarta pada 1
+
+--- sample: quantity_substitution ---
+  [proba=0.857] TITLE: Bupati dan 7 Pejabat Brebes Tak Lolos Syarat Ikuti Vaksinasi Corona
+           BODY(0:220): Bupati Brebes Jawa Tengah Idza Priyanti sempat nyaris gagal disuntik vaksin COVID 19 hari ini karena tekanan darah tinggi Idza mengaku dia sempat grogi saat diukur tekanan darahnya sebelum vaksinasi virus Corona Tadi ten
+  [proba=0.962] TITLE: Lomba TikTok di Kafe Ini Dibubarkan Gegara Patuh Protokol COVID 19
+           BODY(0:220): Lomba TikTok di food court area Hilal point Kota Parepare Sulawesi Selatan dibubarkan paksa oleh aparat pemerintah daerah Lomba itu mengabaikan protokol kesehatan pencegahan COVID 19 Lomba itu melibatkan anak anak Bahkan
+  [proba=0.795] TITLE: Jokowi Tegaskan Ada Pembubaran Satgas Covid 19
+           BODY(0:220): Presiden Joko Widodo menegaskan tidak ada pembubaran Satuan Tugas Penanganan Covid 19 di pusat maupun daerah Jokowi mengatakan bahwa pemerintah tetap memprioritaskan penanganan kesehatan masyarakat di tengah pandemi viru
+  [proba=0.742] TITLE: Jabar Bakal Tambah 96 Tempat Tidur di Ruang Isolasi dan ICU
+           BODY(0:220): Kepala Bidang Kesehatan Masyarakat Dinas Kesehatan DKI Jakarta Fify Mulyani mengatakan pihaknya berencana menambah kapasitas tempat tidur di ruang isolasi dan Intensive Care Unit ICU untuk pasien Covid 19 Fify merinci ak
+
+--- sample: no_predicate_evidence_found ---
+  [proba=0.857] TITLE: Bupati dan 7 Pejabat Brebes Tak Lolos Syarat Ikuti Vaksinasi Corona
+           BODY(0:220): Bupati Brebes Jawa Tengah Idza Priyanti sempat nyaris gagal disuntik vaksin COVID 19 hari ini karena tekanan darah tinggi Idza mengaku dia sempat grogi saat diukur tekanan darahnya sebelum vaksinasi virus Corona Tadi ten
+  [proba=0.632] TITLE: Kasus Covid 19 Jabar Kembali Menanjak Sejak PSBB Transisi
+           BODY(0:220): Gubernur DKI Jakarta Anies Baswedan mengklaim kasus covid 19 di Ibu Kota menunjukkan pelambatan Klaim ini menjadi salah satu alasan pihaknya menerapkan Pembatasan Sosial Berskala Besar PSBB transisi di DKI Jakarta pada 1
+  [proba=0.455] TITLE: Alasan Pilkada Dipakai Wabup OKI Mangkir Panggilan KPK
+           BODY(0:220): Berkas dugaan korupsi tanah kuburan Wakil Bupati Ogan Komering Ulu OKU Johan Anuar dinyatakan lengkap Namun Johan mangkir panggilan KPK Alasannya adalah pilkada KPK memanggil Johan pada Jumat 4 12 2020 Berkasnya dinyatak
+  [proba=0.935] TITLE: Khotbah Jumat Kapolres di Mojokerto Ajak Masyarakat Jaga Persatuan
+           BODY(0:220): Para Bhabinkamtibmas menjadi khatib salat Jumat secara serentak di 848 masjid di Kabupaten Mojokerto Pada khotbahnya polisi mengajak masyarakat menjaga persatuan dan kesatuan serta Pilbup 2020 aman dan damai Seperti di M
+
+--- sample: no_signal_at_all ---
+  [proba=0.551] TITLE: Rapid Antigen di Bandara Ngurah Rai Hari Ini Antrean Lebih Panjang Namun Tertib
+           BODY(0:220): Antrean calon penumpang yang rapid antigen di Bandara Juanda Surabaya lebih panjang ketimbang Selasa 22 12 Namun antrean lebih tertib Informasi itu disampaikan seorang calon penumpang bernama Luky Mundiwardani Menurutnya
+  [proba=0.690] TITLE: RSD Wisma Atlet Bantah Gunakan Obat Corona dari Ahmad Dhani
+           BODY(0:220): Penyanyi Erdian Aji Prihartanto alias Anji berbincang bincang dengan seseorang yang disebut sebut bernama Profesor Hadi Pranoto di akun Youtubenya Unggahan video yang saat ini sudah dihapus Youtube itu mengundang banyak 
+  [proba=0.799] TITLE: Sebaran 3 948 Kasus Baru Corona di RI 9 Desember Terbanyak di DKI
+           BODY(0:220): Kasus COVID 19 bertambah 6 058 pada hari ini Provinsi DKI Jakarta menjadi provinsi terbanyak yang menyumbang kasus baru Berdasarkan data dari Satgas Penanganan COVID 19 Rabu 9 12 2020 total jumlah kasus di RI hari ini te
+  [proba=0.802] TITLE: Tambahan Kasus Tertinggi Sepekan Berada di DKI Jabar Jateng
+           BODY(0:220): Satuan Tugas Penanganan Covid 19 memaparkan data yang menunjukkan Jawa Tengah Jawa Barat dan DKI Jakarta menjadi tiga provinsi dengan penambahan kasus positif virus corona Covid 19 mingguan terbanyak dalam sepekan ini at
+
+Saved full FP table to D:\Lomba\IFEST2026_DAC\notebook_v13_final\local_out\fp_analysis.csv

@@ -1,0 +1,10 @@
+[TIMER] claim_representation: 78.8s
+A_cold feature count: 71
+features ready in 92.6s
+baseline (weight=1, unweighted): Macro F1 = 0.6988 @ thr=0.630  (43.9s)
+1.5x/2.0x @ .7/.9     : Macro F1 = 0.6909 @ thr=0.610  (n_hard=884)  (46.0s)
+1.3x/1.6x @ .7/.9     : Macro F1 = 0.6917 @ thr=0.590  (n_hard=884)  (45.1s)
+2.0x/3.0x @ .8/.95    : Macro F1 = 0.6863 @ thr=0.630  (n_hard=721)  (47.4s)
+
+(reference: Experiment 1 baseline weight=1 unweighted = 0.6988)
+TOTAL wall time: 277.7s
