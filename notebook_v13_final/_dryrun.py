@@ -60,6 +60,17 @@ PROVINCE_ID_MAP_RAW = {11: 'Aceh', 12: 'Sumatera Utara', 13: 'Sumatera Barat', 1
 
 ANTONYM_SET=set()
 for a,b in ANTONYM_PAIRS_RAW: ANTONYM_SET.add((a,b)); ANTONYM_SET.add((b,a))
+# ACTION_VERBS = every antonym root, unfiltered by POS (~1/3 are adjectives: "baik/buruk",
+# "besar/kecil", "mahal/murah"...), used as the predicate-candidate set for
+# find_predicate_chunk/pred_score/polarity_score/argument_binding_conflict. Two corpus-
+# verified attempts to restrict this to real verbs (naive meN-prefix concatenation: -0.0051;
+# proper allomorph-aware stemming, 292/895 roots confirmed verbal: -0.0063) both regressed
+# CV, worse than the naive version. Left unfiltered deliberately: the adjective roots appear
+# to work as a coarse sentiment/framing-shift proxy despite being conceptually mislabeled as
+# "verbs" -- narrowing to true verbs removes that signal along with the noise. Fourth
+# confirmed instance this session of a more-precise entity/predicate-type fix regressing
+# (see entity_type() ORG-widening attempts) -- do not retry this family of fix again without
+# new evidence.
 ACTION_VERBS=set([a for a,_ in ANTONYM_SET])
 SYNONYM_SET=set()
 for a,b in SYNONYM_PAIRS_RAW: SYNONYM_SET.add((a,b)); SYNONYM_SET.add((b,a))
@@ -104,6 +115,11 @@ def entity_type(word):
     # Only geography/org/country are confidently typed from known lists. Any other
     # capitalized proper noun mined from the corpus (the old code guessed 'PERSON') is
     # UNKNOWN -- type-conflict logic must not treat an unknown-type entity as a known type.
+    # NOTE (2026-09-11): widening ORG coverage was tried twice and regressed CV both times
+    # (all-caps acronym regex -0.0056; corpus-context head-noun cues, 391 precise ORGs,
+    # -0.0067). "Another same-type entity is present in the chunk" is weak evidence --
+    # consistent articles routinely mention several orgs -- so more typed entities means
+    # the conflict signal fires more often on label-1 rows and the model discounts it.
     if word in COUNTRIES: return 'COUNTRY'
     if word in PROVINCES: return 'PROVINCE'
     if word in CITIES: return 'CITY'
@@ -658,31 +674,8 @@ def claim_scores(title, body, ch):
             if at=='UNKNOWN': continue
             if any(ce!=arg and ct==at for ce,ct in chunk_ents_typed): abc=1.0
         argument_binding_conflict=abc
-        # Entity-substitution feature family (error-decomposition audit, 2026-09-11):
-        # type-free, LOCAL claim-binding substitution evidence -- title entity + predicate
-        # vs the one body chunk that actually matched that predicate (bc_pred), not a
-        # full-body scan. An "event" requires a COMPETITOR entity to occupy the slot in
-        # place of the missing title argument; simple absence (no competitor) is never
-        # counted as substitution.
-        chunk_ent_names=[w for w,_ in chunk_ents_typed]
-        events=[]
-        for slot,arg in (('subj',arg_subj),('obj',arg_obj)):
-            if arg is None or arg in pred_chunk_set: continue
-            competitors=[ce for ce in chunk_ent_names if ce!=arg]
-            if competitors: events.append((slot,arg,competitors))
-        n_slots_checked=sum(1 for a in (arg_subj,arg_obj) if a is not None)
-        n_entity_substitutions=float(len(events))
-        entity_substitution_score=n_entity_substitutions/n_slots_checked if n_slots_checked>0 else 0.0
-        strongest_entity_substitution=min(1.0,max((len(c) for _,_,c in events),default=0)/3.0)
-        entity_role_conflict=len({slot for slot,_,_ in events})/2.0
-        _ttok_low=set(w.lower() for w in Ttok)
-        _lex_ov=len(_ttok_low & set(w.lower() for w in pred_chunk_words))/max(len(_ttok_low),1)
-        entity_substitution_x_lexical=entity_substitution_score*_lex_ov
     else:
         argument_binding_conflict=0.0
-        entity_substitution_score=0.0; n_entity_substitutions=0.0
-        strongest_entity_substitution=0.0; entity_role_conflict=0.0
-        entity_substitution_x_lexical=0.0
     support=entity_support+max(pred_score,0)+max(polarity_score,0)+qty_score
     conflict=entity_conflict+max(-pred_score,0)+max(-polarity_score,0)+(1-qty_score if tn else 0)
     return dict(entity_support=entity_support, entity_conflict=entity_conflict,
@@ -695,9 +688,6 @@ def claim_scores(title, body, ch):
                 qty_context_exact_match=qty_ctx['qty_context_exact_match'],
                 qty_context_conflict=qty_ctx['qty_context_conflict'],
                 argument_binding_conflict=argument_binding_conflict,
-                entity_substitution_score=entity_substitution_score, n_entity_substitutions=n_entity_substitutions,
-                strongest_entity_substitution=strongest_entity_substitution, entity_role_conflict=entity_role_conflict,
-                entity_substitution_x_lexical=entity_substitution_x_lexical,
                 pred_score=pred_score, polarity_score=polarity_score, qty_score=qty_score,
                 claim_support_score=support, claim_conflict_score=conflict, claim_margin=support-conflict,
                 found_predicate_chunk=float(broot is not None))
@@ -733,12 +723,6 @@ def classify_regime(df, pair, byc):
 
 pair_all, byc_all = build_lookups(train)
 reg_test = classify_regime(test, pair_all, byc_all)
-reg_train_selfexcl = []   # each train row's regime computed leaving itself out (for B-model training)
-for i in range(len(train)):
-    th,ch = train['th'].iloc[i], train['ch'].iloc[i]
-    others = [ (t,l) for t,l in byc_all[ch] if not (t==th and l==train['label'].iloc[i]) ] if ch in byc_all else []
-    # approximate leave-one-out: exclude exactly one occurrence of this row's own (th,label)
-    pass
 print("test regime counts:", {r: int((reg_test==r).sum()) for r in ['C_exact','B_has_pos','B_no_pos','A_cold']})
 
 def predict_c_exact(df, pair):
@@ -868,6 +852,10 @@ print("B regime test rows:", int(b_mask_test.sum()))
 from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.metrics import f1_score, confusion_matrix, classification_report
 
+# Single source of truth: A_THR is calibrated on OOF probabilities produced with these
+# weights, so the CV loop and the final fit MUST use the same value.
+A_CLASS_WEIGHTS=[1,1]
+
 with Timer("A_cold_cv_threshold"):
     groups=train['ch'].values
     sgkf=StratifiedGroupKFold(n_splits=5,shuffle=True,random_state=SEED)
@@ -876,7 +864,7 @@ with Timer("A_cold_cv_threshold"):
     oof=np.zeros(len(train))
     for a,bidx in folds:
         m=cb.CatBoostClassifier(iterations=800,depth=6,learning_rate=0.03,
-                                 class_weights=[1,1],random_seed=SEED,verbose=False)
+                                 class_weights=A_CLASS_WEIGHTS,random_seed=SEED,verbose=False)
         m.fit(Xa_full[a],y[a])
         oof[bidx]=m.predict_proba(Xa_full[bidx])[:,1]
     _cnt=train['ch'].value_counts()
@@ -898,8 +886,9 @@ with Timer("A_cold_cv_threshold"):
     print(f"  iterations    : 800")
     print(f"  depth         : 6")
     print(f"  learning_rate : 0.03")
-    print(f"  class_weights : [1, 1]  (Experiment 1: weight sweep, GO -- stable win over [4,1]")
-    print(f"                  across 3 independent CV seeds, +0.004 to +0.011 Macro F1)")
+    print(f"  class_weights : {A_CLASS_WEIGHTS}  (Experiment 1: weight sweep, GO -- stable win over [4,1]")
+    print(f"                  across 3 independent CV seeds, +0.004 to +0.011 Macro F1;")
+    print(f"                  CV loop and final fit share this constant by construction)")
     print(f"  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)")
     print(f"  threshold     : {A_THR:.3f} (selected on OOF cold predictions only, no test labels)")
     print(f"  OOF Macro F1  : {best[1]:.4f}")
@@ -913,7 +902,7 @@ with Timer("A_cold_cv_threshold"):
 
 with Timer("A_cold_final_fit"):
     a_model=cb.CatBoostClassifier(iterations=800,depth=6,learning_rate=0.03,
-                                   class_weights=[4,1],random_seed=SEED,verbose=False)
+                                   class_weights=A_CLASS_WEIGHTS,random_seed=SEED,verbose=False)
     a_model.fit(Xa_full,y)
     Xte_a=Fte[ALL_A_FEATS].values
     a_proba_all=a_model.predict_proba(Xte_a)[:,1]
@@ -950,8 +939,8 @@ for r in ['C_exact','B_has_pos','B_no_pos','A_cold']:
     m = reg_test==r
     if m.sum(): print(f"  {r:10s} n={m.sum():5d}  positive_rate={final[m].mean():.3f}")
 
-sub=pd.DataFrame({'id':test['id'],'label':final}).set_index('id').loc[test['id']].reset_index()
-assert sub.shape[0]==len(test) and set(sub['id'])==set(sample_sub['id'])
+sub=pd.DataFrame({'id':test['id'],'label':final}).set_index('id').loc[sample_sub['id']].reset_index()
+assert sub.shape[0]==len(test) and list(sub['id'])==list(sample_sub['id'])
 assert set(sub['label'].unique())<={0,1} and list(sub.columns)==['id','label']
 sub.to_csv('D:\\Lomba\\IFEST2026_DAC\\notebook_v13_final\\local_out\\submission.csv', index=False)
 print(sub['label'].value_counts(normalize=True))

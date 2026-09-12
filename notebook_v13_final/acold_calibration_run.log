@@ -1,0 +1,29 @@
+[TIMER] claim_representation: 46.9s
+A_cold feature count: 71
+features ready in 73.9s, n_features=71
+seed 7: single argmax 0.6931 @0.650 | bagged argmax 0.6931 @0.650  (136s)
+seed 42: single argmax 0.6969 @0.650 | bagged argmax 0.6955 @0.650  (160s)
+seed 123: single argmax 0.6918 @0.700 | bagged argmax 0.6947 @0.625  (202s)
+seed 2026: single argmax 0.6899 @0.575 | bagged argmax 0.6877 @0.650  (310s)
+seed 777: single argmax 0.6941 @0.700 | bagged argmax 0.6924 @0.650  (288s)
+
+     arm                     policy  macroF1 mean     std  F1-0 mean
+  single              P1_own_argmax        0.6932  0.0026     0.4169
+  single         P2_abs_from_others        0.6906  0.0053     0.4119
+  single    P3_quantile_from_others        0.6904  0.0047     0.4117
+  bagged              P1_own_argmax        0.6927  0.0031     0.4152
+  bagged         P2_abs_from_others        0.6915  0.0029     0.4128
+  bagged    P3_quantile_from_others        0.6918  0.0030     0.4135
+
+per-seed detail (honest policies only):
+  single         P2_abs_from_others: 0.6949 0.6945 0.6887 0.6822 0.6929
+  single    P3_quantile_from_others: 0.6953 0.6937 0.6882 0.6835 0.6914
+  bagged         P2_abs_from_others: 0.6925 0.6937 0.6941 0.6872 0.6898
+  bagged    P3_quantile_from_others: 0.6914 0.6951 0.6944 0.6881 0.6900
+delta vs single/P2  ->  single/P3_quantile_from_others: -0.0002
+delta vs single/P2  ->  bagged/P2_abs_from_others: +0.0008
+delta vs single/P2  ->  bagged/P3_quantile_from_others: +0.0012
+
+mean quantile implied by argmax thresholds: 0.0463
+mean argmax threshold (single): 0.6550
+TOTAL wall time: 1182.9s

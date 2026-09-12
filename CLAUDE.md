@@ -35,11 +35,17 @@ most important structural fact in the project:**
 | `C_exact` — exact (title,body) pair already in train | 25.7% | none (lookup) | rule: copy the known label | **1.0** (0 label noise, provable) — but see the compliance note below |
 | `B_has_pos` — body seen, train already has a label-1 title for it | 6.0% | one title is genuine, rest are tampered | title-retrieval + entity-conflict classifier | **0.996** (honest CV) |
 | `B_no_pos` — body seen, no known-positive title yet | 4.6% | ambiguous which titles (if any) are genuine | retrieval-only, `max_char` similarity | **0.575** (honest CV; ceiling, not a bug — see below) |
-| `A_cold` — body never seen before | **63.6%** | genuine generalization, no memory to exploit | ensemble (CatBoost+XGB+RF) on 48 handcrafted features | **0.66** (honest grouped CV) — the real bottleneck |
+| `A_cold` — body never seen before | **63.6%** | genuine generalization, no memory to exploit | single CatBoost on 71 features (48 v12 + claim-representation layer), `class_weights=[1,1]`, tuned threshold | **0.6995** seed 42 / 0.691 5-seed mean (honest grouped CV) — the real bottleneck, and at the ceiling of this representation (see `EXPERIMENTS.md`, v13 section) |
 
 `A_cold` is 63.6% of test and by far the weakest regime — it dominates the overall score
 far more than its intrinsic difficulty alone would suggest, because everything else is
-close to solved.
+close to solved. Full pipeline public LB: **~0.870** (2026-09-11).
+
+**Train/serve consistency rule (learned the hard way, 2026-09-11):** any model whose
+threshold is chosen on CV output must be refit for deployment with *identical* config to
+that CV loop — share the config as one constant, never as two literals. A `[4,1]` vs `[1,1]`
+`class_weights` mismatch in `A_cold` cost 6 LB points and was invisible to CV. When LB and
+honest CV disagree, audit this before touching features.
 
 **Compliance judgment call — the `C_exact` rule.** The rules also say *"dilarang ...
 merekonstruksi label"* (label reconstruction is forbidden), which is ambiguous for a raw

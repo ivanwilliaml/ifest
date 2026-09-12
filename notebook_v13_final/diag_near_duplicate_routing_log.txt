@@ -1,0 +1,35 @@
+test regime counts: {'A_cold': 2293, 'C_exact': 927, 'B': 383}
+
+A_cold test rows: 2293   (search over 11646 unique train bodies, 209s)
+  max_cos >= 0.99:     0  (0.0% of A_cold, 0.0% of all test)
+  max_cos >= 0.97:     2  (0.1% of A_cold, 0.1% of all test)
+  max_cos >= 0.95:     4  (0.2% of A_cold, 0.1% of all test)
+  max_cos >= 0.90:    15  (0.7% of A_cold, 0.4% of all test)
+  max_cos >= 0.85:    31  (1.4% of A_cold, 0.9% of all test)
+  max_cos >= 0.80:    62  (2.7% of A_cold, 1.7% of all test)
+
+within train (unique bodies): near-dup (>=0.95, non-exact) share = 0.1%
+
+--- examples of A_cold test rows with a near-duplicate train body ---
+
+ cos=0.9869  len test=1032 train=977  first diff @char 977
+   TEST : ...medis disneyland dalam sebuah pernyataan simak panduan lengkap corona di pusat informasi corona...
+   TRAIN: ...medis disneyland dalam sebuah pernyataan...
+   train titles on that body: 1   test title: Foto Ketika Disneyland Jadi Situs Vaksinasi COVID 19 Massal di California kumparan com
+
+ cos=0.9758  len test=1798 train=1887  first diff @char 0
+   TEST : ...presiden argentina alberto fernandez telah menerima suntikan...
+   TRAIN: ...vaksin corona buatan rusia yang bernama sputnik v mulai digu...
+   train titles on that body: 1   test title: Presiden Argentina Disuntik Vaksin Corona Buatan Rusia
+
+ cos=0.9673  len test=2619 train=2393  first diff @char 0
+   TEST : ...aneka kejadian berlangsung di jabar hari ini jumat 22 1 2021...
+   TRAIN: ...saung angklung udjo sau babak belur dihantam pandemi covid 1...
+   train titles on that body: 1   test title: Jabar Hari Ini  Kades Mirip Jokowi Siswi SMP Dibunuh
+
+ cos=0.9655  len test=2192 train=2310  first diff @char 37
+   TEST : ...perda dki jakarta nomor 2 tahun 2020 mendenda warga yang menolak vaksin covid 19 beleid itu dinil...
+   TRAIN: ...perda dki jakarta nomor 2 tahun 2020 yang mendenda warga yang menolak vaksin covid 19 digugat war...
+   train titles on that body: 1   test title: Denda Warga Penolak Vaksin Corona Rp 5 Juta  Perda DKI Digugat ke MA
+
+TOTAL 732s

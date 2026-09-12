@@ -1,0 +1,83 @@
+sklearn 1.8.0
+catboost 1.2.10
+[TIMER] load: 0.5s
+train (14397, 8) test (3603, 7) class0 0.0998
+ACTION_VERBS: corpus-verified 292/895 antonym roots confirmed verbal (stems from a meN-/ber-/di-/ter- surface form, >=3x, in train bodies)
+antonym pairs: 549  synonym pairs: 4625
+provinces: 34  regencies: 488
+[TIMER] entity_mining: 2.8s
+abbreviation alias table: 26/28 resolved against loaded gazetteer
+entity pool: 5176  phrase gazetteer: 238  role markers: 73
+[TIMER] chunk_index: 5.2s
+[TIMER] lsa: 10.9s
+[TIMER] char_tfidf: 40.8s
+[TIMER] base_features: 10.6s
+49 base+structural features
+[TIMER] claim_representation: 42.1s
+A_cold feature count: 71
+C_exact lookup validated: 12587 unique (title,content) pairs, 0 label conflicts
+test regime counts: {'C_exact': 927, 'B_has_pos': 216, 'B_no_pos': 167, 'A_cold': 2293}
+C_exact resolved: 927 of 927
+B regime training pool: 2011 rows, 26 features
+[TIMER] B_regime_training_pool: 1.3s
+[TIMER] B_regime_fit: 1.9s
+[TIMER] B_regime_predict: 0.5s
+B regime test rows: 383
+A_cold OOF macroF1=0.6932 @ threshold=0.600
+--- A_cold reproducibility record (this notebook, this run) ---
+  n_features    : 71
+  model         : single CatBoostClassifier (NOT an ensemble -- multi-model
+                  stacking was explored in experiments but is not part of
+                  this notebook's committed best config)
+  iterations    : 800
+  depth         : 6
+  learning_rate : 0.03
+  class_weights : [1, 1]  (Experiment 1: weight sweep, GO -- stable win over [4,1]
+                  across 3 independent CV seeds, +0.004 to +0.011 Macro F1;
+                  CV loop and final fit share this constant by construction)
+  CV type       : StratifiedGroupKFold(n_splits=5, group=content_hash)
+  threshold     : 0.600 (selected on OOF cold predictions only, no test labels)
+  OOF Macro F1  : 0.6932
+  OOF F1-0      : 0.4138
+  OOF F1-1      : 0.9727
+--- A_cold OOF confusion matrix (rows=true, cols=pred; labels=[0,1]) ---
+[[ 168  319]
+ [ 157 8476]]
+--- A_cold OOF classification report ---
+              precision    recall  f1-score   support
+
+           0     0.5169    0.3450    0.4138       487
+           1     0.9637    0.9818    0.9727      8633
+
+    accuracy                         0.9478      9120
+   macro avg     0.7403    0.6634    0.6932      9120
+weighted avg     0.9399    0.9478    0.9428      9120
+
+[TIMER] A_cold_cv_threshold: 44.5s
+[TIMER] A_cold_final_fit: 8.0s
+A_cold test rows: 2293
+  C_exact    n=  927  positive_rate=0.998
+  B_has_pos  n=  216  positive_rate=0.023
+  B_no_pos   n=  167  positive_rate=1.000
+  A_cold     n= 2293  positive_rate=0.962
+label
+1    0.916736
+0    0.083264
+Name: proportion, dtype: float64
+==========================================================
+V13 — full regime router (C rule + B title-retrieval + A_cold claim-representation)
+A_cold OOF macro F1  : 0.6932  (F1-0=0.4138, F1-1=0.9727) @ threshold 0.600
+total runtime        : 4.0 min
+==========================================================
+  A_cold_cv_threshold: 44.5s
+  claim_representation: 42.1s
+  char_tfidf: 40.8s
+  lsa: 10.9s
+  base_features: 10.6s
+  A_cold_final_fit: 8.0s
+  chunk_index: 5.2s
+  entity_mining: 2.8s
+  B_regime_fit: 1.9s
+  B_regime_training_pool: 1.3s
+  B_regime_predict: 0.5s
+  load: 0.5s

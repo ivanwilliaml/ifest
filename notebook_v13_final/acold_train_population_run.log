@@ -1,0 +1,23 @@
+[TIMER] claim_representation: 82.9s
+A_cold feature count: 71
+features ready in 109.6s  n_features=71  cold=9120 noncold=5277
+seed 42            T0_all: macroF1=0.6995 F1-0=0.4267 F1-1=0.9724 thr=0.625 (103s)
+seed 42      T1_cold_only: macroF1=0.6720 F1-0=0.3744 F1-1=0.9696 thr=0.825 (64s)
+seed 42  T2_noncold_w0.50: macroF1=0.6876 F1-0=0.4047 F1-1=0.9705 thr=0.675 (107s)
+seed 42  T3_noncold_w0.25: macroF1=0.6826 F1-0=0.3964 F1-1=0.9687 thr=0.750 (88s)
+seed 7            T0_all: macroF1=0.6874 F1-0=0.4082 F1-1=0.9666 thr=0.700 (94s)
+seed 7      T1_cold_only: macroF1=0.6801 F1-0=0.3901 F1-1=0.9702 thr=0.825 (63s)
+seed 7  T2_noncold_w0.50: macroF1=0.6884 F1-0=0.4065 F1-1=0.9704 thr=0.675 (101s)
+seed 7  T3_noncold_w0.25: macroF1=0.6837 F1-0=0.3972 F1-1=0.9701 thr=0.725 (98s)
+seed 123            T0_all: macroF1=0.6911 F1-0=0.4140 F1-1=0.9681 thr=0.675 (108s)
+seed 123      T1_cold_only: macroF1=0.6757 F1-0=0.3816 F1-1=0.9698 thr=0.825 (62s)
+seed 123  T2_noncold_w0.50: macroF1=0.6944 F1-0=0.4221 F1-1=0.9667 thr=0.750 (93s)
+seed 123  T3_noncold_w0.25: macroF1=0.6843 F1-0=0.4017 F1-1=0.9669 thr=0.775 (86s)
+
+              arm  macroF1 mean     std  F1-0 mean  thr mean  delta vs T0
+           T0_all        0.6927  0.0062     0.4163     0.667      +0.0000
+     T1_cold_only        0.6760  0.0041     0.3821     0.825      -0.0167
+ T2_noncold_w0.50        0.6901  0.0037     0.4111     0.700      -0.0025
+ T3_noncold_w0.25        0.6835  0.0009     0.3984     0.750      -0.0091
+
+TOTAL wall time: 1186.3s
