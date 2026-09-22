@@ -144,9 +144,66 @@ Typed entities improved standalone precision only marginally (0.15→0.18) despi
 proper LOCATION/ORG gazetteer replacing the old capitalized-word-only pool. **The
 precision-first hypothesis is confirmed directionally but the gap to the 0.62 oracle
 ceiling is still wide open** — most flagged "conflicts" are still coincidental
-co-occurrence, not genuine substitution. Current best config unchanged:
-**48 feats + BM25-sentence + class_weight 0:4:1 + entity_role_v2, Macro F1 ≈ 0.6596,
-F1-0 ≈ 0.358.**
+co-occurrence, not genuine substitution.
+
+### `notebook_v13_final` baseline supersedes the ensemble config (undocumented until now)
+
+`notebook_v13_final/ifest2026_dac_v13_final.ipynb` (the full regime-router pipeline,
+committed but never summarized here) quietly beat the ensemble config above: **71 A_cold
+features** (48 base/structural + phrase-entity + person/role-anchored substitution +
+canonical-geo + qty-context-alignment + argument-binding-conflict channels), a **single**
+CatBoostClassifier (no blend — multi-model stacking was explored but is not this
+notebook's committed config), `class_weights=[1,1]` (a weight-sweep result: `[1,1]` beat
+`0:4:1` by +0.004 to +0.011 Macro F1 across 3 CV seeds), `StratifiedGroupKFold(n_splits=5,
+group=content_hash)`. Reproduced in this session, this environment:
+**A_cold OOF Macro F1 = 0.6995 @ threshold 0.625 (F1-0 = 0.4267, F1-1 = 0.9724).** This is
+now the reference baseline for any further `A_cold` ablation, not the 0.6596 ensemble
+number above.
+
+### `role_reversal_v1` — structural entity-order-vs-predicate proxy (this session, NEGATIVE)
+
+**Hypothesis.** The manual FP audit (see `CLAUDE.md`) found subject/object role reversal
+("pasien kaget lihat dokter" vs the reverse) as an under-captured FP category, distinct
+from entity substitution (`entity_conflict`/`entity_role_v2`) and from
+predicate-argument non-binding (`argument_binding_conflict`, already in the 71-feature
+set). `notebook_v13_final/diag_role_reversal.py` had only *read* this signal manually on
+the current model's false positives (a coverage/precision diagnostic, not a trained
+feature). This experiment generalized it into a real per-row feature computable without
+label knowledge: for rows where the title has exactly 2 known `ENT_POOL` entities and a
+resolvable predicate, scan the body for a window containing both entities near a
+matching/synonym/antonym predicate root, and flag whether the entity order relative to
+the predicate is reversed between title and body (neutral 0.5 when the title doesn't even
+have the 2-entity+predicate shape to ask the question).
+
+**Method.** ONE change only — `role_reversal_conflict` appended to the notebook's own
+`ALL_A_FEATS` (71→72), same `StratifiedGroupKFold` folds (same `SEED`), same CatBoost
+config (`iterations=800, depth=6, lr=0.03, class_weights=[1,1]`), same threshold search
+(0.05–0.96 step 0.025) — baseline re-run in the same process for an apples-to-apples
+comparison, not copied from an old log. See `notebook_v13_final/exp_role_reversal_v1.py`.
+
+**Coverage.** Only 18.9% of train rows even have the 2-entity+predicate shape needed
+(everything else gets the neutral 0.5); of those, 12.5% are flagged as reversed — i.e.
+~2.4% of all rows get a positive flag. Consistent with this being a narrow,
+high-specificity-by-design signal, as expected going in.
+
+**Result: WORSE, reverted.**
+
+| config | Macro F1 | F1-0 | F1-1 | threshold |
+|---|---|---|---|---|
+| baseline (71 feats) | 0.6995 | 0.4267 | 0.9724 | 0.625 |
+| + role_reversal_conflict (72 feats) | 0.6972 | 0.4241 | 0.9702 | 0.650 |
+| Δ | **−0.0024** | −0.0026 | −0.0021 | — |
+
+Same pattern as every other isolated `A_cold` feature-family addition in this project
+(chunk-distribution, support/conflict aggregates, NMF topic, action/number-isolated
+channels — see the feature-family-ablation diagram above): a diagnostically real category
+does not automatically survive as a low-coverage engineered feature. The structural proxy
+here (predicate-window co-occurrence + order check, no real dependency parser) is
+apparently too noisy at its ~2.4%-of-rows coverage to add signal net of the noise it
+introduces — reinforcing the standing conclusion that the `A_cold` gap is a **precision**
+problem in feature engineering, not a lack of known conflict categories to encode.
+**Current best A_cold config remains the plain 71-feature `notebook_v13_final` baseline,
+Macro F1 = 0.6995.**
 
 ### v13 sessions, 2026-09-10 → 11 (`notebook_v13_final/`) — from 0.6721 to 0.6995, then the ceiling
 
